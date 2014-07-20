@@ -1,0 +1,43 @@
+.navigation
+{
+	font-size: 1.3em;
+	padding-top:30px;
+	background:#2457FF;
+	list-style:none;
+	height:100px;
+	width:100%;
+	padding:0;
+	overflow:hidden;
+    z-index:1;
+    padding-left:300px;
+    border:1px #2457FF;
+}
+.navigation li
+{
+	margin:0;
+	padding:0;
+	display:block;
+	float:left;
+}
+.navigation a
+{
+	text-decoration:none;
+	color:white;
+	display:block;
+	padding: 40px;	
+}
+.navigation .active a 
+{
+	background:white;
+	color:#444444;
+	
+}
+.navigation .active .leftMost a
+{
+	background:#beecbd;
+	color:#444444;
+}
+.navigation a:hover
+{
+	color:black;
+}
