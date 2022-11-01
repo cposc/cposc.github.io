@@ -1,109 +1,18 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CPOSC</title>
 
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
-	<title>CPOSC 2015 - October 17th, 2015</title>
-	<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
-	<link rel="stylesheet" href="ie.css" type="text/css" charset="utf-8" />
-	<script language="Javascript" type="text/javascript" src="js/jquery-1.4.4.js"></script>
-	<script language="Javascript" type="text/javascript" src="js/jquery.lwtCountdown-1.0.js"></script>
-	<script language="Javascript" type="text/javascript" src="js/misc.js"></script>
-
-</head>
-<body>
-	<div id="wrapper">
-		<div id="logo">
-		</div> <!-- end of logo -->
-
-		<div id="main">
-			<div id="countdown">
-
-					<div class="dash weeks_dash">
-						<span class="dash_title">weeks</span>
-						<div class="digit">0</div>
-						<div class="digit">0</div>
-					</div>
-
-					<div class="dash days_dash">
-						<span class="dash_title">days</span>
-						<div class="digit">0</div>
-						<div class="digit">0</div>
-					</div>
-
-					<div class="dash hours_dash">
-						<span class="dash_title">hours</span>
-						<div class="digit">0</div>
-						<div class="digit">0</div>
-					</div>
-
-					<div class="dash minutes_dash">
-						<span class="dash_title">minutes</span>
-						<div class="digit">0</div>
-						<div class="digit">0</div>
-					</div>
-
-					<div class="dash seconds_dash">
-						<span class="dash_title">seconds</span>
-						<div class="digit">0</div>
-						<div class="digit">0</div>
-					</div>
-
-
-
-			</div> <!-- end of countdown -->
-
-			<div id="bottom">
-				<div class="bottom-text">
-				Sign up for updates
-				</div>
-				<!-- Begin MailChimp Signup Form -->
-<div id="mc_embed_signup">
-<form action="//cposc.us7.list-manage.com/subscribe/post?u=036e79a286de049406e010e1e&amp;id=c8ce79af0f" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="newsletter">
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-    <div style="position: absolute; left: -5000px;"><input type="text" name="b_036e79a286de049406e010e1e_c8ce79af0f" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-
-<!--End mc_embed_signup-->
-				<div id="social"> <!-- start of social icons list -->
-					<ul>
-					<li><a href="https://www.facebook.com/pages/Central-PA-Open-Source-Conference/290337789136"><img src="images/facebook.jpg" alt="Facebook Page" /></a></li>
-					<li><a href="http://twitter.com/cposc"><img src="images/twitter.jpg" alt="Twitter" /></a></li>
-					<li><a href="mailto:team@cposc.org"><img src="images/mail.jpg" alt="Contact via mail" /></a></li>
-					</ul>
-				</div> <!-- end of social icons list -->
-
-			</div> <!-- end of bottom div -->
-
-
-
-
-		</div> <!-- end of main -->
-		<!-- start of the javascript code that handles the countdown -->
-		<script language="javascript" type="text/javascript">
-			jQuery(document).ready(function() {
-				$('#countdown').countDown({
-					targetDate: {
-						'day': 		17,
-						'month': 	10,
-						'year': 	2015,
-						'hour': 	8,
-						'min': 		0,
-						'sec': 		0
-					}
-				});
-			});
-		</script>
-		<!-- end of the javascript code that handles the countdown -->
-
-	</div> <!-- end of wrapper -->
-
-</body>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,900;1,300;1,700&family=Open+Sans:ital,wght@0,300;0,600;1,300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/17bfe4c358.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.js"></script>
+  </body>
 </html>

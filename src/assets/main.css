@@ -1,0 +1,21 @@
+@import './base.css';
+
+body {
+  margin: 0;
+}
+
+h1 {
+  font-family: var(--lato-regular);
+  font-weight: 900;
+}
+
+h4 {
+  font-family: var(--lato-regular);
+  color: #70706f;
+  font-weight: 300;
+  margin: 0;
+}
+
+p {
+  font-family: var(--open-regular);
+}
