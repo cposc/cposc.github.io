@@ -7,7 +7,7 @@
     />
     <div class="footerContent">
       <h4>Contact</h4>
-      <p><i class="fa-regular fa-envelope"></i>Email: <a href="mailto:cposc@localareanetworks.com" target="_blank">cposc@localareanetworks.com</a></p>
+      <p><i class="fa-regular fa-envelope"></i>Email: <a href="mailto:cposc@localareanetworks.org" target="_blank">cposc@localareanetworks.org</a></p>
       <h4>Follow on Social Media</h4>
       <p><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/CPOSC2008" target="_blank">Facebook</a></p>
       <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/CPOSC" target="_blank">Twitter</a></p>

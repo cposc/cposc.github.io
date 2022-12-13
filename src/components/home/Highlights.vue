@@ -5,6 +5,8 @@ import HighlightItem from "./HighlightItem.vue";
 <template>
   <div class="gradientContainer"></div>
   <div class="highlightsSection">
+    <h1>Are you ready to support learning and networking in your community?</h1>
+    <p>There are CPOSC sponsorship opportunities at all levels! <a href="mailto:sponsor@localareanetworks.org?subject=Sponsorship Lead: I'd like more info!" target="_blank">Contact us</a> for a prospectus and more information on how you can help this event benefit everyone from high school and college students to professionals with decades of experience.</p>
     <div class="highlightsWrapper">
       <HighlightItem v-for="link of quickLinks"
         :title=link.title
@@ -47,6 +49,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+p {
+  margin-top: 0;
+  max-width: 1000px;
+  text-align: center;
+  padding: 0 1rem 3rem 1rem;
+
+  a {
+    color: #848699;
+    transition: color 0.25s;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
 .highlightsSection {
   background-color: #1F1F1F;
   width: 100%;

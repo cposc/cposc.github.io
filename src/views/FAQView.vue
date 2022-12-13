@@ -1,1 +1,0 @@
-FAQ - for someone attending for the first time

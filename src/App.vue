@@ -9,30 +9,24 @@ import Bottom from "./components/Bottom.vue";
       <div class="headerInner">
         <div class="headerLeft">
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/schedule">Schedule</RouterLink>
           <RouterLink to="/volunteers">Volunteers</RouterLink>
           <RouterLink to="/speakers">Speakers</RouterLink>
           <RouterLink to="/logistics">Travel</RouterLink>
-          <RouterLink to="/faq">Faq</RouterLink>
+          <!-- <RouterLink to="/schedule">Schedule</RouterLink> -->
         </div>
-        <div class="headerRight">
-          <div>REGISTER</div>
-        </div>
+        <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?">
+          <div class="headerRight">
+            <div>GET INVOLVED</div>
+          </div>
+        </a>
       </div>
     </div>
   </nav>
     <RouterView />
     <Bottom :showLine="$route.name === 'home'"/>
-    <!-- <div class="wrapper">
-
-
-      HOW - to get involved or be in the loop about it - links to social media, etc
-      HOW - can you get involved (sponsor prospectus, levels, etc
-
-   -->
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 @keyframes navColor {
   0%   {background-color: rgba(43, 52, 128, 0);}
   25%  {background-color: rgba(43, 52, 128, 25);}
@@ -60,7 +54,7 @@ import Bottom from "./components/Bottom.vue";
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
   }
 
   .headerLeft {
@@ -90,12 +84,75 @@ import Bottom from "./components/Bottom.vue";
     padding: 2rem 1.5rem;
     background-color: #2b3480;
   }
+
+  a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-family: var(--open-regular);
+  }
 }
 
-a {
-  text-decoration: none;
-  color: white;
-  text-transform: uppercase;
-  font-family: var(--open-regular);
+.pageContainer {
+  background-color: black;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 10rem;
+
+  h1 {
+    margin: 1rem 0;
+    color: white;
+  }
+
+  h3 {
+    color: white;
+    font-family: var(--lato-regular);
+    margin-top: 2rem;
+  }
+
+  h4 {
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+
+  .line {
+    background-color: #2b3480;
+    height: 5px;
+    width: 80px;
+  }
+
+  .pageContent {
+    max-width: 800px;
+
+    img {
+      max-width: 800px;
+    }
+
+    p {
+      color: #70706f;
+      text-align: center;
+    }
+
+    .focusBlock {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+
+      background-color: rgba(31,31,31,0.5);
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      margin-bottom: 2rem;
+
+      li {
+        margin-bottom: 8px;
+        font-family: var(--open-regular);
+      }
+    }
+  }
 }
 </style>

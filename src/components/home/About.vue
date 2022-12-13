@@ -3,12 +3,11 @@
   <div class="whatAbout">
     <div class="aboutWrapper">
       <div class="aboutContent">
-        <h4>ABOUT</h4>
-        <h1>CPOSC Event</h1>
+        <!-- <h4>ABOUT</h4> -->
+        <h1>About CPOSC</h1>
         <div class="line"></div>
-        <p>The Central PA Open Source Conference (CPOSC) is a one-day technical conference for open source users and developers.</p>
-        <p>Presentations and sessions cover all aspects of open source, with talks ranging from novice to expert skill levels. The event typically features case studies, best practices, code-alongs, and more.</p>
-        <div class="register">Schedule</div>
+        <p>A Lancaster staple since it began in 2008, the Central Pennsylvania Open Source Conference is a one-day event that strives to foster all aspects of the regional tech community.</p>
+        <!-- <div class="register">Schedule</div> -->
       </div>
       <div class="aboutImage">
         <img
