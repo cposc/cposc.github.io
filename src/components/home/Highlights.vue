@@ -63,6 +63,16 @@ p {
       color: white;
     }
   }
+
+  @media screen and (max-width: 850px) {
+    padding: 0 2rem;
+    margin-bottom: 3rem;
+  }
+}
+
+h1 {
+  text-align: center;
+  padding: 0 1rem;
 }
 
 .highlightsSection {
@@ -79,6 +89,10 @@ p {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+    }
   }
 }
 

@@ -70,6 +70,10 @@
       flex-direction: column;
       align-items: center;
 
+      @media screen and (max-width: 400px) {
+        width: 100%;
+      }
+
       h1 {
         font-size: 40px;
         margin: 0;
@@ -80,6 +84,10 @@
         &:last-of-type {
           font-size: 60px;
           margin: 8px 0;
+        }
+
+        @media screen and (max-width: 400px) {
+          padding: 0 1rem;
         }
       }
 
@@ -93,6 +101,10 @@
       p {
         font-style: italic;
         margin: 2rem 0;
+        
+        @media screen and (max-width: 400px) {
+          padding: 0 2rem;
+        }
       }
 
       .datetimeGrid {
@@ -101,8 +113,19 @@
         border-top: 1px solid white;
         border-bottom: 1px solid white;
 
+        @media screen and (max-width: 400px) {
+          flex-direction: column;
+          border-top: 0px;
+          border-bottom: 0px;
+        }
+
         .location {
           border-right: 1px solid white;
+
+          @media screen and (max-width: 400px) {
+            border-right: 0px;
+            border-bottom: 1px solid white;
+          }
         }
 
         .location, .date {

@@ -33,6 +33,7 @@ export default {
   background-color: #1F1F1F;
   width: 100%;
   color: white;
+  margin-top: -1px;
 
   img {
     width: 200px;
@@ -43,6 +44,10 @@ export default {
     height: 5px;
     background-color: #2b3480;
     width: 500px;
+
+    @media screen and (max-width: 500px) {
+      width: 100%;
+    }
   }
 
   .footerContent {

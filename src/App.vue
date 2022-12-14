@@ -1,98 +1,28 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import TopNav from "./components/TopNav.vue";
 import Bottom from "./components/Bottom.vue";
 </script>
 
 <template>
-  <nav>
-    <div class="headerWrapper">
-      <div class="headerInner">
-        <div class="headerLeft">
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/volunteers">Volunteers</RouterLink>
-          <RouterLink to="/speakers">Speakers</RouterLink>
-          <RouterLink to="/logistics">Travel</RouterLink>
-          <!-- <RouterLink to="/schedule">Schedule</RouterLink> -->
-        </div>
-        <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?">
-          <div class="headerRight">
-            <div>GET INVOLVED</div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </nav>
-    <RouterView />
-    <Bottom :showLine="$route.name === 'home'"/>
+  <TopNav />
+  <RouterView />
+  <Bottom :showLine="$route.name === 'home'"/>
 </template>
 
+<script>
+
+export default {
+  components: {},
+  data() {
+    return {}
+  },
+  methods: {}
+}
+</script>
+
+
 <style lang="scss">
-@keyframes navColor {
-  0%   {background-color: rgba(43, 52, 128, 0);}
-  25%  {background-color: rgba(43, 52, 128, 25);}
-  50%  {background-color: rgba(43, 52, 128, 50);}
-  100% {background-color: rgba(43, 52, 128, 100);}
-}
-
-.headerWrapper {
-  z-index: 50;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: rgba(0,0,0,0.5);
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--open-regular);
-
-  .headerInner {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    max-width: 800px;
-  }
-
-  .headerLeft {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-
-    a {
-      display: block;
-      font-size: 13px;
-      letter-spacing: 2px;
-      padding: 2rem 1.5rem;
-
-      &:hover {
-        animation-name: navColor;
-        animation-duration: 4s;
-        background-color: #2b3480;
-      }
-    }
-  }
-
-  .headerRight {
-    cursor: pointer;
-    color: white;
-    font-size: 13px;
-    letter-spacing: 2px;
-    padding: 2rem 1.5rem;
-    background-color: #2b3480;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-    text-transform: uppercase;
-    font-family: var(--open-regular);
-  }
-}
-
 .pageContainer {
   background-color: black;
   width: 100%;
@@ -127,10 +57,6 @@ import Bottom from "./components/Bottom.vue";
   .pageContent {
     max-width: 800px;
 
-    img {
-      max-width: 800px;
-    }
-
     p {
       color: #70706f;
       text-align: center;
@@ -152,6 +78,10 @@ import Bottom from "./components/Bottom.vue";
         margin-bottom: 8px;
         font-family: var(--open-regular);
       }
+    }
+
+    @media screen and (max-width: 800px) {
+      padding: 0 2rem;
     }
   }
 }

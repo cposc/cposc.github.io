@@ -10,8 +10,8 @@ import GradientContainer from "../components/GradientContainer.vue";
     <div class="pageContent">
       <p>For 2023, we are proud to return CPOSC to <a href="https://artsmu.com/ware-center/" target="_blank">The Ware Center</a> at Millersville University.</p>
       <p></p>
-      <p style="margin-bottom:0;">42 N Prince Street</p>
-      <p style="margin-top:0;">Lancaster, PA 17603</p>
+      <h3 style="margin-bottom:8px;">42 N Prince Street</h3>
+      <h3 style="margin-top:0;">Lancaster, PA 17603</h3>
       <img
         alt="Static Ware Center Map"
         src="@/assets/static_map.png"
@@ -49,6 +49,34 @@ p > a {
   }
 }
 
+p, h3 {
+  @media screen and (max-width: 500px) {
+    padding: 0 2rem;
+  }
+}
+
+h3:not(:last-of-type) {
+  text-align: center;
+}
+
+img {
+  max-width: 800px;
+
+  @media screen and (max-width: 800px) and (min-width: 500px) {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 100vw;
+  }
+}
+
+.pageContent {
+  @media screen and (max-width: 500px) {
+    padding: 0;
+  }
+}
+
 .focusBlock {
   a {
     color: #848699;
@@ -57,6 +85,16 @@ p > a {
     &:hover {
       color: white;
     }
+  }
+
+  @media screen and (max-width: 550px) {
+    ul {
+      padding: 10px;
+    }
+  }
+
+  @media screen and (max-width: 500px) {
+    margin: 0 1rem;
   }
 }
 </style>

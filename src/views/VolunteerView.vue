@@ -41,4 +41,12 @@ p > a {
     color: #848699;
   }
 }
+
+.focusBlock {
+  @media screen and (max-width: 550px) {
+    ul {
+      padding: 10px;
+    }
+  }
+}
 </style>

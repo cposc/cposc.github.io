@@ -49,5 +49,9 @@ i {
   flex-direction: row;
   align-items: center;
   padding: 0 1rem;
+
+  @media screen and (max-width: 850px) {
+    margin-bottom: 2rem;
+  }
 }
 </style>

@@ -46,19 +46,36 @@
     align-items: center;
     width: 750px;
 
+    @media screen and (max-width: 850px) {
+      flex-direction: column;
+      width: 100%;
+    }
+
     .aboutContent {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       padding: 6rem 0;
 
+      @media screen and (max-width: 850px) {
+        align-items: center;
+      }
+
       h1 {
         margin: 1rem 0;
+
+        @media screen and (max-width: 850px) {
+          text-align: center;
+        }
       }
 
       h4 {
         font-size: 12px;
         letter-spacing: 3px;
+
+        @media screen and (max-width: 850px) {
+          text-align: center;
+        }
       }
 
       .line {
@@ -70,6 +87,12 @@
       p {
         letter-spacing: 1px;
         word-spacing: 1.5px;
+        padding: 0 1rem;
+
+        @media screen and (max-width: 850px) {
+          text-align: center;
+          padding: 0 2rem;
+        }
       }
 
       .register {
@@ -88,11 +111,19 @@
 
     .aboutImage {
       margin-left: 2rem;
+
+      @media screen and (max-width: 450px) {
+        margin-left: 0;
+      }
   
       img {
         width: 350px;
         height: 250px;
         object-fit: cover;
+
+        @media screen and (max-width: 450px) {
+          width: 100%;
+        }
       }
     }
   }
