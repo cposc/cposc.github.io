@@ -5,6 +5,7 @@ import ScheduleView from "../views/ScheduleView.vue";
 import VolunteerView from "../views/VolunteerView.vue";
 import SpeakersView from "../views/SpeakersView.vue";
 import LogisticsView from "../views/LogisticsView.vue";
+import PageNotFound from "../views/PageNotFound.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -34,6 +35,7 @@ const router = createRouter({
       name: "logistics",
       component: LogisticsView,
     },
+    { path: "/:pathMatch(.*)*", component: PageNotFound }
     // {
       // path: "/schedule",
       // name: "schedule",

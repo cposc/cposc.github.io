@@ -10,8 +10,8 @@ import GradientContainer from "../components/GradientContainer.vue";
     <div class="pageContent">
       <p>For 2023, we are proud to return CPOSC to <a href="https://artsmu.com/ware-center/" target="_blank">The Ware Center</a> at Millersville University.</p>
       <p></p>
-      <h3 style="margin-bottom:8px;">42 N Prince Street</h3>
-      <h3 style="margin-top:0;">Lancaster, PA 17603</h3>
+      <h3 style="margin-bottom:8px;"><a style="color: white;" href="https://www.google.com/maps/search/?api=1&query=The+Ware+Center+-+Millersville+University" target="_blank">42 N Prince Street</a></h3>
+      <h3 style="margin-top:0;"><a style="color: white;" href="https://www.google.com/maps/search/?api=1&query=The+Ware+Center+-+Millersville+University" target="_blank">Lancaster, PA 17603</a></h3>
       <img
         alt="Static Ware Center Map"
         src="@/assets/static_map.png"

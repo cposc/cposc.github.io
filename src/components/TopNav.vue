@@ -143,7 +143,7 @@ export default {
 
     .dropdownItems {
       &.open {
-        height: 170px !important;
+        height: 180px !important;
       }
 
       position: absolute;
