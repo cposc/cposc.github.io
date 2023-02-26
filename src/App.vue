@@ -1,11 +1,13 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import TopNav from "./components/TopNav.vue";
+import Tickets from "./components/Tickets.vue";
 import Bottom from "./components/Bottom.vue";
 </script>
 
 <template>
   <TopNav />
+  <Tickets />
   <RouterView />
   <Bottom :showLine="$route.name === 'home'"/>
 </template>
