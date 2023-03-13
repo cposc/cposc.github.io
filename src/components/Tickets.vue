@@ -1,5 +1,5 @@
 <template>
-  <div class="opaqueBackground">
+  <div class="opaqueBackground" v-if="shouldShow()">
     <a target="_blank" href="https://www.eventbrite.com/e/the-thirteenth-annual-central-pa-open-source-conference-tickets-529845451007">
       <div class="ticketContainer">
         <h2>Tickets Available!</h2>
@@ -11,6 +11,26 @@
 </template>
 
 <script>
+import moment from 'moment';
+export default {
+  components: {},
+  data() {
+    return {}
+  },
+  methods: {
+    shouldShow: function() {
+      const eventDate = moment("04/01/2023", "MM/DD/YYYY");
+      const today = moment();
+      const daysDiff = eventDate.diff(today, "days");
+      
+      // hide "Tickets Available" on the day of the event
+      if (daysDiff > 0) {
+        return false;
+      }
+      return false;
+    }
+  }
+}
 </script>
 
 <style lang="scss" scoped>

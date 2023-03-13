@@ -14,17 +14,18 @@ import { RouterLink, RouterView } from "vue-router";
           </div>
           <div class="dropdownItems" :class="{ open: isOpen }">
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/volunteers">Volunteers</RouterLink>
+            <RouterLink to="/schedule">Schedule</RouterLink>
             <RouterLink to="/speakers">Speakers</RouterLink>
             <RouterLink to="/logistics">Travel</RouterLink>
+            <RouterLink to="/volunteers">Volunteers</RouterLink>
           </div>
         </div>
         <div class="headerLeft">
           <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/volunteers">Volunteers</RouterLink>
+          <RouterLink to="/schedule">Schedule</RouterLink>
           <RouterLink to="/speakers">Speakers</RouterLink>
           <RouterLink to="/logistics">Travel</RouterLink>
-          <!-- <RouterLink to="/schedule">Schedule</RouterLink> -->
+          <RouterLink to="/volunteers">Volunteers</RouterLink>
         </div>
         <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?">
           <div class="headerRight">
@@ -143,7 +144,7 @@ export default {
 
     .dropdownItems {
       &.open {
-        height: 180px !important;
+        height: 250px !important;
       }
 
       position: absolute;
