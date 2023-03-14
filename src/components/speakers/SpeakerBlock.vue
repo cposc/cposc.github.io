@@ -2,9 +2,19 @@
   <div class="speakerBlock" data-aos="zoom-out" data-aos-duration="5000" data-aos-easing="ease-in-out">
     <div class="left" :style="{'background-color': color}">
       <img
+        v-if="name === 'Bob Murphy'"
+        :alt="name"
+        src="@/assets/speakers/bob_murphy.jpg"
+      />
+      <img
         v-if="name === 'Deanna Bledsoe'"
         :alt="name"
         src="@/assets/speakers/deanna_bledsoe.jpg"
+      />
+      <img
+        v-if="name === 'Ean Dudley'"
+        :alt="name"
+        src="@/assets/speakers/ean_dudley.jpg"
       />
       <img
         v-if="name === 'Francis Wertz'"
@@ -20,6 +30,11 @@
         v-if="name === 'Joe Latrell'"
         :alt="name"
         src="@/assets/speakers/joe_latrell.png"
+      />
+      <img
+        v-if="name === 'Joel Walker'"
+        :alt="name"
+        src="@/assets/speakers/joel_walker.jpeg"
       />
       <img
         v-if="name === 'Jonathan Fleckenstein'"
@@ -45,6 +60,11 @@
         v-if="name === 'Nick Elzer'"
         :alt="name"
         src="@/assets/speakers/nick_elzer.jpeg"
+      />
+      <img
+        v-if="name === 'Richard Everts'"
+        :alt="name"
+        src="@/assets/speakers/rich_everts.jpg"
       />
       <img
         v-if="name === 'Ryan Walker'"
