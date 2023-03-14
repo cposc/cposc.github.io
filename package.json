@@ -5,6 +5,7 @@
     "dev": "vite",
     "build": "vite build",
     "deploy": "npm run build && gh-pages -d dist",
+    "push-live": "gh-pages -d dist",
     "preview": "vite preview",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
