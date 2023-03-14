@@ -24,8 +24,21 @@ export default {
       const daysDiff = eventDate.diff(today, "days");
       
       // hide "Tickets Available" on the day of the event
-      if (daysDiff > 0) {
+      if (daysDiff > 0 && !this.isInappropriatePage) {
         return true;
+      }
+      return false;
+    }
+  },
+  computed: {
+    isInappropriatePage() {
+      // ticket bubble should not appear on Code of Conduct
+      const route = this.$route;
+      if (route) {
+        const name = route.name;
+        if (name && name.includes("code-of-conduct")) {
+          return true
+        }
       }
       return false;
     }

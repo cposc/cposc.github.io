@@ -2,6 +2,11 @@
   <div class="speakerBlock" data-aos="zoom-out" data-aos-duration="5000" data-aos-easing="ease-in-out">
     <div class="left" :style="{'background-color': color}">
       <img
+        v-if="name === 'Alex Mayer'"
+        :alt="name"
+        src="@/assets/speakers/alex_mayer.jpeg"
+      />
+      <img
         v-if="name === 'Bob Murphy'"
         :alt="name"
         src="@/assets/speakers/bob_murphy.jpg"
@@ -15,6 +20,11 @@
         v-if="name === 'Ean Dudley'"
         :alt="name"
         src="@/assets/speakers/ean_dudley.jpg"
+      />
+      <img
+        v-if="name === 'Edward Schwartz'"
+        :alt="name"
+        src="@/assets/speakers/ed_schwartz.jpeg"
       />
       <img
         v-if="name === 'Francis Wertz'"
@@ -123,12 +133,15 @@ export default {
       return "@/assets/speakers/francis_wertz.png";
     },
     shouldShowReadMore: function(bio) {
+      // only show "read more" if bio is long enough
       return (bio.length > this.lengthLimit) ? true: false;
     },
     toggleReadMore: function() {
+      // toggle length of bio shown
       this.readMoreToggle = !this.readMoreToggle;
     },
     bioMinMax: function(bio) {
+      // determine length of bio shown to the user
       if (bio.length <= this.lengthLimit || this.readMoreToggle) {
         return bio;
       } else {

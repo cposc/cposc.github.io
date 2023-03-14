@@ -6,6 +6,7 @@
       src="@/assets/cposc-white-logo2016.png"
     />
     <div class="footerContent">
+      <h4><a href="/code-of-conduct">Code of Conduct</a></h4>
       <h4>Contact</h4>
       <p><i class="fa-regular fa-envelope"></i>Email: <a href="mailto:cposc@localareanetworks.org" target="_blank">cposc@localareanetworks.org</a></p>
       <h4>Follow on Social Media</h4>

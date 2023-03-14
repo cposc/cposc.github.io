@@ -5,6 +5,7 @@ import ScheduleView from "../views/ScheduleView.vue";
 import VolunteerView from "../views/VolunteerView.vue";
 import SpeakersView from "../views/SpeakersView.vue";
 import LogisticsView from "../views/LogisticsView.vue";
+import CodeOfConduct from "../views/CodeOfConduct.vue";
 import PageNotFound from "../views/PageNotFound.vue";
 
 const router = createRouter({
@@ -34,6 +35,11 @@ const router = createRouter({
       path: "/logistics",
       name: "logistics",
       component: LogisticsView,
+    },
+    {
+      path: "/code-of-conduct",
+      name: "code-of-conduct",
+      component: CodeOfConduct,
     },
     { path: "/:pathMatch(.*)*", component: PageNotFound }
     // {

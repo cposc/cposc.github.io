@@ -18,6 +18,7 @@ import { RouterLink, RouterView } from "vue-router";
             <RouterLink to="/speakers">Speakers</RouterLink>
             <RouterLink to="/logistics">Travel</RouterLink>
             <RouterLink to="/volunteers">Volunteers</RouterLink>
+            <RouterLink to="/code-of-conduct">Code of Conduct</RouterLink>
           </div>
         </div>
         <div class="headerLeft">
@@ -144,7 +145,7 @@ export default {
 
     .dropdownItems {
       &.open {
-        height: 250px !important;
+        height: 300px !important;
       }
 
       position: absolute;

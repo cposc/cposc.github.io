@@ -1,5 +1,5 @@
 <template>
-  <div class="scheduleBlock" :class="{ inactive: !show }">
+  <div class="scheduleBlock" :class="{ inactive: !shouldShow }">
     <div class="scheduleTime">{{ time }}</div>
     <div class="scheduleDetails">
       <p>{{ title }}</p>
@@ -24,21 +24,24 @@
 </template>
 
 <script>
+import moment from 'moment';
 export default {
   props: {
     time: String,
+    endTime: String,
     title: String,
     description: String,
-    sessions: Array,
-    show: Boolean
+    sessions: Array
   },
   data() {
     return {
-      isOpen: [true, true, true]
+      isOpen: [true, true, true],
+      minuteTrigger: 1
     }
   },
   methods: {
     toggleSchedule: function(index) {
+      // collapse/open a part of the schedule
       const proxyIsOpen = [...this.isOpen];
       proxyIsOpen[index] = !proxyIsOpen[index];
       this.isOpen = proxyIsOpen.map(p => p);
@@ -47,6 +50,7 @@ export default {
     }
   },
   mounted: function() {
+    // REMEMBER what sections the user collapsed/opened
     // on load, everything will be true
     // check user's localStorage to see if anything was closed
     if (this.sessions) {
@@ -64,6 +68,30 @@ export default {
         proxyIsOpen[2] = false;
       }
       this.isOpen = proxyIsOpen.map(p => p);
+
+      // every 30 seconds, trigger a calc update on whether a session should be opaque
+      let minute = 1;
+      setInterval(() => {
+        minute = minute + 1;
+        this.minuteTrigger = minute
+        // 1000 is once a second
+      }, 1000 * 30);
+    }
+  },
+  computed: {
+    shouldShow() {
+      // prompts computed function to recalculate
+      const triggerRecalc = this.minuteTrigger;
+      
+      const blockEndsAt = moment("2023-04-01 " + this.endTime);
+      const rightNow = moment();
+      const timeDiff = blockEndsAt.diff(rightNow);
+
+      // schedule block still in the future
+      if (timeDiff > 0) {
+        return true;
+      }
+      return false;
     }
   }
 }

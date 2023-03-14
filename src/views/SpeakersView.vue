@@ -27,14 +27,14 @@ export default {
     return {
       speakers: [
         {
-          imageURL: "",
+          imageURL: "alex_mayer.jpeg",
           name: "Alex Mayer",
           bio: "I have worked with computers for over a decade. During that time I have worked as both a Software Engineer and a Site Reliability Engineer. I use GNU/Linux and spend my time outside of work contributing to open-source projects."
         },
         {
           imageURL: "bob_murphy.jpg",
           name: "Bob Murphy",
-          bio: "I am a Linux Systems Administrator, I've been a user of GNU/Linux for my own personal use since the late nineties. I've used many distributions over the years, starting with Slackware, up to the latest Red Hat and Ubuntu releases."
+          bio: "I am a Linux Systems Administrator. I've been a user of GNU/Linux for my own personal use since the late nineties. I've used many distributions over the years, starting with Slackware, up to the latest Red Hat and Ubuntu releases."
         },
         {
           imageURL: "deanna_bledsoe.jpg",
@@ -47,14 +47,14 @@ export default {
           bio: " Ean Dudley is a driven and knowledgeable Cyber Security student at Penn State University. As an IT Support Specialist, Ean has honed their technical skills and is well-versed in the day-to-day operations of IT environments. With 5 years of experience in competitive cyber security environments, such as Capture the Flag and Attack Defense, Ean has a proven track record of success in the competitive environment. Ean's experience leading multiple IT and Cyber Security teams showcases their strong leadership skills, making them a valuable asset to any organization. As a SANS Tournament of Champions Qualifier, Ean demonstrates their expertise and critical thinking abilities in the field of cybersecurity. "
         },
         {
-          imageURL: "",
+          imageURL: "ed_schwartz.jpeg",
           name: "Edward Schwartz",
           bio: "I am a senior researcher scientist in the Software Engineering Institute at Carnegie Mellon University.  I study a variety of topics in binary analysis, including exploitation techniques and defenses."
         },
         {
           imageURL: "francis_wertz.jpeg",
           name: "Francis Wertz",
-          bio: "Hello I’m Francis Wertz. I’ve lived in Lancaster for a touch over a decade now. I’m   a Project Leader working in automotive telemetry. I consider myself a developer advocate, and strive to see my teams become more productive and engaged with their careers in enterprise solutions. I enjoy developing personal projects, homelab, helping small business, home improvement and finish carpentry. I’m married and share a home with my brilliant wife Emma, along with our many pets!"
+          bio: "Hello, I’m Francis Wertz. I’ve lived in Lancaster for a touch over a decade now. I’m   a Project Leader working in automotive telemetry. I consider myself a developer advocate, and strive to see my teams become more productive and engaged with their careers in enterprise solutions. I enjoy developing personal projects, homelab, helping small business, home improvement and finish carpentry. I’m married and share a home with my brilliant wife Emma, along with our many pets!"
         },
         {
           imageURL: "",
@@ -64,7 +64,7 @@ export default {
         {
           imageURL: "jacob_whetstone.jpeg",
           name: "Jacob Whetstone",
-          bio: "Jake is polyglot developer by happenstance, currently focusing on web app development. He's a husband and a father of two; a fan of punk rock, spicy food and bitter drink; trying to be a good neighbor."
+          bio: "Jake is a polyglot developer by happenstance, currently focusing on web app development. He's a husband and a father of two; a fan of punk rock, spicy food and bitter drink; trying to be a good neighbor."
         },
         {
           imageURL: "joe_latrell.png",
@@ -99,7 +99,7 @@ export default {
         {
           imageURL: "nick_elzer.jpeg",
           name: "Nick Elzer",
-          bio: "Nick Elzer was born and raised in Lancaster County, Pennsylvania and is currently studyinh manufacturing engineering technology at Millersville University. At quub, Nick works on development and prototyping for electrical and sensor integration, as well as the development of satellite schematics and PCB boards."
+          bio: "Nick Elzer was born and raised in Lancaster County, Pennsylvania and is currently studying manufacturing engineering technology at Millersville University. At quub, Nick works on development and prototyping for electrical and sensor integration, as well as the development of satellite schematics and PCB boards."
         },
         {
           imageURL: "rich_everts.jpg",
@@ -129,12 +129,12 @@ export default {
         {
           imageURL: "tom_swartz.jpeg",
           name: "Tom Swartz",
-          bio: "Tom is the Associate Director of Support and a developer with Crunchy Data, providing techincal assistance to hundreds of large organizations and programming software for and around PostgreSQL databases. An avid speaker, he as participated in many years of Central Pennsylvania Open Source Conferences, TechLancaster events, and other events in and around Central Pennsylvania. He is an avid enthusiast of mechanical keyboards, amateur radio, and is a passionate advocate for free and open source software. "
+          bio: "Tom is the Associate Director of Support and a developer with Crunchy Data, providing technical assistance to hundreds of large organizations and programming software for and around PostgreSQL databases. An avid speaker, he as participated in many years of Central Pennsylvania Open Source Conferences, TechLancaster events, and other events in and around Central Pennsylvania. He is an avid enthusiast of mechanical keyboards, amateur radio, and is a passionate advocate for free and open source software. "
         },
         {
           imageURL: "",
           name: "Walt Mankowski",
-          bio: "I'm a recovering recovering ivory tower computer scientist. I work in Penn Medicine's Radiology Department looking for better imaging biomarkers for breast and lung cancer. I also help run the Philadelphia Linux Users Group."
+          bio: "I'm a recovering, recovering ivory tower computer scientist. I work in Penn Medicine's Radiology Department looking for better imaging biomarkers for breast and lung cancer. I also help run the Philadelphia Linux Users Group."
         },
       ],
       lastColor: "",
@@ -142,7 +142,9 @@ export default {
   },
   methods: {
     imageBorderColor: function(index) {
+      // show a random border color for each speaker
       const colors = ["#2b3480", "#720b97", "#007eac", "#424242"];
+      // make sure the same color doesn't appear twice in a row
       let colorIdx;
       do {
         colorIdx = Math.floor(Math.random() * 4);
@@ -156,6 +158,7 @@ export default {
     }
   },
   mounted: function() {
+    // scroll to speaker profile based on anchor tag
     const routeHash = this.$route.hash.split("#")[1];
     const anchorElement = document.getElementById(routeHash);
     if (anchorElement) {
