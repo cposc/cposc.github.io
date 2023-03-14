@@ -25,7 +25,7 @@ export default {
       
       // hide "Tickets Available" on the day of the event
       if (daysDiff > 0) {
-        return false;
+        return true;
       }
       return false;
     }

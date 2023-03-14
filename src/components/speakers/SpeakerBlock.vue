@@ -1,6 +1,6 @@
 <template>
-  <div class="speakerBlock">
-    <div class="left">
+  <div class="speakerBlock" data-aos="zoom-out" data-aos-duration="5000" data-aos-easing="ease-in-out">
+    <div class="left" :style="{'background-color': color}">
       <img
         v-if="name === 'Deanna Bledsoe'"
         :alt="name"
@@ -27,6 +27,11 @@
         src="@/assets/speakers/jonathan_fleckenstein.jpeg"
       />
       <img
+        v-if="name === 'Kevin Hicks'"
+        :alt="name"
+        src="@/assets/speakers/kevin_hicks.jpg"
+      />
+      <img
         v-if="name === 'Luke Demi'"
         :alt="name"
         src="@/assets/speakers/luke_demi.jpeg"
@@ -37,6 +42,31 @@
         src="@/assets/speakers/nathaniel_evry.png"
       />
       <img
+        v-if="name === 'Nick Elzer'"
+        :alt="name"
+        src="@/assets/speakers/nick_elzer.jpeg"
+      />
+      <img
+        v-if="name === 'Ryan Walker'"
+        :alt="name"
+        src="@/assets/speakers/ryan_walker.jpg"
+      />
+      <img
+        v-if="name === 'Samantha Noggle'"
+        :alt="name"
+        src="@/assets/speakers/samantha_noggle.jpg"
+      />
+      <img
+        v-if="name === 'Stephanie Schwartz'"
+        :alt="name"
+        src="@/assets/speakers/Stephanie-Schwartz.jpg"
+      />
+      <img
+        v-if="name === 'Thomas Knickman'"
+        :alt="name"
+        src="@/assets/speakers/thomas_knickman.jpeg"
+      />
+      <img
         v-if="name === 'Tom Swartz'"
         :alt="name"
         src="@/assets/speakers/tom_swartz.jpeg"
@@ -44,23 +74,46 @@
       <div class="blankImage" v-if="imageUrl === ''"></div>
     </div>
     <div class="right">
-      <p class="name">{{ name }}</p>
-      <p>{{ bio }}</p>
+      <p class="name" :id="nameAnchor">{{ name }}</p>
+      <p>{{ bioMinMax(bio) }} <span v-if="shouldShowReadMore(bio)" v-on:click="toggleReadMore()" style="text-decoration: underline;cursor: pointer"> Read {{ readMoreToggle ? "Less" : "More" }} </span></p>
     </div>
   </div>
 </template>
 
 <script>
+import { ref } from "vue";
 export default {
   props: {
     imageUrl: String,
     name: String,
+    nameAnchor: String,
     bio: String,
+    index: Number,
+    color: String,
+  },
+  data() {
+    return {
+      lastColor: "",
+      readMoreToggle: false,
+      lengthLimit: 600
+    }
   },
   methods: {
     toImageURL: function(img) {
-      console.log(`@/assets/${img}`)
       return "@/assets/speakers/francis_wertz.png";
+    },
+    shouldShowReadMore: function(bio) {
+      return (bio.length > this.lengthLimit) ? true: false;
+    },
+    toggleReadMore: function() {
+      this.readMoreToggle = !this.readMoreToggle;
+    },
+    bioMinMax: function(bio) {
+      if (bio.length <= this.lengthLimit || this.readMoreToggle) {
+        return bio;
+      } else {
+        return `${bio.substring(0, this.lengthLimit)}...`
+      }
     }
   }
 }
@@ -84,7 +137,13 @@ export default {
   }
   
   .left {
-
+    padding: 1rem;
+    border-radius: 10px;
+    margin-right: 2rem;
+    
+    @media screen and (max-width: 650px) {
+      margin-right: 0;
+    }
   }
 
   .right > p {
@@ -108,12 +167,7 @@ export default {
     width: 200px;
     border-radius: 10px;
     object-fit: cover;
-    margin-right: 2rem;
     background-color: grey;
-
-    @media screen and (max-width: 650px) {
-      margin-right: 0;
-    }
   }
 }
 </style>
