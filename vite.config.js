@@ -13,7 +13,10 @@ export default defineConfig({
         volunteers: './volunteers/index.html',
         speakers: './speakers/index.html',
         logistics: './logistics/index.html',
-        404: './404.html'
+        codeOfConduct: './code-of-conduct/index.html',
+        schedule: './schedule/index.html',
+        404: './404.html',
+        cname: './CNAME'
         // ...
         // List all files you want in your build
       }
