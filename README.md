@@ -18,7 +18,7 @@ The following command runs the project locally [here](http://127.0.0.1:5173/).
 npm run dev
 ```
 
-### Compile and Minify for Production
+### DEPLOY
 
 This codebase is set up with Github Pages - meaning, anything on a pre-determined branch is in "production" and is visible as a website.
 
@@ -26,10 +26,12 @@ This codebase is set up with Github Pages - meaning, anything on a pre-determine
 
 When ready to deploy, run the following commands.
 ```sh
+npm run build
+// copy and paste the CNAME file from the root directory, to inside the /dist folder
 git add .
 git commit -m "message describing my changes"
 git push origin master
-npm run build
+npm run push-live
 ```
 The command `npm run build` is set to push your built `dist` files to the `gh-pages` branch. Github will then display the contents of `gh-pages` as a website.
 
