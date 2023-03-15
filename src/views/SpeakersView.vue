@@ -89,7 +89,7 @@ export default {
         {
           imageURL: "luke_demi.jpg",
           name: "Luke Demi",
-          bio: "This presentation will take attendees on a journey into the world of AI language models, with a focus on GPT-3 and its impact on written content. Specifically, the speaker will discuss how they used AI and prompt engineering techniques to create a recursive talk about creating a talk. Attendees will gain insight into the process of refining an initial prompt and generating slides from an outline, as well as the ethical implications of machine-written speeches and the future of work for human talk writers. Moreover, the speaker will explore whether using AI to generate content is worth it in the long run, and how it is changing the landscape of content creation. Through this engaging and thought-provoking talk, attendees will leave with a deeper understanding of how AI is shaping the way we create content, and the potential consequences of relying on it for our creative needs."
+          bio: "Meet Luke, a software engineer who specializes in solving infrastructure scalability issues. He has been lucky to have tackled some tough challenges during high-growth periods at companies like Coinbase, Clubhouse, and DoorDash. When he's not busy scaling in the tech world, you can find him in Lancaster city with his three kids, who are likely scaling in height as well."
         },
         {
           imageURL: "nathaniel_evry.jpg",
