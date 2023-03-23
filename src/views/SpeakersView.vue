@@ -132,7 +132,7 @@ export default {
           bio: "Tom is the Associate Director of Support and a developer with Crunchy Data, providing technical assistance to hundreds of large organizations and programming software for and around PostgreSQL databases. An avid speaker, he as participated in many years of Central Pennsylvania Open Source Conferences, TechLancaster events, and other events in and around Central Pennsylvania. He is an avid enthusiast of mechanical keyboards, amateur radio, and is a passionate advocate for free and open source software. "
         },
         {
-          imageURL: "",
+          imageURL: "walt_mankowski.jpg",
           name: "Walt Mankowski",
           bio: "I'm a recovering, recovering ivory tower computer scientist. I work in Penn Medicine's Radiology Department looking for better imaging biomarkers for breast and lung cancer. I also help run the Philadelphia Linux Users Group."
         },
