@@ -8,7 +8,7 @@ import ScheduleBlock from "../components/schedule/ScheduleBlock.vue";
     <h1>The Schedule</h1>
     <div class="line"></div>
     <div class="scheduleContent">
-      <p style="margin: 2rem;">Welcome to CPOSC, and thank you for contributing to our local technology community. Below, you'll find the schedule for our event taking place on April 1st, 2023. </p><p> As the day progresses, the schedule will adjust to focus only one what's upcoming. Who needs to know what already happened? Been there, done that. Individual talks, as well as entire sections of the day, are able to be collapsed and expanded again. Your browser will remember these changes in the event that you refresh this page or open a new tab.</p>
+      <p style="margin: 2rem;">Welcome to CPOSC, and thank you for contributing to our local technology community. Below, you'll find the schedule for our event taking place on April 1st, 2023. </p><p> As the day progresses, the schedule will adjust to focus only on what's upcoming. Who needs to know what already happened? Been there, done that. Individual talks, as well as entire sections of the day, are able to be collapsed and expanded again. Your browser will remember these changes in the event that you refresh this page or open a new tab.</p>
       <h3 v-if="shouldShowOver" style="text-align: center; margin: 2rem; padding: 0;">The event is over, and we had a blast! Stay tuned as we begin planning our 2024 event.</h3>
       <h3 :class="{ inactive: shouldShowMorning }">
         Morning
