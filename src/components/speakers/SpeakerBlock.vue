@@ -101,6 +101,11 @@
         :alt="name"
         src="@/assets/speakers/tom_swartz.jpeg"
       />
+      <img
+        v-if="name === 'Walt Mankowski'"
+        :alt="name"
+        src="@/assets/speakers/walt_mankowski.jpg"
+      />
       <div class="blankImage" v-if="imageUrl === ''"></div>
     </div>
     <div class="right">
