@@ -106,6 +106,11 @@
         :alt="name"
         src="@/assets/speakers/walt_mankowski.jpg"
       />
+      <img
+        v-if="name === 'Gregory Ember'"
+        :alt="name"
+        src="@/assets/speakers/gregember.jpg"
+      />
       <div class="blankImage" v-if="imageUrl === ''"></div>
     </div>
     <div class="right">

@@ -57,7 +57,7 @@ export default {
           bio: "Hello, I’m Francis Wertz. I’ve lived in Lancaster for a touch over a decade now. I’m   a Project Leader working in automotive telemetry. I consider myself a developer advocate, and strive to see my teams become more productive and engaged with their careers in enterprise solutions. I enjoy developing personal projects, homelab, helping small business, home improvement and finish carpentry. I’m married and share a home with my brilliant wife Emma, along with our many pets!"
         },
         {
-          imageURL: "",
+          imageURL: "gregember.jpg",
           name: "Gregory Ember",
           bio: "Greg is a Lititz-based IT consultant, systems administrator and project manager. He attended both the University of Delaware and Millersville University in their Computer Science departments before receiving his B.S. in Information Science and Technology from Penn State University. In his spare time over the past twenty years he has assisted the MAME project as 'project facilitator'. His interests include technical documentation, software preservation, digital asset management, knowledge management, data mining, intellectual property law, and the open source community. "
         },
