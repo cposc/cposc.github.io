@@ -1,8 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import TopNav from "./components/TopNav.vue";
-import Tickets from "./components/Tickets.vue";
-import Bottom from "./components/Bottom.vue";
+import TopNav from "./components/2023/TopNav.vue";
+import Tickets from "./components/2023/Tickets.vue";
+import Bottom from "./components/2023/Bottom.vue";
 </script>
 
 <template>

@@ -1,5 +1,5 @@
 <script setup>
-import GradientContainer from "../components/GradientContainer.vue";
+import GradientContainer from "../components/2023/GradientContainer.vue";
 </script>
 
 <template>
@@ -14,7 +14,7 @@ import GradientContainer from "../components/GradientContainer.vue";
       <h3 style="margin-top:0;"><a style="color: white;" href="https://www.google.com/maps/search/?api=1&query=The+Ware+Center+-+Millersville+University" target="_blank">Lancaster, PA 17603</a></h3>
       <img
         alt="Static Ware Center Map"
-        src="@/assets/static_map.png"
+        src="@/assets/2023/static_map.png"
       />
       <p>Parking will be provided at the Prince Street Garage at the corner of N Prince and W Orange Street, just a half block from the venue. Look for more information on how to redeem this complimentary closer to the event.</p>
       <p>The Lancaster Amtrak station is just over a mile from the Ware Center, at 53 McGovern Avenue. Trains are available throughout the day from many destinations including 30th Street Station in Philadelphia.</p>

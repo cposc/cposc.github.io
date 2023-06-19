@@ -2,7 +2,7 @@
   <div class="promoContainer">
     <img
       alt="CPOSC Founder Presenting"
-      src="@/assets/CPOSC_edited.jpg"
+      src="@/assets/2023/CPOSC_edited.jpg"
     />
     <div class="imageOverlay"></div>
     

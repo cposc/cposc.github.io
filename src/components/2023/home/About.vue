@@ -14,7 +14,7 @@
       <div class="aboutImage">
         <img
           alt="CPOSC Audience 2019"
-          src="@/assets/CPOSC_2019.jpg"
+          src="@/assets/2023/CPOSC_2019.jpg"
         />
       </div>
     </div>

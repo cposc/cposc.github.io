@@ -4,63 +4,63 @@
       <img
         v-if="name === 'Crunchy Data'"
         :alt="name"
-        src="@/assets/sponsors/crunchy.png"
+        src="@/assets/2023/sponsors/crunchy.png"
       />
       <img
         v-if="name === 'Boyd Technical Solutions'"
         :alt="name"
-        src="@/assets/sponsors/boyd.png"
+        src="@/assets/2023/sponsors/boyd.png"
       />
       <img
         v-if="name === 'Cargas'"
         :alt="name"
-        src="@/assets/sponsors/cargas.png"
+        src="@/assets/2023/sponsors/cargas.png"
       />
       <img
         v-if="name === 'HUG'"
         :alt="name"
-        src="@/assets/sponsors/hug-logo.png"
+        src="@/assets/2023/sponsors/hug-logo.png"
       />
       <img
         v-if="name === 'Industrial Resolution'"
         :alt="name"
-        src="@/assets/sponsors/indyres.png"
+        src="@/assets/2023/sponsors/indyres.png"
       />
       <img
         v-if="name === 'JFC Global'"
         :alt="name"
-        src="@/assets/sponsors/jfc.png"
+        src="@/assets/2023/sponsors/jfc.png"
       />
       <img
         v-if="name === 'Listrak'"
         :alt="name"
-        src="@/assets/sponsors/Listrak-Large.png"
+        src="@/assets/2023/sponsors/Listrak-Large.png"
       />
       <img
         v-if="name === 'Quub'"
         :alt="name"
-        src="@/assets/sponsors/quublogo.svg"
+        src="@/assets/2023/sponsors/quublogo.svg"
       />
       <img
         v-if="name === 'Mind Development & Design'"
         :alt="name"
-        src="@/assets/sponsors/mind.png"
+        src="@/assets/2023/sponsors/mind.png"
       />
       <img
         v-if="name === 'Seisan'"
         :alt="name"
-        src="@/assets/sponsors/seisan.png"
+        src="@/assets/2023/sponsors/seisan.png"
       />
       <img
         v-if="name === 'WebstaurantStore'"
         :alt="name"
         class="web"
-        src="@/assets/sponsors/webstaurant-logo-w-icon.svg"
+        src="@/assets/2023/sponsors/webstaurant-logo-w-icon.svg"
       />
       <img
         v-if="name === 'Elastic'"
         :alt="name"
-        src="@/assets/sponsors/elastic-logo.svg"
+        src="@/assets/2023/sponsors/elastic-logo.svg"
       />
       <!-- <h4>{{ name }}</h4> -->
     </div>

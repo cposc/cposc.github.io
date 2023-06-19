@@ -4,112 +4,112 @@
       <img
         v-if="name === 'Alex Mayer'"
         :alt="name"
-        src="@/assets/speakers/alex_mayer.jpeg"
+        src="@/assets/2023/speakers/alex_mayer.jpeg"
       />
       <img
         v-if="name === 'Bob Murphy'"
         :alt="name"
-        src="@/assets/speakers/bob_murphy.jpg"
+        src="@/assets/2023/speakers/bob_murphy.jpg"
       />
       <img
         v-if="name === 'Deanna Bledsoe'"
         :alt="name"
-        src="@/assets/speakers/deanna_bledsoe.jpg"
+        src="@/assets/2023/speakers/deanna_bledsoe.jpg"
       />
       <img
         v-if="name === 'Ean Dudley'"
         :alt="name"
-        src="@/assets/speakers/ean_dudley.jpg"
+        src="@/assets/2023/speakers/ean_dudley.jpg"
       />
       <img
         v-if="name === 'Edward Schwartz'"
         :alt="name"
-        src="@/assets/speakers/ed_schwartz.jpeg"
+        src="@/assets/2023/speakers/ed_schwartz.jpeg"
       />
       <img
         v-if="name === 'Francis Wertz'"
         :alt="name"
-        src="@/assets/speakers/francis_wertz.png"
+        src="@/assets/2023/speakers/francis_wertz.png"
       />
       <img
         v-if="name === 'Jacob Whetstone'"
         :alt="name"
-        src="@/assets/speakers/jacob_whetstone.jpeg"
+        src="@/assets/2023/speakers/jacob_whetstone.jpeg"
       />
       <img
         v-if="name === 'Joe Latrell'"
         :alt="name"
-        src="@/assets/speakers/joe_latrell.png"
+        src="@/assets/2023/speakers/joe_latrell.png"
       />
       <img
         v-if="name === 'Joel Walker'"
         :alt="name"
-        src="@/assets/speakers/joel_walker.jpeg"
+        src="@/assets/2023/speakers/joel_walker.jpeg"
       />
       <img
         v-if="name === 'Jonathan Fleckenstein'"
         :alt="name"
-        src="@/assets/speakers/jonathan_fleckenstein.jpeg"
+        src="@/assets/2023/speakers/jonathan_fleckenstein.jpeg"
       />
       <img
         v-if="name === 'Kevin Hicks'"
         :alt="name"
-        src="@/assets/speakers/kevin_hicks.jpg"
+        src="@/assets/2023/speakers/kevin_hicks.jpg"
       />
       <img
         v-if="name === 'Luke Demi'"
         :alt="name"
-        src="@/assets/speakers/luke_demi.jpeg"
+        src="@/assets/2023/speakers/luke_demi.jpeg"
       />
       <img
         v-if="name === 'Nathaniel Evry'"
         :alt="name"
-        src="@/assets/speakers/nathaniel_evry.png"
+        src="@/assets/2023/speakers/nathaniel_evry.png"
       />
       <img
         v-if="name === 'Nick Elzer'"
         :alt="name"
-        src="@/assets/speakers/nick_elzer.jpeg"
+        src="@/assets/2023/speakers/nick_elzer.jpeg"
       />
       <img
         v-if="name === 'Richard Everts'"
         :alt="name"
-        src="@/assets/speakers/rich_everts.jpg"
+        src="@/assets/2023/speakers/rich_everts.jpg"
       />
       <img
         v-if="name === 'Ryan Walker'"
         :alt="name"
-        src="@/assets/speakers/ryan_walker.jpg"
+        src="@/assets/2023/speakers/ryan_walker.jpg"
       />
       <img
         v-if="name === 'Samantha Noggle'"
         :alt="name"
-        src="@/assets/speakers/samantha_noggle.jpg"
+        src="@/assets/2023/speakers/samantha_noggle.jpg"
       />
       <img
         v-if="name === 'Stephanie Schwartz'"
         :alt="name"
-        src="@/assets/speakers/Stephanie-Schwartz.jpg"
+        src="@/assets/2023/speakers/Stephanie-Schwartz.jpg"
       />
       <img
         v-if="name === 'Thomas Knickman'"
         :alt="name"
-        src="@/assets/speakers/thomas_knickman.jpeg"
+        src="@/assets/2023/speakers/thomas_knickman.jpeg"
       />
       <img
         v-if="name === 'Tom Swartz'"
         :alt="name"
-        src="@/assets/speakers/tom_swartz.jpeg"
+        src="@/assets/2023/speakers/tom_swartz.jpeg"
       />
       <img
         v-if="name === 'Walt Mankowski'"
         :alt="name"
-        src="@/assets/speakers/walt_mankowski.jpg"
+        src="@/assets/2023/speakers/walt_mankowski.jpg"
       />
       <img
         v-if="name === 'Gregory Ember'"
         :alt="name"
-        src="@/assets/speakers/gregember.jpg"
+        src="@/assets/2023/speakers/gregember.jpg"
       />
       <div class="blankImage" v-if="imageUrl === ''"></div>
     </div>
@@ -140,7 +140,7 @@ export default {
   },
   methods: {
     toImageURL: function(img) {
-      return "@/assets/speakers/francis_wertz.png";
+      return "@/assets/2023/speakers/francis_wertz.png";
     },
     shouldShowReadMore: function(bio) {
       // only show "read more" if bio is long enough

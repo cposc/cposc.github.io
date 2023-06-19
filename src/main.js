@@ -7,7 +7,7 @@ import 'aos/dist/aos.css';
 import App from "./App.vue";
 import router from "./router";
 
-import "./assets/main.css";
+import "./assets/2023/main.css";
 
 const app = createApp(App);
 

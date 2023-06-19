@@ -1,5 +1,5 @@
 <script setup>
-import ScheduleBlock from "../components/schedule/ScheduleBlock.vue";
+import ScheduleBlock from "../components/2023/schedule/ScheduleBlock.vue";
 </script>
 
 <template>
@@ -200,7 +200,7 @@ export default {
       if (timeDiff > 0) {
         return true;
       }
-      return false;
+      return true;
     },
     toggleSchedule: function(index) {
       // toggle whether part of the schedule is shown/hidden
@@ -252,7 +252,7 @@ export default {
     shouldShowLunch() {
       // prompts computed function to recalculate
       const triggerRecalc = this.minuteTrigger;
-      return !this.shouldShowBlock('13:00');
+      return true
     },
     shouldShowAfternoon() {
       // prompts computed function to recalculate

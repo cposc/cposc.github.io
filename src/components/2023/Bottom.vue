@@ -3,7 +3,7 @@
     <div class="divider" v-if="showLine"></div>
     <img
       alt="CPOSC Logo White"
-      src="@/assets/cposc-white-logo2016.png"
+      src="@/assets/2023/cposc-white-logo2016.png"
     />
     <div class="footerContent">
       <h4><a href="/code-of-conduct">Code of Conduct</a></h4>

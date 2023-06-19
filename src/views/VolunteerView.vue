@@ -1,5 +1,5 @@
 <script setup>
-import GradientContainer from "../components/GradientContainer.vue";
+import GradientContainer from "../components/2023/GradientContainer.vue";
 </script>
 
 <template>

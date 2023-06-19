@@ -1,6 +1,6 @@
 <script setup>
-import GradientContainer from "../components/GradientContainer.vue";
-import SpeakerBlock from "../components/speakers/SpeakerBlock.vue";
+import GradientContainer from "../components/2023/GradientContainer.vue";
+import SpeakerBlock from "../components/2023/speakers/SpeakerBlock.vue";
 </script>
 
 <template>
