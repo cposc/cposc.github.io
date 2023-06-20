@@ -1,10 +1,19 @@
 <template>
-  <div class="opaqueBackground" v-if="shouldShow()">
+  <div class="opaqueBackground" v-if="shouldShowTickets()">
     <a target="_blank" href="https://www.eventbrite.com/e/the-thirteenth-annual-central-pa-open-source-conference-tickets-529845451007">
       <div class="ticketContainer">
         <h2>Tickets Available!</h2>
         <div class="divider"></div>
         <p>Click to view our ticket options.</p>
+      </div>
+    </a>
+  </div>
+  <div class="opaqueBackground" v-if="shouldShowLightning()">
+    <a target="_blank" href="https://www.eventbrite.com/e/the-thirteenth-annual-central-pa-open-source-conference-tickets-529845451007">
+      <div class="ticketContainer">
+        <h2>Lightning Talks!</h2>
+        <div class="divider"></div>
+        <p>Click to submit a talk.</p>
       </div>
     </a>
   </div>
@@ -18,14 +27,25 @@ export default {
     return {}
   },
   methods: {
-    shouldShow: function() {
-      const eventDate = moment("04/01/2023", "MM/DD/YYYY");
+    shouldShowTickets: function() {
+      const eventDate = moment("04/06/2024", "MM/DD/YYYY");
       const today = moment();
       const daysDiff = eventDate.diff(today, "days");
       
       // hide "Tickets Available" on the day of the event
       if (daysDiff > 0 && !this.isInappropriatePage) {
-        return true;
+        // return true;
+      }
+      return false;
+    },
+    shouldShowLightning: function() {
+      const eventDate = moment("04/06/2024", "MM/DD/YYYY");
+      const today = moment();
+      const daysDiff = eventDate.diff(today, "days");
+      
+      // show "Lightning Talks" on the day of the event
+      if (daysDiff < 0 && !this.isInappropriatePage) {
+        // return true;
       }
       return false;
     }

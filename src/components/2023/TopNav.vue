@@ -13,24 +13,26 @@ import { RouterLink, RouterView } from "vue-router";
             <div></div>
           </div>
           <div class="dropdownItems" :class="{ open: isOpen }">
-            <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/schedule">Schedule</RouterLink>
-            <RouterLink to="/speakers">Speakers</RouterLink>
-            <RouterLink to="/logistics">Travel</RouterLink>
-            <RouterLink to="/volunteers">Volunteers</RouterLink>
+            <RouterLink to="/2023">Home</RouterLink>
+            <RouterLink to="/2023/schedule">Schedule</RouterLink>
+            <RouterLink to="/2023/speakers">Speakers</RouterLink>
+            <RouterLink to="/2023/logistics">Travel</RouterLink>
+            <!-- <RouterLink to="/2023/volunteers">Volunteers</RouterLink> -->
             <RouterLink to="/code-of-conduct">Code of Conduct</RouterLink>
           </div>
         </div>
         <div class="headerLeft">
-          <RouterLink to="/">Home</RouterLink>
-          <RouterLink to="/schedule">Schedule</RouterLink>
-          <RouterLink to="/speakers">Speakers</RouterLink>
-          <RouterLink to="/logistics">Travel</RouterLink>
-          <RouterLink to="/volunteers">Volunteers</RouterLink>
+          <RouterLink to="/2023">Home</RouterLink>
+          <RouterLink to="/2023/schedule">Schedule</RouterLink>
+          <RouterLink to="/2023/speakers">Speakers</RouterLink>
+          <RouterLink to="/2023/logistics">Travel</RouterLink>
+          <!-- <RouterLink to="/2023/volunteers">Volunteers</RouterLink> -->
         </div>
-        <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?">
+        <!-- <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?"> -->
+        <a target="_blank" href="https://cposc.org/">
           <div class="headerRight">
-            <div>GET INVOLVED</div>
+            <!-- <div>GET INVOLVED</div> -->
+            <div>CPOSC 2024</div>
           </div>
         </a>
         <div class="hamburgerOverlay" :class="{ open: isOpen }" @click="toggleMenu()"></div>

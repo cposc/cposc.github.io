@@ -1,15 +1,24 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
-import TopNav from "./components/2023/TopNav.vue";
+import TopNav2023 from "./components/2023/TopNav.vue";
+import TopNav2024 from "./components/2024/TopNav.vue";
 import Tickets from "./components/2023/Tickets.vue";
-import Bottom from "./components/2023/Bottom.vue";
+import Bottom2023 from "./components/2023/Bottom.vue";
+import Bottom2024 from "./components/2024/Bottom.vue";
 </script>
 
 <template>
-  <TopNav />
-  <Tickets />
-  <RouterView />
-  <Bottom :showLine="$route.name === 'home'"/>
+  <template v-if="['2023', 'schedule2023', 'volunteers2023', 'speakers2023', 'logistics2023'].includes($route.name)">
+    <TopNav2023 />
+    <RouterView />
+    <Bottom2023 :showLine="$route.name === '2023'"/>
+  </template>
+  <template v-else>
+    <TopNav2024 />
+    <Tickets />
+    <RouterView />
+    <Bottom2024 :showLine="$route.name === 'home'"/>
+  </template>
 </template>
 
 <script>

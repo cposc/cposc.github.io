@@ -4,6 +4,11 @@ import GradientContainer from "../components/2023/GradientContainer.vue";
 
 <template>
   <div class="pageContainer">
+    <img
+      class="headerImage"
+      alt="CPOSC Founder Presenting"
+      src="@/assets/2024/CPOSC_Cover_2024_Galaxy.png"
+    />
     <h4>CONDUCT</h4>
     <h1>Code of Conduct</h1>
     <div class="line"></div>
@@ -30,13 +35,36 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.headerImage {
+  height: 82px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.pageContainer {
+  background-color: white;
+}
+
 p > a {
-  color: white;
+  color: #1F1F1F;
   transition: color 0.25s;
 
   &:hover {
     color: #848699;
   }
+}
+
+h1 {
+  color: #A7609B;
+  margin-bottom: 6px;
+}
+
+.line {
+  background-color: #A7609B;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -45,17 +73,17 @@ p {
   }
 }
 
-img {
-  max-width: 800px;
+// img {
+//   // max-width: 800px;
 
-  @media screen and (max-width: 800px) and (min-width: 500px) {
-    width: 100%;
-  }
+//   @media screen and (max-width: 800px) and (min-width: 500px) {
+//     width: 100%;
+//   }
 
-  @media screen and (max-width: 500px) {
-    width: 100vw;
-  }
-}
+//   @media screen and (max-width: 500px) {
+//     width: 100vw;
+//   }
+// }
 
 .pageContent {
   display: flex;
