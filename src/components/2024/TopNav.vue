@@ -29,7 +29,7 @@ import { RouterLink, RouterView } from "vue-router";
           <RouterLink to="/volunteers">Volunteers</RouterLink>
           <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?">
             <div>
-              <div>GET INVOLVED</div>
+              <div>JOIN THE CREW</div>
             </div>
           </a>
         </div>
@@ -110,13 +110,13 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 50px;
+    height: 80px;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
     
     .hamburger {
       cursor: pointer;
-      padding: 12px;
+      padding: 23px;
 
       div {
         width: 35px;
@@ -147,7 +147,7 @@ export default {
 
     .dropdownItems {
       &.open {
-        height: 300px !important;
+        height: 350px !important;
       }
 
       position: absolute;
@@ -163,7 +163,7 @@ export default {
       a {
         background-color: #1b1b1b;
         width: 100%;
-        padding: 10px;
+        padding: 20px;
         text-align: center;
         border-bottom: 1px solid #1F1F1F;
         transition: background-color 0.25s;

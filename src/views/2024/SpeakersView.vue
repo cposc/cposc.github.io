@@ -2,7 +2,6 @@
 import GradientContainer from "../../components/2023/GradientContainer.vue";
 // import SpeakerBlock from "../../components/2023/speakers/SpeakerBlock.vue";
 
-// TODO: STUDENT SPEAKERS
 </script>
 
 <template>
@@ -21,12 +20,12 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
         <p>While we appreciate your enthusiasm in joining our crew, Friendship CPOSC is still prepping for its next voyage. Revisit this page for updates!</p>
         <p style="margin-bottom: 3rem;">Below are speakers from previous trips around the sun.</p>
         
-        <div style="width: 1000px; margin-left: -7rem; margin-bottom: 3rem;">
-          <carousel :items-to-show="4.5" :wrap-around="true" :autoplay="5000">
+        <div class="speakerCarousel">
+          <carousel :items-to-show="itemsToShow" :wrap-around="true" :autoplay="5000">
             <!-- <slide v-for="slide in 10" :key="slide">
               {{ slide }}
             </slide> -->
-            <slide key="1" :slide-width="350">
+            <slide key="1" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -34,7 +33,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="2" :slide-width="350">
+            <slide key="2" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -42,7 +41,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="3" :slide-width="350">
+            <slide key="3" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -50,7 +49,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="4" :slide-width="350">
+            <slide key="4" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -58,7 +57,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="5" :slide-width="350">
+            <slide key="5" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -66,7 +65,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="6" :slide-width="350">
+            <slide key="6" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -74,7 +73,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="7" :slide-width="350">
+            <slide key="7" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -82,7 +81,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="8" :slide-width="350">
+            <slide key="8" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -90,7 +89,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="9" :slide-width="350">
+            <slide key="9" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -98,7 +97,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="10" :slide-width="350">
+            <slide key="10" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -106,7 +105,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="11" :slide-width="350">
+            <slide key="11" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -114,7 +113,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="12" :slide-width="350">
+            <slide key="12" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -122,7 +121,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="13" :slide-width="350">
+            <slide key="13" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -130,7 +129,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="14" :slide-width="350">
+            <slide key="14" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -138,7 +137,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="15" :slide-width="350">
+            <slide key="15" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -146,7 +145,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="16" :slide-width="350">
+            <slide key="16" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -154,7 +153,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="17" :slide-width="350">
+            <slide key="17" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -162,7 +161,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="18" :slide-width="350">
+            <slide key="18" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -170,7 +169,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="19" :slide-width="350">
+            <slide key="19" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -178,7 +177,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="20" :slide-width="350">
+            <slide key="20" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -186,7 +185,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
                 />
               </div>
             </slide>
-            <slide key="21" :slide-width="350">
+            <slide key="21" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
                   alt="CPOSC Audience 2019"
@@ -199,6 +198,135 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
               <pagination />
             </template>
           </carousel>
+        </div>
+
+        <div class="mobileSpeakers">
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/alex_mayer.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/bob_murphy.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/deanna_bledsoe.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/ean_dudley.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/ed_schwartz.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/gregember.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/jacob_whetstone.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/joe_latrell.png"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/joel_walker.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/jonathan_fleckenstein.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/kevin_hicks.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/luke_demi.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/nathaniel_evry.png"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/nick_elzer.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/rich_everts.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/ryan_walker.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/samantha_noggle.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/Stephanie-Schwartz.jpg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/thomas_knickman.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/tom_swartz.jpeg"
+            />
+          </div>
+          <div class="aboutImage">
+            <img
+              alt="CPOSC Audience 2019"
+              src="@/assets/2023/speakers/walt_mankowski.jpg"
+            />
+          </div>
         </div>
         <!-- NOTE: BEFORE SPEAKERS HAVE BEEN SELECTED -->
         <!-- <p>We’re ready for you! You can submit your talk using <a href="https://forms.gle/7XxjyBCzKFUyvj8R8" target="_blank">this form</a>.</p>
@@ -341,6 +469,7 @@ export default {
       //   },
       // ],
       lastColor: "",
+      innerWidth: window.innerWidth
     }
   },
   methods: {
@@ -358,17 +487,47 @@ export default {
       return colors[index % 3]
     },
     getNameAnchor: function(name) {
-      return name.split(" ").join("+");
+      // return name.split(" ").join("+");
+    },
+    myEventHandler(e) {
+      // your code for handling resize...
+      this.innerWidth = window.innerWidth;
+    }
+  },
+  created() {
+    window.addEventListener("resize", this.myEventHandler);
+  },
+  destroyed() {
+    window.removeEventListener("resize", this.myEventHandler);
+  },
+  computed: {
+    itemsToShow: function() {
+      if (this.innerWidth <= 600) {
+        return 1;
+      } else if (this.innerWidth <= 1150) {
+        return 2.5;
+      }
+      return 4.5
+    },
+    slideWidth: function() {
+      if (this.innerWidth <= 600) {
+        return 150;
+      } else if (this.innerWidth <= 1150) {
+        console.log(150)
+        return 150;
+      }
+      console.log(350)
+      return 350
     }
   },
   mounted: function() {
     // scroll to speaker profile based on anchor tag
-    const routeHash = this.$route.hash.split("#")[1];
-    const anchorElement = document.getElementById(routeHash);
-    if (anchorElement) {
-      var top = anchorElement.offsetTop - 40;
-      window.scrollTo(0, top);
-    }
+    // const routeHash = this.$route.hash.split("#")[1];
+    // const anchorElement = document.getElementById(routeHash);
+    // if (anchorElement) {
+    //   var top = anchorElement.offsetTop - 40;
+    //   window.scrollTo(0, top);
+    // }
   }
 }
 </script>
@@ -418,6 +577,12 @@ p > a {
   }
 }
 
+p {
+  @media screen and (max-width: 860px) {
+    width: 95%;
+  }
+}
+
 .aboutImage {
   margin-left: 2rem;
 
@@ -435,4 +600,110 @@ p > a {
     }
   }
 }
+
+.speakerCarousel {
+  width: 1000px;
+  margin-bottom: 3rem;
+
+  @media screen and (max-width: 1150px) and (min-width: 860px) {
+    width: 800px;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 860px) {
+    width: 300px;
+    margin-left: 0;
+  }
+
+  @media screen and (max-width: 860px) {
+    display: none !important;
+  }
+}
+
+.mobileSpeakers {
+  @media screen and (min-width: 860px) {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  flex-wrap: wrap;
+
+  @media screen and (max-width: 479px) {
+    width: 100%;
+    margin: 0;
+  }
+
+  .aboutImage {
+    @media screen and (min-width: 479px) {
+      margin: 8px !important;
+    }
+
+    @media screen and (max-width: 479px) {
+      img {
+        height: 200px;
+        width: 200px;
+      }
+      margin: 3px !important;
+    }
+
+    @media screen and (max-width: 410px) {
+      img {
+        height: auto;
+        width: 100%;
+      }
+      margin: 3px !important;
+    }
+  }
+}
+
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media screen and (max-width: 800px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+.carousel__slide {
+  @media screen and (max-width: 1150px) and (min-width: 600px) {
+    width: 225px !important;
+  }
+  
+  @media screen and (max-width: 600px) {
+    width: 175px !important;
+    overflow: hidden;
+  }
+
+  div {
+    ol {
+      overflow: hidden !important;
+    }
+  }
+}
+
+.carousel__pagination-button::after {
+  @media screen and (max-width: 860px) {
+    width: 5px !important;
+  }
+
+  @media screen and (max-width: 525px) {
+    width: 1px !important;
+  }
+}
+
+// .carousel__track {
+//   @media screen and (max-width: 860px) {
+//     max-width: 80% !important;
+//   }
+// }
+
 </style>

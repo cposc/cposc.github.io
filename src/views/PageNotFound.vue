@@ -1,5 +1,10 @@
 <template>
   <div class="pageContainer">
+    <img
+      class="headerImage"
+      alt="CPOSC Founder Presenting"
+      src="@/assets/2024/CPOSC_Cover_2024_Galaxy.png"
+    />
     <h4>404</h4>
     <h1>Page Not Found</h1>
     <div class="line"></div>
@@ -17,6 +22,23 @@
 </script>
 
 <style lang="scss" scoped>
+.headerImage {
+  height: 82px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.pageContainer {
+  background-color: white;
+}
+
+.pageContent {
+  z-index: 10;
+}
+
 .notFoundAnimation {
   display: flex;
   flex-direction: row;
@@ -27,11 +49,21 @@
 }
 
 p > a {
-  color: white;
+  color: #1F1F1F;
   transition: color 0.25s;
 
   &:hover {
     color: #848699;
   }
+}
+
+.line {
+  background-color: #A7609B;
+  margin-bottom: 1rem;
+}
+
+h1 {
+  color: #A7609B;
+  margin-bottom: 6px;
 }
 </style>

@@ -41,12 +41,12 @@
           <div class="register">Buy Tickets</div>
         </a> -->
       </div>
-      <div style="width: 1000px">
+      <div class="homeCarousel">
         <carousel :items-to-show="2.5" :wrap-around="true" :autoplay="5000">
           <!-- <slide v-for="slide in 10" :key="slide">
             {{ slide }}
           </slide> -->
-          <slide key="1" :slide-width="350">
+          <slide key="1" :slide-width="slideWidth">
             <div class="aboutImage">
               <img
                 alt="CPOSC Audience 2019"
@@ -54,7 +54,7 @@
               />
             </div>
           </slide>
-          <slide key="2" :slide-width="350">
+          <slide key="2" :slide-width="slideWidth">
             <div class="aboutImage">
               <img
                 alt="CPOSC Audience 2019"
@@ -62,7 +62,7 @@
               />
             </div>
           </slide>
-          <slide key="3" :slide-width="350">
+          <slide key="3" :slide-width="slideWidth">
             <div class="aboutImage">
               <img
                 alt="CPOSC Audience 2019"
@@ -70,7 +70,7 @@
               />
             </div>
           </slide>
-          <slide key="4" :slide-width="350">
+          <slide key="4" :slide-width="slideWidth">
             <div class="aboutImage">
               <img
                 alt="CPOSC Audience 2019"
@@ -78,7 +78,7 @@
               />
             </div>
           </slide>
-          <slide key="5" :slide-width="350">
+          <slide key="5" :slide-width="slideWidth">
             <div class="aboutImage">
               <img
                 alt="CPOSC Audience 2019"
@@ -86,7 +86,7 @@
               />
             </div>
           </slide>
-          <slide key="6" :slide-width="350">
+          <slide key="6" :slide-width="slideWidth">
             <div class="aboutImage">
               <img
                 alt="CPOSC Audience 2019"
@@ -99,6 +99,45 @@
             <pagination />
           </template>
         </carousel>
+      </div>
+
+      <div class="mobileCarousel">
+        <div class="aboutImage">
+          <img
+            alt="CPOSC Audience 2019"
+            src="@/assets/2023/CPOSC_2019.jpg"
+          />
+        </div>
+        <div class="aboutImage">
+          <img
+            alt="CPOSC Audience 2019"
+            src="@/assets/2024/PXL_20230401_142131749.MP.jpg"
+          />
+        </div>
+        <div class="aboutImage">
+          <img
+            alt="CPOSC Audience 2019"
+            src="@/assets/2024/PXL_20230401_200622968.MP.jpg"
+          />
+        </div>
+        <div class="aboutImage">
+          <img
+            alt="CPOSC Audience 2019"
+            src="@/assets/2024/PXL_20230401_130228023.jpg"
+          />
+        </div>
+        <div class="aboutImage">
+          <img
+            alt="CPOSC Audience 2019"
+            src="@/assets/2024/IMG_6726.jpg"
+          />
+        </div>
+        <div class="aboutImage">
+          <img
+            alt="CPOSC Audience 2019"
+            src="@/assets/2024/IMG_6743.jpg"
+          />
+        </div>
       </div>
     </div>
   </div>
@@ -117,6 +156,7 @@ export default {
   },
   data() {
     return {
+      slideWidth: 250
     }
   },
   methods: {
@@ -146,6 +186,15 @@ export default {
   margin-top: -3rem;
   z-index: 10;
   border-radius: 10px;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    border: 3px solid #9e4670;
+
+    .featuredWrapper {
+      margin-bottom: 1.5rem !important;
+    }
+  }
 
   i {
     margin-right: 0.75rem;
@@ -194,7 +243,7 @@ export default {
     align-items: center;
     width: 887px;
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 950px) {
       flex-direction: column;
       width: 100%;
     }
@@ -205,7 +254,7 @@ export default {
       align-items: flex-start;
       padding: 4rem 0;
 
-      @media screen and (max-width: 850px) {
+      @media screen and (max-width: 950px) {
         align-items: center;
       }
 
@@ -213,7 +262,7 @@ export default {
         margin: 1rem 0;
         font-size: 20px;
 
-        @media screen and (max-width: 850px) {
+        @media screen and (max-width: 950px) {
           text-align: center;
         }
       }
@@ -222,7 +271,7 @@ export default {
         font-size: 12px;
         letter-spacing: 3px;
 
-        @media screen and (max-width: 850px) {
+        @media screen and (max-width: 950px) {
           text-align: center;
         }
       }
@@ -238,7 +287,7 @@ export default {
         word-spacing: 1.5px;
         padding: 0 1rem 0 0;
 
-        @media screen and (max-width: 850px) {
+        @media screen and (max-width: 950px) {
           text-align: center;
           padding: 0 2rem;
         }
@@ -271,20 +320,69 @@ export default {
     .aboutImage {
       margin-left: 2rem;
 
-      @media screen and (max-width: 450px) {
-        margin-left: 0;
+      @media screen and (max-width: 1000px) {
+        margin-left: 1rem;
       }
-  
+
+      @media screen and (max-width: 700px) {
+        margin-left: 6px;
+      }
+
+      @media screen and (max-width: 511px) {
+        margin-left: 0;
+        margin-top: 8px;
+      }
+
       img {
         width: 350px;
         height: 250px;
         object-fit: cover;
 
-        @media screen and (max-width: 450px) {
-          width: 100%;
+        @media screen and (max-width: 1000px) {
+          width: 300px;
+          height: 200px;
         }
+
+        @media screen and (max-width: 700px) {
+          width: 250px;
+          height: 175px;
+        }
+
+        @media screen and (max-width: 511px) {
+          width: 100vw;
+          height: 350px;
+        }
+
+        // @media screen and (max-width: 450px) {
+        //   width: 100%;
+        // }
+
+        
       }
     }
   }
+}
+
+.homeCarousel {
+  width: 1000px;
+
+  @media screen and (max-width: 1000px) {
+    width: 800px;
+  }
+
+  @media screen and (max-width: 700px) {
+    display: none;
+  }
+}
+
+.mobileCarousel {
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 </style>

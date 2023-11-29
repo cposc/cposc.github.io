@@ -74,6 +74,10 @@ h1 {
   background-color: #C09D26;
   height: 5px;
   width: 80px;
+
+  @media screen and (max-width: 500px) {
+    margin-left: 2rem;
+  }
 }
 
 .headerImage {
@@ -116,10 +120,14 @@ img.map {
 
   @media screen and (max-width: 800px) and (min-width: 500px) {
     width: 100%;
+    margin-left: 0;
+    max-width: 100%;
   }
 
   @media screen and (max-width: 500px) {
     width: 100vw;
+    margin-left: 0;
+    max-width: 100%;
   }
 }
 

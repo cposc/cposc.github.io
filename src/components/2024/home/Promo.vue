@@ -20,7 +20,7 @@
           alt="CPOSC Founder Presenting"
           src="@/assets/2024/2024_transparent_white.png"
         />
-        <p>Driving growth for The Next Generation in tech. Put CPOSC on your calendar now!</p>
+        <p>Supporting growth for The Next Generation in tech. Put CPOSC on your calendar now!</p>
         <p class="endPromo">Saturday, April 6th, 2024</p>
         <!-- <div class="datetimeGrid">
           <div class="location">Ware Center, Lancaster PA</div>
@@ -73,7 +73,7 @@
     height: 650px;
 
     .contentContainer {
-      width: 600px;
+      max-width: 600px;
       color: white;
       text-align: center;
       display: flex;
@@ -106,8 +106,16 @@
           // margin: 8px 0;
         }
 
-        @media screen and (max-width: 400px) {
+        @media screen and (max-width: 440px) {
+          margin: 1rem 0;
+        }
+
+        @media screen and (max-width: 440px) {
           padding: 0 1rem;
+        }
+
+        @media screen and (max-width: 350px) {
+          font-size: 30px;
         }
       }
 
@@ -120,7 +128,14 @@
 
       p {
         font-style: italic;
-        // margin: 2rem 0;
+
+        @media screen and (max-width: 700px) and (min-width: 350px) {
+          margin: 0 1rem;
+        }
+
+        @media screen and (max-width: 350px) {
+          margin: 0 0.5rem;
+        }
 
         &:not(.endPromo) {
           margin-top: 2rem;

@@ -5,7 +5,7 @@ import GradientContainer from "../GradientContainer.vue";
 
 <template>
   <!-- <div class="gradientContainer"></div> -->
-  <div style="width: 100%; display: flex; flex-direction: column; align-items: center;">
+  <div class="highlightWrapper">
     <div class="highlightsSection">
       <h1>SPONSOR</h1>
       <div class="line"></div>
@@ -94,7 +94,7 @@ p {
     }
   }
 
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 950px) {
     padding: 0 2rem;
     margin-bottom: 3rem;
   }
@@ -103,6 +103,13 @@ p {
 h1 {
   // padding: 0 1rem;
   font-size: 20px;
+}
+
+.highlightWrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .line {
@@ -121,7 +128,17 @@ h1 {
   flex-direction: column;
   align-items: flex-start;
   padding: 4rem 0 6rem 0;
-  width: 887px;
+  max-width: 887px;
+
+  @media screen and (max-width: 950px) {
+    align-items: center;
+  }
+
+  p {
+    @media screen and (max-width: 950px) {
+      text-align: center;
+    }
+  }
 
   .highlightsWrapper {
     display: flex;
@@ -129,8 +146,13 @@ h1 {
     align-items: center;
     margin-top: 1rem;
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 950px) {
       flex-direction: column;
+      margin-top: 0;
+
+      div {
+        margin-bottom: 1.5rem;
+      }
     }
   }
 

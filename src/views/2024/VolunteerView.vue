@@ -13,7 +13,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
     <h1>Get Involved</h1>
     <div class="line"></div>
     <div class="pageContent">
-      <p>There are many ways to get involved with CPOSC. We are looking for volunteers to help in the months leading up to the event as well as on the week/day of. If you are interested in joining a group of volunteers making this the best conference it can be, please <a href="mailto:cposc@localareanetworks.org" target="_blank">reach out</a>. All are welcome!</p>
+      <p>There are many ways to join the CPOSC crew. We are looking for volunteers to help in the months leading up to the event as well as on the week/day of. If you are interested in joining a group of volunteers making this the best conference it can be, please <a href="mailto:cposc@localareanetworks.org" target="_blank">reach out</a>. All are welcome!</p>
       <h3>VOLUNTEER FOCUS AREAS</h3>
       <div class="focusBlock">
         <ul>
@@ -25,7 +25,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
           <li>Attendee happiness</li>
         </ul>
       </div>
-      <p style="z-index: 10; position: relative; text-align: left">If you’re not able to get involved in the lead up to the event, there is always an opportunity for extra hands on the days before and day of the conference too!</p>
+      <p style="z-index: 10; position: relative; text-align: left">If you’re not able to join the crew in the lead up to the event, there is always an opportunity for extra hands on the days before and day of the conference too!</p>
     </div>
     <GradientContainer />
   </div>

@@ -103,6 +103,10 @@ img.footerImage {
         margin-top: 1rem;
         padding: 1.5rem 2rem;
         background-image: linear-gradient(to right, #186D86, rgba(24, 109, 134, 0));
+
+        @media screen and (max-width: 477px) {
+          margin-top: 0;
+        }
       }
     }
 
