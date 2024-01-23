@@ -37,9 +37,9 @@
         <h1>ABOUT CPOSC</h1>
         <div class="line"></div>
         <p>A Lancaster staple since its maiden voyage in 2008, the Central Pennsylvania Open Source Conference is a one-day event that strives to foster all aspects of the regional tech community, while also supporting <b>The Next Generation</b> of tech.</p>
-        <!-- <a target="_blank" href="https://www.eventbrite.com/e/the-thirteenth-annual-central-pa-open-source-conference-tickets-529845451007">
+        <a target="_blank" href="https://www.eventbrite.com/e/the-fourteenth-annual-central-pa-open-source-conference-tickets-803539687837">
           <div class="register">Buy Tickets</div>
-        </a> -->
+        </a>
       </div>
       <div class="homeCarousel">
         <carousel :items-to-show="2.5" :wrap-around="true" :autoplay="5000">
