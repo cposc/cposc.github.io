@@ -1,5 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
+import { useMenuStore } from "../../store/menuStore";
+const menuStore = useMenuStore();
 </script>
 
 <template>
@@ -7,12 +9,12 @@ import { RouterLink, RouterView } from "vue-router";
     <div class="headerWrapper">
       <div class="headerInner">
         <div class="hamburgerLeft">
-          <div @click="toggleMenu()" class="hamburger" :class="{ active: isOpen }">
+          <div @click="menuStore.toggleMenu()" class="hamburger" :class="{ active: menuStore.isOpen }">
             <div></div>
             <div></div>
             <div></div>
           </div>
-          <div class="dropdownItems" :class="{ open: isOpen }">
+          <div class="dropdownItems" :class="{ open: menuStore.isOpen }">
             <RouterLink to="/">Home</RouterLink>
             <!-- <RouterLink to="/2023/schedule">Schedule</RouterLink> -->
             <RouterLink to="/speakers">Speakers</RouterLink>
@@ -34,7 +36,7 @@ import { RouterLink, RouterView } from "vue-router";
           </a>
         </div>
         
-        <div class="hamburgerOverlay" :class="{ open: isOpen }" @click="toggleMenu()"></div>
+        <div class="hamburgerOverlay" :class="{ open: menuStore.isOpen }" @click="menuStore.toggleMenu()"></div>
       </div>
     </div>
   </nav>
@@ -47,11 +49,6 @@ export default {
   data() {
     return {
       isOpen: false
-    }
-  },
-  methods: {
-    toggleMenu() {
-      this.isOpen = !this.isOpen
     }
   }
 }
@@ -171,6 +168,12 @@ export default {
         &:hover {
           background-color: #2c2c2c;
         }
+
+        &.router-link-active { 
+          font-weight: bold; 
+          color: #BA273B;
+        }
+
       }
     }
   }
