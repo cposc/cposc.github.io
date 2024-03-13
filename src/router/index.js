@@ -1,4 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
+import { useMenuStore } from '../store/menuStore';
 
 import HomeView2023 from "../views/2023/HomeView.vue";
 import HomeView2024 from "../views/2024/HomeView.vue";
@@ -81,6 +82,14 @@ const router = createRouter({
       // component: () => import("../views/AboutView.vue"),
     // },
   ],
+});
+
+
+router.beforeEach(() => {
+  const menuStore = useMenuStore();
+  if (menuStore.isOpen) {
+    menuStore.closeMenu();
+  }
 });
 
 export default router;
