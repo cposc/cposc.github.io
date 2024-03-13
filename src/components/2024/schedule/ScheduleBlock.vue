@@ -11,11 +11,14 @@
             <div></div>
             <div></div>
           </div>
-          <h1 v-if="index === 0" class="aud">The Auditorium / Steinman Hall - <a :href="'/2023/speakers#' + session.speaker[0].split(' ').join('+')" target="_blank">{{ session.speaker[0] }}</a><span v-if="session.speaker[1]"> & <a :href="'/speakers#' + session.speaker[1].split(' ').join('+')" target="_blank">{{ session.speaker[1] }}</a></span></h1>
+          <h1 v-if="index === 0" class="aud">The Auditorium / Steinman Hall - <a :href="'/speakers#' + session.speaker[0].split(' ').join('+')" target="_blank">{{ session.speaker[0] }}</a><span v-if="session.speaker[1]"> & <a :href="'/speakers#' + session.speaker[1].split(' ').join('+')" target="_blank">{{ session.speaker[1] }}</a></span></h1>
           <h1 v-if="index === 1" class="binns">Binns Room - <a :href="'/speakers#' + session.speaker[0].split(' ').join('+')" target="_blank">{{ session.speaker[0] }}</a><span v-if="session.speaker[1]"> & <a :href="'/speakers#' + session.speaker[1].split(' ').join('+')" target="_blank">{{ session.speaker[1] }}</a></span></h1>
           <h1 v-if="index === 2" class="library">Library - <a :href="'/speakers#' + session?.speaker[0].split(' ').join('+')" target="_blank">{{ session?.speaker[0] }}</a><span v-if="session.speaker[1]"> & <a :href="'/speakers#' + session.speaker[1].split(' ').join('+')" target="_blank">{{ session.speaker[1] }}</a></span></h1>
           <p class="title" v-if="isOpen[index]">{{ session.title }}</p>
-          <p v-if="session.desc && isOpen[index]" class="description">{{ session.desc }}</p>
+          <p v-if="session.desc && isOpen[index]" class="description">
+            {{ abstractMinMax(session.desc) }}
+            <span v-if="shouldShowReadMore(session.desc)" v-on:click="toggleReadMore()" style="text-decoration: underline;cursor: pointer"> Read {{ readMoreToggle ? "Less" : "More" }} </span>
+          </p>
         </div>
       </div>
     </div>
@@ -35,7 +38,9 @@ export default {
   data() {
     return {
       isOpen: [true, true, true],
-      minuteTrigger: 1
+      minuteTrigger: 1,
+      readMoreToggle: false,
+      lengthLimit: 465
     }
   },
   methods: {
@@ -46,6 +51,22 @@ export default {
       this.isOpen = proxyIsOpen.map(p => p);
 
       localStorage.setItem(`${this.time}-${index}`, `${this.isOpen[index]}`);
+    },
+    shouldShowReadMore: function(bio) {
+      // only show "read more" if bio is long enough
+      return (bio.length > this.lengthLimit) ? true: false;
+    },
+    toggleReadMore: function() {
+      // toggle length of bio shown
+      this.readMoreToggle = !this.readMoreToggle;
+    },
+    abstractMinMax: function(bio) {
+      // determine length of bio shown to the user
+      if (bio.length <= this.lengthLimit || this.readMoreToggle) {
+        return bio;
+      } else {
+        return `${bio.substring(0, this.lengthLimit)}...`
+      }
     }
   },
   mounted: function() {

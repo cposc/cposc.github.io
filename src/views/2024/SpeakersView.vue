@@ -20,8 +20,10 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
         <!-- <p>While we appreciate your enthusiasm in joining our crew, Friendship CPOSC is still prepping for its next voyage. Revisit this page for updates!</p> -->
         
         <!-- NOTE: BEFORE SPEAKERS HAVE BEEN SELECTED -->
-        <p>Are you looking to join us on our maiden voyage to reach the next generation of coders? We’re ready for you! You can submit your talk using <a href="https://forms.gle/9C2Rwf2iXH7MWVWD9" target="_blank">this form</a>.</p>
-        <p>Remember, if you’re overflowing with ideas you are welcome to submit as many talk proposals as you like, though at most only one talk per speaker will be selected. If you have questions about a talk topic or the logistics of being a CPOSC speaker, don’t hesitate to <a href="mailto:cposc@localareanetworks.org" target="_blank">contact us</a> and we’d be more than happy to chat about it. Thanks for your interest in making CPOSC 2024 a great day of new knowledge for our attendees!</p>
+        <!-- <p>Are you looking to join us on our maiden voyage to reach the next generation of coders? We’re ready for you! You can submit your talk using <a href="https://forms.gle/9C2Rwf2iXH7MWVWD9" target="_blank">this form</a>.</p> -->
+        <!-- <p>Remember, if you’re overflowing with ideas you are welcome to submit as many talk proposals as you like, though at most only one talk per speaker will be selected. If you have questions about a talk topic or the logistics of being a CPOSC speaker, don’t hesitate to <a href="mailto:cposc@localareanetworks.org" target="_blank">contact us</a> and we’d be more than happy to chat about it. Thanks for your interest in making CPOSC 2024 a great day of new knowledge for our attendees!</p> -->
+        
+        <p>Speakers have received talk acceptances! Stay tuned for an update as soon as we have everyone's headshots.</p>
         
         <p style="margin-bottom: 3rem;">Below are speakers from previous trips around the sun.</p>
 
