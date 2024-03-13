@@ -5,6 +5,7 @@ import HomeView2023 from "../views/2023/HomeView.vue";
 import HomeView2024 from "../views/2024/HomeView.vue";
 
 import ScheduleView2023 from "../views/2023/ScheduleView.vue";
+import ScheduleView2024 from "../views/2024/ScheduleView.vue";
 
 import VolunteerView2023 from "../views/2023/VolunteerView.vue";
 import VolunteerView2024 from "../views/2024/VolunteerView.vue";
@@ -72,10 +73,12 @@ const router = createRouter({
       name: "code-of-conduct",
       component: CodeOfConduct,
     },
+    {
+      path: "/schedule",
+      name: "schedule",
+      component: ScheduleView2024,
+    },
     { path: "/:pathMatch(.*)*", component: PageNotFound }
-    // {
-      // path: "/schedule",
-      // name: "schedule",
       // route level code-splitting
       // this generates a separate chunk (About.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
