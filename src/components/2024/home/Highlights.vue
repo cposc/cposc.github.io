@@ -1,5 +1,6 @@
 <script setup>
 import HighlightItem from "./HighlightItem.vue";
+import SponsorItem from "./SponsorItem.vue";
 import GradientContainer from "../GradientContainer.vue";
 </script>
 
@@ -9,16 +10,45 @@ import GradientContainer from "../GradientContainer.vue";
     <div class="highlightsSection">
       <h1>SPONSOR</h1>
       <div class="line"></div>
-      <p><b>Are you ready to support learning and networking in your community?</b></p>
-      <!-- <h1>CPOSC Sponsors, 2023</h1> -->
-      <p>There are CPOSC sponsorship opportunities at all levels! <a href="mailto:sponsor@localareanetworks.org?subject=Sponsorship Lead: I'd like more info!" target="_blank">Contact us</a> for a prospectus and more information on how you can help this event benefit everyone from high school and college students to professionals with decades of experience.</p>
-      <!-- <p>Thank you to our 2023 Sponsors for their support in community learning and networking! <a href="mailto:sponsor@localareanetworks.org?subject=Sponsorship Lead: I'd like more info for 2024!" target="_blank">Contact us</a> for information on how you can be involved next year.</p> -->
-      <div class="highlightsWrapper">
+      <!-- NOTE: Pre-Sponsors -->
+      <!-- <p><b>Are you ready to support learning and networking in your community?</b></p> -->
+      <!-- <p>There are CPOSC sponsorship opportunities at all levels! <a href="mailto:sponsor@localareanetworks.org?subject=Sponsorship Lead: I'd like more info!" target="_blank">Contact us</a> for a prospectus and more information on how you can help this event benefit everyone from high school and college students to professionals with decades of experience.</p> -->
+      <!-- <div class="highlightsWrapper">
         <HighlightItem v-for="link of quickLinks"
           :title=link.title
           :content=link.content
           :icon=link.icon
         />
+      </div> -->
+
+      <!-- NOTE: Post-Sponsors -->
+      <h1>CPOSC Sponsors, 2024</h1>
+      <p>Thank you to our 2024 Sponsors for their support in community learning and networking! <a href="mailto:sponsor@localareanetworks.org?subject=Sponsorship Lead: I'd like more info for 2025!" target="_blank">Contact us</a> for information on how you can be involved next year.</p>
+      <div class="sponsorsWrapper">
+        <div class="sponsorSection">
+          <SponsorItem v-for="sponsor of sponsors"
+            :name=sponsor.name
+            :tier=sponsor.tier
+          />
+        </div>
+        <!-- <div class="sponsorSection">
+          <SponsorItem v-for="sponsor of sponsors.slice(2, 4)"
+            :name=sponsor.name
+            :tier=sponsor.tier
+          />
+        </div>
+        <div class="sponsorSection">
+          <SponsorItem v-for="sponsor of sponsors.slice(4, 7)"
+            :name=sponsor.name
+            :tier=sponsor.tier
+          />
+        </div>
+        <div class="sponsorSection">
+          <SponsorItem v-for="sponsor of sponsors.slice(7, 12)"
+            :name=sponsor.name
+            :tier=sponsor.tier
+          />
+        </div> -->
       </div>
     </div>
   </div>
@@ -59,20 +89,22 @@ export default {
           icon: "fa-solid fa-handshake-angle"
         }
       ],
-      // sponsors: [
-      //   { name: "Seisan", tier: "one" },
-      //   { name: "WebstaurantStore", tier: "one" },
-      //   { name: "Elastic", tier: "two" },
-      //   { name: "Listrak", tier: "two" },
-      //   { name: "Cargas", tier: "three" },
-      //   { name: "Mind Development & Design", tier: "three" },
-      //   { name: "Industrial Resolution", tier: "three" },
-      //   { name: "Boyd Technical Solutions", tier: "four" },
-      //   { name: "JFC Global", tier: "four" },
-      //   { name: "Crunchy Data", tier: "four" },
-      //   { name: "HUG", tier: "four" },
-      //   { name: "Quub", tier: "four" },
-      // ]
+      sponsors: [
+        { name: "WebstaurantStore", tier: "one" },
+        { name: "Harbor Compliance", tier: "two" },
+        { name: "Listrak", tier: "two" },
+        { name: "Mind Development & Design", tier: "two" },
+        { name: "Seisan", tier: "two" },
+        { name: "Elastic", tier: "three" },
+        { name: "Cargas", tier: "four" },
+        { name: "Aha Labs", tier: "five" },
+        { name: "HUG", tier: "five" },
+        { name: "JFC Global", tier: "five" },
+        { name: "Boyd Technical Solutions", tier: "five" },
+        { name: "Make 717", tier: "five" },
+        { name: "Sharp Innovation", tier: "five" }
+        // { name: "Tom Swartz", tier: "five" }
+      ]
     }
   }
 }
@@ -155,38 +187,38 @@ h1 {
       }
     }
   }
+}
 
-  .sponsorsWrapper {
+.sponsorsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10rem;
+
+  // @media screen and (max-width: 663px) {
+  //   width: 100%;
+  //   padding: 2rem 0;
+  //   box-shadow: 0 0 50px 50px rgba(117, 117, 117, 0.5);
+  //   margin-top: 2rem;
+  // }
+
+  .sponsorSection {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    background-color: rgba(117, 117, 117, 0.5);
-    box-shadow: 0 0 30px 20px rgba(117, 117, 117, 0.5);
-    border-radius: 10px;
+    justify-content: center;
+    // padding: 1rem 3rem;
+    // margin-bottom: 1rem;
+    width: 100%;
+    flex-wrap: wrap;
+    // max-width: 800px;
 
-    @media screen and (max-width: 663px) {
-      width: 100%;
-      padding: 2rem 0;
-      box-shadow: 0 0 50px 50px rgba(117, 117, 117, 0.5);
-      margin-top: 2rem;
-    }
-
-    .sponsorSection {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: center;
-      padding: 1rem 3rem;
-      margin-bottom: 1rem;
-      width: 100%;
-      max-width: 800px;
-
-      @media screen and (max-width: 663px) {
-        max-width: 100%;
-        flex-direction: column;
-        padding: 0;
-      } 
-    }
+    // @media screen and (max-width: 663px) {
+    //   max-width: 100%;
+    //   flex-direction: column;
+    //   padding: 0;
+    // } 
   }
 }
 

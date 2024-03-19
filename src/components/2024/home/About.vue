@@ -19,7 +19,7 @@
       <div class="featuredWrapper">
         <i class="fa-solid fa-microphone"></i>
         <div class="featuredContent">
-          <span>25+ Speakers</span>
+          <span>20+ Speakers</span>
           <span>Students & professionals!</span>
         </div>
       </div>
