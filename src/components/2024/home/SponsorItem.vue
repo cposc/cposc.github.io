@@ -74,7 +74,7 @@
     <img
       v-if="name === 'Sharp Innovation'"
       :alt="name"
-      src="@/assets/2024/sponsors/sharp.svg"
+      src="@/assets/2024/sponsors/Sharp-25th-simple-stacked.png"
     />
 
     <!-- Tom Swartz -->
