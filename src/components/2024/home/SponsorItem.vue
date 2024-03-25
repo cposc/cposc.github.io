@@ -110,8 +110,8 @@ export default {
   margin: 5px;
 
   img {
-    height: 80px;
-    width: 115px;
+    height: 100px;
+    width: 170px;
     object-fit: contain;
   }
 }
