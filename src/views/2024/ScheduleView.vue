@@ -141,7 +141,7 @@ export default {
     return {
       session1: [
         { speaker: ["Tom Swartz"], title: "Getting Started with Meshtastic", desc: "A beginners guide to LoRa mesh networks using Meshtastic devices" },
-        { speaker: ["Alex Mayer"], title: "Local Development with Docker Compose", desc: "Docker compose is a convinient way to run an entire application stack locally and share the configuration with others. We will review how to add docker compose configuration to an existing project, add services, create volumes to persist data, and execute commands against it." },
+        { speaker: ["Alex Mayer"], title: "Local Development with Docker Compose", desc: "Docker compose is a convenient way to run an entire application stack locally and share the configuration with others. We will review how to add docker compose configuration to an existing project, add services, create volumes to persist data, and execute commands against it." },
         { speaker: ["Jonathan Bowman"], title: "Try a Little Vim", desc: "Vim is a lightweight yet powerful cross-platform programmer's editor known for being ubiquitous yet intimidating. This sessions welcomes the Vim-curious and the Vim-enthused to learn and share" }
       ],
       session2: [
