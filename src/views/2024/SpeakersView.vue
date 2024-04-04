@@ -1,6 +1,6 @@
 <script setup>
 import GradientContainer from "../../components/2023/GradientContainer.vue";
-// import SpeakerBlock from "../../components/2023/speakers/SpeakerBlock.vue";
+import SpeakerBlock from "../../components/2024/SpeakerBlock.vue";
 
 </script>
 
@@ -23,21 +23,15 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
         <!-- <p>Are you looking to join us on our maiden voyage to reach the next generation of coders? We’re ready for you! You can submit your talk using <a href="https://forms.gle/9C2Rwf2iXH7MWVWD9" target="_blank">this form</a>.</p> -->
         <!-- <p>Remember, if you’re overflowing with ideas you are welcome to submit as many talk proposals as you like, though at most only one talk per speaker will be selected. If you have questions about a talk topic or the logistics of being a CPOSC speaker, don’t hesitate to <a href="mailto:cposc@localareanetworks.org" target="_blank">contact us</a> and we’d be more than happy to chat about it. Thanks for your interest in making CPOSC 2024 a great day of new knowledge for our attendees!</p> -->
         
-        <p>Speakers have received talk acceptances! Stay tuned for an update as soon as we have everyone's headshots.</p>
+        <!-- <p>Speakers have received talk acceptances! Stay tuned for an update as soon as we have everyone's headshots.</p> -->
         
-        <p style="margin-bottom: 3rem;">Below are speakers from previous trips around the sun.</p>
+        <!-- <p style="margin-bottom: 3rem;">Below are speakers from previous trips around the sun.</p> -->
 
-        <!-- NOTE: AFTER SPEAKERS HAVE BEEN SELECTED -->
-        <!-- <p>Get to know our Speakers! We encourage all attendees to review this page as our speakers have a wide range of backgrounds and experience levels.</p>
-        <div v-for="(speaker, index) in speakers" v-bind:key="index">
-          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name)" :imageUrl="speaker.imageURL" :bio="speaker.bio" :index="index" :color="imageBorderColor(index)"/>
-        </div> -->
-
-        <div class="speakerCarousel">
+        <!-- <div class="speakerCarousel">
           <carousel :items-to-show="itemsToShow" :wrap-around="true" :autoplay="5000">
-            <!-- <slide v-for="slide in 10" :key="slide">
+            <slide v-for="slide in 10" :key="slide">
               {{ slide }}
-            </slide> -->
+            </slide>
             <slide key="1" :slide-width="slideWidth">
               <div class="aboutImage">
                 <img
@@ -211,9 +205,9 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
               <pagination />
             </template>
           </carousel>
-        </div>
+        </div> -->
 
-        <div class="mobileSpeakers">
+        <!-- <div class="mobileSpeakers">
           <div class="aboutImage">
             <img
               alt="CPOSC Audience 2019"
@@ -340,6 +334,12 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
               src="@/assets/2023/speakers/walt_mankowski.jpg"
             />
           </div>
+        </div> -->
+      
+        <!-- NOTE: AFTER SPEAKERS HAVE BEEN SELECTED -->
+        <p>Get to know our Speakers! We encourage all attendees to review this page as our speakers have a wide range of backgrounds and experience levels.</p>
+        <div v-for="(speaker, index) in speakers" v-bind:key="index">
+          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name)" :imageUrl="speaker.imageURL" :bio="speaker.bio" :index="index" :color="imageBorderColor(index)"/>
         </div>
       </div>
       <!-- <GradientContainer /> -->
@@ -360,118 +360,93 @@ export default {
   },
   data() {
     return {
-      // speakers: [
-      //   {
-      //     imageURL: "alex_mayer.jpeg",
-      //     name: "Alex Mayer",
-      //     bio: "I have worked with computers for over a decade. During that time I have worked as both a Software Engineer and a Site Reliability Engineer. I use GNU/Linux and spend my time outside of work contributing to open-source projects."
-      //   },
-      //   {
-      //     imageURL: "bob_murphy.jpg",
-      //     name: "Bob Murphy",
-      //     bio: "I am a Linux Systems Administrator. I've been a user of GNU/Linux for my own personal use since the late nineties. I've used many distributions over the years, starting with Slackware, up to the latest Red Hat and Ubuntu releases."
-      //   },
-      //   {
-      //     imageURL: "deanna_bledsoe.jpg",
-      //     name: "Deanna Bledsoe",
-      //     bio: "Deanna started using her 20+ years of software development skills to teach kids when schools and extracurricular activities went virtual due to the COVID-19 pandemic.  She started using open-source block coding to help her daughter’s Girl Scout troop earn STEM badges.  This turned into Kai Coders, a program that teaches elementary school kids how to code. Deanna brings the 'spirit of Aloha' , a welcoming, kind, and inclusive environment, into her classrooms.  She acknowledges that not only are mistakes OK, but they are expected and admits to making and learning from many mistakes during her career as a programmer. She works with local schools to bring computer science into subjects both inside and outside of traditional STEM topics.  Examples of this include incorporating invention and coding technology into a food drive, running a coding club for 3rd-5th graders, and most recently, a collaborative LEO (Love Each Other) project incorporating music, art, and STEM teachers into a schoolwide interactive display for Mental Health Awareness month. When Deanna isn't teaching computer science to kids, she is committed to changing the way government operates as the Director of Information Technology for Delaware's Office of the State Treasurer."
-      //   },
-      //   {
-      //     imageURL: "ean_dudley.jpg",
-      //     name: "Ean Dudley",
-      //     bio: " Ean Dudley is a driven and knowledgeable Cyber Security student at Penn State University. As an IT Support Specialist, Ean has honed their technical skills and is well-versed in the day-to-day operations of IT environments. With 5 years of experience in competitive cyber security environments, such as Capture the Flag and Attack Defense, Ean has a proven track record of success in the competitive environment. Ean's experience leading multiple IT and Cyber Security teams showcases their strong leadership skills, making them a valuable asset to any organization. As a SANS Tournament of Champions Qualifier, Ean demonstrates their expertise and critical thinking abilities in the field of cybersecurity. "
-      //   },
-      //   {
-      //     imageURL: "ed_schwartz.jpeg",
-      //     name: "Edward Schwartz",
-      //     bio: "I am a senior researcher scientist in the Software Engineering Institute at Carnegie Mellon University.  I study a variety of topics in binary analysis, including exploitation techniques and defenses."
-      //   },
-      //   {
-      //     imageURL: "francis_wertz.jpeg",
-      //     name: "Francis Wertz",
-      //     bio: "Hello, I’m Francis Wertz. I’ve lived in Lancaster for a touch over a decade now. I’m   a Project Leader working in automotive telemetry. I consider myself a developer advocate, and strive to see my teams become more productive and engaged with their careers in enterprise solutions. I enjoy developing personal projects, homelab, helping small business, home improvement and finish carpentry. I’m married and share a home with my brilliant wife Emma, along with our many pets!"
-      //   },
-      //   {
-      //     imageURL: "gregember.jpg",
-      //     name: "Gregory Ember",
-      //     bio: "Greg is a Lititz-based IT consultant, systems administrator and project manager. He attended both the University of Delaware and Millersville University in their Computer Science departments before receiving his B.S. in Information Science and Technology from Penn State University. In his spare time over the past twenty years he has assisted the MAME project as 'project facilitator'. His interests include technical documentation, software preservation, digital asset management, knowledge management, data mining, intellectual property law, and the open source community. "
-      //   },
-      //   {
-      //     imageURL: "jacob_whetstone.jpeg",
-      //     name: "Jacob Whetstone",
-      //     bio: "Jake is a polyglot developer by happenstance, currently focusing on web app development. He's a husband and a father of two; a fan of punk rock, spicy food and bitter drink; trying to be a good neighbor."
-      //   },
-      //   {
-      //     imageURL: "joe_latrell.png",
-      //     name: "Joe Latrell",
-      //     bio: "Joe Latrell is an inventor and technology developer who has coordinated payloads for launch on the SpaceX Falcon 9, Blue Origin New Shepard, and Rocket Lab Electron. Prior to quub, Joe gained wide-ranging experience in a variety of technology roles, such as launching an early-stage suborbital rocket company, coding programs for large datasets, and developing numerous software packages for the education industry. Joe founded quub to manufacture small, cost-effective satellites designed to gather data and monitor Earth, its weather systems, and its environmental resources. His goal is to create a network of satellites that give first responders, companies, and municipalities the data they need to respond and act quickly."
-      //   },
-      //   {
-      //     imageURL: "joel_walker.jpeg",
-      //     name: "Joel Walker",
-      //     bio: "Just like his college education, Joel had a hard time finishing writing this speaker bio, so he asked ChatGPT to help. Let's see what ChatGPT can do! Joel Walker is a custom software solutions entrepreneur who started his career in the “technology solutions for hire” business 15 years ago. Joel has had a diverse range of work experiences, but he believes that a good bio should start with his favorite jobs, not just the most impressive ones. His favorites include working as a climbing gym hand for Tom and Jodi at Reading Rocks, and as a snowboard instructor in Sugarbush, VT - which is his favorite place in the world. Joel is the Founder and CEO of Industrial Resolution, a custom software development company that specializes in building innovative solutions for clients across a wide range of industries, using a wide range of technologies, such as Elastic. At work, Joel is focused on driving the company's vision and strategy for growth, while also making a positive impact on the communities in which he lives and works. This ethos led him in 2016 to create Pubforge, a technology and tinkerer-friendly workspace in Lancaster, Pennsylvania that provides an environment for community leaders, entrepreneurs, and innovators to take advantage of. In addition to his work at Industrial Resolution, Joel is involved in various initiatives that support the development of technology talent and resources in his community: *He serves as the Chairman of Local Area Networks, a 501c(3) non-profit that provides technology resources and education to the Lancaster tech community. *He has previously served as the Steward and Owner of the Central PA Open Source Conference for a period of 4 years, which brings together technology professionals and enthusiasts to share knowledge and foster collaboration, before forming LAN to ensure the management of the conference persisted for years to come and for the benefit of all. *Joel launched the \"Lanc Tech Fund\", a donor-advised fund managed by the Lancaster County Community Foundation which will one day help to fund the future of accessible tech education in our area. *He co-created the Thaddeus Stevens College Computer Software Engineering Technology Associate's Degree Program with Elyse Ewing (the brains) and Chip Cargas (the money), which provides students with the skills and knowledge they need to succeed in the technology industry. *Joel is a former Director at Lancaster Chamber of Commerce, a LEAD STEM Fellow and PA STEM Ambassador, advocating for STEM education and workforce development in Pennsylvania. *He currently serves as a member of the PA State Workforce Development Boards Subcommittee of Career Pathways and Apprenticeships, where he helps develop strategies to address the skills gap in the technology industry, and on the Education Committee at ABC Keystone. Joel is also a family man. He has a boy and a girl, Huck and Scout, each of whom make him feel so proud. He was also lucky enough to find a wise and loving wife, Holly."
-      //   },
-      //   {
-      //     imageURL: "jonathan_fleckenstein.jpeg",
-      //     name: "Jonathan Fleckenstein",
-      //     bio: "I've been doing web development for over 10 years. I love working with TypeScript and React and am always looking for something new to learn!"
-      //   },
-      //   {
-      //     imageURL: "kevin_hicks.jpg",
-      //     name: "Kevin Hicks",
-      //     bio: "I'm a Software Architect at WebstaurantStore focusing on designing web applications that handle the logistics of processing orders and getting them to customers. I also contract on the side working on web and mobile applications for various clients. When I'm not working, I like to play board games, video games and spend time with my wife and daughter outside."
-      //   },
-      //   {
-      //     imageURL: "luke_demi.jpg",
-      //     name: "Luke Demi",
-      //     bio: "Meet Luke, a software engineer who specializes in solving infrastructure scalability issues. He has been lucky to have tackled some tough challenges during high-growth periods at companies like Coinbase, Clubhouse, and DoorDash. When he's not busy scaling in the tech world, you can find him in Lancaster city with his three kids, who are likely scaling in height as well."
-      //   },
-      //   {
-      //     imageURL: "nathaniel_evry.jpg",
-      //     name: "Nathaniel Evry",
-      //     bio: "Passionate technologist with a diverse set of skills and a love for innovation. I'm a creative problem-solver always eager to learn and build new things! I'm currently doing aerospace research at Quub!"
-      //   },
-      //   {
-      //     imageURL: "nick_elzer.jpeg",
-      //     name: "Nick Elzer",
-      //     bio: "Nick Elzer was born and raised in Lancaster County, Pennsylvania and is currently studying manufacturing engineering technology at Millersville University. At quub, Nick works on development and prototyping for electrical and sensor integration, as well as the development of satellite schematics and PCB boards."
-      //   },
-      //   {
-      //     imageURL: "rich_everts.jpg",
-      //     name: "Richard Everts",
-      //     bio: "Richard Everts is a federally funded researcher in the AI space, patented technologist, award-winning film maker, and published author. With over two decades of leadership in multiple industries, his primary research and development includes Artificial General Intelligence (AGI), consciousness, and supporting those most vulnerable in society. "
-      //   },
-      //   {
-      //     imageURL: "ryan_walker.jpg",
-      //     name: "Ryan Walker",
-      //     bio: "Ryan is the Chief Technology Officer at Casetext, a startup that builds AI products to improve the practice of law.  He's worked at the intersection of software engineering, machine learning, and natural language for over a decade and has a particular interest in text search systems.  Ryan is originally from Lancaster, he did his undergraduate studies at Millersville University, and holds a PhD in mathematics from the University of Kentucky."
-      //   },
-      //   {
-      //     imageURL: "samantha_noggle.jpg",
-      //     name: "Samantha Noggle",
-      //     bio: "Samantha Noggle is in her senior year at Millersville University, pursuing a bachelor's degree in Computer Science. She is extremely interested in exploring the various forms of artificial intelligence and their applications. She's previously interned at Lighthouse IP where she used machine learning techniques in her role as a software engineer."
-      //   },
-      //   {
-      //     imageURL: "Stephanie-Schwartz.jpg",
-      //     name: "Stephanie Schwartz",
-      //     bio: "Stephanie Schwartz is a professor and chair of the Computer Science department at Millersville University. She received her Ph.D. and M.S. degrees in Computer Science from the University of Delaware and her B.S. in Computer Science from Shippensburg University. Her research interests include user modeling, cognitive modeling, machine learning, data mining, and artificial intelligence in general. She teaches courses ranging from beginning programming courses to upper-level electives in artificial intelligence and data mining. Before teaching, she worked as a software engineer at several companies including MapQuest (now owned by AOL), AMP (now part of Tyco), and Primavera Software (now apparently part of Oracle -- because in the tech industry, change is the only constant)."
-      //   },
-      //   {
-      //     imageURL: "thomas_knickman.jpeg",
-      //     name: "Thomas Knickman",
-      //     bio: "I am a senior software engineer with 10 years of experience working on the web. I have helped architect, scale, and maintain several large scale (100+ developers) monorepos at my previous roles at SurveyMonkey and Under Armour, and now work at Vercel as a core team member and maintainer of Turborepo, an open source build system optimized for JavaScript and TypeScript, written in Go, and Rust."
-      //   },
-      //   {
-      //     imageURL: "tom_swartz.jpeg",
-      //     name: "Tom Swartz",
-      //     bio: "Tom is the Associate Director of Support and a developer with Crunchy Data, providing technical assistance to hundreds of large organizations and programming software for and around PostgreSQL databases. An avid speaker, he as participated in many years of Central Pennsylvania Open Source Conferences, TechLancaster events, and other events in and around Central Pennsylvania. He is an avid enthusiast of mechanical keyboards, amateur radio, and is a passionate advocate for free and open source software. "
-      //   },
-      //   {
-      //     imageURL: "walt_mankowski.jpg",
-      //     name: "Walt Mankowski",
-      //     bio: "I'm a recovering, recovering ivory tower computer scientist. I work in Penn Medicine's Radiology Department looking for better imaging biomarkers for breast and lung cancer. I also help run the Philadelphia Linux Users Group."
-      //   },
-      // ],
+      speakers: [
+        {
+          // imageURL: "",
+          name: "Alex Mayer",
+          bio: "Docker compose is a convinient way to run an entire application stack locally and share the configuration with others. We will review how to add docker compose configuration to an existing project, add services, create volumes to persist data, and execute commands against it."
+        },
+        {
+          // imageURL: "",
+          name: "Bob Murphy",
+          bio: "I'm a systems administrator, and long-time desktop Linux user, and EFF member."
+        },
+        {
+          // imageURL: "",
+          name: "Cody Alan Stubbs",
+          bio: "I am a full-stack software engineer. I started off my career as a food/sensory scientist testing food products with consumers and professional tasters, but made a pivot into software engineering after building web applications for global research and business teams in my prior role. Outside of work, I enjoy tinkering with traditional food production methods and being involved with Lancaster's tech meetups."
+        },
+        {
+          // imageURL: "",
+          name: "Ean Dudley",
+          bio: "Meet Ean Dudley, a Senior at Penn State University majoring in Cybersecurity with a focus on geopolitics and a minor in Political Science. Currently an IT Support Specialist at PSU and a Digital Literacy Instructor at the York Literacy Institute, [Your Name] is passionate about technology education and empowering others. As a member of ISC2 and a SANS Tournament of Champions Qualifier, Ean actively engages in the cybersecurity community. With plans to pursue a Master's in Cybersecurity in Fall 2024, Ean is a dedicated individual with a keen interest in the dynamic and ever-evolving field of cybersecurity."
+        },
+        {
+          // imageURL: "",
+          name: "Elizabeth K. Joseph",
+          bio: "Elizabeth K. Joseph is a Linux systems administrator who now leads the Open Source Program Office for IBM Z where she works with the community to explore Linux and z/OS workloads on mainframes. She has previously worked on distributed systems and has written books on Ubuntu and OpenStack. A big fan of her adopted home city of Philadelphia, she is a regular speaker at open source conferences around the world."
+        },
+        {
+          // imageURL: "",
+          name: "Frederick Yocum",
+          bio: "Frederick Yocum divides his time in unequal measure between freelance graphic design, fine art (his vocation), and working as a photography coordinator for the Lancaster-based nonprofit, Mennonite Central Committee. "
+        },
+        {
+          // imageURL: "",
+          name: "Jeff Barrett",
+          bio: "25+ years of software engineering and leadership. Currently advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
+        },
+        {
+          // imageURL: "",
+          name: "John Mulligan",
+          bio: "John Mulligan is an independent tabletop game designer and owner of Exeunt Press. His published games blend the storytelling of roleplaying games (TTRPGs) with the mechanisms of board games, including the ENNIE-nominated Exclusion Zone Botanist. He writes Skeleton Code Machine, a publication that explores tabletop game mechanisms. John is also one of the founders of the CPOSC conference and former organizer of the Central PA Linux User Group."
+        },
+        {
+          // imageURL: "",
+          name: "Jonathan Bowman",
+          bio: "Vim is a lightweight yet powerful open-source cross-platform programmer's editor known for being ubiquitous yet intimidating. This session welcomes the Vim-curious to try out this editor and consider its usefulness. "
+        },
+        {
+          // imageURL: "",
+          name: "Logan Farr",
+          bio: "Logan has been working in software engineering for over a decade – frontend, backend, full stack, and most recently DevOps. He's passionate about technology and leadership, and loves to nerd out about infrastructure. In his free time, Logan loves traveling, reading, and playing video games."
+        },
+        {
+          // imageURL: "",
+          name: "Luke Demi",
+          bio: "Luke Demi is a software engineer, father, and aspiring futurist."
+        },
+        {
+          // imageURL: "",
+          name: "Luke Westfall",
+          bio: "Luke is a mechanical and a software engineer. He is a Penn State graduate holding a B.Sc. in Mechanical Engineering (2014) and a B.Sc. in Software Engineering (2022). Luke started his career doing mechanical and electrical design for custom hoists and cranes and slowly transitioned into his current role as Senior Software Engineer at Kito Americas, Inc. headquartered in Manheim, PA. In his downtime, Luke enjoys automating his home, working on his cars, and tinkering with gadgets."
+        },
+        {
+          // imageURL: "",
+          name: "Dr. Nazli Hardy",
+          bio: "Dr. Nazli Hardy been a faculty member of Computer Science at Millersville University since 2004. One of her most favorite courses to teach is Discrete Math. It's not a universally well known course, but once you take it, you never forget it. It is the fundamental logic course for all Computer Science classes. Students particularly enjoy the Permutations and Combinations topics and Dr. Hardy is happy to being the topic to a broader audience. When Dr. Hardy is not in the classroom, she is spending time with her husband, Dr, Chris Hardy, and their 2 kids, Zuzu & Zaavi. In addition to her role as Associate Professor of Computer Science at MU, Dr. Hardy is the founder of Woman Empowered. She works extensively in leadership roles in women in STEM and success mindset."
+        },
+        {
+          // imageURL: "",
+          name: "Rick Joi",
+          bio: "Rick Joi is the former Chief Innovation Officer at Energage, an HR technology company that runs dozens of regional Top Workplaces programs across the country. Rick has ten patents from his time there, but the core of his role was helping empower others to get their ideas implemented. His deep understanding of innovation was informed by being uniquely positioned to learn how various Top Workplaces encouraged and implemented ideas."
+        },
+        {
+          // imageURL: "",
+          name: "Robert Hudson",
+          bio: "I'm a former programmer, past-life writing instructor and tutor, and lifelong learner who enjoys figuring things out and sharing that with other people. Currently working in hospitality doing all those things and loving every challenge. Also an accomplished origamist, amateur appetizer chef, and novice bubble baker."
+        },
+        {
+          // imageURL: "",
+          name: "Stephanie Schwartz",
+          bio: "Stephanie Schwartz is a professor and chair of the Computer Science department at Millersville University. She received her Ph.D. and M.S. degrees in Computer Science from the University of Delaware and her B.S. in Computer Science from Shippensburg University. Her research interests include user modeling, cognitive modeling, machine learning, data mining, and artificial intelligence in general. She teaches courses ranging from beginning programming courses to upper-level electives in artificial intelligence and data mining. Before teaching, she worked as a software engineer at several companies including MapQuest (now owned by AOL), AMP (now part of Tyco), and Primavera Software (now apparently part of Oracle -- because in the tech industry, change is the only constant)."
+        },
+        {
+          // imageURL: "",
+          name: "Tom Swartz",
+          bio: "Tom is the Associate Director of Support and a developer with Crunchy Data, providing technical assistance to hundreds of large organizations and programming software for and around PostgreSQL databases. An avid speaker, he as participated in many years of Central Pennsylvania Open Source Conferences, TechLancaster events, and other events in and around Central Pennsylvania. He is an avid enthusiast of mechanical keyboards, amateur radio, and is a passionate advocate for free and open source software. "
+        },
+      ],
       lastColor: "",
       innerWidth: window.innerWidth
     }
@@ -491,7 +466,7 @@ export default {
       return colors[index % 3]
     },
     getNameAnchor: function(name) {
-      // return name.split(" ").join("+");
+      return name.split(" ").join("+");
     },
     myEventHandler(e) {
       // your code for handling resize...
@@ -499,39 +474,39 @@ export default {
     }
   },
   created() {
-    window.addEventListener("resize", this.myEventHandler);
+    // window.addEventListener("resize", this.myEventHandler);
   },
   destroyed() {
-    window.removeEventListener("resize", this.myEventHandler);
+    // window.removeEventListener("resize", this.myEventHandler);
   },
   computed: {
-    itemsToShow: function() {
-      if (this.innerWidth <= 600) {
-        return 1;
-      } else if (this.innerWidth <= 1150) {
-        return 2.5;
-      }
-      return 4.5
-    },
-    slideWidth: function() {
-      if (this.innerWidth <= 600) {
-        return 150;
-      } else if (this.innerWidth <= 1150) {
-        console.log(150)
-        return 150;
-      }
-      console.log(350)
-      return 350
-    }
+    // itemsToShow: function() {
+    //   if (this.innerWidth <= 600) {
+    //     return 1;
+    //   } else if (this.innerWidth <= 1150) {
+    //     return 2.5;
+    //   }
+    //   return 4.5
+    // },
+    // slideWidth: function() {
+    //   if (this.innerWidth <= 600) {
+    //     return 150;
+    //   } else if (this.innerWidth <= 1150) {
+    //     console.log(150)
+    //     return 150;
+    //   }
+    //   console.log(350)
+    //   return 350
+    // }
   },
   mounted: function() {
     // scroll to speaker profile based on anchor tag
-    // const routeHash = this.$route.hash.split("#")[1];
-    // const anchorElement = document.getElementById(routeHash);
-    // if (anchorElement) {
-    //   var top = anchorElement.offsetTop - 40;
-    //   window.scrollTo(0, top);
-    // }
+    const routeHash = this.$route.hash.split("#")[1];
+    const anchorElement = document.getElementById(routeHash);
+    if (anchorElement) {
+      var top = anchorElement.offsetTop - 40;
+      window.scrollTo(0, top);
+    }
   }
 }
 </script>
@@ -555,6 +530,7 @@ export default {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    margin-bottom: 6rem;
 
     h4, p {
       color: #1F1F1F;
@@ -587,83 +563,83 @@ p {
   }
 }
 
-.aboutImage {
-  margin-left: 2rem;
+// .aboutImage {
+//   margin-left: 2rem;
 
-  @media screen and (max-width: 450px) {
-    margin-left: 0;
-  }
+//   @media screen and (max-width: 450px) {
+//     margin-left: 0;
+//   }
 
-  img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
+//   img {
+//     width: 200px;
+//     height: 200px;
+//     object-fit: cover;
 
-    @media screen and (max-width: 450px) {
-      width: 100%;
-    }
-  }
-}
+//     @media screen and (max-width: 450px) {
+//       width: 100%;
+//     }
+//   }
+// }
 
-.speakerCarousel {
-  width: 1000px;
-  margin-bottom: 3rem;
+// .speakerCarousel {
+//   width: 1000px;
+//   margin-bottom: 3rem;
 
-  @media screen and (max-width: 1150px) and (min-width: 860px) {
-    width: 800px;
-    margin-left: 0;
-  }
+//   @media screen and (max-width: 1150px) and (min-width: 860px) {
+//     width: 800px;
+//     margin-left: 0;
+//   }
 
-  @media screen and (max-width: 860px) {
-    width: 300px;
-    margin-left: 0;
-  }
+//   @media screen and (max-width: 860px) {
+//     width: 300px;
+//     margin-left: 0;
+//   }
 
-  @media screen and (max-width: 860px) {
-    display: none !important;
-  }
-}
+//   @media screen and (max-width: 860px) {
+//     display: none !important;
+//   }
+// }
 
-.mobileSpeakers {
-  @media screen and (min-width: 860px) {
-    display: none;
-  }
+// .mobileSpeakers {
+//   @media screen and (min-width: 860px) {
+//     display: none;
+//   }
 
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  width: 90%;
-  margin-left: 5%;
-  margin-right: 5%;
-  flex-wrap: wrap;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: center;
+//   width: 90%;
+//   margin-left: 5%;
+//   margin-right: 5%;
+//   flex-wrap: wrap;
 
-  @media screen and (max-width: 479px) {
-    width: 100%;
-    margin: 0;
-  }
+//   @media screen and (max-width: 479px) {
+//     width: 100%;
+//     margin: 0;
+//   }
 
-  .aboutImage {
-    @media screen and (min-width: 479px) {
-      margin: 8px !important;
-    }
+//   .aboutImage {
+//     @media screen and (min-width: 479px) {
+//       margin: 8px !important;
+//     }
 
-    @media screen and (max-width: 479px) {
-      img {
-        height: 200px;
-        width: 200px;
-      }
-      margin: 3px !important;
-    }
+//     @media screen and (max-width: 479px) {
+//       img {
+//         height: 200px;
+//         width: 200px;
+//       }
+//       margin: 3px !important;
+//     }
 
-    @media screen and (max-width: 410px) {
-      img {
-        height: auto;
-        width: 100%;
-      }
-      margin: 3px !important;
-    }
-  }
-}
+//     @media screen and (max-width: 410px) {
+//       img {
+//         height: auto;
+//         width: 100%;
+//       }
+//       margin: 3px !important;
+//     }
+//   }
+// }
 
 .pageContent {
   display: flex;
@@ -671,38 +647,38 @@ p {
   align-items: center;
   width: 100%;
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 960px) {
     padding-right: 0;
     padding-left: 0;
   }
 }
 
-.carousel__slide {
-  @media screen and (max-width: 1150px) and (min-width: 600px) {
-    width: 225px !important;
-  }
+// .carousel__slide {
+//   @media screen and (max-width: 1150px) and (min-width: 600px) {
+//     width: 225px !important;
+//   }
   
-  @media screen and (max-width: 600px) {
-    width: 175px !important;
-    overflow: hidden;
-  }
+//   @media screen and (max-width: 600px) {
+//     width: 175px !important;
+//     overflow: hidden;
+//   }
 
-  div {
-    ol {
-      overflow: hidden !important;
-    }
-  }
-}
+//   div {
+//     ol {
+//       overflow: hidden !important;
+//     }
+//   }
+// }
 
-.carousel__pagination-button::after {
-  @media screen and (max-width: 860px) {
-    width: 5px !important;
-  }
+// .carousel__pagination-button::after {
+//   @media screen and (max-width: 860px) {
+//     width: 5px !important;
+//   }
 
-  @media screen and (max-width: 525px) {
-    width: 1px !important;
-  }
-}
+//   @media screen and (max-width: 525px) {
+//     width: 1px !important;
+//   }
+// }
 
 // .carousel__track {
 //   @media screen and (max-width: 860px) {
