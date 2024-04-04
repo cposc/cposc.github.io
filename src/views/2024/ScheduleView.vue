@@ -88,7 +88,7 @@ import ScheduleBlock from "../../components/2024/schedule/ScheduleBlock.vue";
           v-if="isOpen[2]"
         />
         <ScheduleBlock
-          time="3:10 PM to 3:30 PM"
+          time="3:00 PM to 3:40 PM"
           title="Sweets & Syncs"
           description="Sweets will be available in the lobby! Use this time to grab a bite and sync with other attendees."
           v-if="isOpen[2]"
@@ -99,21 +99,21 @@ import ScheduleBlock from "../../components/2024/schedule/ScheduleBlock.vue";
           :sessions="session6"
           v-if="isOpen[2]"
         />
-        <ScheduleBlock
+        <!-- <ScheduleBlock
           time="4:30 PM to 5:10 PM"
           title="Session 7"
           :sessions="session7"
           v-if="isOpen[2]"
-        />
+        /> -->
         <ScheduleBlock
-          time="5:20 PM to 5:50 PM"
+          time="4:30 PM to 5:00 PM"
           title="Lightning Talks"
           description="Throughout the day, all attendees have had the opportunity to submit lightning talks. Join us in Steinman Hall for 30 minutes of knowledge dispersment, at lightning speed!"
           v-if="isOpen[2]"
         />
         <ScheduleBlock
-          time="5:50 PM to 6:00 PM"
-          title="Farewell, Closing Remarks"
+          time="5:00 PM to 5:30 PM"
+          title="Farewell, Closing Remarks, Giveaways"
           v-if="isOpen[2]"
         />
         <h3>
@@ -140,38 +140,32 @@ export default {
   data() {
     return {
       session1: [
-        // { speaker: ["Mahesh Chand"], title: "From Web2 to Web3: How AI is Leading the Way in Software Innovation", desc: 'In today\'s rapidly evolving technological landscape, the convergence of Web3 and Artificial Intelligence (AI) is poised to usher in a new era of innovation and disruption. Join us for an engaging exploration of how these two groundbreaking technologies are reshaping the business landscape and revolutionizing the way we build software. In this thought-provoking talk, [Your Name] will delve into the profound impact of Web3 and AI on businesses across industries. We will uncover the synergies and possibilities that emerge when decentralized, blockchain-based technologies meet the power of advanced AI algorithms. Through real-world examples and case studies, we will showcase how businesses are leveraging Web3 and AI to enhance efficiency, transparency, and user experiences. Our discussion will not only examine the transformative potential of Web3 and AI but also shed light on the challenges and considerations that arise in this new paradigm. You will gain insights into the opportunities for startups and established enterprises alike, along with the evolving role of developers and software engineers in this dynamic landscape.' },
-        { speaker: ["Ken Richard"], title: "Birds of a Feather", desc: '' },
+        { speaker: ["Tom Swartz"], title: "Getting Started with Meshtastic", desc: "A beginners guide to LoRa mesh networks using Meshtastic devices" },
         { speaker: ["Alex Mayer"], title: "Local Development with Docker Compose", desc: "Docker compose is a convinient way to run an entire application stack locally and share the configuration with others. We will review how to add docker compose configuration to an existing project, add services, create volumes to persist data, and execute commands against it." },
-        { speaker: ["Frederick Yocum"], title: "An Intro to ResourceSpace", desc: "A nontechnical introduction to ResourceSpace, an open source web-based digital asset management system used by commercial, academic, and not-for-profit organizations to organize and share documents and images. The presentation will provide an overview of the fundamental principles that underpin its functionality and define its limitations." }
-      ],
-      session2: [
-        { speaker: ["Elizabeth K. Joseph"], title: "Will your open source project run on a mainframe? Or on a smartwatch?", desc: 'You probably developed your open source project for a single, "default" architecture like x86, but today there is considerable growth in other architectures, from ARM to Power to mainframes. The talk will present some of the tools available to open source software developers to port their projects to other architectures.' },
-        { speaker: ["Ean Dudley"], title: "Unraveling the Tale of Stuxnet and the Statistical Landscape of Cyberwarfare", desc: "Embark on a captivating journey into the world of cyberwarfare through the lens of Stuxnet, a clandestine digital weapon that reshaped the landscape of state-sponsored cyber operations. In this talk, we will weave a narrative around Stuxnet's intriguing story, exploring its technical intricacies, international implications, and the statistical dimensions that underscore the realm of cyberwarfare." },
         { speaker: ["Jonathan Bowman"], title: "Try a Little Vim", desc: "Vim is a lightweight yet powerful cross-platform programmer's editor known for being ubiquitous yet intimidating. This sessions welcomes the Vim-curious and the Vim-enthused to learn and share" }
       ],
+      session2: [
+        { speaker: ["Ean Dudley"], title: "Unraveling the Tale of Stuxnet and the Statistical Landscape of Cyberwarfare", desc: "Embark on a captivating journey into the world of cyberwarfare through the lens of Stuxnet, a clandestine digital weapon that reshaped the landscape of state-sponsored cyber operations. In this talk, we will weave a narrative around Stuxnet's intriguing story, exploring its technical intricacies, international implications, and the statistical dimensions that underscore the realm of cyberwarfare." },
+        { speaker: ["Nazli Hardy", "Ashton Kunkle", "Neily Landman"], title: "Understanding & Using Permutations and Combinations in Everyday Life", desc: 'If a lottery ticket had 5 slots for numbers from 0-9 followed by 2 slots for English letters (A-Z), then the permutation of unique tickets would be 10 * 10 * 10 * 10 *10 * 26 * 26. It may actually be easier to earn money being a YouTuber than choosing the winning number. If 3 people sit in a row, there are 6 different ways to seat them. But, if they sit in a circle, there are 2 different ways. Perhaps that is why, conversations are easier at a circular table.' },
+        { speaker: ["Cody Alan Stubbs"], title: "6 Months as a Software Engineer - Reflections for New and Senior Devs", desc: "After pivoting into software engineering, the first six months in a full-stack role have been quite challenging and fun! This talk offers new developers a chance to hear the lessons learned by a fellow fresh developer, and senior developers can gain a valuable perspective to inform how they guide and collaborate with new developers." }
+      ],
       session3: [
-        { speaker: ["Mark Tripoli"], title: "Is it a platform or a framework? Shaping HubSpot's developer ecosystem", desc: "Explore the intricate journey of developing HubSpot's 'Developer Projects', a tale of innovation, iteration, and real-world lessons. I'll share our successes, setbacks, and the unique challenge of building a framework in tandem with its first features. Learn how we have and continue to navigate these complexities to shape a dynamic platform (or framework?)." },
-        { speaker: ["John Mulligan"], title: "Accelerating Tabletop Game Development with Python Simulations", desc: "Learn how to use simple Python for rapid iteration and testing of tabletop roleplaying and board games. What used to require extensive playtesting and complicated math can now be done in seconds with a few lines of basic Python code. We’ll explore how to optimize game mechanics through simulation using real-world examples, including an ENNIE-nominated TTRPG. Little to no programming experience required." },
+        { speaker: ["Elizabeth K. Joseph"], title: "Will your open source project run on a mainframe? Or on a smartwatch?", desc: 'You probably developed your open source project for a single, "default" architecture like x86, but today there is considerable growth in other architectures, from ARM to Power to mainframes. The talk will present some of the tools available to open source software developers to port their projects to other architectures.' },
+        { speaker: ["Jeff Barrett"], title: 'Don\'t Drift Into Management or "Leadership"', desc: "I walk through why you want to treat moving into management or leadership as a career change and outline many of the hidden challenges of management and leadership. I will be focusing on how best to handle the change to management and leadership. If cursing is not allowed, I can handle eliminating that from the talk." },
         { speaker: ["Robert Hudson"], title: "Minimal, meaningful, motion", desc: 'Need to explain something too complex for words - and too cumbersome for a diagram? Why not animate it instead? Using creatively-sourcef SVGs, open-source Inkscape, LiceCap, and a dose of JavaScript with GSAP, I\'ll show you how to create simple, effective animations that you can use to show, not tell, how things actually work.' }
       ],
       session4: [
+        { speaker: ["Luke Demi"], title: "Digital Immortality: A Very Serious Attempt to Preserve My Essence with AI", desc: "Can AI deliver immortality? In this talk I'll start with the basics as I demonstrate using state of the art text, voice, and video models to create an version of myself that my family can rely on for centuries to come." },
         { speaker: ["Luke Westfall"], title: "From CAD to Code: Navigating a Dynamic Career Pivot", desc: "Embark on a journey from mechanical engineering to software development. This talk will unravel the challenges and triumphs of career pivoting, guiding attendees through the transformation from designing machinery to leading a tech team. Discover strategies to overcome fear, embrace change, and leverage your past experiences in new tech realms. Perfect for those contemplating a career shift but hesitant to take the leap." },
-        { speaker: ["Jeff Barrett"], title: 'Don\'t Drift Into Management or "Leadership"', desc: "I walk through why you want to treat moving into management or leadership as a career change and outline many of the hidden challenges of management and leadership. I will be focusing on how best to handle the change to management and leadership. If cursing is not allowed, I can handle eliminating that from the talk." },
-        { speaker: ["Cody Alan Stubbs"], title: "6 Months as a Software Engineer - Reflections for New and Senior Devs", desc: "After pivoting into software engineering, the first six months in a full-stack role have been quite challenging and fun! This talk offers new developers a chance to hear the lessons learned by a fellow fresh developer, and senior developers can gain a valuable perspective to inform how they guide and collaborate with new developers." }
+        { speaker: ["Frederick Yocum"], title: "An Intro to ResourceSpace", desc: "A nontechnical introduction to ResourceSpace, an open source web-based digital asset management system used by commercial, academic, and not-for-profit organizations to organize and share documents and images. The presentation will provide an overview of the fundamental principles that underpin its functionality and define its limitations." }
       ],
       session5: [
-        { speaker: ["PJ Hagerty"], title: "Open Source Isn't What It Used to Be", desc: 'Many folks have an image of Open Source. To some it\'s "if I build it, they will come". Others, "it\'s unregulated, Wild West - not dependable". And even others, "it\'s how we do business". All this has changed, and continues to change. Open Source have become financially a part of everything technology driven. But what does that mean for us as developers?' },
         { speaker: ["Stephanie Schwartz", "Ed Schwartz", "Nick Elzer"], title: "Code and AI: Industry Insights and Educational Implications for Software Development", desc: "How are you using generative AI for coding? How are other developers using it? But more than that, how will these tools shift the way software development happens and how we should educate future computer scientists? We don't pretend to have the answers, but we will have a panel representing various perspectives and experiences and we will encourage open discussion." },
-        { speaker: ["Logan Farr"], title: "Observability: Getting insights into your applications", desc: 'We\'ve all heard of the term "Observability". But what makes something "observable"? How do we know what is the right thing to measure and where the red herrings are? In an ecosystem full of data, it\'s important to ask yourself what you really care about. In this talk, we\'ll be reviewing the what, why, when, and how to get the right information to teams in the most efficient way possible.' }
+        { speaker: ["Logan Farr"], title: "Observability: Getting insights into your applications", desc: 'We\'ve all heard of the term "Observability". But what makes something "observable"? How do we know what is the right thing to measure and where the red herrings are? In an ecosystem full of data, it\'s important to ask yourself what you really care about. In this talk, we\'ll be reviewing the what, why, when, and how to get the right information to teams in the most efficient way possible.' },
+        { speaker: ["Ken Richard"], title: "Birds of a Feather", desc: '' }
       ],
       session6: [
-        { speaker: ["Richard Everts"], title: "Unleashing AI Superpowers: Mastering Local Intelligence", desc: 'Dive into AI\'s cutting-edge with Rich Everts, exploring the power of LLMs, Stable Diffusion, and other models for local deployment. This fast-paced session will empower you to unleash AI\'s full potential, revolutionizing how you innovate and automate, all without needing the internet.' },
-        { speaker: ["Tom Swartz"], title: "Getting Started with Meshtastic", desc: "A beginners guide to LoRa mesh networks using Meshtastic devices" },
-        { speaker: ["Nazli Hardy"], title: "Understanding & Using Permutations and Combinations in Everyday Life", desc: 'If a lottery ticket had 5 slots for numbers from 0-9 followed by 2 slots for English letters (A-Z), then the permutation of unique tickets would be 10 * 10 * 10 * 10 *10 * 26 * 26. It may actually be easier to earn money being a YouTuber than choosing the winning number. If 3 people sit in a row, there are 6 different ways to seat them. But, if they sit in a circle, there are 2 different ways. Perhaps that is why, conversations are easier at a circular table.' }
-      ],
-      session7: [
-        { speaker: ["Luke Demi"], title: "Digital Immortality: A Very Serious Attempt to Preserve My Essence with AI", desc: "Can AI deliver immortality? In this talk I'll start with the basics as I demonstrate using state of the art text, voice, and video models to create an version of myself that my family can rely on for centuries to come." },
+        { speaker: ["John Mulligan"], title: "Accelerating Tabletop Game Development with Python Simulations", desc: "Learn how to use simple Python for rapid iteration and testing of tabletop roleplaying and board games. What used to require extensive playtesting and complicated math can now be done in seconds with a few lines of basic Python code. We’ll explore how to optimize game mechanics through simulation using real-world examples, including an ENNIE-nominated TTRPG. Little to no programming experience required." },
         { speaker: ["Rick Joi"], title: "How to get your ideas implemented at your organization", desc: "We all have ideas for how to make our organizations better, but it can sometimes seem impossible to get anyone to pay attention to our ideas, much less devote organizational resources to them. Learn the secrets of how to break through the invisible barriers so that your ideas have a positive impact on your organization." },
         { speaker: ["Bob Murphy"], title: "A brief introduction to tmux.", desc: "tmux is a terminal multiplexer, a tool that makes working on the command line better and easier.  It can allow you to work across connections, and to get multiple views on the computers that you are using.  I'll show what it does, how to install it on popular systems, and how to use it." }
       ],
