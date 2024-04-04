@@ -25,7 +25,7 @@ import GradientContainer from "../../components/2023/GradientContainer.vue";
       />
       <h3>PARKING</h3>
       <div class="smallLine"></div>
-      <p style="text-align: left">Parking will be provided at the <b>Prince Street Garage</b> at the corner of N Prince and W Orange Street, just a half block from the venue. Look for more information on how to redeem this complimentary closer to the event.</p>
+      <p style="text-align: left">Nearby parking is available at the <b>Prince Street Garage</b> at the corner of N Prince and W Orange Street, just a half block from the venue. The Penn Square Garage is also within walking distance! In the past, parking at the Prince Street Garage was reimbursed as a benefit to having this event at the Ware Center. Unfortunately, <b>our event space no longer offers parking ticket reimbursement</b>.</p>
       <p style="text-align: left">The Lancaster Amtrak station is just over a mile from the Ware Center, at 53 McGovern Avenue. Trains are available throughout the day from many destinations including 30th Street Station in Philadelphia.</p>
       
       <h3>HOTEL OPTIONS</h3>
