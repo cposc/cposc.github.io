@@ -364,7 +364,7 @@ export default {
         {
           // imageURL: "",
           name: "Alex Mayer",
-          bio: "Docker compose is a convinient way to run an entire application stack locally and share the configuration with others. We will review how to add docker compose configuration to an existing project, add services, create volumes to persist data, and execute commands against it."
+          bio: "I have worked with computers for over a decade. During that time I have worked as both a Software Engineer and a Site Reliability Engineer. I use GNU/Linux and spend my time outside of work contributing to open-source projects."
         },
         {
           // imageURL: "",
