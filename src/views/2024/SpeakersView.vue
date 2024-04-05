@@ -404,7 +404,7 @@ export default {
         {
           // imageURL: "",
           name: "Jonathan Bowman",
-          bio: "Vim is a lightweight yet powerful open-source cross-platform programmer's editor known for being ubiquitous yet intimidating. This session welcomes the Vim-curious to try out this editor and consider its usefulness. "
+          bio: "Currently a software engineer at Cargas using SQL to convert data between systems, Jonathan has been a middle and high school teacher, software developer, pastor, IT director, data wrangler, and always a hobbyist developer. He loves Vim, Python, Rust, laughing at teenage offspring, and connecting with people."
         },
         {
           // imageURL: "",
