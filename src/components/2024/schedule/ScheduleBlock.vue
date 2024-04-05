@@ -11,13 +11,13 @@
             <div></div>
             <div></div>
           </div>
-          <h1 v-if="index === 0" class="aud">The Auditorium / Steinman Hall - <a :href="'/speakers#' + session.speaker[0].split(' ').join('+')" target="_blank">{{ session.speaker[0] }}</a><span v-if="session.speaker[1]"> & <a :href="'/speakers#' + session.speaker[1].split(' ').join('+')" target="_blank">{{ session.speaker[1] }}</a></span></h1>
+          <h1 v-if="index === 0" class="aud">The Auditorium / Steinman Hall - <a :href="'/speakers#' + session.speaker[0].split(' ').join('+')" target="_blank">{{ session.speaker[0] }}</a><span v-if="session.speaker[1]"> <span>{{ session.speaker[2] ? "," : "&" }}</span> {{ session.speaker[1] }}</span><span v-if="session.speaker[2]">, & {{ session.speaker[2] }}</span></h1>
           <h1 v-if="index === 1" class="binns">
             Binns Room - <a :href="'/speakers#' + session.speaker[0].split(' ').join('+')" target="_blank">
               {{ session.speaker[0] }}
             </a>
-            <span v-if="session.speaker[1]"> & <a :href="'/speakers#' + session.speaker[1].split(' ').join('+')" target="_blank">{{ session.speaker[1] }}</a></span>
-            <span v-if="session.speaker[2]"> & <a :href="'/speakers#' + session.speaker[2].split(' ').join('+')" target="_blank">{{ session.speaker[2] }}</a></span>
+            <span v-if="session.speaker[1]"> <span>{{ session.speaker[2] ? "," : "&" }}</span> {{ session.speaker[1] }}</span>
+            <span v-if="session.speaker[2]">, & {{ session.speaker[2] }}</span>
           </h1>
           <h1 v-if="index === 2" class="library">Library - <a :href="'/speakers#' + session?.speaker[0].split(' ').join('+')" target="_blank">{{ session?.speaker[0] }}</a><span v-if="session.speaker[1]"> & <a :href="'/speakers#' + session.speaker[1].split(' ').join('+')" target="_blank">{{ session.speaker[1] }}</a></span></h1>
           <p class="title" v-if="isOpen[index]">{{ session.title }}</p>
@@ -212,7 +212,7 @@ export default {
     margin-bottom: 1.5rem;
 
     a {
-      color: black;
+      color: white;
     }
   }
 
