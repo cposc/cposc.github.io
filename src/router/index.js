@@ -1,20 +1,24 @@
 import { createRouter, createWebHistory } from "vue-router";
-import { useMenuStore } from '../store/menuStore';
+import { useMenuStore } from "../store/menuStore";
+
+import HomeView2025 from "../views/2025/HomeView.vue";
+import ScheduleView2025 from "../views/2025/ScheduleView.vue";
+import VolunteerView2025 from "../views/2025/VolunteerView.vue";
+import SpeakersView2025 from "../views/2025/SpeakersView.vue";
+import LogisticsView2025 from "../views/2025/LogisticsView.vue";
+import SponsorView2025 from "../views/2025/SponsorsView.vue";
+
+import HomeView2024 from "../views/2024/HomeView.vue";
+import ScheduleView2024 from "../views/2024/ScheduleView.vue";
+import VolunteerView2024 from "../views/2024/VolunteerView.vue";
+import SpeakersView2024 from "../views/2024/SpeakersView.vue";
+import LogisticsView2024 from "../views/2024/LogisticsView.vue";
 
 import HomeView2023 from "../views/2023/HomeView.vue";
-import HomeView2024 from "../views/2024/HomeView.vue";
-
 import ScheduleView2023 from "../views/2023/ScheduleView.vue";
-import ScheduleView2024 from "../views/2024/ScheduleView.vue";
-
 import VolunteerView2023 from "../views/2023/VolunteerView.vue";
-import VolunteerView2024 from "../views/2024/VolunteerView.vue";
-
 import SpeakersView2023 from "../views/2023/SpeakersView.vue";
-import SpeakersView2024 from "../views/2024/SpeakersView.vue";
-
 import LogisticsView2023 from "../views/2023/LogisticsView.vue";
-import LogisticsView2024 from "../views/2024/LogisticsView.vue";
 
 // same pages every year
 import CodeOfConduct from "../views/CodeOfConduct.vue";
@@ -26,23 +30,87 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView2024,
+      component: HomeView2025,
     },
     {
       path: "/speakers",
-      name: "speakers",
-      component: SpeakersView2024,
+      redirect: { name: "speakers2025" },
     },
     {
       path: "/logistics",
+      redirect: { name: "logistics2025" },
+    },
+    {
+      path: "/schedule",
+      redirect: { name: "schedule2025" },
+    },
+    {
+      path: "/volunteers",
+      redirect: { name: "volunteers2025" },
+    },
+    {
+      path: "/sponsors",
+      redirect: { name: "sponsors2025" },
+    },
+    {
+      path: "/code-of-conduct",
+      name: "code-of-conduct",
+      component: CodeOfConduct,
+    },
+    { path: "/:pathMatch(.*)*", component: PageNotFound },
+    // 2025 conference pages
+    {
+      path: "/2025/speakers",
+      name: "speakers2025",
+      component: SpeakersView2025,
+    },
+    {
+      path: "/2025/logistics",
+      name: "logistics2025",
+      component: LogisticsView2025,
+    },
+    {
+      path: "/2025/schedule",
+      name: "schedule2025",
+      component: ScheduleView2025,
+    },
+    {
+      path: "/2025/volunteers",
+      name: "volunteers2025",
+      component: VolunteerView2025,
+    },
+    {
+      path: "/2025/sponsors",
+      name: "sponsors2025",
+      component: SponsorView2025,
+    },
+    // 2024 conference pages
+    {
+      path: "/2024",
+      name: "home2024",
+      component: HomeView2024,
+    },
+    {
+      path: "/2024/speakers",
+      name: "speakers2024",
+      component: SpeakersView2024,
+    },
+    {
+      path: "/2024/logistics",
       name: "logistics",
       component: LogisticsView2024,
     },
     {
-      path: "/volunteers",
+      path: "/2024/schedule",
+      name: "schedule",
+      component: ScheduleView2024,
+    },
+    {
+      path: "/2024/volunteers",
       name: "volunteers",
       component: VolunteerView2024,
     },
+    // 2023 conference pages
     {
       path: "/2023",
       name: "2023",
@@ -68,25 +136,8 @@ const router = createRouter({
       name: "logistics2023",
       component: LogisticsView2023,
     },
-    {
-      path: "/code-of-conduct",
-      name: "code-of-conduct",
-      component: CodeOfConduct,
-    },
-    {
-      path: "/schedule",
-      name: "schedule",
-      component: ScheduleView2024,
-    },
-    { path: "/:pathMatch(.*)*", component: PageNotFound }
-      // route level code-splitting
-      // this generates a separate chunk (About.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      // component: () => import("../views/AboutView.vue"),
-    // },
   ],
 });
-
 
 router.beforeEach(() => {
   const menuStore = useMenuStore();
