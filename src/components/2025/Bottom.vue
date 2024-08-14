@@ -66,7 +66,6 @@ img.footerImage {
   align-items: center;
   background-color: #1F1F1F;
   color: white;
-  width: 100%;
 
   img.logo {
     width: 200px;
@@ -126,9 +125,7 @@ img.footerImage {
     margin-bottom: 0;
     margin-top: 1rem;
     padding: 1.5rem 2rem;
-    margin-left: 4rem;
-    // background-image: linear-gradient(to right, #186D86, rgba(24, 109, 134, 0));
-    width: 100%;
+    align-self: flex-start;
 
     @media screen and (max-width: 477px) {
       margin-top: 0;

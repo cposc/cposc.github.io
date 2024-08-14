@@ -15,7 +15,13 @@
       class="web"
       src="@/assets/2024/sponsors/harborcompliance.png"
     />
-    
+
+    <img
+      v-if="name === 'Crunchy Data'"
+      :alt="name"
+      src="@/assets/2023/sponsors/crunchy_data.svg"
+    />
+
     <img
       v-if="name === 'Listrak'"
       :alt="name"
@@ -75,6 +81,11 @@
       v-if="name === 'Sharp Innovation'"
       :alt="name"
       src="@/assets/2024/sponsors/Sharp-25th-simple-stacked.png"
+    />
+    <img
+      v-if="name === 'Quub'"
+      :alt="name"
+      src="@/assets/2023/sponsors/quub.png"
     />
 
     <!-- Tom Swartz -->
