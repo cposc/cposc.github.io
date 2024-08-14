@@ -104,5 +104,18 @@ export default {
       padding: 0 2rem;
     }
   }
+
+  .btn2025 {
+    cursor: pointer;
+    background-color: #37bfea;
+    padding: 1rem 2rem;
+    width: fit-content;
+    border-radius: 30px;
+    text-align: center;
+
+    font-family: "Poppins", sans-serif;
+    color: #1F1F1F;
+    font-weight: 600;
+	}
 }
 </style>
