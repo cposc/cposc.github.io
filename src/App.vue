@@ -43,6 +43,11 @@ export default {
 
 
 <style lang="scss">
+@font-face {
+  font-family: "Alarm Clock";
+  src: url("./assets/2025/alarm_clock.ttf");
+}
+
 .pageContainer {
   background-color: black;
   width: 100%;
