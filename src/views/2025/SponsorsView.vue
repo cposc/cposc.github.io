@@ -155,8 +155,8 @@ import SponsorItem from "../../components/2025/home/SponsorItem.vue";
           <td>Number of Free, All-Access Passes</td>
           <td>1</td>
           <td>2</td>
-          <td>5</td>
-          <td>8</td>
+          <td>4</td>
+          <td>10</td>
         </tr>
       </table>
       <div className="smallTable">
@@ -192,7 +192,7 @@ import SponsorItem from "../../components/2025/home/SponsorItem.vue";
             provided)
           </li>
           <li>Special mention during opening/closing remarks</li>
-          <li>Free all-access passes (5)</li>
+          <li>Free all-access passes (4)</li>
         </ul>
         <h4>Flux Capacitor</h4>
         <p>
@@ -210,7 +210,7 @@ import SponsorItem from "../../components/2025/home/SponsorItem.vue";
           <li>Special mention during opening/closing remarks</li>
           <li>Room sponsorship</li>
           <li>Company-provided promo material given to all attendees</li>
-          <li>Free all-access passes (8)</li>
+          <li>Free all-access passes (10)</li>
         </ul>
       </div>
       <div className="otherSponsorContent">

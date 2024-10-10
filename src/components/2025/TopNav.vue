@@ -20,7 +20,7 @@ const menuStore = useMenuStore();
             <!-- <RouterLink to="/logistics">Travel</RouterLink> -->
             <RouterLink to="/sponsors">Sponsor</RouterLink>
             <RouterLink to="/volunteers">Volunteer</RouterLink>
-            <RouterLink to="/schedule">Schedule</RouterLink>
+            <!-- <RouterLink to="/schedule">Schedule</RouterLink> -->
             <RouterLink to="/code-of-conduct">Code of Conduct</RouterLink>
           </div>
         </div>
@@ -30,12 +30,12 @@ const menuStore = useMenuStore();
           <!-- <RouterLink to="/speakers">Speakers</RouterLink> -->
           <!-- <RouterLink to="/logistics">Travel</RouterLink> -->
           <RouterLink to="/volunteers">Volunteer</RouterLink>
-          <RouterLink to="/schedule">Schedule</RouterLink>
-          <!-- <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?">
+          <!-- <RouterLink to="/schedule">Schedule</RouterLink> -->
+          <a target="_blank" href="https://forms.gle/yCLJWq8TFPRfrEsu9">
             <div>
-              <div>JOIN THE CREW</div>
+              <div><b>SUBMIT A TALK</b></div>
             </div>
-          </a> -->
+          </a>
         </div>
         
         <div class="hamburgerOverlay" :class="{ open: menuStore.isOpen }" @click="menuStore.toggleMenu()"></div>
