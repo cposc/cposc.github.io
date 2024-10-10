@@ -544,7 +544,6 @@ li {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  max-width: 1700px;
   padding-bottom: 8rem;
 
   .sponsorsWrapper {
