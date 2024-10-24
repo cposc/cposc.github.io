@@ -109,10 +109,14 @@ export default {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    height: 80px;
+    height: 77px;
     width: 100%;
     background-color: rgba(0,0,0,0.5);
-    
+
+    @media screen and (max-width: 640px) {
+      height: 68px;
+    }
+
     .hamburger {
       cursor: pointer;
       padding: 23px;

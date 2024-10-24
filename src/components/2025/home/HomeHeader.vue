@@ -71,7 +71,15 @@
     }
 
     @media screen and (max-width: 445px) {
-      margin-bottom: -11rem;
+      margin-bottom: -11.5rem;
+    }
+
+    @media screen and (max-width: 420px) {
+      margin-bottom: -14rem;
+
+      h1 {
+        padding-bottom: 0 !important;
+      }
     }
     
 

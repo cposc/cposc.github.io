@@ -40,116 +40,118 @@ onMounted(syncWithRealTime);
 </script>
 
 <template>
-  <div class="container">
-    <div class="box box1">
-      <div class="box-top">
-        <div class="column month">
-          <p class="label">Month</p>
-          <p class="display">Apr</p>
+  <div class="circuitBox">
+    <div class="container">
+      <div class="box box1">
+        <div class="box-top">
+          <div class="column month">
+            <p class="label">Month</p>
+            <p class="display">Apr</p>
+          </div>
+          <div class="column day">
+            <p class="label">Day</p>
+            <p class="display">26</p>
+          </div>
+          <div class="column year">
+            <p class="label">Year</p>
+            <p class="display">2025</p>
+          </div>
+          <div class="column ampm">
+            <div class="label">Am</div>
+            <div class="lit"></div>
+            <div class="label">Pm</div>
+            <div class="unlit"></div>
+          </div>
+          <div class="column hour">
+            <p class="label">Hour</p>
+            <p class="display">08</p>
+          </div>
+          <div class="column colon">
+            <div class="lit time"></div>
+            <div class="lit time"></div>
+          </div>
+          <div class="column min">
+            <p class="label">Min</p>
+            <p class="display">00</p>
+          </div>
         </div>
-        <div class="column day">
-          <p class="label">Day</p>
-          <p class="display">26</p>
-        </div>
-        <div class="column year">
-          <p class="label">Year</p>
-          <p class="display">2025</p>
-        </div>
-        <div class="column ampm">
-          <div class="label">Am</div>
-          <div class="lit"></div>
-          <div class="label">Pm</div>
-          <div class="unlit"></div>
-        </div>
-        <div class="column hour">
-          <p class="label">Hour</p>
-          <p class="display">08</p>
-        </div>
-        <div class="column colon">
-          <div class="lit time"></div>
-          <div class="lit time"></div>
-        </div>
-        <div class="column min">
-          <p class="label">Min</p>
-          <p class="display">00</p>
-        </div>
-      </div>
-      <div class="box-bottom">
-        <p class="large-label">Destination Time</p>
-      </div>
-    </div>
-    <div class="box box2">
-      <div class="box-top">
-        <div class="column month">
-          <p class="label">Month</p>
-          <p class="display">{{ currentMonth }}</p>
-        </div>
-        <div class="column day">
-          <p class="label">Day</p>
-          <p class="display">{{ currentDay }}</p>
-        </div>
-        <div class="column year">
-          <p class="label">Year</p>
-          <p class="display">{{ currentYear }}</p>
-        </div>
-        <div class="column ampm">
-          <div class="label">Am</div>
-          <div :class="amPm === 'AM' ? 'lit' : 'unlit'"></div>
-          <div class="label">Pm</div>
-          <div :class="amPm === 'PM' ? 'lit' : 'unlit'"></div>
-        </div>
-        <div class="column hour">
-          <p class="label">Hour</p>
-          <p class="display">{{ currentHour }}</p>
-        </div>
-        <div class="column colon">
-          <div class="lit time"></div>
-          <div class="lit time"></div>
-        </div>
-        <div class="column min">
-          <p class="label">Min</p>
-          <p class="display">{{ currentMinute }}</p>
+        <div class="box-bottom">
+          <p class="large-label">Destination Time</p>
         </div>
       </div>
-      <div class="box-bottom">
-        <p class="large-label">Present Time</p>
+      <div class="box box2">
+        <div class="box-top">
+          <div class="column month">
+            <p class="label">Month</p>
+            <p class="display">{{ currentMonth }}</p>
+          </div>
+          <div class="column day">
+            <p class="label">Day</p>
+            <p class="display">{{ currentDay }}</p>
+          </div>
+          <div class="column year">
+            <p class="label">Year</p>
+            <p class="display">{{ currentYear }}</p>
+          </div>
+          <div class="column ampm">
+            <div class="label">Am</div>
+            <div :class="amPm === 'AM' ? 'lit' : 'unlit'"></div>
+            <div class="label">Pm</div>
+            <div :class="amPm === 'PM' ? 'lit' : 'unlit'"></div>
+          </div>
+          <div class="column hour">
+            <p class="label">Hour</p>
+            <p class="display">{{ currentHour }}</p>
+          </div>
+          <div class="column colon">
+            <div class="lit time"></div>
+            <div class="lit time"></div>
+          </div>
+          <div class="column min">
+            <p class="label">Min</p>
+            <p class="display">{{ currentMinute }}</p>
+          </div>
+        </div>
+        <div class="box-bottom">
+          <p class="large-label">Present Time</p>
+        </div>
       </div>
-    </div>
-    <div class="box box3">
-      <div class="box-top">
-        <div class="column month">
-          <p class="label">Month</p>
-          <p class="display">Apr</p>
+      <div class="box box3">
+        <div class="box-top">
+          <div class="column month">
+            <p class="label">Month</p>
+            <p class="display">Apr</p>
+          </div>
+          <div class="column day">
+            <p class="label">Day</p>
+            <p class="display">06</p>
+          </div>
+          <div class="column year">
+            <p class="label">Year</p>
+            <p class="display">2024</p>
+          </div>
+          <div class="column ampm">
+            <div class="label">Am</div>
+            <div class="unlit"></div>
+            <div class="label">Pm</div>
+            <div class="lit"></div>
+          </div>
+          <div class="column hour">
+            <p class="label">Hour</p>
+            <p class="display">06</p>
+          </div>
+          <div class="column colon">
+            <div class="lit time"></div>
+            <div class="lit time"></div>
+          </div>
+          <div class="column min">
+            <p class="label">Min</p>
+            <p class="display">00</p>
+          </div>
         </div>
-        <div class="column day">
-          <p class="label">Day</p>
-          <p class="display">06</p>
+        <div class="box-bottom">
+          <p class="large-label">Last Time Departed</p>
         </div>
-        <div class="column year">
-          <p class="label">Year</p>
-          <p class="display">2024</p>
-        </div>
-        <div class="column ampm">
-          <div class="label">Am</div>
-          <div class="unlit"></div>
-          <div class="label">Pm</div>
-          <div class="lit"></div>
-        </div>
-        <div class="column hour">
-          <p class="label">Hour</p>
-          <p class="display">06</p>
-        </div>
-        <div class="column colon">
-          <div class="lit time"></div>
-          <div class="lit time"></div>
-        </div>
-        <div class="column min">
-          <p class="label">Min</p>
-          <p class="display">00</p>
-        </div>
-      </div>
-      <div class="box-bottom">
-        <p class="large-label">Last Time Departed</p>
       </div>
     </div>
   </div>
@@ -169,6 +171,17 @@ body {
   background-color: #262626;
 }
 
+.circuitBox {
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+
+  position: absolute;
+  top: -0.25rem;
+}
+
 .container {
   background-color: #565456;
   margin: 0;
@@ -180,6 +193,36 @@ body {
   font-size: 0.75rem; /* Use rem instead of px */
   text-transform: uppercase;
   width: fit-content;
+  scale: 0.6;
+
+  @media screen and (max-width: 1240px) {
+    display: flex;
+    margin-top: 3.5rem;
+  }
+
+  @media screen and (max-width: 905px) {
+    scale: 0.5;
+    margin-top: 3rem;
+  }
+
+  @media screen and (max-width: 800px) {
+    margin-top: 2.5rem;
+  }
+
+  @media screen and (max-width: 752px) {
+    scale: 0.4;
+    margin-top: 2rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    flex-direction: column;
+    margin-top: -4.25rem;
+  }
+
+  @media screen and (min-width: 320px) and (max-width: 530px) {
+    scale: 0.3;
+    margin-top: -5.75rem;
+  }
 }
 
 .box {
