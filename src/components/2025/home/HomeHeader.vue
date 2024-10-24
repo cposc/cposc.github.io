@@ -13,7 +13,7 @@
     >
       <div class="contentContainer">
         <h1>Hack to the Future</h1>
-        <h2>Central Pennsylvania Open Sourced Conference</h2>
+        <h2>Central Pennsylvania Open Source Conference</h2>
         <div class="conferenceDate">Saturday, April 26th, 2025</div>
       </div>
     </div>
