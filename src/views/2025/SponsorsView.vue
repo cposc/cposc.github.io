@@ -13,7 +13,7 @@ import SponsorItem from "../../components/2025/home/SponsorItem.vue";
         <img
           width="200"
           height="200"
-          src="http://localhost:5173/vroom_vroom.gif"
+          src="http://cposc.org/vroom_vroom.gif"
         />
       </marquee>
       <div className="sponsors">
