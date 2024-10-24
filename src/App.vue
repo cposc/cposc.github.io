@@ -43,6 +43,10 @@ export default {
 
 
 <style lang="scss">
+@font-face {
+  font-family: "Alarm Clock";
+  src: url("./assets/2025/alarm_clock.ttf");
+}
 body {
   width: 100vw;
   overflow-x: hidden;
