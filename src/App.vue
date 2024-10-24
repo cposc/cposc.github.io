@@ -47,7 +47,11 @@ export default {
   font-family: "Alarm Clock";
   src: url("./assets/2025/alarm_clock.ttf");
 }
-
+body {
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 .pageContainer {
   background-color: black;
   width: 100%;

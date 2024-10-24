@@ -23,13 +23,7 @@
       </p>
       <p>
         There are CPOSC sponsorship opportunities at all levels!
-        <a
-          href="mailto:sponsor@localareanetworks.org?subject=Sponsorship Lead: I'd like more info!"
-          target="_blank"
-        >
-          Contact us
-        </a>
-        for a prospectus and more information on how you can help this event
+        <a href="/sponsors">Check out our prospectus</a>, which includes information on how you can help this event
         benefit everyone from high school and college students to professionals
         with decades of experience.
       </p>

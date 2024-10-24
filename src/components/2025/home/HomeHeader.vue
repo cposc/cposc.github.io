@@ -35,6 +35,10 @@
   max-height: 763px;
   background-color: #1f1f1f;
 
+  @media screen and (max-width: 875px) {
+    padding-bottom: 1.5rem;
+  }
+
   img.headerImage, .imageOverlay {
     position: absolute;
     top: 3rem;
@@ -54,6 +58,23 @@
     padding-bottom: 6rem;
     width: 100%;
 
+    @media screen and (max-width: 875px) {
+      padding-bottom: 0rem;
+    }
+
+    @media screen and (max-width: 640px) {
+      margin-bottom: -10rem;
+    }
+
+    @media screen and (max-width: 565px) {
+      margin-bottom: -12rem;
+    }
+
+    @media screen and (max-width: 445px) {
+      margin-bottom: -11rem;
+    }
+    
+
     .contentContainer {
       text-align: center;
       display: flex;
@@ -68,17 +89,83 @@
         font-family: "Bebas Neue", sans-serif;
         font-weight: 800;
         font-style: normal;
+
+        @media screen and (max-width: 1200px) {
+          font-size: 90px;
+        }
+
+        @media screen and (max-width: 925px) {
+          font-size: 70px;
+        }
+
+        @media screen and (max-width: 640px) {
+          padding-bottom: 5rem;
+        }
+
+        @media screen and (max-width: 600px) {
+          font-size: 60px;
+        }
+
+        @media screen and (max-width: 525px) {
+          font-size: 50px;
+        }
+
+        @media screen and (max-width: 445px) {
+          font-size: 40px;
+          padding-bottom: 4rem;
+        }
+
+        @media screen and (max-width: 400px) {
+          font-size: 35px;
+          padding-bottom: 3rem;
+        }
+
+        @media screen and (max-width: 385px) {
+          padding-bottom: 4rem;
+        }
       }
 
       h2 {
         font-family: "Poppins", sans-serif;
         font-size: 38px;
         margin-top: 0;
+
+        @media screen and (max-width: 565px) {
+          max-width: 300px;
+        }
+
+        @media screen and (max-width: 480px) {
+          max-width: 250px;
+        }
       }
 
       p {
         font-style: italic;
         color: white;
+      }
+
+      @media screen and (max-width: 1260px) {
+        h2 {
+          font-size: 30px;
+        }
+      }
+
+      @media screen and (max-width: 1030px) {
+        h2 {
+          font-size: 25px;
+        }
+      }
+
+      @media screen and (max-width: 890px) {
+        h2 {
+          font-size: 20px;
+        }
+      }
+
+      @media screen and (max-width: 730px) {
+        h2 {
+          font-size: 16px;
+        }
       }
     }
   }
@@ -99,6 +186,14 @@
     border-radius: 30px;
     background-clip: padding-box;
     padding: 1rem 2rem 1rem 2rem;
+
+    @media screen and (max-width: 460px) {
+      font-size: 16px;
+    }
+
+    @media screen and (max-width: 385px) {
+      padding: 0.5rem 1rem 0.5rem 1rem;
+    }
 
     &::after {
       position: absolute;

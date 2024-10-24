@@ -1,33 +1,25 @@
-<script setup>
-import GradientContainer from "../../components/2023/GradientContainer.vue";
-</script>
-
 <template>
   <div class="pageContainer">
-    <img
-      class="headerImage"
-      alt="CPOSC Founder Presenting"
-      src="@/assets/2024/CPOSC_Cover_2024_Galaxy.png"
-    />
-    <h4>VOLUNTEERS</h4>
-    <h1>Get Involved</h1>
-    <div class="line"></div>
-    <div class="pageContent">
-      <p>Join us on this 88 mph journey to success! We're looking for volunteers to help in the months leading up to the event as well as on the week/day of. If you're interested in being a part of this flux capacitor crew, <a href="mailto:cposc@localareanetworks.org" target="_blank">hop in the DeLorean</a> while we speed to April.</p>
-      <h3>VOLUNTEER FOCUS AREAS</h3>
-      <div class="focusBlock">
-        <ul>
-          <li>Marketing, social media, and communications</li>
-          <li>Speakers</li>
-          <li>Sponsorships</li>
-          <li>Streaming and hybrid event opportunities</li>
-          <li>Venue and food logistics</li>
-          <li>Attendee happiness</li>
-        </ul>
+    <div className="volunteers">
+      <h1>Get Involved</h1>
+      <div class="line"></div>
+      <div class="pageContent">
+        <p>Join us on this 88 mph journey to success! We're looking for volunteers to help in the months leading up to the event as well as on the week/day of. If you're interested in being a part of this flux capacitor crew, <a href="mailto:cposc@localareanetworks.org" target="_blank">hop in the DeLorean</a> while we speed to April.</p>
+        <p>If you don't have an email client set up on your machine, please email <b>cposc@localareanetworks.org</b> instead of clicking the link above.</p>
+        <h3>VOLUNTEER FOCUS AREAS</h3>
+        <div class="focusBlock">
+          <ul>
+            <li>Marketing, social media, and communications</li>
+            <li>Speakers</li>
+            <li>Sponsorships</li>
+            <li>Streaming and hybrid event opportunities</li>
+            <li>Venue and food logistics</li>
+            <li>Attendee happiness</li>
+          </ul>
+        </div>
+        <p style="z-index: 10; position: relative; text-align: left">There are always opportunities before and/or during the event!</p>
       </div>
-      <p style="z-index: 10; position: relative; text-align: left">There are always opportunities before and/or during the event!</p>
     </div>
-    <GradientContainer />
   </div>
 </template>
 
@@ -38,17 +30,23 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.headerImage {
-  height: 82px;
+.volunteers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: white;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
+
+  min-height: calc(100vh - 28.9rem);
 }
 
-.pageContainer {
-  background-color: white;
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  color: #1f1f1f;
+  padding-top: 2rem;
+  padding-bottom: 8px;
+  margin: 0;
 }
 
 p > a {
@@ -60,13 +58,8 @@ p > a {
   }
 }
 
-h1 {
-  color: #186D86;
-  margin-bottom: 6px !important;
-}
-
 .line {
-  background-color: #186D86;
+  background-color: #ff2cb7;
   margin-bottom: 1rem;
 }
 
@@ -77,8 +70,15 @@ h4, h3, p, a {
 
 .focusBlock {
   z-index: 10;
-  position: relative;
-  background-color: #186D86 !important;
+  border-image: linear-gradient(to right, #ff7164 0%, #ffac19 100%) 1;
+  border-width: 6px;
+  border-style: solid;
+  padding: 5px;
+  background-color: white !important;
+
+  li {
+    color: #1F1F1F;
+  }
 
   @media screen and (max-width: 550px) {
     ul {

@@ -24,17 +24,17 @@
         <p><a href="/2023" target="_blank">CPOSC 2023</a></p>
         <p><a href="/2024" target="_blank">CPOSC 2024</a></p>
       </div>
-      <div class="footerSection">
+      <div class="footerSection contact">
         <h4>Contact</h4>
         <p><i class="fa-regular fa-envelope"></i>Email: <a href="mailto:cposc@localareanetworks.org" target="_blank">cposc@localareanetworks.org</a></p>
       </div>
-      <div class="footerSection">
+      <div class="footerSection socials">
         <h4>Follow on Social Media</h4>
-        <p><i class="fa-brands fa-facebook"></i> <a href="https://www.facebook.com/CPOSC2008" target="_blank">Facebook</a></p>
-        <p><i class="fa-brands fa-twitter"></i> <a href="https://twitter.com/CPOSC" target="_blank">Twitter</a></p>
+        <a href="https://www.facebook.com/CPOSC2008" target="_blank"><i class="fa-brands fa-facebook"></i></a>
+        <a href="https://www.linkedin.com/company/central-pa-open-source-conference" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </div>
-    <p className="copyright">© 2023-2024 Local Area Networks and CPOSC. All rights reserved.</p>
+    <p className="copyright">© 2024-2025 Local Area Networks and CPOSC. All rights reserved.</p>
   </div>
 </template>
 
@@ -74,21 +74,72 @@ img.footerImage {
   }
 
   .footerContent {
-    width: 100%;
-    padding: 1.5rem 0 0 0;
+    width: calc(100% - 4rem);
+    padding: 1.5rem 2rem 0 2rem;
     z-index: 10;
 
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0.5rem;
+
+    @media screen and (max-width: 780px) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media screen and (max-width: 624px) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
 
     i {
       margin-right: 0.5rem;
     }
 
     .footerSection {
-      margin: 0rem 2rem;
+      &.contact {
+        justify-self: center;
+
+        @media screen and (max-width: 780px) {
+          justify-self: end;
+
+          h4 {
+            text-align: right;
+          }
+        }
+      }
+
+      &.socials {
+        font-size: 1.5rem;
+        justify-self: end;
+
+        a:first-of-type {
+          margin-right: 0.25rem;
+        }
+
+        @media screen and (max-width: 780px) {
+          grid-column: 1 / -1;
+          justify-self: center;
+
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+
+          h4 {
+            grid-column: 1 / -1;
+            margin-bottom: 10px;
+          }
+
+          a:first-of-type {
+            text-align: right;
+          }
+        }
+      }
     }
 
     p {
