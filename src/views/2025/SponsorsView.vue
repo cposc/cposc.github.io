@@ -255,7 +255,7 @@ import SponsorItem from "../../components/2025/home/SponsorItem.vue";
         </p>
         <h3>Contact Info</h3>
         <p>
-          If you would like to sponsor CPOSC 2024, please send an email to
+          If you would like to sponsor CPOSC 2025, please send an email to
           sponsor@localareanetworks.org. One of the organizers will respond
           promptly.
         </p>
