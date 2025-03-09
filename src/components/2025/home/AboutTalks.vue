@@ -84,38 +84,38 @@
         </div>
       </div>
     </div>
-    <div
-      class="talkContents"
-      data-aos="fade-left"
-      data-aos-duration="5000"
-      data-aos-easing="ease-in-out"
-    >
-      <div className="retroImgSpeaker">
-        <div className="colorBlock"></div>
-        <img
-          alt="CPOSC Audience 2019"
-          src="@/assets/2024/IMG_6743.jpg"
-          className="sectionImg"
-        />
-        <img
-          alt="retro orange triangles"
-          src="@/assets/2025/retro_circles.png"
-          className="shapesOverlay"
-        />
-      </div>
-      <h1>Where we're going, we don't need roadmaps -</h1>
-      <p>
-        <b>But we need a schedule!</b> Whether you’ve got groundbreaking ideas
-        or innovative projects that could use a flux capacitor to reach new
-        heights, we want to hear from you. Your submission could be the key to
-        unlocking the next great chapter in our tech timeline, and who knows—you
-        might just make history.
-      </p>
-      <p>Be a part of our journey to a tech-filled future!</p>
-      <a target="_blank" href="https://forms.gle/yCLJWq8TFPRfrEsu9">
-        <div class="register">Submit a Talk</div>
-      </a>
-    </div>
+    <!-- <div -->
+    <!--   class="talkContents" -->
+    <!--   data-aos="fade-left" -->
+    <!--   data-aos-duration="5000" -->
+    <!--   data-aos-easing="ease-in-out" -->
+    <!-- > -->
+    <!--   <div className="retroImgSpeaker"> -->
+    <!--     <div className="colorBlock"></div> -->
+    <!--     <img -->
+    <!--       alt="CPOSC Audience 2019" -->
+    <!--       src="@/assets/2024/IMG_6743.jpg" -->
+    <!--       className="sectionImg" -->
+    <!--     /> -->
+    <!--     <img -->
+    <!--       alt="retro orange triangles" -->
+    <!--       src="@/assets/2025/retro_circles.png" -->
+    <!--       className="shapesOverlay" -->
+    <!--     /> -->
+    <!--   </div> -->
+    <!--   <h1>Where we're going, we don't need roadmaps -</h1> -->
+    <!--   <p> -->
+    <!--     <b>But we need a schedule!</b> Whether you’ve got groundbreaking ideas -->
+    <!--     or innovative projects that could use a flux capacitor to reach new -->
+    <!--     heights, we want to hear from you. Your submission could be the key to -->
+    <!--     unlocking the next great chapter in our tech timeline, and who knows—you -->
+    <!--     might just make history. -->
+    <!--   </p> -->
+    <!--   <p>Be a part of our journey to a tech-filled future!</p> -->
+    <!--   <a target="_blank" href="https://forms.gle/yCLJWq8TFPRfrEsu9"> -->
+    <!--     <div class="register">Submit a Talk</div> -->
+    <!--   </a> -->
+    <!-- </div> -->
     <div
       class="aboutWrapper"
       data-aos="fade-left"
