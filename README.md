@@ -1,6 +1,6 @@
 # cposc
 
-This is the CPOSC website for the event being held April 1st, 2023. Use the instructions below to pull down the codebase and start making changes.
+This is the CPOSC website for the event being held April 26th, 2025. Use the instructions below to pull down the codebase and start making changes.
 
 -----
 

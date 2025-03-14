@@ -31,11 +31,11 @@ const menuStore = useMenuStore();
           <!-- <RouterLink to="/logistics">Travel</RouterLink> -->
           <RouterLink to="/volunteers">Volunteer</RouterLink>
           <!-- <RouterLink to="/schedule">Schedule</RouterLink> -->
-          <a target="_blank" href="https://forms.gle/yCLJWq8TFPRfrEsu9">
+          <!-- <a target="_blank" href="https://forms.gle/yCLJWq8TFPRfrEsu9">
             <div>
               <div><b>SUBMIT A TALK</b></div>
             </div>
-          </a>
+          </a> -->
           <a target="_blank" href="https://www.eventbrite.com/e/1009939595517">
             <div>
               <div><b>GET YOUR TICKET</b></div>
