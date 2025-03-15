@@ -167,7 +167,7 @@ export default {
   }
 
   .blankImage, img {
-    height: 200px;
+    min-height: 200px;
     width: 200px;
     border-radius: 10px;
     object-fit: cover;
