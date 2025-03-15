@@ -1,8 +1,61 @@
 <template>
   <div class="speakerBlock" data-aos="zoom-out" data-aos-duration="5000" data-aos-easing="ease-in-out">
-    <div class="right">
+  <div class="right">
       <p class="name" :id="nameAnchor">{{ name }}</p>
-      <p>{{ bioMinMax(bio) }} <span v-if="shouldShowReadMore(bio)" v-on:click="toggleReadMore()" style="text-decoration: underline;cursor: pointer"> Read {{ readMoreToggle ? "Less" : "More" }} </span></p>
+      <p class="talk">{{ talkTitle }}</p>
+      <p class="abstract">{{ talkAbstract }}</p>
+      <img
+        v-if="name === 'Scott Dienner'"
+        :alt="name"
+        src="@/assets/2025/speakers/ScottDienner.jpg"
+      />
+      <img
+        v-if="name === 'Andy James'"
+        :alt="name"
+        src="@/assets/2025/speakers/AndyJames.jpg"
+      />
+      <img
+        v-if="name === 'Jeff Barrett'"
+        :alt="name"
+        src="@/assets/2025/speakers/JeffBarrett.jpg"
+      />
+      <img
+        v-if="name === 'Tom Courtney'"
+        :alt="name"
+        src="@/assets/2025/speakers/TomCourtney.jpg"
+      />
+      <img
+        v-if="name === 'Joe Latrell'"
+        :alt="name"
+        src="@/assets/2025/speakers/JoeLatrell.png"
+      />
+      <img
+        v-if="name === 'Bob Murphy'"
+        :alt="name"
+        src="@/assets/2025/speakers/BobMurphy.png"
+      />
+      <img
+        v-if="name === 'Benjamin Sautner'"
+        :alt="name"
+        src="@/assets/2025/speakers/BenjaminSautner.jpg"
+      />
+      <img
+        v-if="name === 'Alex Mayer'"
+        :alt="name"
+        src="@/assets/2025/speakers/AlexMayer.png"
+      />
+      <img
+        v-if="name === 'Zach Fedor'"
+        :alt="name"
+        src="@/assets/2025/speakers/ZachFedor.jpg"
+      />
+      <img
+        v-if="name === 'Peter Stukalov'"
+        :alt="name"
+        src="@/assets/2025/speakers/PeterStukalov.jpg"
+      />
+      <div class="blankImage" v-if="imageUrl === ''"></div>
+      <p class="bio">{{ bioMinMax(bio) }} <span v-if="shouldShowReadMore(bio)" v-on:click="toggleReadMore()" style="text-decoration: underline;cursor: pointer"> Read {{ readMoreToggle ? "Less" : "More" }} </span></p>
     </div>
   </div>
 </template>
@@ -13,6 +66,8 @@ export default {
   props: {
     imageUrl: String,
     name: String,
+    talkTitle: String,
+    talkAbstract: String,
     nameAnchor: String,
     bio: String,
     index: Number,
@@ -54,8 +109,9 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  margin-top: 3rem;
-  width: 80%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  //width: 80%;
   margin-left: auto;
   margin-right: auto;
 //   max-width: 450px;
@@ -75,6 +131,10 @@ export default {
     }
   }
 
+.right {
+  text-align: center;
+}
+
   .right > p {
     text-align: center;
     margin-top: 0;
@@ -85,11 +145,25 @@ export default {
     }
   }
 
+  p.bio {
+    margin-top: 1em;
+    font-size: 0.8em;
+  }
+
+  p.talk {
+    font-style: italic;
+    margin-bottom: 0.25em;
+  }
+
+  p.abstract {
+    font-size: 0.8em;
+  }
+
   .name {
-    // color: white;
     font-weight: bold;
     font-size: 18px;
     text-transform: uppercase;
+    margin-bottom: 0.5em;
   }
 
   .blankImage, img {
@@ -98,6 +172,8 @@ export default {
     border-radius: 10px;
     object-fit: cover;
     background-color: grey;
+    text-align: center;
+    margin: 0 auto 0 auto;
   }
 }
 </style>

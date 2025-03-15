@@ -1,19 +1,19 @@
 <script setup>
-import GradientContainer from "../../components/2023/GradientContainer.vue";
-import SpeakerBlock from "../../components/2024/SpeakerBlock.vue";
+import SpeakerBlock from "../../components/2025/SpeakerBlock.vue";
 
 </script>
 
 <template>
   <div class="pageContainer">
-    <img
-      class="headerImage"
-      alt="CPOSC Founder Presenting"
-      src="@/assets/2024/CPOSC_Cover_2024_Galaxy.png"
-    />
-    <div class="speakerContent">
-      <h4>SPEAKERS</h4>
-      <h1>Talk to Us</h1>
+  <marquee direction="left">
+        <img
+          width="200"
+          height="200"
+          src="http://cposc.org/vroom_vroom.gif"
+        />
+      </marquee>
+    <div class="speakers">
+      <h1>CPOSC SPEAKERS</h1>
       <div class="line"></div>
       <div class="pageContent">
         <!-- NOTE: BEFORE CALL FOR SPEAKERS IS READY -->
@@ -22,324 +22,13 @@ import SpeakerBlock from "../../components/2024/SpeakerBlock.vue";
         <!-- NOTE: BEFORE SPEAKERS HAVE BEEN SELECTED -->
         <!-- <p>Are you looking to join us on our maiden voyage to reach the next generation of coders? We’re ready for you! You can submit your talk using <a href="https://forms.gle/9C2Rwf2iXH7MWVWD9" target="_blank">this form</a>.</p> -->
         <!-- <p>Remember, if you’re overflowing with ideas you are welcome to submit as many talk proposals as you like, though at most only one talk per speaker will be selected. If you have questions about a talk topic or the logistics of being a CPOSC speaker, don’t hesitate to <a href="mailto:cposc@localareanetworks.org" target="_blank">contact us</a> and we’d be more than happy to chat about it. Thanks for your interest in making CPOSC 2024 a great day of new knowledge for our attendees!</p> -->
-        
-        <!-- <p>Speakers have received talk acceptances! Stay tuned for an update as soon as we have everyone's headshots.</p> -->
-        
-        <!-- <p style="margin-bottom: 3rem;">Below are speakers from previous trips around the sun.</p> -->
-
-        <!-- <div class="speakerCarousel">
-          <carousel :items-to-show="itemsToShow" :wrap-around="true" :autoplay="5000">
-            <slide v-for="slide in 10" :key="slide">
-              {{ slide }}
-            </slide>
-            <slide key="1" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/alex_mayer.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="2" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/bob_murphy.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="3" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/deanna_bledsoe.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="4" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/ean_dudley.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="5" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/ed_schwartz.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="6" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/gregember.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="7" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/jacob_whetstone.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="8" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/joe_latrell.png"
-                />
-              </div>
-            </slide>
-            <slide key="9" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/joel_walker.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="10" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/jonathan_fleckenstein.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="11" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/kevin_hicks.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="12" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/luke_demi.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="13" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/nathaniel_evry.png"
-                />
-              </div>
-            </slide>
-            <slide key="14" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/nick_elzer.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="15" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/rich_everts.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="16" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/ryan_walker.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="17" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/samantha_noggle.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="18" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/Stephanie-Schwartz.jpg"
-                />
-              </div>
-            </slide>
-            <slide key="19" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/thomas_knickman.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="20" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/tom_swartz.jpeg"
-                />
-              </div>
-            </slide>
-            <slide key="21" :slide-width="slideWidth">
-              <div class="aboutImage">
-                <img
-                  alt="CPOSC Audience 2019"
-                  src="@/assets/2023/speakers/walt_mankowski.jpg"
-                />
-              </div>
-            </slide>
-            <template #addons>
-              <navigation />
-              <pagination />
-            </template>
-          </carousel>
-        </div> -->
-
-        <!-- <div class="mobileSpeakers">
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/alex_mayer.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/bob_murphy.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/deanna_bledsoe.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/ean_dudley.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/ed_schwartz.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/gregember.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/jacob_whetstone.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/joe_latrell.png"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/joel_walker.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/jonathan_fleckenstein.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/kevin_hicks.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/luke_demi.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/nathaniel_evry.png"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/nick_elzer.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/rich_everts.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/ryan_walker.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/samantha_noggle.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/Stephanie-Schwartz.jpg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/thomas_knickman.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/tom_swartz.jpeg"
-            />
-          </div>
-          <div class="aboutImage">
-            <img
-              alt="CPOSC Audience 2019"
-              src="@/assets/2023/speakers/walt_mankowski.jpg"
-            />
-          </div>
-        </div> -->
       
         <!-- NOTE: AFTER SPEAKERS HAVE BEEN SELECTED -->
-        <p>Get to know our Speakers! We encourage all attendees to review this page as our speakers have a wide range of backgrounds and experience levels.</p>
+        <!-- <p>Speakers have received talk acceptances! Stay tuned for an update as soon as we have everyone's headshots.</p> -->
+        <p>Get to know our fantastic lineup of 2025 speakers!</p>
         <div v-for="(speaker, index) in speakers" v-bind:key="index">
-          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name)" :imageUrl="speaker.imageURL" :bio="speaker.bio" :index="index" :color="imageBorderColor(index)"/>
+          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name)" :imageUrl="speaker.imageURL" :bio="speaker.bio" :talkTitle="speaker.talkTitle" :talkAbstract="speaker.talkAbstract" :index="index" :color="imageBorderColor(index)"/>
+          <div class="line"></div>
         </div>
       </div>
       <!-- <GradientContainer /> -->
@@ -362,89 +51,96 @@ export default {
     return {
       speakers: [
         {
-          // imageURL: "",
-          name: "Alex Mayer",
-          bio: "I have worked with computers for over a decade. During that time I have worked as both a Software Engineer and a Site Reliability Engineer. I use GNU/Linux and spend my time outside of work contributing to open-source projects."
-        },
-        {
-          // imageURL: "",
-          name: "Bob Murphy",
-          bio: "I'm a systems administrator, and long-time desktop Linux user, and EFF member."
-        },
-        {
-          // imageURL: "",
-          name: "Cody Alan Stubbs",
-          bio: "I am a full-stack software engineer. I started off my career as a food/sensory scientist testing food products with consumers and professional tasters, but made a pivot into software engineering after building web applications for global research and business teams in my prior role. Outside of work, I enjoy tinkering with traditional food production methods and being involved with Lancaster's tech meetups."
-        },
-        {
-          // imageURL: "",
-          name: "Ean Dudley",
-          bio: "Meet Ean Dudley, a Senior at Penn State University majoring in Cybersecurity with a focus on geopolitics and a minor in Political Science. Currently an IT Support Specialist at PSU and a Digital Literacy Instructor at the York Literacy Institute, [Your Name] is passionate about technology education and empowering others. As a member of ISC2 and a SANS Tournament of Champions Qualifier, Ean actively engages in the cybersecurity community. With plans to pursue a Master's in Cybersecurity in Fall 2024, Ean is a dedicated individual with a keen interest in the dynamic and ever-evolving field of cybersecurity."
-        },
-        {
-          // imageURL: "",
-          name: "Elizabeth K. Joseph",
-          bio: "Elizabeth K. Joseph is a Linux systems administrator who now leads the Open Source Program Office for IBM Z where she works with the community to explore Linux and z/OS workloads on mainframes. She has previously worked on distributed systems and has written books on Ubuntu and OpenStack. A big fan of her adopted home city of Philadelphia, she is a regular speaker at open source conferences around the world."
-        },
-        {
-          // imageURL: "",
-          name: "Frederick Yocum",
-          bio: "Frederick Yocum divides his time in unequal measure between freelance graphic design, fine art (his vocation), and working as a photography coordinator for the Lancaster-based nonprofit, Mennonite Central Committee. "
-        },
-        {
-          // imageURL: "",
+          imageURL: "@/assets/2025/speakers/JeffBarrett.jpg",
           name: "Jeff Barrett",
-          bio: "25+ years of software engineering and leadership. Currently advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
+          bio: "",
+          talkTitle: "Software Eng and Ops When 1 Minute Downtime is Immediate Termination",
+          talkAbstract: "This is going to be a high-level technical overview of software engineering and operations in the space of high-frequency trading and financial exchanges. In an ecosystem of 30-70MM messages/second and 3K trades/second with sub-microsecond response latency, it is immediate unquestioned termination if you cause a minute of downtime. How you architect solutions and code will directly relate to your job security."
+          //bio: "25+ years of software engineering and leadership. Currently advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
         },
         {
-          // imageURL: "",
-          name: "John Mulligan",
-          bio: "John Mulligan is an independent tabletop game designer and owner of Exeunt Press. His published games blend the storytelling of roleplaying games (TTRPGs) with the mechanisms of board games, including the ENNIE-nominated Exclusion Zone Botanist. He writes Skeleton Code Machine, a publication that explores tabletop game mechanisms. John is also one of the founders of the CPOSC conference and former organizer of the Central PA Linux User Group."
+          imageURL: "@/assets/2025/speakers/TomCourtney.jpg",
+          name: "Tom Courtney",
+          bio: "Tom Courtney is a seasoned innovator with a career leading global high-tech product development teams and organizations at companies like Apple, Xerox, and ASML. Through his work, writing, and consulting, Tom delivers actionable AI strategies that enable individuals to unlock their potential and enhance both their professional and personal pursuits.  When he's not exploring the intersection of AI and society, you might find him playing piano, 3D printing, eBike riding, or experimenting with new technologies.",
+          talkTitle: "Supercharging Innovation:  AI’s Role in Ideation and Visualization",
+          talkAbstract: "Struggling to generate and visualize innovative new product ideas? This talk explores how AI accelerates ideation and visualization, automatically using 14 ideation techniques to instantly produce 70 detailed new product concepts - then automatically creates 70 stunning AI-generated images in seconds using DeepSeek generated python code. But why stop at images?  We’ll take a look at how AI-powered \"TEXT TO 3D DESIGN\" tools transform these AI-generated concepts into real 3D printed models. Experience a game-changing AI workflow that turns imagination into reality."
         },
         {
-          // imageURL: "",
-          name: "Jonathan Bowman",
-          bio: "Currently a software engineer at Cargas using SQL to convert data between systems, Jonathan has been a middle and high school teacher, software developer, pastor, IT director, data wrangler, and always a hobbyist developer. He loves Vim, Python, Rust, laughing at teenage offspring, and connecting with people."
+          imageURL: "@/assets/2025/speakers/ScottDienner.jpg",
+          name: "Scott Dienner",
+          bio: "I've been a software engineer for around 12 years and a manager for around 2 years. I've been enjoying using AI to solve lots of problems, maybe too much. My day to day usually involves a lot of meetings and programming in SQL, React, and nodejs.",
+          talkTitle: "AI in the Support Stack: Real-World Applications & Critical Considerations",
+          talkAbstract: "Explore practical AI implementations in support operations through real-world examples: automated Zendesk ticket summarization, RAG-powered knowledge base queries, and vector search for Jira issues. Learn how these solutions enhanced support efficiency while examining the gap between AI reality and perception, separating genuine potential from inflated expectations."
         },
         {
-          // imageURL: "",
+          imageURL: "",
           name: "Logan Farr",
-          bio: "Logan has been working in software engineering for over a decade – frontend, backend, full stack, and most recently DevOps. He's passionate about technology and leadership, and loves to nerd out about infrastructure. In his free time, Logan loves traveling, reading, and playing video games."
+          bio: "",
+          talkTitle: "Secrets to a Well-Designed Service",
+          talkAbstract: "What sets apart a well-designed service from a run-of-the-mill service? How do we avoid architecture anti-patterns as software developers? In this talk, we'll cover the key ingredients of any service at all levels – development patterns, CI/CD, infrastructure, and even runtime in a production environment. "
         },
         {
-          // imageURL: "",
-          name: "Luke Demi",
-          bio: "Luke Demi is a software engineer, father, and aspiring futurist."
+          imageURL: "@/assets/2025/speakers/ZachFedor.jpg",
+          name: "Zach Fedor",
+          bio: "Co-organizer of TechLancaster and member of the local meetup scene since 2014. English major turned self-taught web developer currently building React apps at early stage startups and pondering deep philosophical questions about life, the universe, and JavaScript.",
+          talkTitle: "Rage Against the Machine Learning: A Luddite's Guide to AI",
+          talkAbstract: "Far from being simpletons or technophobes, the Luddites were skilled craftspeople who saw how new factory tech was destroying their communities and livelihoods. So they fought back with secret meetings, organized resistance, and hammers. This talk compares the Industrial and AI revolutions, exploring how Luddite principles and tactics might be adapted for the digital age, when the machine to break exists in the cloud not the factory floor."
         },
         {
-          // imageURL: "",
-          name: "Luke Westfall",
-          bio: "Luke is a mechanical and a software engineer. He is a Penn State graduate holding a B.Sc. in Mechanical Engineering (2014) and a B.Sc. in Software Engineering (2022). Luke started his career doing mechanical and electrical design for custom hoists and cranes and slowly transitioned into his current role as Senior Software Engineer at Kito Americas, Inc. headquartered in Manheim, PA. In his downtime, Luke enjoys automating his home, working on his cars, and tinkering with gadgets."
+          imageURL: "",
+          name: "Tim Freund",
+          bio: "Tim is a software engineer and SRE who spends his days teaching the trade to students at Thaddeus Stevens. When he isn't you can find him volunteering at Lancaster Cemetery or running the trails through Lancaster County Park. He's always on the lookout for delicious food in the area, so share your tips.",
+          talkTitle: "Automate Infrastructure with Incus and Ansible",
+          talkAbstract: "Learn how you can quickly build, destroy, and rebuild labs and project infrastructure using Incus (LXC / KVM), OpenTofu (Terraform), and Ansible. This talk is informed by experience building and rebuilding labs for class. Participants will get access to a live container for the duration of the talk and all configuration artifacts will be available for download so you can build your own lab later."
         },
         {
-          // imageURL: "",
-          name: "Dr. Nazli Hardy",
-          bio: "Dr. Nazli Hardy been a faculty member of Computer Science at Millersville University since 2004. One of her most favorite courses to teach is Discrete Math. It's not a universally well known course, but once you take it, you never forget it. It is the fundamental logic course for all Computer Science classes. Students particularly enjoy the Permutations and Combinations topics and Dr. Hardy is happy to being the topic to a broader audience. When Dr. Hardy is not in the classroom, she is spending time with her husband, Dr, Chris Hardy, and their 2 kids, Zuzu & Zaavi. In addition to her role as Associate Professor of Computer Science at MU, Dr. Hardy is the founder of Woman Empowered. She works extensively in leadership roles in women in STEM and success mindset."
-        },
-        {
-          // imageURL: "",
-          name: "Rick Joi",
-          bio: "Rick Joi is the former Chief Innovation Officer at Energage, an HR technology company that runs dozens of regional Top Workplaces programs across the country. Rick has ten patents from his time there, but the core of his role was helping empower others to get their ideas implemented. His deep understanding of innovation was informed by being uniquely positioned to learn how various Top Workplaces encouraged and implemented ideas."
-        },
-        {
-          // imageURL: "",
+          imageURL: "",
           name: "Robert Hudson",
-          bio: "I'm a former programmer, past-life writing instructor and tutor, and lifelong learner who enjoys figuring things out and sharing that with other people. Currently working in hospitality doing all those things and loving every challenge. Also an accomplished origamist, amateur appetizer chef, and novice bubble baker."
+          bio: "Rob is a good little hominid, and always very curious. This curiosity, along with the desire to make boring and slow things interesting and quick, took him on a career journey from fry cook to Radio Shack salesman to writing teacher to proposal writer to \"technical analyst,\" a title that afforded him the flexibility to do all kinds of things. He also once pretended to be a golf instructor and dropped out of a PhD program, so things didn't always go just right. But he ended up with a nice job at a hospitality company, a family of very curious children, and hobbies, like origami, that mostly keep him out of trouble in the few free minutes he has.",
+          talkTitle: "Curious George Makes a Job",
+          talkAbstract: "There was once a curious not-so-little monkey, or at least 99% similar (by DNA), who could not decide what he wanted to be when he grew up. And by all reckoning, he was well past grown-up age. He liked computers, and he liked people, and he liked making them work together. But no job was just right for him. So he got the idea to hack his way to a new job for the future. This presentation is that story."
         },
         {
-          // imageURL: "",
-          name: "Stephanie Schwartz",
-          bio: "Stephanie Schwartz is a professor and chair of the Computer Science department at Millersville University. She received her Ph.D. and M.S. degrees in Computer Science from the University of Delaware and her B.S. in Computer Science from Shippensburg University. Her research interests include user modeling, cognitive modeling, machine learning, data mining, and artificial intelligence in general. She teaches courses ranging from beginning programming courses to upper-level electives in artificial intelligence and data mining. Before teaching, she worked as a software engineer at several companies including MapQuest (now owned by AOL), AMP (now part of Tyco), and Primavera Software (now apparently part of Oracle -- because in the tech industry, change is the only constant)."
+          imageURL: "@/assets/2025/speakers/AndyJames.jpg",
+          name: "Andy James",
+          bio: "Andy has over 15 years of professional software development experience, including over 5 years each at both Google and Elastic. He's a full stack engineer focused on web applications, including Elastic's Customer Support Portal which features the Support Assistant; a chat bot utilizing Retrieval Augmented Generation to provide immediate Support to customers instead of needing to wait for a support engineer to assess their issue.",
+          talkTitle: "GenAI for Customer Support: Making an LLM More Capable on Niche Topics",
+          talkAbstract: "This talk will shed light on the journey to integrate generative AI into Elastic's customer success and support operations, providing you with a behind-the-scenes look at our process. Topics include building a knowledge base, UX considerations, tuning RAG search, and observability for the features."
         },
         {
-          // imageURL: "",
-          name: "Tom Swartz",
-          bio: "Tom is the Associate Director of Support and a developer with Crunchy Data, providing technical assistance to hundreds of large organizations and programming software for and around PostgreSQL databases. An avid speaker, he as participated in many years of Central Pennsylvania Open Source Conferences, TechLancaster events, and other events in and around Central Pennsylvania. He is an avid enthusiast of mechanical keyboards, amateur radio, and is a passionate advocate for free and open source software. "
+          imageURL: "@/assets/2025/speakers/JoeLatrell.png",
+          name: "Joe Latrell",
+          bio: "",
+          talkTitle: "Lesson Learned - Continuing a Company After a Disaster",
+          talkAbstract: "What do you do when your company implodes and takes a major step backward? We'll look at what happened, what could have been done better, and how to move on. This is a subject few seem willing to talk about. We'll cover the stigma of setbacks and retooling your mind to move forward again."
+        },
+        {
+          imageURL: "@/assets/2025/speakers/AlexMayer.png",
+          name: "Alex Mayer",
+          bio: "",
+          talkTitle: "Advanced Git",
+          talkAbstract: "Do you use git for work or personal projects? Ever wonder if your workflow could be better? Let's go over a few features of git that can help improve your process."
+        },
+        {
+          imageURL: "@/assets/2025/speakers/BobMurphy.png",
+          name: "Bob Murphy",
+          bio: "",
+          talkTitle: "Hacker Public Radio - why you should listen, and contribute.",
+          talkAbstract: "Hacker Public Radio is a community podcast that run 5 days a week.  It is dedicated to sharing knowledge and has been running in various forms for nearly 20 years.  Anyone that has anything that is of interest to hackers is welcome to submit a show.  https://hackerpublicradio.org/"
+        },
+        {
+          imageURL: "@/assets/2025/speakers/BenjaminSautner.jpg",
+          name: "Benjamin Sautner",
+          bio: "I'm currently a Distinguished Software Engineer at Comcast where I work in our Connected Living organization focused on the Xfinity Android and iOS apps.  I've been working in the mobile app space for over 10 years and before that I worked mainly in process control and automation systems.  I come from a Java background and now I develop primarily using Kotlin Multiplatform. Ask me about my chickens!",
+          talkTitle: "Nimbits: The Open Source IoT Platform That Shaped My Career",
+          talkAbstract: "In 2004 I was working in the process control / data acquisition field doing automation of chemical plants in Pennsylvania.  I've always enjoyed home automation and connecting devices to the internet and one day asked if I could get a licence for some of the data acquisition software we used so I could try to connect my aquarium to it. I was denied because it was expensive and proprietary. So I wrote my own just to show them! Nimbits was born!"
+        },
+        {
+          imageURL: "@/assets/2025/speakers/PeterStukalov.jpg",
+          name: "Peter Stukalov",
+          bio: "Hello, I’m Peter Stukalov, a DevOps and SRE specialist with 15 years of experience. I recently arrived in the U.S. from Russia on an H1B visa. My focus is on designing and automating cloud infrastructures, including GitOps workflows. I look forward to sharing my insights and learning from everyone at the conference.",
+          talkTitle: "A GitOps approach with ArgoCD",
+          talkAbstract: "A real world GitOps example using ArgoCD with code and the ability to poke buttons in a real infrastructure."
         },
       ],
       lastColor: "",
@@ -512,49 +208,37 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.headerImage {
-  height: 82px;
+
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  object-fit: cover;
+  padding-bottom: 2em;
+
+  @media screen and (max-width: 960px) {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 
-.pageContainer {
+.speakers {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: white;
+  width: 100%;
 
-  .speakerContent {
-    z-index: 10;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 6rem;
-
-    h4, p {
-      color: #1F1F1F;
-    }
-
-    h1 {
-      color: #BA273B;
-      margin-bottom: 6px;
-    }
-
-    .line {
-      background-color: #BA273B;
-      margin-bottom: 1rem;
-    }
-  }
+  min-height: calc(100vh - 28.9rem);
 }
 
-p > a {
-  color: #BA273B;
-  transition: color 0.25s;
-
-  &:hover {
-    color: #848699;
-  }
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 40px;
+  color: #1f1f1f;
+  padding-top: 2rem;
+  padding-bottom: 8px;
+  margin: 0;
 }
 
 p {
@@ -562,6 +246,32 @@ p {
     width: 95%;
   }
 }
+
+p > a {
+  color: #1F1F1F;
+  transition: color 0.25s;
+
+  &:hover {
+    color: #848699;
+  }
+}
+
+.line {
+  background-color: #ff2cb7;
+  margin-bottom: 1rem;
+  width: auto;
+}
+
+h4, h3, p, a {
+  z-index: 10;
+  color: #1F1F1F !important;
+}
+
+marquee {
+    position: absolute;
+    top: 40px;
+    height: 122px;
+  }
 
 // .aboutImage {
 //   margin-left: 2rem;
@@ -640,18 +350,6 @@ p {
 //     }
 //   }
 // }
-
-.pageContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  @media screen and (max-width: 960px) {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
 
 // .carousel__slide {
 //   @media screen and (max-width: 1150px) and (min-width: 600px) {

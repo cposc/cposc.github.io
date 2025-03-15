@@ -1,5 +1,12 @@
 <template>
   <div class="pageContainer">
+  <marquee direction="left">
+        <img
+          width="200"
+          height="200"
+          src="http://cposc.org/vroom_vroom.gif"
+        />
+      </marquee>
     <div className="volunteers">
       <h1>Get Involved</h1>
       <div class="line"></div>
@@ -107,6 +114,13 @@ p > a {
 h4, h3, p, a {
   z-index: 10;
   color: #1F1F1F !important;
+}
+
+
+marquee {
+  position: absolute;
+  top: 40px;
+  height: 122px;
 }
 
 .focusBlock {
