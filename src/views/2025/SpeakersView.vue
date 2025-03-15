@@ -27,8 +27,8 @@ import SpeakerBlock from "../../components/2025/SpeakerBlock.vue";
         <!-- <p>Speakers have received talk acceptances! Stay tuned for an update as soon as we have everyone's headshots.</p> -->
         <p>Get to know our fantastic lineup of 2025 speakers!</p>
         <div v-for="(speaker, index) in speakers" v-bind:key="index">
-          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name)" :imageUrl="speaker.imageURL" :bio="speaker.bio" :talkTitle="speaker.talkTitle" :talkAbstract="speaker.talkAbstract" :index="index" :color="imageBorderColor(index)"/>
           <div class="line"></div>
+          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name)" :imageUrl="speaker.imageURL" :bio="speaker.bio" :talkTitle="speaker.talkTitle" :talkAbstract="speaker.talkAbstract" :index="index" :color="imageBorderColor(index)"/>
         </div>
       </div>
       <!-- <GradientContainer /> -->
