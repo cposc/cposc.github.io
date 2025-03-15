@@ -78,7 +78,6 @@ body {
   }
 
   .line {
-    background-color: #2b3480;
     height: 5px;
     width: 80px;
   }

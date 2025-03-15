@@ -257,8 +257,8 @@ p > a {
 }
 
 .line {
-  background-color: #ff2cb7;
-  margin-bottom: 1rem;
+  background: linear-gradient(305deg, rgba(162,28,217,1) 0%, rgba(254,112,100,1) 100%);
+  margin-bottom: 1em;
   width: auto;
 }
 
