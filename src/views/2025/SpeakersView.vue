@@ -1,17 +1,16 @@
 <script setup>
 import SpeakerBlock from "../../components/2025/SpeakerBlock.vue";
-
 </script>
 
 <template>
   <div class="pageContainer">
-  <marquee direction="left">
-        <img
-          width="200"
-          height="200"
-          src="http://cposc.org/vroom_vroom.gif"
-        />
-      </marquee>
+    <marquee direction="left">
+      <img
+        width="200"
+        height="200"
+        src="http://cposc.org/vroom_vroom.gif"
+      />
+    </marquee>
     <div class="speakers">
       <h1>CPOSC SPEAKERS</h1>
       <div class="line"></div>
@@ -28,7 +27,7 @@ import SpeakerBlock from "../../components/2025/SpeakerBlock.vue";
         <p>Get to know our fantastic lineup of 2025 speakers!</p>
         <div v-for="(speaker, index) in speakers" v-bind:key="index">
           <div class="line"></div>
-          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name)" :imageUrl="speaker.imageURL" :bio="speaker.bio" :talkTitle="speaker.talkTitle" :talkAbstract="speaker.talkAbstract" :index="index" :color="imageBorderColor(index)"/>
+          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name.split(' ').join(''))" :imageUrl="speaker.imageURL" :bio="speaker.bio" :talkTitle="speaker.talkTitle" :talkAbstract="speaker.talkAbstract" :index="index"/>
         </div>
       </div>
       <!-- <GradientContainer /> -->
@@ -37,16 +36,8 @@ import SpeakerBlock from "../../components/2025/SpeakerBlock.vue";
 </template>
 
 <script>
-import 'vue3-carousel/dist/carousel.css'
-import { Carousel, Slide, Pagination, Navigation } from 'vue3-carousel'
-
 export default {
-  components: {
-    Carousel,
-    Slide,
-    Pagination,
-    Navigation,
-  },
+  components: {},
   data() {
     return {
       speakers: [
@@ -148,19 +139,6 @@ export default {
     }
   },
   methods: {
-    imageBorderColor: function(index) {
-      // show a random border color for each speaker
-      const colors = ["#2b3480", "#720b97", "#007eac", "#424242"];
-      // make sure the same color doesn't appear twice in a row
-      // let colorIdx;
-      // do {
-      //   colorIdx = Math.floor(Math.random() * 4);
-      // } while (this.lastColor === colors[colorIdx])
-
-      // this.lastColor = colors[colorIdx];
-      // return this.lastColor;
-      return colors[index % 3]
-    },
     getNameAnchor: function(name) {
       return name.split(" ").join("+");
     },
@@ -168,32 +146,6 @@ export default {
       // your code for handling resize...
       this.innerWidth = window.innerWidth;
     }
-  },
-  created() {
-    // window.addEventListener("resize", this.myEventHandler);
-  },
-  destroyed() {
-    // window.removeEventListener("resize", this.myEventHandler);
-  },
-  computed: {
-    // itemsToShow: function() {
-    //   if (this.innerWidth <= 600) {
-    //     return 1;
-    //   } else if (this.innerWidth <= 1150) {
-    //     return 2.5;
-    //   }
-    //   return 4.5
-    // },
-    // slideWidth: function() {
-    //   if (this.innerWidth <= 600) {
-    //     return 150;
-    //   } else if (this.innerWidth <= 1150) {
-    //     console.log(150)
-    //     return 150;
-    //   }
-    //   console.log(350)
-    //   return 350
-    // }
   },
   mounted: function() {
     // scroll to speaker profile based on anchor tag
@@ -268,120 +220,8 @@ h4, h3, p, a {
 }
 
 marquee {
-    position: absolute;
-    top: 40px;
-    height: 122px;
-  }
-
-// .aboutImage {
-//   margin-left: 2rem;
-
-//   @media screen and (max-width: 450px) {
-//     margin-left: 0;
-//   }
-
-//   img {
-//     width: 200px;
-//     height: 200px;
-//     object-fit: cover;
-
-//     @media screen and (max-width: 450px) {
-//       width: 100%;
-//     }
-//   }
-// }
-
-// .speakerCarousel {
-//   width: 1000px;
-//   margin-bottom: 3rem;
-
-//   @media screen and (max-width: 1150px) and (min-width: 860px) {
-//     width: 800px;
-//     margin-left: 0;
-//   }
-
-//   @media screen and (max-width: 860px) {
-//     width: 300px;
-//     margin-left: 0;
-//   }
-
-//   @media screen and (max-width: 860px) {
-//     display: none !important;
-//   }
-// }
-
-// .mobileSpeakers {
-//   @media screen and (min-width: 860px) {
-//     display: none;
-//   }
-
-//   display: flex;
-//   flex-direction: row;
-//   justify-content: center;
-//   width: 90%;
-//   margin-left: 5%;
-//   margin-right: 5%;
-//   flex-wrap: wrap;
-
-//   @media screen and (max-width: 479px) {
-//     width: 100%;
-//     margin: 0;
-//   }
-
-//   .aboutImage {
-//     @media screen and (min-width: 479px) {
-//       margin: 8px !important;
-//     }
-
-//     @media screen and (max-width: 479px) {
-//       img {
-//         height: 200px;
-//         width: 200px;
-//       }
-//       margin: 3px !important;
-//     }
-
-//     @media screen and (max-width: 410px) {
-//       img {
-//         height: auto;
-//         width: 100%;
-//       }
-//       margin: 3px !important;
-//     }
-//   }
-// }
-
-// .carousel__slide {
-//   @media screen and (max-width: 1150px) and (min-width: 600px) {
-//     width: 225px !important;
-//   }
-  
-//   @media screen and (max-width: 600px) {
-//     width: 175px !important;
-//     overflow: hidden;
-//   }
-
-//   div {
-//     ol {
-//       overflow: hidden !important;
-//     }
-//   }
-// }
-
-// .carousel__pagination-button::after {
-//   @media screen and (max-width: 860px) {
-//     width: 5px !important;
-//   }
-
-//   @media screen and (max-width: 525px) {
-//     width: 1px !important;
-//   }
-// }
-
-// .carousel__track {
-//   @media screen and (max-width: 860px) {
-//     max-width: 80% !important;
-//   }
-// }
-
+  position: absolute;
+  top: 40px;
+  height: 122px;
+}
 </style>

@@ -37,9 +37,6 @@
     <div class="featuredThings">
       <div
         class="featuredWrapper"
-        data-aos="zoom-in"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
       >
         <i class="fa-solid fa-location-dot"></i>
         <div class="featuredContent">
@@ -49,9 +46,6 @@
       </div>
       <div
         class="featuredWrapper"
-        data-aos="zoom-in"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
       >
         <i class="fa-solid fa-users"></i>
         <div class="featuredContent">
@@ -61,9 +55,6 @@
       </div>
       <div
         class="featuredWrapper"
-        data-aos="zoom-in"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
       >
         <i class="fa-solid fa-microphone"></i>
         <div class="featuredContent">
@@ -73,9 +64,6 @@
       </div>
       <div
         class="featuredWrapper"
-        data-aos="zoom-in"
-        data-aos-duration="5000"
-        data-aos-easing="ease-in-out"
       >
         <i class="fa-solid fa-mug-saucer"></i>
         <div class="featuredContent">
@@ -118,61 +106,7 @@
     <!-- </div> -->
     <div
       class="aboutWrapper"
-      data-aos="fade-left"
-      data-aos-duration="5000"
-      data-aos-easing="ease-in-out"
     >
-      <div class="homeCarousel">
-        <carousel :items-to-show="4.2" :wrap-around="true" :autoplay="5000">
-          <slide key="1" :slide-width="slideWidth">
-            <div class="aboutImage">
-              <img
-                alt="CPOSC Audience 2019"
-                src="@/assets/2023/CPOSC_2019.jpg"
-              />
-            </div>
-          </slide>
-          <slide key="2" :slide-width="slideWidth">
-            <div class="aboutImage">
-              <img
-                alt="CPOSC Audience 2019"
-                src="@/assets/2024/PXL_20230401_142131749.MP.jpg"
-              />
-            </div>
-          </slide>
-          <slide key="3" :slide-width="slideWidth">
-            <div class="aboutImage">
-              <img
-                alt="CPOSC Audience 2019"
-                src="@/assets/2024/PXL_20230401_200622968.MP.jpg"
-              />
-            </div>
-          </slide>
-          <slide key="4" :slide-width="slideWidth">
-            <div class="aboutImage">
-              <img
-                alt="CPOSC Audience 2019"
-                src="@/assets/2024/PXL_20230401_130228023.jpg"
-              />
-            </div>
-          </slide>
-          <slide key="5" :slide-width="slideWidth">
-            <div class="aboutImage">
-              <img alt="CPOSC Audience 2019" src="@/assets/2024/IMG_6726.jpg" />
-            </div>
-          </slide>
-          <slide key="6" :slide-width="slideWidth">
-            <div class="aboutImage">
-              <img alt="CPOSC Audience 2019" src="@/assets/2024/IMG_6743.jpg" />
-            </div>
-          </slide>
-          <template #addons>
-            <navigation />
-            <pagination />
-          </template>
-        </carousel>
-      </div>
-
       <div class="mobileCarousel">
         <div class="aboutImage">
           <img alt="CPOSC Audience 2019" src="@/assets/2023/CPOSC_2019.jpg" />
@@ -270,6 +204,19 @@ export default {
     }
 
     @media screen and (max-width: 800px) {
+      h1 {
+        text-align: center;
+      }
+
+      p {
+        text-align: center;
+      }
+
+      a {
+        align-self: center;
+        margin: auto !important;
+      }
+
       grid-template-columns: 100%;
       grid-template-areas:
         "connHeader"
@@ -639,6 +586,7 @@ p {
   @media screen and (max-width: 800px) {
     padding-top: 20rem;
   }
+
   i {
     font-size: 30px;
   }
@@ -779,15 +727,19 @@ p {
 }
 
 .mobileCarousel {
-  @media screen and (min-width: 925px) {
-    display: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  max-width: 3500px;
+  column-gap: 5px;
+  margin-top: 5rem;
+
+  @media screen and (max-width: 1250px) {
+     grid-template-columns: 1fr 1fr 1fr;
   }
 
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  column-gap: 5px;
-  margin-left: -2rem;
-  margin-top: 16rem;
+  @media screen and (max-width: 500px) {
+     grid-template-columns: 1fr;
+  }
 
   .aboutImage {
     margin: 0 !important;
@@ -800,14 +752,6 @@ p {
 
   @media screen and (max-width: 400px) {
     grid-template-columns: 1fr;
-  }
-
-  @media screen and (min-width: 486px) {
-    margin-top: 22rem;
-  }
-
-  @media screen and (min-width: 801px) {
-    margin-top: 0rem;
   }
 }
 </style>
