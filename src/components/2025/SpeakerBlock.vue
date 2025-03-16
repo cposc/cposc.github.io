@@ -71,7 +71,6 @@ export default {
     nameAnchor: String,
     bio: String,
     index: Number,
-    color: String,
   },
   data() {
     return {

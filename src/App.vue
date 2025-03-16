@@ -1,5 +1,5 @@
 <script setup>
-import { RouterLink, RouterView } from "vue-router";
+import { RouterView } from "vue-router";
 import TopNav2025 from "./components/2025/TopNav.vue";
 import Bottom2025 from "./components/2025/Bottom.vue";
 
