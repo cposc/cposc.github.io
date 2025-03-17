@@ -30,7 +30,7 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
           .
         </p> -->
         <!-- Once schedule is out -->
-        <p style="margin: 2rem;">Welcome to CPOSC, and thank you for contributing to our local technology community. Ready to hack all the way to the future with us? Below, you'll find the schedule for our event taking place on April 26th, 2024. We searched the time continuum to get you the best talks!</p>
+        <p style="margin: 2rem;">Welcome to CPOSC, and thank you for contributing to our local technology community. Ready to hack all the way to the future with us? Below, you'll find the schedule for our event taking place on April 26th, 2025. We searched the time continuum to get you the best talks!</p>
         <p>PRINTABLE PDF SCHEDULE (coming soon)</p>
         <!-- <p>PRINTABLE PDF SCHEDULE: <a href="/CPOSCSchedule2024_color.pdf" target="_blank">COLOR</a> / <a href="/CPOSCSchedule2024_bw.pdf" target="_blank">B&W</a></p> -->
         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeUh2udfcPPiQ1UBTzojvnZO9wijKQSzZytQSXLDLLadCa8gg/viewform?pli=1" target="_blank">**Submit a Lightning Talk**</a></p>
@@ -118,7 +118,7 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
         <ScheduleBlock
           time="4:40 PM to 5:20 PM"
           title="Lightning Talks"
-          description="Throughout the day, all attendees have had the opportunity to submit lightning talks. Join us in Steinman Hall for 30 minutes of knowledge dispersment, at lightning speed!"
+          description="Throughout the day, all attendees have had the opportunity to submit lightning talks. Join us in Steinman Hall for some knowledge dispersment, at lightning speed -- a.k.a. 5 minutes at a time!"
           v-if="isOpen[2]"
         />
         <ScheduleBlock
@@ -186,7 +186,7 @@ export default {
   },
   methods: {
     shouldShowBlock: function(endTime) {
-      const blockEndsAt = moment("2024-04-06 " + endTime);
+      const blockEndsAt = moment("2025-04-26 " + endTime);
       const rightNow = moment();
       const timeDiff = blockEndsAt.diff(rightNow);
 
