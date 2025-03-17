@@ -50,6 +50,13 @@ export default {
           //bio: "25+ years of software engineering and leadership. Currently advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
         },
         {
+          imageURL: "@/assets/2025/speakers/JonathanBowman.jpg",
+          name: "Jonathan Bowman",
+          bio: "",
+          talkTitle: "Tools (and Toys) for the Terminal",
+          talkAbstract: "The command-line console is, fascinatingly, a technology both ancient and trending. Whether you are familiar with the command-line, scared of it, or some combination, you are welcome at this session. We will explore together some open-source tools for making your terminal both useful and fun."
+        },
+        {
           imageURL: "@/assets/2025/speakers/TomCourtney.jpg",
           name: "Tom Courtney",
           bio: "Tom Courtney is a seasoned innovator with a career leading global high-tech product development teams and organizations at companies like Apple, Xerox, and ASML. Through his work, writing, and consulting, Tom delivers actionable AI strategies that enable individuals to unlock their potential and enhance both their professional and personal pursuits.  When he's not exploring the intersection of AI and society, you might find him playing piano, 3D printing, eBike riding, or experimenting with new technologies.",
