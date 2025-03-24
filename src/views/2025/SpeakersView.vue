@@ -42,12 +42,18 @@ export default {
     return {
       speakers: [
         {
+          imageURL: "",
+          name: "R. Geoffrey Avery",
+          bio: "",
+          talkTitle: "Lightning Talks",
+          talkAbstract: "The Gong returns! Knowledge about anything shared with the crowd, 5 minutes at a time."
+        },
+        {
           imageURL: "@/assets/2025/speakers/JeffBarrett.jpg",
           name: "Jeff Barrett",
-          bio: "",
           talkTitle: "Software Eng and Ops When 1 Minute Downtime is Immediate Termination",
-          talkAbstract: "This is going to be a high-level technical overview of software engineering and operations in the space of high-frequency trading and financial exchanges. In an ecosystem of 30-70MM messages/second and 3K trades/second with sub-microsecond response latency, it is immediate unquestioned termination if you cause a minute of downtime. How you architect solutions and code will directly relate to your job security."
-          //bio: "25+ years of software engineering and leadership. Currently advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
+          talkAbstract: "This is going to be a high-level technical overview of software engineering and operations in the space of high-frequency trading and financial exchanges. In an ecosystem of 30-70MM messages/second and 3K trades/second with sub-microsecond response latency, it is immediate unquestioned termination if you cause a minute of downtime. How you architect solutions and code will directly relate to your job security.",
+          bio: "25+ years of software engineering and leadership. Currently advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
         },
         {
           imageURL: "@/assets/2025/speakers/JonathanBowman.jpg",
@@ -125,6 +131,13 @@ export default {
           bio: "",
           talkTitle: "Hacker Public Radio - why you should listen, and contribute.",
           talkAbstract: "Hacker Public Radio is a community podcast that run 5 days a week.  It is dedicated to sharing knowledge and has been running in various forms for nearly 20 years.  Anyone that has anything that is of interest to hackers is welcome to submit a show.  https://hackerpublicradio.org/"
+        },
+        {
+          imageURL: "",
+          name: "Anupam Priya",
+          bio: "With 12+ years of experience in Business Consulting, SAP Technology and Project Management, Anupam currently works as a Manager with PwC's Advisory Practice in Toronto, having previously spent 9 years at Deloitte Consulting. She specializes in driving tech led business transformations and holds certifications as a PMP, SAFe Agilist 5, Scrum Master, and SAP Activate Project Manager. She also holds an MBA in Strategy & Operations and a Bachelors in Computer Science and Engineering. Beyond work, Anupam is a member of Access Employment and Toastmasters International and enjoys reading, painting, hiking, and playing badminton. She is passionate about understanding the levers that are moving the world today as society stands on the brink of a massive transition. The key to success lies in sharing ideas and engaging in discussions that inspire innovation and progress.",
+          talkTitle: "Unleashing the Power, Potential and Productivity of Teams",
+          talkAbstract: "Through this session, I aim to revisit the fundamentals of effective teamwork, uncover common blind spots, and explore research-backed strategies for building high-performing teams. Participants will critically reflect on how to unlock the full power, potential, and productivity of teams and gain actionable insights to drive collaboration and success in an engaging environment."
         },
         {
           imageURL: "@/assets/2025/speakers/BenjaminSautner.jpg",

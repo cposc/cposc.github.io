@@ -3,7 +3,7 @@
     <p class="scheduleTime">{{ time }}</p>
     <p class="scheduleType">{{ title }}</p>
     <div class="scheduleDetails">
-      <h1 v-if="title === 'Welcome to CPOSC!' || title === 'Lightning Talks' || title === 'Farewell, Closing Remarks'" class="lightning aud">The Auditorium / Steinman Hall</h1>
+      <h1 v-if="title === 'Welcome!' || title === 'Lightning Talks' || title === 'A Fond Farewell'" class="lightning aud">The Auditorium / Steinman Hall</h1>
       <p class="description">{{ description }}</p>
       <div v-if="sessions && sessions.length > 0" class="sessionBlocks">
         <div v-for="(session, index) in sessions" v-bind:key="index" class="sessionBlock">

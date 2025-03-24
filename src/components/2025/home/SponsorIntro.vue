@@ -22,7 +22,7 @@
         </b>
       </p>
       <p>
-        There are CPOSC sponsorship opportunities at all levels!
+        It's not too late! There are CPOSC sponsorship opportunities at all levels.
         <a href="/sponsors">Check out our prospectus</a>, which includes information on how you can help this event
         benefit everyone from high school and college students to professionals
         with decades of experience.

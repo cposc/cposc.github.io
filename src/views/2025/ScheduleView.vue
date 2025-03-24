@@ -34,7 +34,7 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
         <p>PRINTABLE PDF SCHEDULE (coming soon)</p>
         <!-- <p>PRINTABLE PDF SCHEDULE: <a href="/CPOSCSchedule2024_color.pdf" target="_blank">COLOR</a> / <a href="/CPOSCSchedule2024_bw.pdf" target="_blank">B&W</a></p> -->
         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeUh2udfcPPiQ1UBTzojvnZO9wijKQSzZytQSXLDLLadCa8gg/viewform?pli=1" target="_blank">**Submit a Lightning Talk**</a></p>
-        <h3 v-if="shouldShowOver" style="text-align: center; margin: 2rem; padding: 0;">The event is over, and we had a blast! Stay tuned as we begin planning our 2024 event.</h3>
+        <h3 v-if="shouldShowOver" style="text-align: center; margin: 2rem; padding: 0;">The event is over, and we had a blast! Stay tuned as we begin planning our 2026 event.</h3>
         <h3 className="morning">
           Morning
           <div class="collapsable morning" :class="{ active: !isOpen[0] }" @click="toggleSchedule(0)">
@@ -44,13 +44,14 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
         </h3>
         <ScheduleBlock
           time="8:00 AM to 9:00 AM"
-          title="Registration"
-          description="Registration is available when you first walk into the Ware Center. At this time, you'll receive your CPOSC t-shirt and badge! Use your badge to re-visit this schedule at any time. Please also help yourself to breakfast in the common area."
+          title="Registration & Breakfast"
+          description="Registration is available when you first walk into the Ware Center Lobby. At this time, you'll check in and receive your CPOSC t-shirt and badge. Use your badge to re-visit this schedule at any time. A delicious breakfast and plenty of coffee will be available just beyond the Registration Desk, where you can fuel up for the day."
           v-if="isOpen[0]"
         />
         <ScheduleBlock
           time="9:00 AM to 9:20 AM"
-          title="Welcome to CPOSC!"
+          title="Welcome!"
+          description="Some brief remarks with some important announcements to make sure everyone is ready for a terrific day at CPOSC"
           v-if="isOpen[0]"
         />
         <ScheduleBlock
@@ -80,8 +81,8 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
         </h3>
         <ScheduleBlock
           time="12:30 PM to 1:30 PM"
-          title="Lunch Break, Time Networking"
-          description="Use this hour to take advantage of the lunch being provided to all attendees. During this time, you may also find yourself networking and connecting with peers in technology, or you can enjoy your meal in solitude."
+          title="Lunch"
+          description="Time for a brain break! A refreshing and dietary-restriction-friendly lunch from Silantra Asian Kitchen will be provided to all attendees in the Atrium. During this time, you may also find yourself networking and connecting with peers in technology, or you can enjoy your meal in one of the quieter corners of the venue."
           v-if="isOpen[1]"
         />
         <h3 className="afternoon">
@@ -104,26 +105,20 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
           v-if="isOpen[2]"
         />
         <ScheduleBlock
-          time="3:40 PM to 4:30 PM"
-          title="Session 6"
-          :sessions="session6"
+          time="3:30 PM to 4:00 PM"
+          title="Sweet Snacks in the Lobby"
+          description="Fuel up for Lightning Talks and beyond with some delicious desserts, perhaps chatting about your favorite talk takeaways with your neighbors in line."
           v-if="isOpen[2]"
         />
-        <!-- <ScheduleBlock
-          time="4:30 PM to 5:10 PM"
-          title="Session 7"
-          :sessions="session7"
-          v-if="isOpen[2]"
-        /> -->
         <ScheduleBlock
-          time="4:40 PM to 5:20 PM"
+          time="3:50 PM to 4:45 PM"
           title="Lightning Talks"
           description="Throughout the day, all attendees have had the opportunity to submit lightning talks. Join us in Steinman Hall for some knowledge dispersment, at lightning speed -- a.k.a. 5 minutes at a time!"
           v-if="isOpen[2]"
         />
         <ScheduleBlock
-          time="5:20 PM to 5:30 PM"
-          title="Farewell, Closing Remarks, Giveaways"
+          time="4:45 PM to 5:00 PM"
+          title="A Fond Farewell"
           v-if="isOpen[2]"
         />
         <h3 className="afterparty">
@@ -134,9 +129,9 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
           </div>
         </h3>
         <ScheduleBlock
-          time="6:00 PM to late"
-          title="After Party Sponsored by Industrial Resolution"
-          description="The fun doesn't have to stop! Follow us to Pub Forge for an after party sponsored by Industrial Resolution."
+          time="6:00 PM onward"
+          title="After Party"
+          description="The fun doesn't have to stop! Details to come"
           v-if="isOpen[3]"
         />
       </div>
@@ -153,32 +148,27 @@ export default {
       session1: [
         { speaker: ["Zach Fedor"], title: "Rage Against the Machine Learning: A Luddite's Guide to AI", desc: "Far from being simpletons or technophobes, the Luddites were skilled craftspeople who saw how new factory tech was destroying their communities and livelihoods. So they fought back with secret meetings, organized resistance, and hammers. This talk compares the Industrial and AI revolutions, exploring how Luddite principles and tactics might be adapted for the digital age, when the machine to break exists in the cloud not the factory floor." },
         { speaker: ["Jonathan Bowman"], title: "Tools (and Toys) for the Terminal", desc: "The command-line console is, fascinatingly, a technology both ancient and trending. Whether you are familiar with the command-line, scared of it, or some combination, you are welcome at this session. We will explore together some open-source tools for making your terminal both useful and fun." },
-        { speaker: ["Rob Hudson"], title: "Curious George makes a job", desc: "There was once a curious not-so-little monkey, or at least 99% similar (by DNA), who could not decide what he wanted to be when he grew up. And by all reckoning, he was well past grown-up age. He liked computers, and he liked people, and he liked making them work together. But no job was just right for him. So he got the idea to hack his way to a new job for the future. This presentation is that story." }
+        { speaker: ["Rob Hudson"], title: "Curious George Makes a Job", desc: "There was once a curious not-so-little monkey, or at least 99% similar (by DNA), who could not decide what he wanted to be when he grew up. And by all reckoning, he was well past grown-up age. He liked computers, and he liked people, and he liked making them work together. But no job was just right for him. So he got the idea to hack his way to a new job for the future. This presentation is that story." }
       ],
       session2: [
-        { speaker: ["TBD"], title: "TBD", desc: "TBD" },
+        { speaker: ["Joe Latrell"], title: "Lesson Learned - Continuing a Company After a Disaster", desc: "What do you do when your company implodes and takes a major step backward? We'll look at what happened, what could have been done better, and how to move on. This is a subject few seem willing to talk about. We'll cover the stigma of setbacks and retooling your mind to move forward again." },
         { speaker: ["Alex Mayer"], title: "Advanced Git", desc: "Do you use git for work or personal projects? Ever wonder if your workflow could be better? Let's go over a few features of git that can help improve your process." },
-        { speaker: ["Bob Murphy"], title: "Hacker Public Radio - why you should listen, and contribute.", desc: "Hacker Public Radio is a community podcast that run 5 days a week.  It is dedicated to sharing knowledge and has been running in various forms for nearly 20 years.  Anyone that has anything that is of interest to hackers is welcome to submit a show." }
+        { speaker: ["Bob Murphy"], title: "Hacker Public Radio - Why You Should Listen, and Contribute", desc: "Hacker Public Radio is a community podcast that run 5 days a week.  It is dedicated to sharing knowledge and has been running in various forms for nearly 20 years.  Anyone that has anything that is of interest to hackers is welcome to submit a show." }
       ],
       session3: [
         { speaker: ["Jeff Barrett"], title: "Software Eng and Ops When 1 Minute Downtime is Immediate Termination", desc: "This is going to be a high-level technical overview of software engineering and operations in the space of high-frequency trading and financial exchanges. In an ecosystem of 30-70MM messages/second and 3K trades/second with sub-microsecond response latency, it is immediate unquestioned termination if you cause a minute of downtime. How you architect solutions and code will directly relate to your job security." },
-        { speaker: ["Logan Farr"], title: "Secrets to a well-designed service", desc: "What sets apart a well-designed service from a run-of-the-mill service? How do we avoid architecture anti-patterns as software developers? In this talk, we'll cover the key ingredients of any service at all levels – development patterns, CI/CD, infrastructure, and even runtime in a production environment." },
-        { speaker: ["Matthew Cross"], title: "Open Source Powering Game Preservation", desc: "Do you know that 87% of video games are up to being lost forever? Be it those titles lost, out of print, locked in a developer's or publisher's vault to never see the light of day again. Well luckily, there is fantastic work being done by open source developers to ensure our gaming history is not lost." }
+        { speaker: ["Tom Courtney"], title: "Supercharging Innovation:  AI’s Role in Ideation and Visualization", desc: "This talk shows how AI can generate 70 innovative product or service ideas using ChatGPT and 14 ideation methods, exporting them to Excel. You'll also learn how to use DeepSeek to write a Python program that reads the Excel file and automatically creates 70 AI-generated images with DALL·E -bringing all 70 ideas to life in seconds. A provided template lets you apply this process to your own business." },
+        { speaker: ["Logan Farr"], title: "Secrets to a Well-Designed Service", desc: "What sets apart a well-designed service from a run-of-the-mill service? How do we avoid architecture anti-patterns as software developers? In this talk, we'll cover the key ingredients of any service at all levels – development patterns, CI/CD, infrastructure, and even runtime in a production environment." }
       ],
       session4: [
-        { speaker: ["Joe Latrell"], title: "Lesson Learned - Continuing a Company After a Disaster", desc: "What do you do when your company implodes and takes a major step backward? We'll look at what happened, what could have been done better, and how to move on. This is a subject few seem willing to talk about. We'll cover the stigma of setbacks and retooling your mind to move forward again." },
-        { speaker: ["Andy James"], title: 'GenAI for Customer Support: Making an LLM More Capable on Niche Topics', desc: "This talk will shed light on the journey to integrate generative AI into Elastic's customer success and support operations, providing you with a behind-the-scenes look at our process. Topics include building a knowledge base, UX considerations, tuning RAG search, and observability for the features." },
-        { speaker: ["Peter Stukalov"], title: "A GitOps approach with ArgoCD", desc: 'A real world GitOps example using ArgoCD with code and the ability to poke buttons in a real infrastructure.' }
+        { speaker: ["Benjamin Sautner"], title: "Nimbits: The Open Source IoT Platform That Shaped My Career", desc: "In 2004 I was working in the process control / data acquisition field doing automation of chemical plants in Pennsylvania.  I've always enjoyed home automation and connecting devices to the internet and one day asked if I could get a licence for some of the data acquisition software we used so i could try to connect my aquarium to it. I was denied because it was expensive and proprietary. So I wrote my own just to shown them! Nimbits was born!" },
+        { speaker: ["Andy James"], title: "GenAI for Customer Support: Making an LLM More Capable on Niche Topics", desc: "This talk will shed light on the journey to integrate generative AI into Elastic's customer success and support operations, providing you with a behind-the-scenes look at our process. Topics include building a knowledge base, UX considerations, tuning RAG search, and observability for the features." },
+        { speaker: ["Peter Stukalov"], title: "A GitOps Approach with ArgoCD", desc: 'A real world GitOps example using ArgoCD with code and the ability to poke buttons in a real infrastructure.' }
       ],
       session5: [
-        { speaker: ["Benjamin Sautner"], title: "Nimbits: The Open Source IoT Platform That Shaped My Career", desc: "In 2004 I was working in the process control / data acquisition field doing automation of chemical plants in Pennsylvania.  I've always enjoyed home automation and connecting devices to the internet and one day asked if I could get a licence for some of the data acquisition software we used so i could try to connect my aquarium to it. I was denied because it was expensive and proprietary. So I wrote my own just to shown them! Nimbits was born!" },
+        { speaker: ["Anupam Priya"], title: "Unleashing the Power, Potential and Productivity of Teams", desc: "Through this session, I aim to revisit the fundamentals of effective teamwork, uncover common blind spots, and explore research-backed strategies for building high-performing teams. Participants will critically reflect on how to unlock the full power, potential, and productivity of teams and gain actionable insights to drive collaboration and success in an engaging environment." },
         { speaker: ["Scott Dienner"], title: "AI in the Support Stack: Real-World Applications & Critical Considerations", desc: "Explore practical AI implementations in support operations through real-world examples: automated Zendesk ticket summarization, RAG-powered knowledge base queries, and vector search for Jira issues. Learn how these solutions enhanced support efficiency while examining the gap between AI reality and perception, separating genuine potential from inflated expectations." },
         { speaker: ["Tim Freund"], title: "Automate Infrastructure with Incus and Ansible", desc: "Learn how you can quickly build, destroy, and rebuild labs and project infrastructure using Incus (LXC / KVM), OpenTofu (Terraform), and Ansible. This talk is informed by experience building and rebuilding labs for class. Participants will get access to a live container for the duration of the talk and all configuration artifacts will be available for download so you can build your own lab later." }
-      ],
-      session6: [
-        { speaker: ["Anupam Priya"], title: "Unleashing the power, potential and productivity of teams", desc: "Through this session, I aim to revisit the fundamentals of effective teamwork, uncover common blind spots, and explore research-backed strategies for building high-performing teams. Participants will critically reflect on how to unlock the full power, potential, and productivity of teams and gain actionable insights to drive collaboration and success in an engaging environment." },
-        { speaker: ["Tom Courtney"], title: "Supercharging Innovation:  AI’s Role in Ideation and Visualization", desc: "This talk shows how AI can generate 70 innovative product or service ideas using ChatGPT and 14 ideation methods, exporting them to Excel. You'll also learn how to use DeepSeek to write a Python program that reads the Excel file and automatically creates 70 AI-generated images with DALL·E -bringing all 70 ideas to life in seconds. A provided template lets you apply this process to your own business." },
-        { speaker: ["TBD"], title: "Birds of a Feather", desc: "" }
       ],
       isOpen: [true, true, true, true],
       minuteTrigger: 1

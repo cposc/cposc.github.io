@@ -1,6 +1,6 @@
 <template>
   <div class="sponsorItem" data-aos="zoom-in" data-aos-duration="5000" data-aos-easing="ease-in-out">
-    <!-- <div v-bind:class="tier"> -->
+    <div v-bind:class="tier">
     <img
       v-if="name === 'WebstaurantStore'"
       :alt="name"
@@ -95,7 +95,7 @@
       src="@/assets/2024/sponsors/make717logo_color.svg"
     /> -->
 
-    <!-- </div> -->
+    </div>
   </div>
 </template>
 

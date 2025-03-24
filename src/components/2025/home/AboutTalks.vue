@@ -30,8 +30,11 @@
         just like time travel, the possibilities are endless.
       </p>
       <p>Put <b>Saturday, April 26th, 2025</b> on your calendar now!</p>
-      <a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NTUyZTgxMzhqbGU3ZXYzbmtsM2ZtaHRmZnUgY19mMjI2NzNlMmU1ZWE5ZjczNmJhYThlMjMyMmU1MmM4MGRjMzJkY2NlYTY1Mzg1MDI0MWY0MTUyNmRjMDQ2N2RlQGc&tmsrc=c_f22673e2e5ea9f736baa8e2322e52c80dc32dccea653850241f41526dc0467de%40group.calendar.google.com">
+      <!--<a target="_blank" href="https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=NTUyZTgxMzhqbGU3ZXYzbmtsM2ZtaHRmZnUgY19mMjI2NzNlMmU1ZWE5ZjczNmJhYThlMjMyMmU1MmM4MGRjMzJkY2NlYTY1Mzg1MDI0MWY0MTUyNmRjMDQ2N2RlQGc&tmsrc=c_f22673e2e5ea9f736baa8e2322e52c80dc32dccea653850241f41526dc0467de%40group.calendar.google.com">
         <div class="register">Add Event to Calendar</div>
+      </a>-->
+      <a target="_blank" href="https://www.eventbrite.com/e/the-15th-annual-central-pa-open-source-conference-tickets-1009939595517">
+        <div class="register">Get Your Ticket Today</div>
       </a>
     </div>
     <div class="featuredThings">
