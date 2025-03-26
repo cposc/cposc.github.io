@@ -77,11 +77,11 @@ export default {
           talkAbstract: "Explore practical AI implementations in support operations through real-world examples: automated Zendesk ticket summarization, RAG-powered knowledge base queries, and vector search for Jira issues. Learn how these solutions enhanced support efficiency while examining the gap between AI reality and perception, separating genuine potential from inflated expectations."
         },
         {
-          imageURL: "",
+          imageURL: "@/assets/2025/speakers/LoganFarr.jpg",
           name: "Logan Farr",
-          bio: "",
+          bio: "Logan is an engineering manager at HealthVerity, and has been working as a full-stack software engineer for over a decade. He's passionate about technology and leadership, and loves to nerd out about cloud infrastructure. In his free time, Logan loves traveling, reading, video games, and playing D&D.",
           talkTitle: "Secrets to a Well-Designed Service",
-          talkAbstract: "What sets apart a well-designed service from a run-of-the-mill service? How do we avoid architecture anti-patterns as software developers? In this talk, we'll cover the key ingredients of any service at all levels – development patterns, CI/CD, infrastructure, and even runtime in a production environment. "
+          talkAbstract: "What sets apart a well-designed service from a run-of-the-mill service? How do we avoid architecture anti-patterns as software developers? In this talk, we'll cover the key ingredients of any service at all levels – development patterns, CI/CD, infrastructure, and even runtime in a production environment."
         },
         {
           imageURL: "@/assets/2025/speakers/ZachFedor.jpg",

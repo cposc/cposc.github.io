@@ -20,6 +20,11 @@
         src="@/assets/2025/speakers/AndyJames.jpg"
       />
       <img
+        v-if="name === 'Logan Farr'"
+        :alt="name"
+        src="@/assets/2025/speakers/LoganFarr.jpg"
+      />
+      <img
         v-if="name === 'Jeff Barrett'"
         :alt="name"
         src="@/assets/2025/speakers/JeffBarrett.jpg"
