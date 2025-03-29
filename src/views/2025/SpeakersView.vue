@@ -42,7 +42,7 @@ export default {
     return {
       speakers: [
         {
-          imageURL: "",
+          imageURL: "@/assets/2025/speakers/RGeoffreyAvery.jpg",
           name: "R. Geoffrey Avery",
           bio: "",
           talkTitle: "Lightning Talks",

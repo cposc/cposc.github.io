@@ -10,6 +10,11 @@
         src="@/assets/2025/speakers/ScottDienner.jpg"
       />
       <img
+        v-if="name === 'R. Geoffrey Avery'"
+        :alt="name"
+        src="@/assets/2025/speakers/RGeoffreyAvery.jpg"
+      />
+      <img
         v-if="name === 'Jonathan Bowman'"
         :alt="name"
         src="@/assets/2025/speakers/JonathanBowman.jpg"
