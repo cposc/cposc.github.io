@@ -82,7 +82,7 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
         <ScheduleBlock
           time="12:30 PM to 1:30 PM"
           title="Lunch"
-          description="Time for a brain break! A refreshing and dietary-restriction-friendly lunch from Silantra Asian Kitchen will be provided to all attendees in the Atrium. During this time, you may also find yourself networking and connecting with peers in technology, or you can enjoy your meal in one of the quieter corners of the venue."
+          description="Time for a brain break! A dietary-restriction-friendly lunch from Silantra Asian Kitchen will be provided to all attendees in the Atrium. During this time, you may also find yourself networking and connecting with peers in technology, or you can enjoy your meal in one of the quieter corners of the venue."
           v-if="isOpen[1]"
         />
         <h3 className="afternoon">
@@ -105,7 +105,7 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
           v-if="isOpen[2]"
         />
         <ScheduleBlock
-          time="3:30 PM to 4:00 PM"
+          time="3:30 PM to 3:50 PM"
           title="Sweet Snacks in the Lobby"
           description="Fuel up for Lightning Talks and beyond with some delicious desserts, perhaps chatting about your favorite talk takeaways with your neighbors in line."
           v-if="isOpen[2]"
@@ -148,7 +148,7 @@ export default {
       session1: [
         { speaker: ["Zach Fedor"], title: "Rage Against the Machine Learning: A Luddite's Guide to AI", desc: "Far from being simpletons or technophobes, the Luddites were skilled craftspeople who saw how new factory tech was destroying their communities and livelihoods. So they fought back with secret meetings, organized resistance, and hammers. This talk compares the Industrial and AI revolutions, exploring how Luddite principles and tactics might be adapted for the digital age, when the machine to break exists in the cloud not the factory floor." },
         { speaker: ["Jonathan Bowman"], title: "Tools (and Toys) for the Terminal", desc: "The command-line console is, fascinatingly, a technology both ancient and trending. Whether you are familiar with the command-line, scared of it, or some combination, you are welcome at this session. We will explore together some open-source tools for making your terminal both useful and fun." },
-        { speaker: ["Rob Hudson"], title: "Curious George Makes a Job", desc: "There was once a curious not-so-little monkey, or at least 99% similar (by DNA), who could not decide what he wanted to be when he grew up. And by all reckoning, he was well past grown-up age. He liked computers, and he liked people, and he liked making them work together. But no job was just right for him. So he got the idea to hack his way to a new job for the future. This presentation is that story." }
+                { speaker: ["Logan Farr"], title: "Secrets to a Well-Designed Service", desc: "What sets apart a well-designed service from a run-of-the-mill service? How do we avoid architecture anti-patterns as software developers? In this talk, we'll cover the key ingredients of any service at all levels – development patterns, CI/CD, infrastructure, and even runtime in a production environment." }
       ],
       session2: [
         { speaker: ["Joe Latrell"], title: "Lesson Learned - Continuing a Company After a Disaster", desc: "What do you do when your company implodes and takes a major step backward? We'll look at what happened, what could have been done better, and how to move on. This is a subject few seem willing to talk about. We'll cover the stigma of setbacks and retooling your mind to move forward again." },
@@ -158,7 +158,7 @@ export default {
       session3: [
         { speaker: ["Jeff Barrett"], title: "Software Eng and Ops When 1 Minute Downtime is Immediate Termination", desc: "This is going to be a high-level technical overview of software engineering and operations in the space of high-frequency trading and financial exchanges. In an ecosystem of 30-70MM messages/second and 3K trades/second with sub-microsecond response latency, it is immediate unquestioned termination if you cause a minute of downtime. How you architect solutions and code will directly relate to your job security." },
         { speaker: ["Tom Courtney"], title: "Supercharging Innovation:  AI’s Role in Ideation and Visualization", desc: "This talk shows how AI can generate 70 innovative product or service ideas using ChatGPT and 14 ideation methods, exporting them to Excel. You'll also learn how to use DeepSeek to write a Python program that reads the Excel file and automatically creates 70 AI-generated images with DALL·E -bringing all 70 ideas to life in seconds. A provided template lets you apply this process to your own business." },
-        { speaker: ["Logan Farr"], title: "Secrets to a Well-Designed Service", desc: "What sets apart a well-designed service from a run-of-the-mill service? How do we avoid architecture anti-patterns as software developers? In this talk, we'll cover the key ingredients of any service at all levels – development patterns, CI/CD, infrastructure, and even runtime in a production environment." }
+        { speaker: ["Rob Hudson"], title: "Curious George Makes a Job", desc: "There was once a curious not-so-little monkey, or at least 99% similar (by DNA), who could not decide what he wanted to be when he grew up. And by all reckoning, he was well past grown-up age. He liked computers, and he liked people, and he liked making them work together. But no job was just right for him. So he got the idea to hack his way to a new job for the future. This presentation is that story." }
       ],
       session4: [
         { speaker: ["Benjamin Sautner"], title: "Nimbits: The Open Source IoT Platform That Shaped My Career", desc: "In 2004 I was working in the process control / data acquisition field doing automation of chemical plants in Pennsylvania.  I've always enjoyed home automation and connecting devices to the internet and one day asked if I could get a licence for some of the data acquisition software we used so i could try to connect my aquarium to it. I was denied because it was expensive and proprietary. So I wrote my own just to shown them! Nimbits was born!" },
