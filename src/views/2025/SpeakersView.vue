@@ -53,7 +53,7 @@ export default {
           name: "Jeff Barrett",
           talkTitle: "Software Eng and Ops When 1 Minute Downtime is Immediate Termination",
           talkAbstract: "This is going to be a high-level technical overview of software engineering and operations in the space of high-frequency trading and financial exchanges. In an ecosystem of 30-70MM messages/second and 3K trades/second with sub-microsecond response latency, it is immediate unquestioned termination if you cause a minute of downtime. How you architect solutions and code will directly relate to your job security.",
-          bio: "25+ years of software engineering and leadership. Currently advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
+          bio: "25+ years of software engineering and leadership. Currently learning high-frequency trading, advising, coaching, and leading folks to better outcomes in healthy work environments. Focusing on outcomes over ego."
         },
         {
           imageURL: "@/assets/2025/speakers/JonathanBowman.jpg",

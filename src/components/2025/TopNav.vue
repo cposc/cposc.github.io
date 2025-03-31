@@ -15,7 +15,7 @@ const menuStore = useMenuStore();
           </div>
           <div class="dropdownItems" :class="{ open: menuStore.isOpen }">
             <RouterLink to="/">Home</RouterLink>
-            <RouterLink to="/speakers">Speakers</RouterLink>
+            <RouterLink to="/schedule">Schedule</RouterLink>
             <!-- <RouterLink to="/logistics">Travel</RouterLink> -->
             <RouterLink to="/sponsors">Sponsor</RouterLink>
             <RouterLink to="/volunteers">Volunteer</RouterLink>
@@ -26,7 +26,7 @@ const menuStore = useMenuStore();
         <div class="headerLeft">
           <RouterLink to="/">Home</RouterLink>
           <RouterLink to="/sponsors">Sponsor</RouterLink>
-          <RouterLink to="/speakers">Speakers</RouterLink>
+          <RouterLink to="/schedule">Schedule</RouterLink>
           <!-- <RouterLink to="/logistics">Travel</RouterLink> -->
           <RouterLink to="/volunteers">Volunteer</RouterLink>
           <!-- <RouterLink to="/schedule">Schedule</RouterLink> -->
