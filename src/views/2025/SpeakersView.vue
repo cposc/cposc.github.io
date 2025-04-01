@@ -114,14 +114,14 @@ export default {
         {
           imageURL: "@/assets/2025/speakers/JoeLatrell.png",
           name: "Joe Latrell",
-          bio: "",
+          bio: "Joe Latrell is an inventor and entrepreneur with a passion for solving real-world problems through technology. He has coordinated satellite payloads for launch aboard SpaceX's Falcon 9, Blue Origin's New Shepard, and Rocket Lab's Electron, bridging the gap between cutting-edge aerospace and practical data applications. Before founding Quub, Joe built a broad base of experience across the tech industry — from launching an early suborbital rocket venture to developing data-driven software solutions for education and environmental analysis. At Quub, Joe leads the design and production of small, affordable satellites built to monitor Earth’s weather, resources, and environmental changes in near real-time. His mission is to deliver actionable insights to first responders, businesses, and governments — enabling faster, smarter decisions when they matter most.",
           talkTitle: "Lesson Learned - Continuing a Company After a Disaster",
           talkAbstract: "What do you do when your company implodes and takes a major step backward? We'll look at what happened, what could have been done better, and how to move on. This is a subject few seem willing to talk about. We'll cover the stigma of setbacks and retooling your mind to move forward again."
         },
         {
           imageURL: "@/assets/2025/speakers/AlexMayer.png",
           name: "Alex Mayer",
-          bio: "",
+          bio: "Alex has over a decade of experience as a Software Engineer and Site Reliability Engineer. He is the co-organizer of the Lancaster Linux Users Group (LancLUG), an avid GNU/Linux user, and contributes to open-source projects as often as he can.",
           talkTitle: "Advanced Git",
           talkAbstract: "Do you use git for work or personal projects? Ever wonder if your workflow could be better? Let's go over a few features of git that can help improve your process."
         },
