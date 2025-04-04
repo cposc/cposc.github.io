@@ -126,7 +126,7 @@ export default {
           talkAbstract: "Do you use git for work or personal projects? Ever wonder if your workflow could be better? Let's go over a few features of git that can help improve your process."
         },
         {
-          imageURL: "@/assets/2025/speakers/BobMurphy.png",
+          imageURL: "@/assets/2025/speakers/murph.png",
           name: "murph",
           bio: "I'm murph, a system administrator in New Jersey, desktop Linux user, hackers.town resident, and EFF member. You can reach me on the fediverse at @murph@hackers.town.",
           talkTitle: "Hacker Public Radio - why you should listen, and contribute.",

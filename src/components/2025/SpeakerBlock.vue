@@ -45,9 +45,9 @@
         src="@/assets/2025/speakers/JoeLatrell.png"
       />
       <img
-        v-if="name === 'Bob Murphy'"
+        v-if="name === 'murph'"
         :alt="name"
-        src="@/assets/2025/speakers/BobMurphy.png"
+        src="@/assets/2025/speakers/murph.png"
       />
       <img
         v-if="name === 'Benjamin Sautner'"
