@@ -127,8 +127,8 @@ export default {
         },
         {
           imageURL: "@/assets/2025/speakers/BobMurphy.png",
-          name: "Bob Murphy",
-          bio: "",
+          name: "murph",
+          bio: "I'm murph, a system administrator in New Jersey, desktop Linux user, hackers.town resident, and EFF member. You can reach me on the fediverse at @murph@hackers.town.",
           talkTitle: "Hacker Public Radio - why you should listen, and contribute.",
           talkAbstract: "Hacker Public Radio is a community podcast that run 5 days a week.  It is dedicated to sharing knowledge and has been running in various forms for nearly 20 years.  Anyone that has anything that is of interest to hackers is welcome to submit a show.  https://hackerpublicradio.org/"
         },
