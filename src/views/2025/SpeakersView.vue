@@ -58,7 +58,7 @@ export default {
         {
           imageURL: "@/assets/2025/speakers/JonathanBowman.jpg",
           name: "Jonathan Bowman",
-          bio: "",
+          bio: "Currently a software engineer at Cargas, in the past Jonathan has also been a middle and high school teacher, web developer, IT director, data wrangler, and always a hobbyist developer. An avid Vim user and command-line aficionado for a few decades, he loves hearing of new tools and methods that are making hobbies or work enjoyable. He also enjoys jogging, shaving, and puzzling over the intricacies of parenthood.",
           talkTitle: "Tools (and Toys) for the Terminal",
           talkAbstract: "The command-line console is, fascinatingly, a technology both ancient and trending. Whether you are familiar with the command-line, scared of it, or some combination, you are welcome at this session. We will explore together some open-source tools for making your terminal both useful and fun."
         },
