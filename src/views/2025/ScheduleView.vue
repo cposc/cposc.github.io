@@ -31,8 +31,7 @@ import ScheduleBlock from "../../components/2025/schedule/ScheduleBlock.vue";
         </p> -->
         <!-- Once schedule is out -->
         <p style="margin: 2rem;">Welcome to CPOSC, and thank you for contributing to our local technology community. Ready to hack all the way to the future with us? Below, you'll find the schedule for our event taking place on April 26th, 2025. We searched the time continuum to get you the best talks!</p>
-        <p>PRINTABLE PDF SCHEDULE (coming soon)</p>
-        <!-- <p>PRINTABLE PDF SCHEDULE: <a href="/CPOSCSchedule2024_color.pdf" target="_blank">COLOR</a> / <a href="/CPOSCSchedule2024_bw.pdf" target="_blank">B&W</a></p> -->
+        <p>PRINTABLE PDF SCHEDULE: <a href="/CPOSC2025-PrintableSchedule.pdf" target="_blank">DOWNLOAD</a></p>
         <p><a href="https://docs.google.com/forms/d/e/1FAIpQLSeUh2udfcPPiQ1UBTzojvnZO9wijKQSzZytQSXLDLLadCa8gg/viewform?pli=1" target="_blank">**Submit a Lightning Talk**</a></p>
         <h3 v-if="shouldShowOver" style="text-align: center; margin: 2rem; padding: 0;">The event is over, and we had a blast! Stay tuned as we begin planning our 2026 event.</h3>
         <h3 className="morning">
