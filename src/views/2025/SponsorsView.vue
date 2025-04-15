@@ -263,10 +263,6 @@ import SponsorItem from "../../components/2025/home/SponsorItem.vue";
     </div>
     <div class="sponsorships previousSponsors">
       <h2>This Year's Sponsors</h2>
-      <p>
-        Sponsors are listed in alphabetic order rather than the year or amount
-        these organizations previously supported.
-      </p>
       <h3>Flux Capacitor</h3>
       <div class="sponsorsWrapper">
         <div class="sponsorSection">
@@ -328,8 +324,8 @@ export default {
         { name: "Harbor Compliance", tier: "three" },
         { name: "Make 717", tier: "three" },
         { name: "JFC Global", tier: "four" },
-        // { name: "Swartz", tier: "four" }, // NEW
         { name: "TCCP", tier: "four" }, // NEW
+        { name: "Swartz", tier: "four" }, // NEW
         // Last Year's
         // { name: "Aha Labs", tier: "five" },
         // { name: "Boyd Technical Solutions", tier: "five" },

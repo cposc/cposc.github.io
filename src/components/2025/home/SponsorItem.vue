@@ -92,6 +92,11 @@
       :alt="name"
       src="@/assets/2025/sponsors/TCCP.png"
     />
+    <img
+      v-if="name === 'Swartz'"
+      :alt="name"
+      src="@/assets/2025/sponsors/Swartz.png"
+    />
 
     <!-- Tom Swartz -->
     <!-- <img
