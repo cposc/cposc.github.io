@@ -1,110 +1,91 @@
 <template>
   <div class="sponsorItem" data-aos="zoom-in" data-aos-duration="5000" data-aos-easing="ease-in-out">
     <div v-bind:class="tier">
+
+    <!-- Tier 1 -->
+    <a v-if="name == 'WebstaurantStore'" href="https://www.webstaurantstore.com" target="_blank">
     <img
       v-if="name === 'WebstaurantStore'"
       :alt="name"
       class="web"
       src="@/assets/2024/sponsors/Webstaurantstore-brand-logo.png"
     />
+    </a>
 
-    <!-- Harbor Compliance -->
+    <!-- Tier 2 -->
+    <a v-if="name == 'Cargas'" href="https://www.cargas.com" target="_blank">
+    <img
+      v-if="name === 'Cargas'"
+      :alt="name"
+      src="@/assets/2024/sponsors/cargas.png"
+    />
+    </a>
+    <a v-if="name == 'Elastic'" href="https://www.elastic.co" target="_blank">
+    <img
+      v-if="name === 'Elastic'"
+      :alt="name"
+      src="@/assets/2024/sponsors/elastic-logo.svg"
+    />
+    </a>
+    <a v-if="name == 'Listrak'" href="https://www.listrak.com/" target="_blank">
+    <img
+      v-if="name === 'Listrak'"
+      :alt="name"
+      src="@/assets/2024/sponsors/Listrak-Large.png"
+    />
+    </a>
+    <a v-if="name == 'Mind Development & Design'" href="https://www.minddevelopmentanddesign.com/" target="_blank">
+    <img
+      v-if="name === 'Mind Development & Design'"
+      :alt="name"
+      src="@/assets/2024/sponsors/mind.png"
+    />
+    </a>
+
+    <!-- Tier 3 -->
+    <a v-if="name == 'Harbor Compliance'" href="https://www.harborcompliance.com/" target="_blank">
     <img
       v-if="name === 'Harbor Compliance'"
       :alt="name"
       class="web"
       src="@/assets/2024/sponsors/harborcompliance.png"
     />
-
-    <img
-      v-if="name === 'Crunchy Data'"
-      :alt="name"
-      src="@/assets/2023/sponsors/crunchy_data.svg"
-    />
-
-    <img
-      v-if="name === 'Listrak'"
-      :alt="name"
-      src="@/assets/2024/sponsors/Listrak-Large.png"
-    />
-    <img
-      v-if="name === 'Mind Development & Design'"
-      :alt="name"
-      src="@/assets/2024/sponsors/mind.png"
-    />
-    <img
-      v-if="name === 'Seisan'"
-      :alt="name"
-      src="@/assets/2024/sponsors/seisan.png"
-    />
-    <img
-      v-if="name === 'Elastic'"
-      :alt="name"
-      src="@/assets/2024/sponsors/elastic-logo.svg"
-    />
-    <img
-      v-if="name === 'Cargas'"
-      :alt="name"
-      src="@/assets/2024/sponsors/cargas.png"
-    />
-    <img
-      v-if="name === 'Aha Labs'"
-      :alt="name"
-      src="@/assets/2024/sponsors/aha.png"
-    />
-    <img
-      v-if="name === 'HUG'"
-      :alt="name"
-      src="@/assets/2024/sponsors/hug-logo.png"
-    />
+    </a>
+    <a v-if="name == 'Industrial Resolution'" href="https://theindustrialresolution.com/" target="_blank">
     <img
       v-if="name === 'Industrial Resolution'"
       :alt="name"
       src="@/assets/2024/sponsors/indyres.png"
     />
+    </a>
+    <a v-if="name == 'Make 717'" href="https://www.make717.org/" target="_blank">
+    <img
+      v-if="name === 'Make 717'"
+      :alt="name"
+      src="@/assets/2024/sponsors/make717logo_color.svg"
+    />
+    </a>
+    
+    <!-- Tier 4 -->
+    <a v-if="name == 'JFC Global'" href="https://jfcglobal.com/" target="_blank">
     <img
       v-if="name === 'JFC Global'"
       :alt="name"
       src="@/assets/2024/sponsors/jfc.png"
     />
-    <img
-      v-if="name === 'Boyd Technical Solutions'"
-      :alt="name"
-      src="@/assets/2024/sponsors/boyd.png"
-    />
-    <img
-      v-if="name === 'Make 717'"
-      :alt="name"
-      src="@/assets/2024/sponsors/make717logo_color.svg"
-    />
-    <img
-      v-if="name === 'Sharp Innovation'"
-      :alt="name"
-      src="@/assets/2024/sponsors/Sharp-25th-simple-stacked.png"
-    />
-    <img
-      v-if="name === 'Quub'"
-      :alt="name"
-      src="@/assets/2023/sponsors/quub.png"
-    />
+    </a>
+    <a v-if="name == 'TCCP'" href="https://www.tccp.org/" target="_blank">
     <img
       v-if="name === 'TCCP'"
       :alt="name"
       src="@/assets/2025/sponsors/TCCP.png"
     />
+    </a>
     <img
       v-if="name === 'Swartz'"
       :alt="name"
       src="@/assets/2025/sponsors/Swartz.png"
     />
-
-    <!-- Tom Swartz -->
-    <!-- <img
-      v-if="name === 'Make 717'"
-      :alt="name"
-      src="@/assets/2024/sponsors/make717logo_color.svg"
-    /> -->
-
     </div>
   </div>
 </template>
