@@ -87,6 +87,11 @@
       :alt="name"
       src="@/assets/2023/sponsors/quub.png"
     />
+    <img
+      v-if="name === 'TCCP'"
+      :alt="name"
+      src="@/assets/2025/sponsors/TCCP.png"
+    />
 
     <!-- Tom Swartz -->
     <!-- <img
@@ -121,9 +126,26 @@ export default {
   margin: 5px;
 
   img {
-    height: 100px;
-    width: 170px;
     object-fit: contain;
+  }
+
+  .one img {
+    height: 200px;
+    width: 350px;
+  }
+
+  .two img {
+    height: 150px;
+    width: 200px;
+  }
+
+  .three img {
+    height: 100px;
+    width: 150px;
+  }
+
+  .four img {
+    height: 60px;
   }
 }
 </style>

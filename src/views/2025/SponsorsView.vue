@@ -262,15 +262,46 @@ import SponsorItem from "../../components/2025/home/SponsorItem.vue";
       </div>
     </div>
     <div class="sponsorships previousSponsors">
-      <h2>previous sponsors</h2>
+      <h2>This Year's Sponsors</h2>
       <p>
         Sponsors are listed in alphabetic order rather than the year or amount
         these organizations previously supported.
       </p>
+      <h3>Flux Capacitor</h3>
       <div class="sponsorsWrapper">
         <div class="sponsorSection">
           <SponsorItem
-            v-for="sponsor of sponsors"
+            v-for="sponsor of sponsors.filter(s => s.tier === 'one')"
+            :name="sponsor.name"
+            :tier="sponsor.tier"
+          />
+        </div>
+      </div>
+      <h3>DeLorean</h3>
+      <div class="sponsorsWrapper">
+        <div class="sponsorSection">
+          <SponsorItem
+            v-for="sponsor of sponsors.filter(s => s.tier === 'two')"
+            :name="sponsor.name"
+            :tier="sponsor.tier"
+          />
+        </div>
+      </div>
+      <h3>Hoverboard</h3>
+      <div class="sponsorsWrapper">
+        <div class="sponsorSection">
+          <SponsorItem
+            v-for="sponsor of sponsors.filter(s => s.tier === 'three')"
+            :name="sponsor.name"
+            :tier="sponsor.tier"
+          />
+        </div>
+      </div>
+      <h3>Time Circuit</h3>
+      <div class="sponsorsWrapper">
+        <div class="sponsorSection">
+          <SponsorItem
+            v-for="sponsor of sponsors.filter(s => s.tier === 'four')"
             :name="sponsor.name"
             :tier="sponsor.tier"
           />
@@ -288,22 +319,34 @@ export default {
   data() {
     return {
       sponsors: [
-        { name: "Aha Labs", tier: "five" },
-        { name: "Boyd Technical Solutions", tier: "five" },
-        { name: "Cargas", tier: "four" },
-        { name: "Crunchy Data", tier: "four" },
-        { name: "Elastic", tier: "three" },
-        { name: "Harbor Compliance", tier: "two" },
-        { name: "HUG", tier: "five" },
-        { name: "Industrial Resolution", tier: "one" },
-        { name: "JFC Global", tier: "five" },
-        { name: "Listrak", tier: "two" },
-        { name: "Make 717", tier: "five" },
-        { name: "Mind Development & Design", tier: "two" },
-        { name: "Quub", tier: "four" },
-        { name: "Seisan", tier: "two" },
-        { name: "Sharp Innovation", tier: "five" },
+        // This Year's
         { name: "WebstaurantStore", tier: "one" },
+        { name: "Cargas", tier: "two" },
+        { name: "Elastic", tier: "two" },
+        { name: "Listrak", tier: "two" },
+        { name: "Mind Development & Design", tier: "two" },
+        { name: "Harbor Compliance", tier: "three" },
+        { name: "Make 717", tier: "three" },
+        { name: "JFC Global", tier: "four" },
+        // { name: "Swartz", tier: "four" }, // NEW
+        { name: "TCCP", tier: "four" }, // NEW
+        // Last Year's
+        // { name: "Aha Labs", tier: "five" },
+        // { name: "Boyd Technical Solutions", tier: "five" },
+        // { name: "Cargas", tier: "four" },
+        // { name: "Crunchy Data", tier: "four" },
+        // { name: "Elastic", tier: "three" },
+        // { name: "Harbor Compliance", tier: "two" },
+        // { name: "HUG", tier: "five" },
+        // { name: "Industrial Resolution", tier: "one" },
+        // { name: "JFC Global", tier: "five" },
+        // { name: "Listrak", tier: "two" },
+        // { name: "Make 717", tier: "five" },
+        // { name: "Mind Development & Design", tier: "two" },
+        // { name: "Quub", tier: "four" },
+        // { name: "Seisan", tier: "two" },
+        // { name: "Sharp Innovation", tier: "five" },
+        // { name: "WebstaurantStore", tier: "one" },
       ],
       activeBlock: 0,
       showBlock: [true, false, false, false],
