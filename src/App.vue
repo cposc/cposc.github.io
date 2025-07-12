@@ -1,5 +1,7 @@
 <script setup>
 import { RouterView } from "vue-router";
+import SiteContainer2026 from "./2026/sitecontainer/SiteContainer2026.vue";
+
 import TopNav2025 from "./components/2025/TopNav.vue";
 import Bottom2025 from "./components/2025/Bottom.vue";
 
@@ -23,10 +25,13 @@ import Bottom2023 from "./components/2023/Bottom.vue";
     <RouterView />
     <Bottom2024 :showLine="$route.name === '2024'" />
   </template>
-  <template v-else>
+  <template v-if="['2025', 'schedule2025', 'volunteers2025', 'speakers2025', 'logistics2025'].includes($route.name)">
     <TopNav2025 />
     <RouterView />
     <Bottom2025 :showLine="$route.name === 'home'" />
+  </template>
+  <template v-else>
+    <SiteContainer2026 />
   </template>
 </template>
 

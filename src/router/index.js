@@ -1,6 +1,8 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { useMenuStore } from "../store/menuStore";
 
+import HomeView2026 from "../2026/home/HomeView.vue";
+
 import HomeView2025 from "../views/2025/HomeView.vue";
 import ScheduleView2025 from "../views/2025/ScheduleView.vue";
 import VolunteerView2025 from "../views/2025/VolunteerView.vue";
@@ -30,7 +32,7 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView2025,
+      component: HomeView2026,
     },
     {
       path: "/speakers",
