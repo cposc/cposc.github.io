@@ -1,12 +1,17 @@
 <template>
   <div class="header" id="homepageHeader">
+    <img
+      class="logo"
+      src="/src/2026/assets/logo.png"
+      alt="CPOSC 2026 Logo"
+    />
     <nav>
-      <a href="#about">About</a>
-      <a href="#sponsors">Sponsors</a>
+      <a href="/#about">About</a>
+      <a href="/#sponsors">Sponsors</a>
       <!-- <a href="#schedule">Schedule</a> -->
       <!-- <a href="#speakers">Speakers</a> -->
-      <a href="#travel">Travel</a>
-      <a href="#volunteer">Volunteer</a>
+      <a href="/#travel">Travel</a>
+      <a href="/#volunteer">Volunteer</a>
       <!-- <a href="#register">Join Us</a> -->
     </nav>
   </div>
@@ -20,11 +25,17 @@
   justify-content: center;
   width: 100%;
   padding: 0 16px;
-  background: linear-gradient(45deg, #2d1b69, #11998e);
+  // background: linear-gradient(45deg, #2d1b69, #11998e);
+  background: #0e0723;
   color: #f1f1f1;
   position: absolute;
   z-index: 10;
   transition: all 0.2s;
+
+  .logo {
+    height: 35px;
+    margin-right: 1rem;
+  }
 
   &.sticky {
     position: sticky;

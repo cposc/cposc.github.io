@@ -4,16 +4,16 @@
       <div class="footer-content">
         <div>
           <h4>Quick Links</h4>
-          <p><a href="#about">About</a></p>
+          <p><a href="/#about">About</a></p>
           <!-- <p><a href="#speakers">Speakers</a></p> -->
           <!-- <p><a href="#schedule">Schedule</a></p> -->
-          <p><a href="#sponsors">Sponsors</a></p>
-          <p><a href="#travel">Travel</a></p>
+          <p><a href="/#sponsors">Sponsors</a></p>
+          <p><a href="/#travel">Travel</a></p>
         </div>
         <div>
           <h4>Get Involved</h4>
-          <p><a href="#volunteer">Volunteer</a></p>
-          <p><a href="#sponsors">Sponsor</a></p>
+          <p><a href="/#volunteer">Volunteer</a></p>
+          <p><a href="/#sponsors">Sponsor</a></p>
           <!-- <p><a href="#">Call for Papers</a></p> -->
           <p><a href="/code-of-conduct" target="_blank">Code of Conduct</a></p>
         </div>
@@ -22,7 +22,7 @@
           <p><a href="#">Twitter</a></p>
           <p><a href="#">LinkedIn</a></p>
           <p><a href="#">Mastodon</a></p>
-          <p><a href="mailto:info@cposc.org">info@cposc.org</a></p>
+          <p><a href="mailto:cposc@localareanetworks.org">cposc@localareanetworks.org</a></p>
         </div>
         <div>
           <h4>The Archives</h4>

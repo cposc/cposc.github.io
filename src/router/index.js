@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import { useMenuStore } from "../store/menuStore";
 
 import HomeView2026 from "../2026/home/HomeView.vue";
+import LogisticsView2026 from "../2026/travel/TravelOptions.vue";
 
 import HomeView2025 from "../views/2025/HomeView.vue";
 import ScheduleView2025 from "../views/2025/ScheduleView.vue";
@@ -35,12 +36,12 @@ const router = createRouter({
       component: HomeView2026,
     },
     {
-      path: "/speakers",
-      redirect: { name: "speakers2025" },
+      path: "/logistics",
+      redirect: { name: "logistics2026" },
     },
     {
-      path: "/logistics",
-      redirect: { name: "logistics2025" },
+      path: "/speakers",
+      redirect: { name: "speakers2025" },
     },
     {
       path: "/schedule",
@@ -60,7 +61,17 @@ const router = createRouter({
       component: CodeOfConduct,
     },
     { path: "/:pathMatch(.*)*", component: PageNotFound },
+    // 2026
+    {
+      path: "/2026/logistics",
+      name: "logistics2026",
+      component: LogisticsView2026,
+    },
     // 2025 conference pages
+    {
+      path: "/2025",
+      component: HomeView2025,
+    },
     {
       path: "/2025/speakers",
       name: "speakers2025",

@@ -32,7 +32,7 @@
               Inn Lancaster.
             </p>
           </div>
-          <a href="#" class="card-link">View Hotel Options →</a>
+          <a href="/logistics#hotels" class="card-link">View Hotel Options →</a>
         </div>
         <div class="card">
           <div>
@@ -43,7 +43,7 @@
               reimbursement like previous years.
             </p>
           </div>
-          <a href="#" class="card-link">Explore Travel Options →</a>
+          <a href="/logistics#travel" class="card-link">Explore Travel Options →</a>
         </div>
       </div>
     </div>

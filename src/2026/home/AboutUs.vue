@@ -33,7 +33,7 @@
           </div>
         </div>
       </div>
-      <div class="highlight-box">
+      <!-- <div class="highlight-box">
         <h3>
           <i class="fa-solid fa-graduation-cap"></i> Students Attend Free!
         </h3>
@@ -42,7 +42,7 @@
           are able to register for a FREE ticket because your future is our
           investment.
         </p>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
