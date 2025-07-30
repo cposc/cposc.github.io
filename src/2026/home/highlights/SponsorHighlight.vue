@@ -6,12 +6,11 @@
         The organizations that make our cosmic gathering possible
       </p>
       <div class="highlight-box">
-        <h3><i class="fa-solid fa-star"></i> Become a Sponsor</h3>
         <p>
           Join our constellation of supporters and help power the future of open
           source in Central PA. Multiple sponsorship levels available.
         </p>
-        <a href="#" class="card-link">View Sponsorship Opportunities →</a>
+        <a href="/2026/sponsors" class="card-link">View Sponsorship Opportunities →</a>
       </div>
 
       <div class="grid">

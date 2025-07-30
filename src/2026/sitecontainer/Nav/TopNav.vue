@@ -1,18 +1,30 @@
 <template>
   <div class="header" id="homepageHeader">
-    <img
-      class="logo"
-      src="/src/2026/assets/logo.png"
-      alt="CPOSC 2026 Logo"
-    />
+    <img class="logo" src="/src/2026/assets/logo.png" alt="CPOSC 2026 Logo" />
     <nav>
-      <a href="/#about">About</a>
-      <a href="/#sponsors">Sponsors</a>
-      <!-- <a href="#schedule">Schedule</a> -->
-      <!-- <a href="#speakers">Speakers</a> -->
-      <a href="/#travel">Travel</a>
-      <a href="/#volunteer">Volunteer</a>
-      <!-- <a href="#register">Join Us</a> -->
+      <ul aria-label="navigation">
+        <li>
+          <a href="/#about">About</a>
+        </li>
+        <li>
+          <a href="/#sponsors">Sponsors</a>
+        </li>
+        <li>
+          <a href="#schedule">Schedule</a>
+        </li>
+        <!-- <li>
+          <a href="#speakers">Speakers</a>
+        </li> -->
+        <li>
+          <a href="/#travel">Travel</a>
+        </li>
+        <li>
+          <a href="/#volunteer">Volunteer</a>
+        </li>
+        <!-- <li>
+          <a href="#register">Join Us</a>
+        </li> -->
+      </ul>
     </nav>
   </div>
 </template>
@@ -25,12 +37,26 @@
   justify-content: center;
   width: 100%;
   padding: 0 16px;
-  // background: linear-gradient(45deg, #2d1b69, #11998e);
   background: #0e0723;
   color: #f1f1f1;
   position: absolute;
-  z-index: 10;
+  z-index: 20;
   transition: all 0.2s;
+
+  @media screen and (max-width: 1000px) {
+    top: 0;
+  }
+
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+
+    li {
+      display: flex;
+    }
+  }
 
   .logo {
     height: 35px;
@@ -40,11 +66,10 @@
   &.sticky {
     position: sticky;
     top: 0px;
-    // padding: 10px 16px;
     color: #f1f1f1;
 
-    a {
-      padding: 1.5rem 1rem;
+    @media screen and (max-width: 1000px) {
+      position: absolute;
     }
   }
 
@@ -57,7 +82,7 @@
     gap: 4px;
 
     a {
-      padding: 1rem;
+      padding: 1.5rem 1rem;
       transition: all 0.3s;
       color: white;
       text-decoration: none;
@@ -78,16 +103,27 @@ onMounted(() => {
   if (!header) return;
 
   const sticky = header.offsetTop;
+  const url = window.location.href;
+  let overrideSticky = false;
 
   const handleScroll = () => {
     if (window.pageYOffset > sticky) {
       header.classList.add("sticky");
-    } else {
+    } else if (!overrideSticky) {
       header.classList.remove("sticky");
     }
   };
 
+  const checkForSticky = () => {
+    if (url.includes("logistics") || url.includes("sponsors")) {
+      overrideSticky = true;
+      header.classList.add("sticky");
+    }
+  };
+
   window.addEventListener("scroll", handleScroll);
+  window.navigation.addEventListener("navigate", checkForSticky());
+  checkForSticky();
 
   // Clean up on unmount
   onUnmounted(() => {

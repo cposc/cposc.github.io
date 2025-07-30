@@ -6,7 +6,7 @@
     <!-- UPDATE the href to be the CFP link once that's available -->
     <span>
       CPOSC Sweet 0x10 is looking for speakers from the local tech community!
-      Submit a talk, <a href="#">here</a>.
+      Submit a talk, <a href="https://forms.gle/NXooPfBHm6HFH5VTA" target="_blank">here</a>.
     </span>
     <div className="close" @click="toggleElement('speakerVisibility')">X</div>
   </div>
@@ -16,7 +16,7 @@
   >
     <span>
       The CPOSC Sweet 0x10 agenda is live! Explore
-      <a href="#schedule">20+ sessions</a> and start planning your experience.
+      <a href="/#schedule">20+ sessions</a> and start planning your experience.
     </span>
     <div className="close" @click="toggleElement('scheduleVisibility')">X</div>
   </div>
@@ -26,7 +26,7 @@
   >
     <span>
       The CPOSC Sweet 0x10 conference is looking for sponsors.
-      <a href="#sponsors">Help us</a> make the magic happen! Every bit counts.
+      <a href="/#sponsors">Help us</a> make the magic happen! Every bit counts.
     </span>
     <div className="close" @click="toggleElement('sponsorVisibility')">X</div>
   </div>
@@ -77,7 +77,7 @@ export default {
 <style lang="scss" scoped>
 .scheduleBanner {
   position: absolute;
-  z-index: 10;
+  z-index: 15;
   top: 0;
   width: 100%;
   padding: 1rem;

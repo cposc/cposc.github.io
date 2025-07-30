@@ -4,7 +4,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
 
 import AboutUs from "./AboutUs.vue";
 // import SpeakerHighlight from "./highlights/SpeakersHighlight.vue";
-// import ScheduleHighlight from "./highlights/ScheduleHighlight.vue";
+import ScheduleHighlight from "./highlights/ScheduleHighlight.vue";
 import SponsorHighlight from "./highlights/SponsorHighlight.vue";
 import TravelHighlight from "./highlights/TravelHighlight.vue";
 import VolunteerHighlight from "./highlights/VolunteerHighlight.vue";
@@ -57,8 +57,8 @@ document.querySelectorAll(".card").forEach((card) => {
   <div class="main-content">
     <AboutUs />
     <!-- <SpeakerHighlight /> -->
-    <!-- <ScheduleHighlight /> -->
     <SponsorHighlight />
+    <ScheduleHighlight />
     <TravelHighlight />
     <VolunteerHighlight />
     <!-- <RegistrationCTA /> -->
@@ -162,7 +162,10 @@ h3 {
 .card h3 {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #2d1b69;
+  background: linear-gradient(45deg, #2d1b69, #11998e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .card p {
@@ -171,14 +174,14 @@ h3 {
 }
 
 .card-link {
-  color: #11998e;
+  color: #2d1b69;
   text-decoration: none;
   font-weight: 600;
   transition: color 0.3s ease;
 }
 
 .card-link:hover {
-  color: #2d1b69;
+  color: #11998e;
 }
 
 /* About Section */

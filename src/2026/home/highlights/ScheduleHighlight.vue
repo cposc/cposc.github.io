@@ -2,8 +2,18 @@
   <section class="section" id="schedule">
     <div class="container">
       <h2>Conference Schedule</h2>
-      <i>Schedule coming soon! Check back in Spring 2025.</i>
       <div class="grid">
+        <div class="card centered">
+          <div>
+            <h3>Schedule Coming Soon</h3>
+            <p>
+              Want to be a part of this conference? Slots fill up fast! We'll choose speakers in early 2026.
+            </p>
+          </div>
+          <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk idea →</a>
+        </div>
+      </div>
+      <!-- <div class="grid">
         <div class="card">
           <div>
             <h3>Morning Sessions</h3>
@@ -37,7 +47,7 @@
           </div>
           <a href="#" class="card-link">Evening Details →</a>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 </template>
@@ -50,6 +60,10 @@ h2 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  &.centered {
+    text-align: center;
+  }
 
   h3 {
     margin: 0;

@@ -3,6 +3,7 @@ import { useMenuStore } from "../store/menuStore";
 
 import HomeView2026 from "../2026/home/HomeView.vue";
 import LogisticsView2026 from "../2026/travel/TravelOptions.vue";
+import SponsorsView2026 from "../2026/sponsors/SponsorProspectus.vue";
 
 import HomeView2025 from "../views/2025/HomeView.vue";
 import ScheduleView2025 from "../views/2025/ScheduleView.vue";
@@ -66,6 +67,11 @@ const router = createRouter({
       path: "/2026/logistics",
       name: "logistics2026",
       component: LogisticsView2026,
+    },
+    {
+      path: "/2026/sponsors",
+      name: "sponsors2026",
+      component: SponsorsView2026,
     },
     // 2025 conference pages
     {

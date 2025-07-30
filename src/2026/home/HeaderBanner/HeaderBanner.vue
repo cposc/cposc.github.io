@@ -104,10 +104,26 @@ onUnmounted(() => {
   background-color: #2D1B69;
   height: 650px;
 
+  @media screen and (max-width: 1200px) {
+    height: 600px;
+  }
+
+  @media screen and (max-width: 420px) {
+    height: 700px;
+  }
+
   .hero-image {
     z-index: 2;
     width: 100%;
     object-fit: cover;
+
+    @media screen and (max-width: 1200px) {
+      height: 600px;
+    }
+
+    @media screen and (max-width: 420px) {
+      height: 700px;
+    }
   }
 
   .feature-copy {
@@ -127,12 +143,39 @@ onUnmounted(() => {
     border-radius: 12px;
     width: 50%;
 
+    @media screen and (max-width: 1200px) {
+      padding-right: 6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: linear-gradient(
+        to bottom,
+        #121a44 60%,
+        rgba(49, 34, 68, 0) 100%
+      );
+      padding: 2rem 2rem 2rem 2rem;
+      width: 80%;
+    }
+
     h1 {
       font-weight: 400;
       font-style: normal;
       color: white;
       font-size: 45px;
       margin-bottom: 1rem;
+      text-align: left;
+
+      @media screen and (max-width: 1465px) {
+        max-width: 80%;
+      }
+
+      @media screen and (max-width: 1200px) {
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 1200px) {
+        text-align: center;
+      }
     }
 
     p {
@@ -141,10 +184,26 @@ onUnmounted(() => {
       margin: 0;
       max-width: 650px;
 
+      @media screen and (max-width: 1465px) {
+        max-width: 80%;
+      }
+
+      @media screen and (max-width: 1200px) {
+        max-width: 100%;
+      }
+
+      @media screen and (max-width: 1200px) {
+        text-align: center;
+      }
+
       &.date {
         font-size: 25px;
         margin: 1rem 0;
         font-weight: 800;
+
+        @media screen and (max-width: 1200px) {
+          text-align: center;
+        }
       }
     }
 
@@ -169,12 +228,8 @@ onUnmounted(() => {
       margin-right: -16rem;
       margin-top: 6rem;
 
-      .crown {
-        position: absolute;
-        margin-top: -4.5rem;
-        margin-left: 16rem;
-        width: 200px;
-        transform: rotate(35deg);
+      @media screen and (max-width: 1465px) {
+        margin-top: 0;
       }
 
       .gallery-img {
@@ -182,6 +237,15 @@ onUnmounted(() => {
         width: 400px;
         object-fit: cover;
         border-radius: 12px;
+
+        @media screen and (max-width: 1640px) {
+          height: 300px;
+          width: 300px;
+        }
+
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
       }
     }
   }

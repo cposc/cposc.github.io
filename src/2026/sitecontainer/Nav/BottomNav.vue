@@ -6,7 +6,7 @@
           <h4>Quick Links</h4>
           <p><a href="/#about">About</a></p>
           <!-- <p><a href="#speakers">Speakers</a></p> -->
-          <!-- <p><a href="#schedule">Schedule</a></p> -->
+          <p><a href="/#schedule">Schedule</a></p>
           <p><a href="/#sponsors">Sponsors</a></p>
           <p><a href="/#travel">Travel</a></p>
         </div>
@@ -14,14 +14,13 @@
           <h4>Get Involved</h4>
           <p><a href="/#volunteer">Volunteer</a></p>
           <p><a href="/#sponsors">Sponsor</a></p>
-          <!-- <p><a href="#">Call for Papers</a></p> -->
+          <p><a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank">Call for Papers</a></p>
           <p><a href="/code-of-conduct" target="_blank">Code of Conduct</a></p>
         </div>
         <div>
           <h4>Connect</h4>
-          <p><a href="#">Twitter</a></p>
-          <p><a href="#">LinkedIn</a></p>
-          <p><a href="#">Mastodon</a></p>
+          <p><a href="https://www.linkedin.com/company/central-pa-open-source-conference" target="_blank">LinkedIn</a></p>
+          <p><a href="https://mastodon.social/@cposc" target="_blank">Mastodon</a></p>
           <p><a href="mailto:cposc@localareanetworks.org">cposc@localareanetworks.org</a></p>
         </div>
         <div>

@@ -1,13 +1,13 @@
 <script setup>
 import { RouterView } from "vue-router";
-// import AnnouncementBanner from "./AnnouncementBanner/AnnouncementBanner.vue";
+import AnnouncementBanner from "./AnnouncementBanner/AnnouncementBanner.vue";
 import BottomNav from "./Nav/BottomNav.vue";
 </script>
 
 <template>
   <!-- <AnnouncementBanner :announcementType="'speakers'" /> -->
   <!-- <AnnouncementBanner :announcementType="'schedule'" /> -->
-  <!-- <AnnouncementBanner :announcementType="'sponsors'" /> -->
+  <AnnouncementBanner :announcementType="'sponsors'" />
   <RouterView />
   <BottomNav />
 </template>

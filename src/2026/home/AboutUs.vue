@@ -51,4 +51,12 @@
 .highlight-box h3 {
   margin-top: 0;
 }
+.about-content {
+  @media screen and (max-width: 1290px) {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+  }
+}
 </style>

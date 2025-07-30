@@ -43,7 +43,7 @@
               reimbursement like previous years.
             </p>
           </div>
-          <a href="/logistics#travel" class="card-link">Explore Travel Options →</a>
+          <a href="/logistics#parking" class="card-link">Explore Travel Options →</a>
         </div>
       </div>
     </div>
