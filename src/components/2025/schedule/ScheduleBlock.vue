@@ -18,7 +18,7 @@
               Binns Room
             </h1>
             <h1 v-if="index === 2" class="library">Choral Room</h1>
-            <p v-if="isOpen[index]" class="speakers">Speaker(s): <a :href="'/speakers#' + session.speaker[0].split(' ').join('')" target="_blank">{{ session.speaker[0] }}</a><span v-if="session.speaker[1]"> <span>{{ session.speaker[2] ? "," : "&" }}</span> {{ session.speaker[1] }}</span><span v-if="session.speaker[2]">, & {{ session.speaker[2] }}</span></p>
+            <p v-if="isOpen[index]" class="speakers">Speaker(s): <a :href="'/2025/speakers#' + session.speaker[0].split(' ').join('')" target="_blank">{{ session.speaker[0] }}</a><span v-if="session.speaker[1]"> <span>{{ session.speaker[2] ? "," : "&" }}</span> {{ session.speaker[1] }}</span><span v-if="session.speaker[2]">, & {{ session.speaker[2] }}</span></p>
             <p v-if="session.desc && isOpen[index]" class="description">
               {{ abstractMinMax(session.desc) }}
               <span v-if="shouldShowReadMore(session.desc)" v-on:click="toggleReadMore()" style="text-decoration: underline;cursor: pointer"> Read {{ readMoreToggle ? "Less" : "More" }} </span>

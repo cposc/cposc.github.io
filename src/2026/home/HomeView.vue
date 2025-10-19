@@ -288,6 +288,11 @@ h3 {
   }
   .stats {
     grid-template-columns: 1fr;
+    width: 100%;
+
+    .stat {
+      width: calc(100% - 40px);
+    }
   }
   .section {
     padding: 50px 0;

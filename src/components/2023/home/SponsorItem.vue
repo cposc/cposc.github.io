@@ -55,7 +55,7 @@
         v-if="name === 'WebstaurantStore'"
         :alt="name"
         class="web"
-        src="@/assets/2023/sponsors/webstaurant-logo-w-icon.svg"
+        src="@/assets/2023/sponsors/Webstaurantstore-brand-logo.png"
       />
       <img
         v-if="name === 'Elastic'"

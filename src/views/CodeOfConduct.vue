@@ -1,12 +1,12 @@
-<script setup>
-import GradientContainer from "../components/2023/GradientContainer.vue";
-</script>
-
 <template>
   <div class="pageContainer">
+    <img
+      class="hero-image"
+      src="/src/2026/assets/hero2026.png"
+      alt="Hero Image - Circuit board and clouds"
+    />
     <div class="conductContainer">
       <h1>Code of Conduct</h1>
-      <div class="line"></div>
       <div class="pageContent">
         <p>CPOSC is dedicated to providing a harassment-free conference experience for everyone. Our Code of Conduct is as follows:</p>
         <p>We do not tolerate harassment of conference participants – regardless of gender, gender identity and expression, sexual orientation, disability, physical appearance, body size, race, age or religion – in any form. Sexual language and imagery is not appropriate for any conference venue, including talks. Conference participants violating these rules may be sanctioned or expelled from the conference without a refund at the discretion of the conference organizers.</p>
@@ -16,31 +16,25 @@ import GradientContainer from "../components/2023/GradientContainer.vue";
         <p>If a participant fails to follow any of the above, the conference organizers may take any action they deem appropriate, including warning the offender or expulsion from the conference with no refund. If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of conference staff immediately. Conference staff can be identified by special badges.</p>
         <p>We expect participants to follow these rules at all conference venues and conference-related social events. Conference staff will be happy to help participants contact venue security or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the conference. We value your attendance.</p>
         <p>This anti-harassment policy is based on the example policy from the Geek Feminism wiki, created by the Ada Initiative and other volunteers.</p>
-        <div class="line"></div>
         <p>If you encounter a violation of this code of conduct during the conference, please email details to <a href="mailto:cposc@localareanetworks.org?subject=Breach of Conduct" target="_blank">cposc@localareanetworks.org</a>. If you have a serious emergency, please contact 911.</p>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-    
-}
-</script>
-
 <style lang="scss" scoped>
-.headerImage {
-  height: 82px;
+
+img {
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 150px;
   object-fit: cover;
 }
 
 .pageContainer {
   margin-bottom: 2rem;
+  font-family: "Lexend", arial;
+  background-color: #0e0723;
+  padding-top: 0rem;
 }
 
 .pageContent {
@@ -66,7 +60,6 @@ export default {
   min-height: calc(100vh - 28.9rem);
 
   h1 {
-    font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
     color: #1f1f1f;
     padding-top: 2rem;
@@ -84,28 +77,11 @@ p > a {
   }
 }
 
-.line {
-  background-color: #ff7164;
-  margin-bottom: 1rem;
-}
-
 p {
   @media screen and (max-width: 500px) {
     padding: 0 2rem;
   }
 }
-
-// img {
-//   // max-width: 800px;
-
-//   @media screen and (max-width: 800px) and (min-width: 500px) {
-//     width: 100%;
-//   }
-
-//   @media screen and (max-width: 500px) {
-//     width: 100vw;
-//   }
-// }
 
 .pageContent {
   display: flex;

@@ -2,73 +2,47 @@
 import TopNav from "../sitecontainer/Nav/TopNav.vue";
 // import RegistrationCTA from "./RegistrationCTA.vue";
 
-// Add a download button for easy PDF generation
-document.addEventListener("DOMContentLoaded", () => {
-  const downloadBtn = document.createElement("button");
-  downloadBtn.innerHTML = "📄 Download as PDF";
-  downloadBtn.style.cssText = `
-      position: fixed;
-      top: 10px;
-      right: 20px;
-      background: linear-gradient(45deg, #2D1B69, #11998E);
-      color: white;
-      padding: 12px 20px;
-      border: none;
-      border-radius: 25px;
-      font-weight: 600;
-      cursor: pointer;
-      z-index: 1000;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      transition: transform 0.3s ease;
-  `;
+// // Add a download button for easy PDF generation
+// document.addEventListener("DOMContentLoaded", () => {
+//   const downloadBtn = document.createElement("button");
+//   downloadBtn.innerHTML = "📄 Download as PDF";
+//   downloadBtn.style.cssText = `
+//       position: fixed;
+//       top: 10px;
+//       right: 20px;
+//       background: linear-gradient(45deg, #2D1B69, #11998E);
+//       color: white;
+//       padding: 12px 20px;
+//       border: none;
+//       border-radius: 25px;
+//       font-weight: 600;
+//       cursor: pointer;
+//       z-index: 1000;
+//       box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+//       transition: transform 0.3s ease;
+//   `;
 
-  downloadBtn.addEventListener('mouseenter', function() {
-    this.style.transform = 'translateY(-2px)';
-  });
+//   downloadBtn.addEventListener('mouseenter', function() {
+//     this.style.transform = 'translateY(-2px)';
+//   });
 
-  downloadBtn.addEventListener('mouseleave', function() {
-    this.style.transform = 'translateY(0)';
-  });
+//   downloadBtn.addEventListener('mouseleave', function() {
+//     this.style.transform = 'translateY(0)';
+//   });
 
-  downloadBtn.addEventListener('click', function() {
-    window.print();
-  });
+//   downloadBtn.addEventListener('click', function() {
+//     window.print();
+//   });
 
-  document.body.appendChild(downloadBtn);
-});
-</script>
+//   document.body.appendChild(downloadBtn);
+// });
+// </script>
 
 <template>
   <TopNav></TopNav>
+  <a href="/CPOSCProspectus2026.pdf" target="_blank"><div class="prospectus-download">📄 Download as PDF</div></a>
   <div class="document">
     <!-- Cover Page -->
-    <div class="cover-page">
-      <div class="cover-content">
-        <img
-          class="logo"
-          src="/src/2026/assets/logo-white-outline.png"
-          alt="CPOSC 2026 Logo"
-        />
-        <h1 class="subtitle">Sponsorship Prospectus</h1>
-        <p class="tagline">
-          16 Years of Bringing Bits, Bytes & Brilliant Minds Together
-        </p>
-        <div class="cover-stats">
-          <div class="stat">
-            <span class="stat-number">220+</span>
-            <span class="stat-label">Technologists</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">15+</span>
-            <span class="stat-label">Speakers</span>
-          </div>
-          <div class="stat">
-            <span class="stat-number">16</span>
-            <span class="stat-label">Years Strong</span>
-          </div>
-        </div>
-    </div>
-  </div>
   <!-- About Page -->
   <div class="page">
       <div class="page-header">
@@ -166,31 +140,32 @@ document.addEventListener("DOMContentLoaded", () => {
                   <div class="level-price">$5,000</div>
               </div>
               <ul class="benefits">
+                  <li><i class="fa-solid fa-circle-dot"></i> Name and logo on conference t-shirt (220+ distributed)</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Logo on the website</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Premium logo placement on all conference materials</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Dedicated sponsor table in high-traffic area</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> 5-minute speaking opportunity during opening ceremony</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Logo on conference t-shirts (220+ distributed)</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Company info posted in high-traffic areas</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Social media spotlight campaign (pre, during, post event)</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Inclusion in all press releases and media coverage</li>
                   <li><i class="fa-solid fa-circle-dot"></i> 4 complimentary conference tickets</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Recognition in conference app and website</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Opportunity to sponsor a specific track or workshop</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Networking opportunities with attendees</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
           </div>
 
           <div class="level gold">
               <div class="level-header">
                   <div class="level-name"><i class="fa-solid fa-medal"></i> Gold Sponsor</div>
-                  <div class="level-price">$2,500</div>
+                  <div class="level-price">$2,000</div>
               </div>
               <ul class="benefits">
+                  <li><i class="fa-solid fa-circle-dot"></i> Name and logo on conference t-shirt</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Logo on the website</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Logo placement on conference materials and signage</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Sponsor table in networking area</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Logo on conference website and app</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Company info posted in high-traffic areas</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Social media mentions throughout campaign</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Recognition during opening and closing ceremonies</li>
                   <li><i class="fa-solid fa-circle-dot"></i> 2 complimentary conference tickets</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Opportunity to sponsor break refreshments</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
@@ -198,51 +173,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
           <div class="level community">
               <div class="level-header">
-                  <div class="level-name"><i class="fa-solid fa-people-group"></i> Community Partner</div>
+                  <div class="level-name"><i class="fa-solid fa-medal"></i> Silver Sponsor</div>
                   <div class="level-price">$1,000</div>
               </div>
               <ul class="benefits">
-                  <li><i class="fa-solid fa-circle-dot"></i> Logo on conference website and materials</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> Recognition during conference announcements</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Large name on conference t-shirt</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Logo on the website</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Logo placement on conference materials and signage</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Social media mentions throughout campaign</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> 2 complimentary conference tickets</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Networking opportunities with attendees</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
+              </ul>
+          </div>
+
+          <div class="level other">
+              <div class="level-header">
+                  <div class="level-name"><i class="fa-solid fa-people-group"></i> Community Partner</div>
+                  <div class="level-price">$500</div>
+              </div>
+              <ul class="benefits">
+                  <li><i class="fa-solid fa-circle-dot"></i> Small name on conference t-shirt</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> Logo on the website</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Social media thank you posts</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> 1 complimentary conference ticket</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> 2 complimentary conference tickets</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Networking opportunities with attendees</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
               </ul>
           </div>
       </div>
-  </div>
-
-  <!-- Custom Opportunities Page -->
-  <div class="page">
-      <div class="page-header">
-          <h2>Custom Partnership Opportunities</h2>
-          <p>Let's Create Something Special Together</p>
-      </div>
-
-      <h3>Tailor Your Investment</h3>
-      <p>Every organization has unique goals. We're happy to work with you to create a sponsorship package that delivers maximum value for your specific objectives.</p>
-
-      <h4>Meal Sponsorships</h4>
-      <p><strong>Breakfast ($1,500)</strong> - Start the day by energizing our community<br>
-      <strong>Lunch ($3,000)</strong> - Power the afternoon networking and learning<br>
-      <strong>Coffee Breaks ($800 each)</strong> - Keep the conversations flowing</p>
-
-      <h4>Special Recognition Opportunities</h4>
-      <p><strong>Speaker Travel Fund ($3,500)</strong> - Help us bring in amazing keynote speakers<br>
-      <strong>Video Sponsor ($1,000)</strong> - Help fund the recording of sessions, so that attendees can access the content for years to come</p>
-
-      <div class="highlight-box">
-          <h4>Corporate Partnership Packages</h4>
-          <p>Looking to make a bigger impact? Let's discuss multi-year partnerships, exclusive category sponsorships, or creating a named scholarship program. We're open to innovative ideas that benefit both your organization and our community.</p>
-      </div>
-
-      <h3>What You Get With Every Package</h3>
-      <ul style="margin: 20px 0; padding-left: 25px;">
-          <li>High-resolution photos from the event for your marketing use</li>
-          <li>Connection opportunities with other sponsors and community leaders</li>
-          <li>First opportunity to sponsor next year's event</li>
-      </ul>
   </div>
 
   <!-- Call to Action Page -->
@@ -275,7 +235,6 @@ document.addEventListener("DOMContentLoaded", () => {
           
           <div class="contact-info">
               <p><strong>Email:</strong> <a href="mailto:sponsors@cposc.org">sponsors@localareanetworks.org</a></p>
-              <p><strong>Website:</strong> <a href="https://cposc.org/sponsors">cposc.org/2026/sponsors</a></p>
           </div>
           
           <p style="margin-top: 30px; font-style: italic;">
@@ -285,7 +244,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       <div style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 2px solid #11998E;">
           <p style="font-size: 1.2rem; color: #2D1B69; font-weight: 600;">
-              <i class="fa-solid fa-star"></i> CPOSC Sweet 0x10 • April 26, 2025 • Lancaster, PA <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i> CPOSC Sweet 0x10 • March 28th, 2026 • Lancaster, PA <i class="fa-solid fa-star"></i>
           </p>
           <p style="color: #666; margin-top: 10px;">
               16 years of open source excellence • Celebrating our Sweet Sixteenth!
@@ -296,6 +255,21 @@ document.addEventListener("DOMContentLoaded", () => {
 </template>
 
 <style lang="scss" scoped>
+.prospectus-download {
+    position: fixed;
+    top: 10px;
+    right: 20px;
+    background: linear-gradient(45deg, #2D1B69, #11998E);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+}
 h1, h2, h3, h4, a, p {
   font-family: "Lexend", sans-serif;
 }
@@ -377,7 +351,7 @@ h1, h2, h3, h4, a, p {
 
         /* Page Styles */
         .page {
-            padding: 60px 50px;
+            padding: 20px 50px;
             min-height: 11in;
             page-break-after: always;
         }

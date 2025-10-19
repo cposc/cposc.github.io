@@ -1,8 +1,12 @@
 <template>
   <div class="pageContainer">
+    <img
+      class="hero-image"
+      src="/src/2026/assets/hero2026.png"
+      alt="Hero Image - Circuit board and clouds"
+    />
     <div class="notfoundContainer">
       <h1>404 Page Not Found</h1>
-      <div class="line"></div>
       <div class="pageContent">
         <p>Oops! We don't know what to do with this URL. Use our navigation up top to learn more about CPOSC.</p>
         <div class="notFoundAnimation">
@@ -18,6 +22,12 @@
 </script>
 
 <style lang="scss" scoped>
+img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
 .headerImage {
   height: 82px;
   width: 100%;
@@ -31,15 +41,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Lexend", arial;
   background-color: white;
   width: 100%;
 
   min-height: calc(100vh - 28.9rem);
 
   h1 {
-    font-family: "Bebas Neue", sans-serif;
     font-size: 40px;
-    color: #1f1f1f;
+    color: #0e0723;
     padding-top: 2rem;
     padding-bottom: 8px;
     margin: 0;
@@ -48,6 +58,7 @@
 
 .pageContainer {
   margin-bottom: 2rem;
+  padding-top: 0;
 }
 
 .pageContent {

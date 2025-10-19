@@ -35,11 +35,11 @@ const menuStore = useMenuStore();
               <div><b>SUBMIT A TALK</b></div>
             </div>
           </a> -->
-          <a target="_blank" href="https://www.eventbrite.com/e/1009939595517">
+          <!-- <a target="_blank" href="https://www.eventbrite.com/e/1009939595517">
             <div>
               <div><b>GET YOUR TICKET</b></div>
             </div>
-          </a>
+          </a> -->
         </div>
         
         <div class="hamburgerOverlay" :class="{ open: menuStore.isOpen }" @click="menuStore.toggleMenu()"></div>

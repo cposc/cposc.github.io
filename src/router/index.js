@@ -33,7 +33,7 @@ const router = createRouter({
   routes: [
     {
       path: "/",
-      name: "home",
+      name: "home2026",
       component: HomeView2026,
     },
     {
@@ -41,28 +41,15 @@ const router = createRouter({
       redirect: { name: "logistics2026" },
     },
     {
-      path: "/speakers",
-      redirect: { name: "speakers2025" },
-    },
-    {
-      path: "/schedule",
-      redirect: { name: "schedule2025" },
-    },
-    {
-      path: "/volunteers",
-      redirect: { name: "volunteers2025" },
-    },
-    {
       path: "/sponsors",
-      redirect: { name: "sponsors2025" },
+      redirect: { name: "sponsors2026" },
     },
-    {
-      path: "/code-of-conduct",
-      name: "code-of-conduct",
-      component: CodeOfConduct,
-    },
-    { path: "/:pathMatch(.*)*", component: PageNotFound },
     // 2026
+    // {
+    //   path: "/2026",
+    //   name: "home2026",
+    //   component: HomeView2026,
+    // },
     {
       path: "/2026/logistics",
       name: "logistics2026",
@@ -73,6 +60,12 @@ const router = createRouter({
       name: "sponsors2026",
       component: SponsorsView2026,
     },
+    {
+      path: "/code-of-conduct",
+      name: "code-of-conduct",
+      component: CodeOfConduct,
+    },
+    { path: "/:pathMatch(.*)*", component: PageNotFound },
     // 2025 conference pages
     {
       path: "/2025",
@@ -83,21 +76,21 @@ const router = createRouter({
       name: "speakers2025",
       component: SpeakersView2025,
     },
-    {
-      path: "/2025/logistics",
-      name: "logistics2025",
-      component: LogisticsView2025,
-    },
+    // {
+    //   path: "/2025/logistics",
+    //   name: "logistics2025",
+    //   component: LogisticsView2025,
+    // },
     {
       path: "/2025/schedule",
       name: "schedule2025",
       component: ScheduleView2025,
     },
-    {
-      path: "/2025/volunteers",
-      name: "volunteers2025",
-      component: VolunteerView2025,
-    },
+    // {
+    //   path: "/2025/volunteers",
+    //   name: "volunteers2025",
+    //   component: VolunteerView2025,
+    // },
     {
       path: "/2025/sponsors",
       name: "sponsors2025",

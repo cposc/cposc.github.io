@@ -6,6 +6,6 @@ import Highlights from "../../components/2023/home/Highlights.vue";
 
 <template>
   <Promo />
-  <WhatAbout />
+  <!-- <WhatAbout /> -->
   <Highlights />
 </template>

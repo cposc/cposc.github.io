@@ -5,7 +5,7 @@ import GradientContainer from "../GradientContainer.vue";
 </script>
 
 <template>
-  <div class="gradientContainer"></div>
+  <!-- <div class="gradientContainer"></div> -->
   <div class="highlightsSection">
     <!-- <h1>Are you ready to support learning and networking in your community?</h1> -->
     <h1>CPOSC Sponsors, 2023</h1>
@@ -109,7 +109,7 @@ p {
   padding: 0 1rem 3rem 1rem;
 
   a {
-    color: #848699;
+    color: white;
     transition: color 0.25s;
 
     &:hover {
@@ -129,14 +129,14 @@ h1 {
 }
 
 .highlightsSection {
-  background-color: #1F1F1F;
+  background-color: black;
   width: 100%;
   color: white;
 
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 14rem 0 6rem 0;
+  padding: 8rem 0 6rem 0;
 
   .highlightsWrapper {
     display: flex;
@@ -152,14 +152,14 @@ h1 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(117, 117, 117, 0.5);
-    box-shadow: 0 0 30px 20px rgba(117, 117, 117, 0.5);
+    background-color: white;
+    // box-shadow: 0 0 30px 20px rgba(117, 117, 117, 0.5);
     border-radius: 10px;
 
     @media screen and (max-width: 663px) {
       width: 100%;
       padding: 2rem 0;
-      box-shadow: 0 0 50px 50px rgba(117, 117, 117, 0.5);
+      // box-shadow: 0 0 50px 50px rgba(117, 117, 117, 0.5);
       margin-top: 2rem;
     }
 
@@ -186,6 +186,6 @@ h1 {
   position: absolute;
   height: 150px; /* For browsers that do not support gradients */
   width: 100%;
-  background-image: linear-gradient(to top, transparent , black);
+  background-image: linear-gradient(to top, white, black);
 }
 </style>

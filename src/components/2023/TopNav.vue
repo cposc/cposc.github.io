@@ -29,10 +29,10 @@ import { RouterLink, RouterView } from "vue-router";
           <!-- <RouterLink to="/2023/volunteers">Volunteers</RouterLink> -->
         </div>
         <!-- <a target="_blank" href="mailto:cposc@localareanetworks.org?subject=How can I help?"> -->
-        <a target="_blank" href="https://cposc.org/">
+        <a target="_blank" href="/">
           <div class="headerRight">
             <!-- <div>GET INVOLVED</div> -->
-            <div>CPOSC 2024</div>
+            <div>CPOSC 2026</div>
           </div>
         </a>
         <div class="hamburgerOverlay" :class="{ open: isOpen }" @click="toggleMenu()"></div>

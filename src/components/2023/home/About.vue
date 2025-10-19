@@ -8,7 +8,7 @@
         <div class="line"></div>
         <p>A Lancaster staple since it began in 2008, the Central Pennsylvania Open Source Conference is a one-day event that strives to foster all aspects of the regional tech community.</p>
         <a target="_blank" href="https://www.eventbrite.com/e/the-thirteenth-annual-central-pa-open-source-conference-tickets-529845451007">
-          <div class="register">Buy Tickets</div>
+          <!-- <div class="register">Buy Tickets</div> -->
         </a>
       </div>
       <div class="aboutImage">

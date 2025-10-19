@@ -28,7 +28,7 @@
         with decades of experience.
       </p>
       <div class="sponsor">
-        <RouterLink to="/sponsors">Learn More About Sponsoring</RouterLink>
+        <RouterLink to="/2025/sponsors">Learn More About Sponsoring</RouterLink>
       </div>
       <!-- <div class="highlightsWrapper">
         <HighlightItem v-for="link of quickLinks"

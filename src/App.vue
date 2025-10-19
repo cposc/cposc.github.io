@@ -11,26 +11,28 @@ import Bottom2024 from "./components/2024/Bottom.vue";
 import TopNav2023 from "./components/2023/TopNav.vue";
 import Tickets from "./components/2023/Tickets.vue";
 import Bottom2023 from "./components/2023/Bottom.vue";
+
+import Bottom2026 from "./2026/sitecontainer/Nav/BottomNav.vue";
 </script>
 
 <template>
   <template v-if="['2023', 'schedule2023', 'volunteers2023', 'speakers2023', 'logistics2023'].includes($route.name)">
     <TopNav2023 />
     <RouterView />
-    <Bottom2023 :showLine="$route.name === '2023'" />
+    <Bottom2026 />
   </template>
   <template v-if="['2024', 'schedule2024', 'volunteers2024', 'speakers2024', 'logistics2024'].includes($route.name)">
-    <TopNav2024 />
-    <Tickets />
+    <!-- <TopNav2024 /> -->
+    <!-- <Tickets /> -->
     <RouterView />
-    <Bottom2024 :showLine="$route.name === '2024'" />
+    <Bottom2026 />
   </template>
   <template v-if="['2025', 'schedule2025', 'volunteers2025', 'speakers2025', 'logistics2025'].includes($route.name)">
-    <TopNav2025 />
+    <!-- <TopNav2025 /> -->
     <RouterView />
-    <Bottom2025 :showLine="$route.name === 'home'" />
+    <Bottom2026 />
   </template>
-  <template v-else>
+  <template v-if="['home2026', '2026', 'schedule2026', 'volunteers2026', 'speakers2026', 'logistics2026'].includes($route.name)">
     <SiteContainer2026 />
   </template>
 </template>
