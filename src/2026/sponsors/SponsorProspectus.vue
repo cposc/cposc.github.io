@@ -145,7 +145,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Premium logo placement on all conference materials</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Company info posted in high-traffic areas</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Social media spotlight campaign (pre, during, post event)</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> 4 complimentary conference tickets</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> 10 complimentary conference tickets</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Networking opportunities with attendees</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
@@ -165,7 +165,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Company info posted in high-traffic areas</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Social media mentions throughout campaign</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Recognition during opening and closing ceremonies</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> 2 complimentary conference tickets</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> 4 complimentary conference tickets</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
@@ -197,7 +197,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Small name on conference t-shirt</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Logo on the website</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Social media thank you posts</li>
-                  <li><i class="fa-solid fa-circle-dot"></i> 2 complimentary conference tickets</li>
+                  <li><i class="fa-solid fa-circle-dot"></i> 1 complimentary conference tickets</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Networking opportunities with attendees</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
               </ul>
