@@ -24,53 +24,126 @@ import VolunteerView2023 from "../views/2023/VolunteerView.vue";
 import SpeakersView2023 from "../views/2023/SpeakersView.vue";
 import LogisticsView2023 from "../views/2023/LogisticsView.vue";
 
+// same pages every year
 import CodeOfConduct from "../views/CodeOfConduct.vue";
 import PageNotFound from "../views/PageNotFound.vue";
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
-    // current site = 2026
-    { path: "/", name: "home2026", component: HomeView2026 },
-    { path: "/logistics", name: "logistics2026", component: LogisticsView2026 },
-    { path: "/sponsors", name: "home2026", component: SponsorsView2026 },
-
-    // 2026
-
-    // shared
-    { path: "/code-of-conduct", name: "code-of-conduct", component: CodeOfConduct },
-
-    // 2025
-    { path: "/2025",              component: HomeView2025 },
-    { path: "/2025/speakers",     name: "speakers2025",   component: SpeakersView2025 },
-    // { path: "/2025/logistics", name: "logistics2025", component: LogisticsView2025 },
-    { path: "/2025/schedule",     name: "schedule2025",   component: ScheduleView2025 },
-    // { path: "/2025/volunteers",name: "volunteers2025",component: VolunteerView2025 },
-    { path: "/2025/sponsors",     name: "sponsors2025",   component: SponsorView2025 },
-
-    // 2024
-    { path: "/2024",              name: "home2024",       component: HomeView2024 },
-    { path: "/2024/speakers",     name: "speakers2024",   component: SpeakersView2024 },
-    { path: "/2024/logistics",    name: "logistics",      component: LogisticsView2024 },
-    { path: "/2024/schedule",     name: "schedule",       component: ScheduleView2024 },
-    { path: "/2024/volunteers",   name: "volunteers",     component: VolunteerView2024 },
-
-    // 2023
-    { path: "/2023",              name: "2023",           component: HomeView2023 },
-    { path: "/2023/schedule",     name: "schedule2023",   component: ScheduleView2023 },
-    { path: "/2023/volunteers",   name: "volunteers2023", component: VolunteerView2023 },
-    { path: "/2023/speakers",     name: "speakers2023",   component: SpeakersView2023 },
-    { path: "/2023/logistics",    name: "logistics2023",  component: LogisticsView2023 },
-
-    // keep catch-all LAST
-    { path: "/:pathMatch(.*)*", name: "not-found", component: PageNotFound },
+    {
+      path: "/",
+      name: "home",
+      component: HomeView2026,
+    },
+    {
+      path: "/logistics",
+      name: "logistics2026",
+      component: LogisticsView2026,
+    },
+    {
+      path: "/sponsors",
+      name: "sponsors2026",
+      component: SponsorsView2026,
+    },
+    {
+      path: "/code-of-conduct",
+      name: "code-of-conduct",
+      component: CodeOfConduct,
+    },
+    // 2026 pages
+    // 2025 conference pages
+    {
+      path: "/2025",
+      name: "home2025",
+      component: HomeView2025,
+    },
+    {
+      path: "/2025/speakers",
+      name: "speakers2025",
+      component: SpeakersView2025,
+    },
+    // {
+    //   path: "/2025/logistics",
+    //   name: "logistics2025",
+    //   component: LogisticsView2025,
+    // },
+    {
+      path: "/2025/schedule",
+      name: "schedule2025",
+      component: ScheduleView2025,
+    },
+    // {
+    //   path: "/2025/volunteers",
+    //   name: "volunteers2025",
+    //   component: VolunteerView2025,
+    // },
+    {
+      path: "/2025/sponsors",
+      name: "sponsors2025",
+      component: SponsorView2025,
+    },
+    // 2024 conference pages
+    {
+      path: "/2024",
+      name: "home2024",
+      component: HomeView2024,
+    },
+    {
+      path: "/2024/speakers",
+      name: "speakers2024",
+      component: SpeakersView2024,
+    },
+    {
+      path: "/2024/logistics",
+      name: "logistics2024",
+      component: LogisticsView2024,
+    },
+    {
+      path: "/2024/schedule",
+      name: "schedule2024",
+      component: ScheduleView2024,
+    },
+    {
+      path: "/2024/volunteers",
+      name: "volunteers2024",
+      component: VolunteerView2024,
+    },
+    // 2023 conference pages
+    {
+      path: "/2023",
+      name: "2023",
+      component: HomeView2023,
+    },
+    {
+      path: "/2023/schedule",
+      name: "schedule2023",
+      component: ScheduleView2023,
+    },
+    {
+      path: "/2023/volunteers",
+      name: "volunteers2023",
+      component: VolunteerView2023,
+    },
+    {
+      path: "/2023/speakers",
+      name: "speakers2023",
+      component: SpeakersView2023,
+    },
+    {
+      path: "/2023/logistics",
+      name: "logistics2023",
+      component: LogisticsView2023,
+    },
+    { path: "/:pathMatch(.*)*", component: PageNotFound },
   ],
 });
 
 router.beforeEach(() => {
   const menuStore = useMenuStore();
-  if (menuStore.isOpen) menuStore.closeMenu();
-  // no return needed
+  if (menuStore.isOpen) {
+    menuStore.closeMenu();
+  }
 });
 
 export default router;
