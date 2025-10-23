@@ -36,7 +36,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
 
 //   document.body.appendChild(downloadBtn);
 // });
-// </script>
+</script>
 
 <template>
   <TopNav></TopNav>
@@ -251,7 +251,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
           </p>
       </div>
   </div>
-</div>
+  </div>
 </template>
 
 <style lang="scss" scoped>

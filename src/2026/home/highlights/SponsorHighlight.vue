@@ -10,7 +10,7 @@
           Join our constellation of supporters and help power the future of open
           source in Central PA. Multiple sponsorship levels available.
         </p>
-        <a href="/2026/sponsors" class="card-link">View Sponsorship Opportunities →</a>
+        <a href="/sponsors" class="card-link">View Sponsorship Opportunities →</a>
       </div>
 
       <div class="grid">
