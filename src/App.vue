@@ -37,6 +37,7 @@ import Bottom2026 from "./2026/sitecontainer/Nav/BottomNav.vue";
   </template>
   <template v-else>
     <RouterView />
+    <Bottom2026 />
   </template>
 </template>
 
