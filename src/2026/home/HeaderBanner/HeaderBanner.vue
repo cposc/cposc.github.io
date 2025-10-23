@@ -79,7 +79,7 @@
         />
         <img
           v-else-if="currentIndex === 5"
-          src="src/2026/assets/carousel/PXL_20230401_200622968.MP.jpg"
+          src="/src/2026/assets/carousel/PXL_20230401_200622968.MP.jpg"
           alt="CPOSC crowd"
           class="gallery-img"
         />
