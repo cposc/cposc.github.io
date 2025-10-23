@@ -221,10 +221,10 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
       </div>
 
       <h3>Important Dates</h3>
-      <p><strong>January 15, 2025:</strong> Early bird sponsor deadline<br>
-      <strong>March 1, 2025:</strong> Final sponsor commitment deadline<br>
-      <strong>March 15, 2025:</strong> All sponsor materials due<br>
-      <strong>March 28, 2025:</strong> Conference day!</p>
+      <p><strong>January 15, 2026:</strong> Early bird sponsor deadline<br>
+      <strong>March 1, 2026:</strong> Final sponsor commitment deadline<br>
+      <strong>March 15, 2026:</strong> All sponsor materials due<br>
+      <strong>March 28, 2026:</strong> Conference day!</p>
 
       <h3>Payment Options</h3>
       <p>We accept payments via check, ACH transfer, or credit card. Payment plans available for larger sponsorships. All sponsorships are tax-deductible as business expenses.</p>
