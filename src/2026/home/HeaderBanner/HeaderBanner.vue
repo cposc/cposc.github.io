@@ -48,8 +48,39 @@
       <!-- <button @click="goGetTickets">GET TICKETS</button> -->
       <div class="gallery">
         <img
-          :src="images[currentIndex].src"
-          :alt="images[currentIndex].alt"
+          v-if="currentIndex === 0"
+          src="/src/2026/assets/carousel/PXL_20230401_130228023.jpg"
+          alt="CPOSC crowd"
+          class="gallery-img"
+        />
+        <img
+          v-if="currentIndex === 1"
+          src="/src/2026/assets/carousel/CPOSC_2019.jpg"
+          alt="CPOSC crowd"
+          class="gallery-img"
+        />
+        <img
+          v-else-if="currentIndex === 2"
+          src="/src/2026/assets/carousel/IMG_6726.jpg"
+          alt="CPOSC crowd"
+          class="gallery-img"
+        />
+        <img
+          v-else-if="currentIndex === 3"
+          src="/src/2026/assets/carousel/IMG_6743.jpg"
+          alt="CPOSC crowd"
+          class="gallery-img"
+        />
+        <img
+          v-else-if="currentIndex === 4"
+          src="/src/2026/assets/carousel/PXL_20230401_142131749.MP.jpg"
+          alt="CPOSC crowd"
+          class="gallery-img"
+        />
+        <img
+          v-else-if="currentIndex === 5"
+          src="src/2026/assets/carousel/PXL_20230401_200622968.MP.jpg"
+          alt="CPOSC crowd"
           class="gallery-img"
         />
       </div>
@@ -61,22 +92,13 @@
 <script setup>
 import { ref, onMounted, onUnmounted } from "vue";
 
-const images = [
-  { src: "/src/2026/assets/carousel/PXL_20230401_130228023.jpg", alt: "CPOSC crowd"},
-  { src: "/src/2026/assets/carousel/CPOSC_2019.jpg", alt: "CPOSC crowd"},
-  { src: "/src/2026/assets/carousel/IMG_6726.jpg", alt: "CPOSC crowd"},
-  { src: "/src/2026/assets/carousel/IMG_6743.jpg", alt: "CPOSC crowd"},
-  { src: "/src/2026/assets/carousel/PXL_20230401_142131749.MP.jpg", alt: "CPOSC crowd"},
-  { src: "src/2026/assets/carousel/PXL_20230401_200622968.MP.jpg", alt: "CPOSC crowd"},
-]
-
 const currentIndex = ref(0);
 
 let intervalId;
 
 onMounted(() => {
   intervalId = setInterval(() => {
-    currentIndex.value = (currentIndex.value + 1) % images.length;
+    currentIndex.value = (currentIndex.value + 1) % 6;
   }, 5000); // rotate every 5 seconds
 });
 
