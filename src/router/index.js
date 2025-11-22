@@ -25,6 +25,7 @@ import SpeakersView2023 from "../views/2023/SpeakersView.vue";
 import LogisticsView2023 from "../views/2023/LogisticsView.vue";
 
 // same pages every year
+import AboutNonprofit from "../views/AboutNonprofit.vue";
 import CodeOfConduct from "../views/CodeOfConduct.vue";
 import PageNotFound from "../views/PageNotFound.vue";
 
@@ -50,6 +51,11 @@ const router = createRouter({
       path: "/code-of-conduct",
       name: "code-of-conduct",
       component: CodeOfConduct,
+    },
+    {
+      path: "/about-nonprofit",
+      name: "about-nonprofit",
+      component: AboutNonprofit,
     },
     // 2026 pages
     // 2025 conference pages

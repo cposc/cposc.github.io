@@ -5,6 +5,7 @@
         <div>
           <h4>Quick Links</h4>
           <p><a href="/#about">About</a></p>
+          <p><a href="/about-nonprofit">Nonprofit</a></p>
           <!-- <p><a href="#speakers">Speakers</a></p> -->
           <p><a href="/#schedule">Schedule</a></p>
           <p><a href="/#sponsors">Sponsors</a></p>
