@@ -217,7 +217,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
 
       <div class="highlight-box">
           <h4><i class="fa-solid fa-bolt-lightning"></i> Early Bird Benefits</h4>
-          <p>Sponsors who commit by <strong>January 15, 2025</strong> receive enhanced social media promotion, priority placement in all materials, and special recognition as "Founding Sweet 0x10 Sponsors."</p>
+          <p>Sponsors who commit by <strong>January 15, 2026</strong> receive enhanced social media promotion, priority placement in all materials, and special recognition as "Founding Sweet 0x10 Sponsors."</p>
       </div>
 
       <h3>Important Dates</h3>
@@ -234,7 +234,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
           <p>Ready to be part of something special? Have questions about custom packages? Want to brainstorm unique ways to engage with our community?</p>
           
           <div class="contact-info">
-              <p><strong>Email:</strong> <a href="mailto:sponsors@cposc.org">sponsors@localareanetworks.org</a></p>
+              <p><strong>Email:</strong> <a href="mailto:sponsor@localareanetworks.org">sponsor@localareanetworks.org</a></p>
           </div>
           
           <p style="margin-top: 30px; font-style: italic;">
