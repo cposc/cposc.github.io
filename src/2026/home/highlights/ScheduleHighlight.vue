@@ -10,7 +10,7 @@
               Want to be a part of this conference? Slots fill up fast! We'll choose speakers in early 2026.
             </p>
           </div>
-          <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk idea →</a>
+          <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a>
         </div>
       </div>
       <!-- <div class="grid">
