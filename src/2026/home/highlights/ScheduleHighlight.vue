@@ -5,7 +5,7 @@
       <div class="grid">
         <div class="card centered">
           <div>
-            <h3>Schedule Coming Soon</h3>
+            <h3>Call for Speakers</h3>
             <p>
               Want to be a part of this conference? Slots fill up fast! We'll choose speakers in early 2026.
             </p>

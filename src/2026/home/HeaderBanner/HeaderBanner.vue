@@ -43,7 +43,7 @@
       </p>
       <p class="date">March 28, 2026</p>
       <!-- COMMENT THIS OUT once tickets are available -->
-      <p><i>Tickets will be available Spring 2026.</i></p>
+      <p><i>Tickets will be available in late December 2025. Check back or follow CPOSC on social media for updates!</i></p>
       <!-- UNCOMMENT THIS once tickets are available - uncomment and update goGetTickets function with ticket URL -->
       <!-- <button @click="goGetTickets">GET TICKETS</button> -->
       <div class="gallery">
