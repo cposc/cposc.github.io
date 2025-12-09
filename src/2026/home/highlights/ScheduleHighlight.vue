@@ -7,7 +7,7 @@
           <div>
             <h3>Call for Speakers</h3>
             <p>
-              Want to be a part of this conference? Slots fill up fast! We'll choose speakers in early 2026.
+              Want to be a part of this conference? Our next (and final!) review deadline for submissions is January 12, 2026.
             </p>
           </div>
           <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a>
