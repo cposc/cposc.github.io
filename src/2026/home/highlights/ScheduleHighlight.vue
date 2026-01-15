@@ -7,7 +7,7 @@
           <div>
             <h3>Call for Speakers</h3>
             <p>
-              Want to be a part of this conference? Our next (and final!) review deadline for submissions is January 19, 2026. Speakers get complimentary tickets for you and a plus-one, as well as exclusive swag and a great resume booster!
+              Want to be a part of this conference? Our next (and final!) review deadline for submissions is January 19, 2026. Speakers get complimentary tickets for you and a plus-one, as well as exclusive swag, a great resume booster, and the gratitude of all our attendees!
             </p>
           </div>
           <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a>
