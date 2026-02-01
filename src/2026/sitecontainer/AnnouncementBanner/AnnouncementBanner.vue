@@ -1,15 +1,15 @@
 <template>
-  <div
+  <!-- <div
     className="scheduleBanner speakers"
     v-if="announcementType === 'speakers' && isSpeakerVisible"
   >
-    <!-- UPDATE the href to be the CFP link once that's available -->
+    UPDATE the href to be the CFP link once that's available
     <span>
       CPOSC Sweet 0x10 is looking for speakers from the local tech community!
       Submit a talk, <a href="https://forms.gle/NXooPfBHm6HFH5VTA" target="_blank">here</a>.
     </span>
     <div className="close" @click="toggleElement('speakerVisibility')">X</div>
-  </div>
+  </div> -->
   <div
     className="scheduleBanner schedule"
     v-if="announcementType === 'schedule' && isScheduleVisible"
@@ -79,14 +79,20 @@ export default {
   position: absolute;
   z-index: 15;
   top: 0;
-  width: 100%;
-  padding: 1rem;
+  width: calc(100% - 3rem);
+  padding: 1rem 2rem 1rem 1rem;
   font-family: "Lexend", arial;
   color: white;
   font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
+
+  span,
+  span a {
+    display: inline;
+    white-space: normal;
+  }
 
   &.schedule {
     background-color: #666ad8;
@@ -100,11 +106,11 @@ export default {
     background-color: #11998e;
   }
 
-  span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+  // span {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: center;
+  // }
 
   a {
     display: block;
@@ -121,7 +127,16 @@ export default {
   .close {
     cursor: pointer;
     position: absolute;
-    right: 8rem;
+    right: 1rem;
+  }
+
+  @media screen and (max-width: 1000px) {
+    position: unset;
+    margin-top: 4rem;
+  }
+  @media screen and (max-width: 650px) {
+    position: unset;
+    margin-top: 3rem;
   }
 }
 </style>

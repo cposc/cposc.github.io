@@ -129,29 +129,29 @@
           <div class="values-list">
             <div class="value-item">
               <div class="value-icon">🤝</div>
-              <h4>Access</h4>
+              <h3>Access</h3>
               <p>
                 Everyone belongs here, regardless of background or experience.
               </p>
             </div>
             <div class="value-item">
               <div class="value-icon">🔗</div>
-              <h4>Connection</h4>
+              <h3>Connection</h3>
               <p>Relationships fuel career growth and community strength.</p>
             </div>
             <div class="value-item">
               <div class="value-icon">🌍</div>
-              <h4>Inclusion</h4>
+              <h3>Inclusion</h3>
               <p>We welcome diverse perspectives and lived experiences.</p>
             </div>
             <div class="value-item">
               <div class="value-icon">📈</div>
-              <h4>Growth</h4>
+              <h3>Growth</h3>
               <p>We support learning, progress, and lifelong curiosity.</p>
             </div>
             <div class="value-item">
               <div class="value-icon">💡</div>
-              <h4>Community</h4>
+              <h3>Community</h3>
               <p>We build an ecosystem that helps people succeed together.</p>
             </div>
           </div>
@@ -247,8 +247,7 @@
           <div class="support-options">
             <div class="support-item sponsor-card">
               <div class="support-header">
-                <span class="support-icon">🎯</span>
-                <h3>Sponsor CPOSC</h3>
+                <h3><span class="support-icon">🎯</span> Sponsor CPOSC</h3>
               </div>
               <p>
                 Reach hundreds of technologists, hiring managers, students, and
@@ -260,8 +259,7 @@
 
             <div class="support-item donate-card">
               <div class="support-header">
-                <span class="support-icon">💝</span>
-                <h3>Donate</h3>
+                <h3><span class="support-icon">💝</span> Donate</h3>
               </div>
               <p>
                 Support free student tickets, venue costs, and meals that make
@@ -271,8 +269,7 @@
 
             <div class="support-item volunteer-card">
               <div class="support-header">
-                <span class="support-icon">✨</span>
-                <h3>Volunteer</h3>
+                <h3><span class="support-icon">✨</span> Volunteer</h3>
               </div>
               <p>
                 Help shape the conference experience and connect with the
@@ -590,6 +587,12 @@ ul {
     margin-bottom: 2rem;
     text-align: left;
   }
+
+  .intro-text {
+    @media screen and (max-width: 500px) {
+      text-align: center !important;
+    }
+  }
 }
 
 .mission-box {
@@ -621,7 +624,7 @@ ul {
     left: 0;
     width: 5px;
     height: 100%;
-    background: linear-gradient(180deg, #0e0723 0%, #6366f1 100%);
+    background: linear-gradient(45deg, #2d1b69, #11998e);
   }
 
   .mission-icon {
@@ -635,7 +638,7 @@ ul {
   h3 {
     font-size: 1.15rem;
     color: #0f172a;
-    margin-bottom: 1rem;
+    margin-bottom: 0rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.05em;
@@ -668,7 +671,7 @@ ul {
 
   .year-badge {
     display: inline-block;
-    background: linear-gradient(135deg, #0e0723 0%, #4c1d95 100%);
+    background: linear-gradient(45deg, #2d1b69, #11998e);
     color: white;
     padding: 0.5rem 1.25rem;
     border-radius: 50px;
@@ -680,6 +683,9 @@ ul {
 
   p {
     text-align: left;
+    @media screen and (max-width: 500px) {
+      text-align: center !important;
+    }
   }
 }
 
@@ -766,17 +772,13 @@ ul {
 
 // What We Do Section
 .flagship-program {
-  background: radial-gradient(
-    circle at top left,
-    #4c1d95 0%,
-    #0e0723 50%,
-    #020617 100%
-  );
-  color: white;
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.1), rgba(167, 139, 250, 0.1));
+  border: 2px solid rgba(125, 211, 252, 0.3);
+  color: #64748b;
   padding: 2.5rem 2rem;
   border-radius: 18px;
   margin-top: 1.5rem;
-  box-shadow: 0 10px 40px rgba(14, 7, 35, 0.3);
+  // box-shadow: 0 10px 40px rgba(14, 7, 35, 0.3);
   box-sizing: border-box;
   width: 100%;
   max-width: 100%;
@@ -796,7 +798,7 @@ ul {
 
     .flagship-badge {
       display: inline-block;
-      background: rgba(255, 255, 255, 0.15);
+      background: linear-gradient(45deg, #2d1b69, #11998e);
       backdrop-filter: blur(10px);
       color: white;
       padding: 0.4rem 1rem;
@@ -810,7 +812,7 @@ ul {
   }
 
   h3 {
-    color: #ffffff;
+    color: #64748b;
     margin-bottom: 1rem;
     font-size: 1.5rem;
     font-weight: 700;
@@ -823,7 +825,7 @@ ul {
   }
 
   p {
-    color: #e2e8f0;
+    color: #64748b;
     margin-bottom: 0.85rem;
     font-size: 1.02rem;
     text-align: left;
@@ -871,6 +873,9 @@ ul {
   border: 2px solid #e5e7eb;
   transition: all 0.3s ease;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
   &:hover {
     transform: translateY(-4px);
@@ -884,7 +889,7 @@ ul {
     display: block;
   }
 
-  h4 {
+  h3 {
     color: #0f172a;
     margin-bottom: 0.5rem;
     font-weight: 700;
@@ -932,23 +937,24 @@ ul {
 }
 
 .stat-card {
-  background: linear-gradient(135deg, #0e0723 0%, #1e1b4b 100%);
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.1), rgba(167, 139, 250, 0.1));
+  border: 2px solid rgba(125, 211, 252, 0.3);
   padding: 2rem 1.5rem;
   border-radius: 14px;
   text-align: center;
-  box-shadow: 0 8px 25px rgba(14, 7, 35, 0.2);
+  // box-shadow: 0 8px 25px rgba(14, 7, 35, 0.2);
 
   .stat-number {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #64748b;
     margin-bottom: 0.5rem;
     line-height: 1;
   }
 
   .stat-label {
     font-size: 0.95rem;
-    color: #cbd5e1;
+    color: #64748b;
     font-weight: 500;
   }
 }
@@ -1198,6 +1204,19 @@ ul {
   p {
     margin-bottom: 0.75rem;
     text-align: left;
+  }
+}
+
+h1, h2 {
+  background: linear-gradient(45deg, #2d1b69, #11998e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+@media screen and (max-width: 500px) {
+  h2 {
+    text-align: center !important;
   }
 }
 </style>

@@ -186,6 +186,9 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
+              <div>
+                <img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" />
+              </div>
           </div>
 
           <div class="level other">
@@ -613,5 +616,9 @@ h1, h2, h3, h4, a, p {
             .stats-grid {
                 grid-template-columns: 1fr;
             }
+        }
+
+        .sponsor {
+            width: 200px;
         }
 </style>

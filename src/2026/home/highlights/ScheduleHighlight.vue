@@ -5,12 +5,12 @@
       <div class="grid">
         <div class="card centered">
           <div>
-            <h3>Call for Speakers</h3>
+            <h3>Schedule Coming Soon!</h3>
             <p>
-              Want to be a part of this conference? Our next (and final!) review deadline for submissions is January 19, 2026. Speakers get complimentary tickets for you and a plus-one, as well as exclusive swag, a great resume booster, and the gratitude of all our attendees!
+              We're in the process of sending out speaker acceptances and finalizing sessions. Confirmed topics will be posted as they're locked in, highlighting the voices and ideas shaping this year's conference. Potential topics include A.I., accessibility, hardware & software, soft skills, robotics, and more!
             </p>
           </div>
-          <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a>
+          <!-- <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a> -->
         </div>
       </div>
       <!-- <div class="grid">

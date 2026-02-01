@@ -179,6 +179,10 @@ onUnmounted(() => {
       width: 80%;
     }
 
+    @media screen and (max-width: 1000px) {
+      margin-top: 4rem;
+    }
+
     h1 {
       font-weight: 400;
       font-style: normal;

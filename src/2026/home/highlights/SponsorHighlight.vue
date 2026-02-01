@@ -10,9 +10,11 @@
           Join our constellation of supporters and help power the future of open
           source in Central PA. Multiple sponsorship levels available.
         </p>
+        <div>
+          <img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" />
+        </div>
         <a href="/sponsors" class="card-link">View Sponsorship Opportunities →</a>
       </div>
-
       <div class="grid">
         <div class="card">
           <div>
@@ -36,7 +38,14 @@
         </div>
         <div class="card">
           <div>
-            <h3>Community Partners</h3>
+            <h3>Silver Sponsors</h3>
+            <p>Steady stars that help light the way. These organizations help make CPOSC possible through their commitment and collaboration.</p>
+          </div>
+          <!-- <a href="#" class="card-link">View Gold Sponsors →</a> -->
+        </div>
+        <div class="card">
+          <div>
+            <h3>Community</h3>
             <p>
               Local businesses and organizations that make Central PA's tech
               scene sparkle. The foundation of our community.
@@ -63,5 +72,21 @@ h3 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.sponsor {
+  width: 200px;
+}
+
+.grid {
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  @media screen and (max-width: 1150px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media screen and (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
 }
 </style>

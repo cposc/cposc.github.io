@@ -15,7 +15,7 @@
           <h4>Get Involved</h4>
           <p><a href="/#volunteer">Volunteer</a></p>
           <p><a href="/#sponsors">Sponsor</a></p>
-          <p><a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank">Call for Speakers</a></p>
+          <!-- <p><a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank">Call for Speakers</a></p> -->
           <p><a href="/code-of-conduct" target="_blank">Code of Conduct</a></p>
         </div>
         <div>
