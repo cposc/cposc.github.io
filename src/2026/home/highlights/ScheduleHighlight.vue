@@ -44,23 +44,23 @@
               </div>
               <div>
                 <span>0x10 Years in Tech (Panel)</span><br />
-                <em>Leady By: Logan Farr</em>
+                <em>Lead By: Logan Farr</em>
               </div>
               <div>
                 <span>Sixteen Candles and the Human API: Refactoring 16 Years of Quick Fixes</span><br />
-                <em>Leady By: Don Demcsak</em>
+                <em>Speaker: Don Demcsak</em>
               </div>
               <div>
                 <span>Creating and Providing Enhanced Access to .5 Million Journal Articles</span><br />
-                <em>Leady By: Eric Lease Morgan</em>
+                <em>Speaker: Eric Lease Morgan</em>
               </div>
               <div>
                 <span>Hacking Around Your Home with Home Assistant</span><br />
-                <em>Leady By: Edward Schwartz</em>
+                <em>Speaker: Edward Schwartz</em>
               </div>
               <div>
                 <span>An Alternative to LLMs for Making Sense of Things</span><br />
-                <em>Leady By: Oliver Cox</em>
+                <em>Speaker: Oliver Cox</em>
               </div>
             </div>
           </div>
