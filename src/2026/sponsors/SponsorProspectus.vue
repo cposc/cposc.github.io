@@ -188,6 +188,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
               </ul>
               <div>
                 <img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" />
+                <img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" />
               </div>
           </div>
 
@@ -619,6 +620,7 @@ h1, h2, h3, h4, a, p {
         }
 
         .sponsor {
-            width: 200px;
+            height: 100px;
+            margin-right: 25px;
         }
 </style>

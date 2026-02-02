@@ -12,6 +12,7 @@
         </p>
         <div>
           <img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" />
+          <img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" />
         </div>
         <a href="/sponsors" class="card-link">View Sponsorship Opportunities →</a>
       </div>
@@ -75,7 +76,8 @@ h3 {
 }
 
 .sponsor {
-  width: 200px;
+  height: 100px;
+  margin-right: 25px;
 }
 
 .grid {
