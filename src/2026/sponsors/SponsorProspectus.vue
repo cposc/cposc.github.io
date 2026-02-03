@@ -152,7 +152,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
               <div>
-                
+                <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor sponsor-platinum" src="/src/2026/assets/sponsors/webstaurantstore.png" alt="WebstaurantStore Logo" /></a>
               </div>
           </div>
 
