@@ -86,15 +86,15 @@ h3 {
 }
 
 .sponsor {
-  height: 100px;
-  margin-right: 25px;
+  max-width: 100%;
+  max-height: 6rem;
 }
 .sponsor-community {
-  height: 40px;
+  height: 2rem;
 }
 .sponsor-platinum {
-  width: 65%;
-  height: auto;
+  max-width: 100%;
+  max-height: 10rem;
 }
 
 .grid {

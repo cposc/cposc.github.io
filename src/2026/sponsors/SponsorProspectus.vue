@@ -152,7 +152,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
               <div>
-                <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor sponsor-platinum" src="/src/2026/assets/sponsors/WebstaurantStore.png" alt="WebstaurantStore Logo" /></a>
+                
               </div>
           </div>
 
@@ -632,18 +632,21 @@ h1, h2, h3, h4, a, p {
         }
 
         .sponsor {
-            margin-right: 25px;
+            margin-right: 1.5rem;
         }
         .sponsor-platinum {
-            width: 100%;
+            max-width: 100%;
         }
         .sponsor-gold {
-            height: 125px;
+            max-width: 100%;
+            max-height: 6rem;
         }
         .sponsor-silver {
-            height: 125px;
+            max-width: 100%;
+            max-height: 6rem;
         }
         .sponsor-community {
-            height: 50px;
+            max-height: 2rem;
+            max-width: 100%;
         }
 </style>
