@@ -151,6 +151,9 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
+              <div>
+                <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor sponsor-platinum" src="/src/2026/assets/sponsors/WebstaurantStore.png" alt="WebstaurantStore Logo" /></a>
+              </div>
           </div>
 
           <div class="level gold">
@@ -169,6 +172,10 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
+              <div>
+                <a href="https://www.minddevelopmentanddesign.com/" target="_blank"><img class="sponsor sponsor-gold" src="/src/2026/assets/sponsors/mind.png" alt="MIND Logo" /></a>
+                <a href="https://cargas.com/" target="_blank"><img class="sponsor sponsor-gold" src="/src/2026/assets/sponsors/cargas.png" alt="Cargas Logo" /></a>
+              </div>
           </div>
 
           <div class="level community">
@@ -187,8 +194,8 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
               <div>
-                <img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" />
-                <img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" />
+                <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor sponsor-silver" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
+                <a href="https://make717.org/" target="_blank"><img class="sponsor sponsor-silver" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
               </div>
           </div>
 
@@ -205,6 +212,10 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Networking opportunities with attendees</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
               </ul>
+              <div>
+                <a href="https://scpaworks.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
+                <a href="https://www.tccp.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
+              </div>
           </div>
       </div>
   </div>
@@ -620,7 +631,18 @@ h1, h2, h3, h4, a, p {
         }
 
         .sponsor {
-            height: 100px;
             margin-right: 25px;
+        }
+        .sponsor-platinum {
+            width: 100%;
+        }
+        .sponsor-gold {
+            height: 125px;
+        }
+        .sponsor-silver {
+            height: 125px;
+        }
+        .sponsor-community {
+            height: 50px;
         }
 </style>

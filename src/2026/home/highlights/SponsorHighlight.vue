@@ -11,8 +11,17 @@
           source in Central PA. Multiple sponsorship levels available.
         </p>
         <div>
-          <img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" />
-          <img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" />
+          <div>
+            <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor sponsor-platinum" src="/src/2026/assets/sponsors/WebstaurantStore.png" alt="WebstaurantStore Logo" /></a>
+          </div>
+          <a href="https://www.minddevelopmentanddesign.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/mind.png" alt="MIND Logo" /></a>
+          <a href="https://cargas.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/cargas.png" alt="Cargas Logo" /></a>
+          <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
+          <a href="https://make717.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
+          <!--<div>
+            <a href="https://scpaworks.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
+            <a href="https://www.tccp.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
+          </div>-->
         </div>
         <a href="/sponsors" class="card-link">View Sponsorship Opportunities →</a>
       </div>
@@ -78,6 +87,13 @@ h3 {
 .sponsor {
   height: 100px;
   margin-right: 25px;
+}
+.sponsor-community {
+  height: 40px;
+}
+.sponsor-platinum {
+  width: 65%;
+  height: auto;
 }
 
 .grid {
