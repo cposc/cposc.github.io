@@ -213,6 +213,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
               </ul>
               <div>
+                <a href="https://jfcglobal.com/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/jfc.png" alt="JFC Global Logo" /></a>
                 <a href="https://scpaworks.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
                 <a href="https://www.tccp.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
               </div>
