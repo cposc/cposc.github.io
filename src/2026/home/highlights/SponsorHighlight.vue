@@ -11,18 +11,16 @@
           source in Central PA. Multiple sponsorship levels available.
         </p>
         <div>
-          <div>
-            <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor sponsor-platinum" src="/src/2026/assets/sponsors/WebstaurantStore.png" alt="WebstaurantStore Logo" /></a>
+          <div class="sponsors">
+            <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/WebstaurantStore.png" alt="WebstaurantStore Logo" /></a>
+            <a href="https://www.minddevelopmentanddesign.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/mind.png" alt="MIND Logo" /></a>
+            <a href="https://cargas.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/cargas.png" alt="Cargas Logo" /></a>
+            <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
+            <a href="https://make717.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
+            <a href="https://jfcglobal.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/jfc.png" alt="JFC Global Logo" /></a>
+            <a href="https://scpaworks.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
+            <a href="https://www.tccp.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
           </div>
-          <a href="https://www.minddevelopmentanddesign.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/mind.png" alt="MIND Logo" /></a>
-          <a href="https://cargas.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/cargas.png" alt="Cargas Logo" /></a>
-          <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
-          <a href="https://make717.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
-          <!--<div>
-            <a href="https://jfcglobal.com/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/jfc.png" alt="JFC Global Logo" /></a>
-            <a href="https://scpaworks.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
-            <a href="https://www.tccp.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
-          </div>-->
         </div>
         <a href="/sponsors" class="card-link">View Sponsorship Opportunities →</a>
       </div>
@@ -85,16 +83,19 @@ h3 {
   justify-content: space-between;
 }
 
-.sponsor {
-  max-width: 100%;
-  max-height: 6rem;
-}
-.sponsor-community {
-  height: 2rem;
-}
-.sponsor-platinum {
-  max-width: 100%;
-  max-height: 10rem;
+.sponsors {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .sponsor {
+    max-width: 150px;
+    max-height: 80px;
+  }
 }
 
 .grid {

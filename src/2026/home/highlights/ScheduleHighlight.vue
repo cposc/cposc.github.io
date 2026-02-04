@@ -64,6 +64,7 @@
               </div>
             </div>
           </div>
+          <button @click="goGetTickets">GET TICKETS</button>
           <!-- <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a> -->
         </div>
       </div>
@@ -105,7 +106,31 @@
     </div>
   </section>
 </template>
+<script setup>
+const goGetTickets = () => {
+  //  Opens in new tab/window
+  window.open('https://www.eventbrite.com/e/central-pennsylvania-open-source-conference-cposc-2026-tickets-1981965338681', '_blank');
+};
+</script>
 <style lang="scss" scoped>
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #4c349b;
+  font-family: "Lexend", arial;
+  font-size: 16px;
+  border-radius: 8px;
+  border-width: 0px;
+  margin-top: 1.5rem;
+  width: fit-content;
+  align-self: center;;
+
+  box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+}
+
 h2 {
   margin: 0;
 }

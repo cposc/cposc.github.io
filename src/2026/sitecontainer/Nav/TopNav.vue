@@ -54,6 +54,9 @@
       <li>
         <a href="/#volunteer">Volunteer</a>
       </li>
+      <li>
+        <a href="https://www.eventbrite.com/e/central-pennsylvania-open-source-conference-cposc-2026-tickets-1981965338681" target="_blank">GET TICKETS</a>
+      </li>
       <!-- <li>
         <a href="#register">Join Us</a>
       </li> -->

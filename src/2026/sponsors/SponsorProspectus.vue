@@ -40,7 +40,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
 
 <template>
   <TopNav></TopNav>
-  <a href="/CPOSCProspectus2026.pdf" target="_blank"><div class="prospectus-download">📄 Download as PDF</div></a>
+  <a class="floating-download" href="/CPOSCProspectus2026.pdf" target="_blank"><div class="prospectus-download">📄 Download as PDF</div></a>
   <div class="document">
     <!-- Cover Page -->
   <!-- About Page -->
@@ -48,6 +48,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
       <div class="page-header">
           <h2>Welcome to CPOSC</h2>
           <p>Where Open Source Innovation Meets Community Impact</p>
+          <a class="fixed-download" href="/CPOSCProspectus2026.pdf" target="_blank"><div class="prospectus-download">📄 Download as PDF</div></a>
       </div>
 
       <h3>About CPOSC Sweet 0x10</h3>
@@ -151,8 +152,8 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
-              <div>
-                <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor sponsor-platinum" src="/src/2026/assets/sponsors/webstaurantstore.png" alt="WebstaurantStore Logo" /></a>
+              <div class="sponsors">
+                <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/webstaurantstore.png" alt="WebstaurantStore Logo" /></a>
               </div>
           </div>
 
@@ -172,9 +173,9 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Inclusion in thank you communications</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
-              <div>
-                <a href="https://www.minddevelopmentanddesign.com/" target="_blank"><img class="sponsor sponsor-gold" src="/src/2026/assets/sponsors/mind.png" alt="MIND Logo" /></a>
-                <a href="https://cargas.com/" target="_blank"><img class="sponsor sponsor-gold" src="/src/2026/assets/sponsors/cargas.png" alt="Cargas Logo" /></a>
+              <div class="sponsors">
+                <a href="https://www.minddevelopmentanddesign.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/mind.png" alt="MIND Logo" /></a>
+                <a href="https://cargas.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/cargas.png" alt="Cargas Logo" /></a>
               </div>
           </div>
 
@@ -193,9 +194,9 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Access to conference attendee statistics</li>
               </ul>
-              <div>
-                <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor sponsor-silver" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
-                <a href="https://make717.org/" target="_blank"><img class="sponsor sponsor-silver" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
+              <div class="sponsors">
+                <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
+                <a href="https://make717.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
               </div>
           </div>
 
@@ -212,10 +213,10 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
                   <li><i class="fa-solid fa-circle-dot"></i> Networking opportunities with attendees</li>
                   <li><i class="fa-solid fa-circle-dot"></i> Support local tech education and growth</li>
               </ul>
-              <div>
-                <a href="https://jfcglobal.com/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/jfc.png" alt="JFC Global Logo" /></a>
-                <a href="https://scpaworks.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
-                <a href="https://www.tccp.org/" target="_blank"><img class="sponsor sponsor-community" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
+              <div class="sponsors">
+                <a href="https://jfcglobal.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/jfc.png" alt="JFC Global Logo" /></a>
+                <a href="https://scpaworks.org/" target="_blank"><img class="sponsor sponsor-long" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
+                <a href="https://www.tccp.org/" target="_blank"><img class="sponsor sponsor-long" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
               </div>
           </div>
       </div>
@@ -271,6 +272,30 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
 </template>
 
 <style lang="scss" scoped>
+.floating-download {
+    @media screen and (max-width: 500px) {
+        display: none;
+    }
+}
+
+.fixed-download {
+    @media screen and (min-width: 500px) {
+        display: none;
+    }
+
+    @media screen and (max-width: 500px){
+        text-decoration: none;
+    }
+
+    .prospectus-download {
+        @media screen and (max-width: 500px) {
+            position: relative;
+            top: 0;
+            right: 0;
+            z-index: 5;
+        }
+    }
+}
 .prospectus-download {
     position: fixed;
     top: 10px;
@@ -487,11 +512,18 @@ h1, h2, h3, h4, a, p {
         .level-name {
             font-size: 2rem;
             font-weight: 700;
+            @media screen and (max-width: 500px) {
+                font-size: 1.5rem;
+            }
         }
 
         .level-price {
             font-size: 2.5rem;
             font-weight: 700;
+
+            @media screen and (max-width: 500px) {
+                font-size: 2rem;
+            }
         }
 
         .level.platinum .level-name,
@@ -631,22 +663,29 @@ h1, h2, h3, h4, a, p {
             }
         }
 
+        .sponsors {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
         .sponsor {
-            margin-right: 1.5rem;
+            max-width: 200px;
+            max-height: 120px;
+
+            @media screen and (max-width: 500px) {
+                max-width: 180px;
+                max-height: 80px;
+            }
         }
-        .sponsor-platinum {
-            max-width: 100%;
-        }
-        .sponsor-gold {
-            max-width: 100%;
-            max-height: 6rem;
-        }
-        .sponsor-silver {
-            max-width: 100%;
-            max-height: 6rem;
-        }
-        .sponsor-community {
-            max-height: 2rem;
-            max-width: 100%;
+
+        .sponsor-long {
+            max-width: 350px;
+
+            @media screen and (max-width: 500px) {
+                max-width: 250px;
+            }
         }
 </style>

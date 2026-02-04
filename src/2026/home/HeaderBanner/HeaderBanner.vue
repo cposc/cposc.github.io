@@ -43,9 +43,9 @@
       </p>
       <p class="date">March 28, 2026</p>
       <!-- COMMENT THIS OUT once tickets are available -->
-      <p><i>Tickets will be available Spring 2026.</i></p>
+      <!-- <p><i>Tickets will be available Spring 2026.</i></p> -->
       <!-- UNCOMMENT THIS once tickets are available - uncomment and update goGetTickets function with ticket URL -->
-      <!-- <button @click="goGetTickets">GET TICKETS</button> -->
+      <button @click="goGetTickets">GET TICKETS</button>
       <div class="gallery">
         <img
           v-if="currentIndex === 0"
@@ -106,10 +106,10 @@ onUnmounted(() => {
   clearInterval(intervalId);
 });
 
-// const goGetTickets = () => {
-//   // Opens in new tab/window
-//   window.open('https://www.example.com', '_blank');
-// };
+const goGetTickets = () => {
+  //  Opens in new tab/window
+  window.open('https://www.eventbrite.com/e/central-pennsylvania-open-source-conference-cposc-2026-tickets-1981965338681', '_blank');
+};
 </script>
 
 <style lang="scss" scoped>
@@ -151,7 +151,7 @@ onUnmounted(() => {
   .feature-copy {
     position: absolute;
     top: 5rem;
-    z-index: 2;
+    z-index: 12;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -177,6 +177,10 @@ onUnmounted(() => {
       );
       padding: 2rem 2rem 2rem 2rem;
       width: 80%;
+    }
+
+    @media screen and (max-width: 1000px) {
+      margin-top: 4rem;
     }
 
     h1 {

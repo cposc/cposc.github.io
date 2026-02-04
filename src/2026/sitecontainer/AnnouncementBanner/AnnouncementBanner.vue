@@ -131,11 +131,9 @@ export default {
   }
 
   @media screen and (max-width: 1000px) {
-    position: unset;
     margin-top: 4rem;
   }
   @media screen and (max-width: 650px) {
-    position: unset;
     margin-top: 3rem;
   }
 }
