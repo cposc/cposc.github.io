@@ -79,8 +79,22 @@ onMounted(async () => {
 </template>
 
 <style lang="scss" scoped>
-h1, h2, h3, h4, a, p {
+h1, h2 {
   font-family: "Lexend", sans-serif;
+}
+h3 {
+  font-family: "Cal Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+h4,
+p,
+a,
+em {
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
 
 button {
