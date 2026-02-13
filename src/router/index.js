@@ -4,6 +4,7 @@ import { useMenuStore } from "../store/menuStore";
 import HomeView2026 from "../2026/home/HomeView.vue";
 import LogisticsView2026 from "../2026/travel/TravelOptions.vue";
 import SponsorsView2026 from "../2026/sponsors/SponsorProspectus.vue";
+import ScheduleView2026 from "../2026/schedule/Schedule.vue";
 
 import HomeView2025 from "../views/2025/HomeView.vue";
 import ScheduleView2025 from "../views/2025/ScheduleView.vue";
@@ -46,6 +47,11 @@ const router = createRouter({
       path: "/sponsors",
       name: "sponsors2026",
       component: SponsorsView2026,
+    },
+    {
+      path: "/schedule",
+      name: "schedule2026",
+      component: ScheduleView2026,
     },
     {
       path: "/code-of-conduct",
