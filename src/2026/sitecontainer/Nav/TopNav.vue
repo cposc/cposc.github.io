@@ -10,7 +10,7 @@
           <a href="/#sponsors">Sponsors</a>
         </li>
         <li>
-          <a href="#schedule">Schedule</a>
+          <a href="/#schedule">Schedule</a>
         </li>
         <!-- <li>
           <a href="#speakers">Speakers</a>
@@ -43,7 +43,7 @@
         <a href="/#sponsors">Sponsors</a>
       </li>
       <li>
-        <a href="#schedule">Schedule</a>
+        <a href="/#schedule">Schedule</a>
       </li>
       <!-- <li>
         <a href="#speakers">Speakers</a>

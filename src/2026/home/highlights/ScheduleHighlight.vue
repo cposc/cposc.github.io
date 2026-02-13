@@ -5,9 +5,9 @@
       <div class="grid">
         <div class="card centered">
           <div>
-            <h3>Schedule Coming Soon!</h3>
+            <h3>Schedule</h3>
             <p>
-              We're in the process of sending out speaker acceptances and finalizing sessions. Check out some of the voices and ideas shaping this year's conference!
+              Check out some of the voices and ideas shaping this year's conference!
             </p>
             <div class="talks">
               <div>
@@ -64,6 +64,7 @@
               </div>
             </div>
           </div>
+          <a href="/2026/schedule" class="card-link secondary-button">View Full Schedule →</a>
           <button @click="goGetTickets">GET TICKETS</button>
           <!-- <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a> -->
         </div>
@@ -155,6 +156,7 @@ h2 {
     overflow-x: auto;
     gap: 0.5rem;
     gap: 1.5rem;
+    margin-bottom: 1rem;
 
     div {
       width: 300px;

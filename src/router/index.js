@@ -49,7 +49,7 @@ const router = createRouter({
       component: SponsorsView2026,
     },
     {
-      path: "/schedule",
+      path: "/2026/schedule",
       name: "schedule2026",
       component: ScheduleView2026,
     },

@@ -3,6 +3,11 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
 import { ref, onMounted } from "vue";
 import Papa from "papaparse";
 
+const goGetTickets = () => {
+  //  Opens in new tab/window
+  window.open('https://www.eventbrite.com/e/central-pennsylvania-open-source-conference-cposc-2026-tickets-1981965338681', '_blank');
+};
+
 const csvRows = ref([]); // <-- this will be your array of arrays
 
 onMounted(async () => {
@@ -19,37 +24,6 @@ onMounted(async () => {
 
     csvRows.value = parsed.data;
     csvRows.value.shift();
-
-    // Example: Loop rows
-    for (const row of csvRows.value) {
-      const startTime = row[0];
-      const endTime = row[1];
-      // location = Steinman Hall
-      const titleOne = row[2];
-      const speakerOne = row[3];
-      const abstractOne = row[4];
-      // location = Binns Room
-      const titleTwo = row[5];
-      const speakerTwo = row[6];
-      const abstractTwo = row[7];
-      // location = Choral Room
-      const titleThree = row[8];
-      const speakerThree = row[9];
-      const abstractThree = row[10];
-      // location = Common Area
-      const titleFour = row[11];
-      // location = PubForge
-      const titleFive = row[12];
-
-      console.log("Start Time:", startTime);
-      console.log("End Time:", endTime);
-      console.log("Steinman Hall:", titleOne, speakerOne, abstractOne);
-      console.log("Binns Room:", titleTwo, speakerTwo, abstractTwo);
-      console.log("Choral Room:", titleThree, speakerThree, abstractThree);
-      console.log("Common Area:", titleFour);
-      console.log("PubForge:", titleFive);
-    };
-
   } catch (err) {
     console.error("Error loading CSV:", err);
   }
@@ -62,7 +36,10 @@ onMounted(async () => {
     <div class="page">
       <div class="pageCont">
         <h1>Schedule</h1>
-
+        <p>
+          Check out the voices and ideas shaping this year's conference!
+        </p>
+        <button @click="goGetTickets">GET TICKETS</button>
         <div v-for="(row, rowIndex) in csvRows" :key="rowIndex">
           <div class="card centered" v-if="row[0]">
             <h2>{{ row[0] }} <span v-if="row[1]">- {{ row[1] }}</span></h2>
@@ -102,6 +79,24 @@ onMounted(async () => {
 </template>
 
 <style lang="scss" scoped>
+button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #4c349b;
+  font-family: "Lexend", arial;
+  font-size: 16px;
+  border-radius: 8px;
+  border-width: 0px;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  width: fit-content;
+  align-self: center;;
+
+  box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+  -webkit-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 10px -2px rgba(0,0,0,0.75);
+}
 .page {
   padding-top: 7rem;
 
