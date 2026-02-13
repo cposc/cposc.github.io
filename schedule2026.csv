@@ -1,0 +1,53 @@
+Start Time,End Time,Steinman Hall,,,Binns Room,,,Choral Room,,,Common Area / Sponsor Area,Pubforge
+8:00 AM,9:00 AM,,,,,,,,,,Registration & Breakfast,
+9:00 AM,9:15 AM,Welcome,,,,,,,,,,
+9:25 AM,10:10 AM,Using a Computer Hands-Free: Coding by Voice Control No Longer Sucks,Nathan Heffley,"After struggling to use a computer for programming through an entire work day, it was either time to find a new career or find a replacement for the keyboard. In hindsight, it's also a lot of fun! This talk with have plenty, whether you need help figuring out ways to reduce stress on your hands or are just curious about what it looks like to work as a developer who doesn't use their hands.","Zero to Mobile App in 30 Minutes!
+
+",Jonathan Fleckenstein,Walk the audience through the steps required to build a mobile app with React Native. Start with showing how to setup React Native. Show hello world example and make some changes to show near instant app updates. Add small feature that utilizes mapping and geolocation APIs. Show off other features like sensor data. Briefly cover the architecture of React Native and how it works.,"Sixteen Candles and the Human API: Refactoring 16 Years of Quick Fixes
+
+",Don Demcsak,"""Peopling"" is the hardest API. Like a forgotten 16th birthday, your soft skills need attention. This session treats your career like legacy code overdue for a refactor. Using comedic data visualization, we'll debug your professional life via the Career Venn Diagram, the Manager Translation Matrix, CoffeeOps networking, and the Personality Graph. Stop waiting for Jake Ryan and start optimizing your throughput in Central PA.",,
+10:20 AM,11:05 AM,"Hard Earned Lessons on Observability and Security
+
+",Brad Lhotsky,"In the age of AI, this talk will be abnormally focused on the humans the machines are meant to serve. We'll look at successful security and observability solutions and how they map to the human behind the keyboard. Learn from more than two decades of mistakes in both to build successful and celebrated security and observability programs without them.","Robotics for All: Inspiring the Next Generation of STEM Leaders
+
+","""One Small Step for an Axolotl"" Student Team","FIRST Robotics is a global, student-driven program where young people design, build, fund, and code robots in a collaborative, exciting, and fun learning environment. Team 25650, One Small Step for an Axolotl, an international-award-winning FIRST Tech Challenge (FTC) team, shares how FIRST transforms hands-on STEM experiences to inspire youth (k-12) for pathways for STEM and leadership and how you can get involved! (includes live demo/test drive)","Confessions of a Compulsive Distro-Hopper
+
+",Jonathan Bowman,"Once upon a time, Linux was not popular but it was attractive and intriguing. Today, Linux is everywhere yet often taken for granted. This presentation is one Linux-fan's saga of experimenting with Linux for a few decades, a story inviting all of us to grow a little more Linux-aware and Linux-playful. It is about refusing to quit. And then not being able to. Audience participation will be celebrated.",,
+11:15 AM,12:00 PM,"Outcome Over Ego in Tech
+
+",Jeff Barrett,"After 27 years in software engineering, I've watched tech lose its grip on outcomes—especially when they don't serve one's ego. That's changing. I see a renewed focus on outcomes over ego in today's tech ecosystem, alongside pressure on those outcomes from AI augmentation and shifting funding landscapes. Through this lens, we'll explore what I saw before, what I see now, and what it means for our egos in the years ahead.","Where AI Meets Hardware: Designing and Building a 3D Satellite Tracker
+",Tom Courtney,"Discover how AI can bridge code and motion. I used AI to design and build a fully 3D-printed electro-mechanical satellite tracker. Selecting components, writing Arduino code, integrating servos, steppers, and Wi-Fi.  A hands-on story of AI-driven design, engineering, and creativity.","Creating and Providing Enhanced Access to .5 Million Journal Articles
+
+",Eric Lease Morgan,"This presentation describes the why's and wherefore's of creating a publically accessible digital library of journal articles. It outlines how a protocol called OAI-PMH was used to harvest the articles, how the articles where indexed and searched, and finally, how data sets of the articles were created for the purposes of analysis and modeling. The whole process makes it possible to use and understand any large collection of documents.",,
+12:00 PM,1:00 PM,,,,,,,,,,Lunch,
+1:05 PM,1:50 PM,"From Hype to Habit: How Software Engineers Are Using Generative AI
+
+",Stephanie Schwartz,"How are engineers actually using generative AI day to day? This talk shares survey results from software developers on real-world GenAI use cases, preferred interaction modes (autocompletion, chat, and agentic tools), and how much they trust the results. I explore impacts on productivity and quality—and what these insights mean for educating future software engineers.",High Quality Pull Requests and Reviews,Alex Mayer,"If you work in development or IT, chances are you will either need to submit or review pull requests. What are some dos and don'ts to make sure everyone gets the most out of code reviews? Pull requests are a great place to spread knowledge and collaborate. They can also be a nightmare if one side is spending more energy and communication isn't flowing. Let's talk about what makes up a high quality pull request and review.","Birds of a Feather Talk Tech Together
+
+",Moderated by Ken Richard,"Ease back in after lunch with some attendee-submitted, randomly-drawn topics, discussed by the group a few minutes at a time. Bring your own subjects of conversation or just bring a willingness to participate and learn!",,
+2:00 PM,2:45 PM,"Hacking Around Your Home with Home Assistant
+
+",Ed Schwartz,"Home Assistant is an open source software project that allows you to connect all of your smart devices into a single platform.  Have a device that ""isn't supported""?  No problem!  You can create your own device integrations, or more likely, find someone else who has already done it for you.  I'll share the basics of getting started with Home Assistant in this talk, and share some of the cool hacks and automations that I use at home.","An Alternative to LLMs for Making Sense of Things
+",Oliver Cox,"LLMs come with a tantalizing prospectus, offering to organize information for you. But LLMs bring numerous corrosive issues, among them data use and the ""black box"" problem. HSM's data system, the HYPERCOSM, allows users to express and visualize their ideas in a way that's unambiguous and interoperable. It is thus a viable alternative to LLMs organizing your ideas. Learn more about the design and data structure that powers the HYPERCOSM.","Strategy & Economics of VC 101 (and Why It Matters to Fundraising Founders)
+
+",Dustin Betz,"Demystifying venture capital as an asset class by explanation in plain English: when is the right time for startups to raise funding, what are the instruments or vehicles used to do so at the earliest stages, and where does VC fit within the wider landscape of startup fundraising. ",,
+2:55 PM,3:40 PM,"The Vibe of Agentic Infrastructure
+
+",Erica Windisch,"The velocity of agentic software development has reshaped how work is done. AI has proven useful to many developers, but has changed the requirements tooling and processes, and most of it is closed-source. In this talk, we will explore where teams and tools are struggling with the pace of agentic development, and the future of open source agentic infrastructure.","How Minds Get Small: Cognitive Compression from Biology to SIML
+
+",Rich Everts,"Modern AI keeps getting bigger, but intelligence gets smaller. This talk explores cognitive compression and how biological systems and emerging AI architectures reduce sensory input into compact, predictive internal models. We’ll cover Meta's JEPA-style learning, why model-centric AI hits limits, and how simulation-grounded, bitwise architectures like SIML point toward embodied agents that learn by minimizing surprise, not maximizing reward.","Speed Networking / Mentoring
+",,"New this year! We are soliciting attendees to sign up as Mentors in different areas of expertise, then attendees of the session will move through the room with the opportunity to pick Mentors' brains for a few minutes each before the bell rings and it's on to the next. A great way to network, make connections, and learn something new from your fellow attendees!",Sweet Snacks,
+3:50 PM,4:35 PM,Panel: 0x10 Years in Tech,"Logan Farr with Jeff Barrett, Ryan Doherty, Jake Whetstone, Rob Hudson","Join a panel of industry veterans as we discuss topics you’ll encounter at any part of being a developer; ranging from hiring to code reviews to production support. 16+ years of engineering involves a lot of learning, a lot of mistakes, and a lot of wisdom.",Gettin' Ziggy Wit it,Jonathan Bowe,"Do you, like Will Smith, enjoy being fresh, hip, and using the latest technology? Do you like statically typed language, or wish you could do more at compile time? If so, then Zig might just be for you! We'll be talking about one of the newer system-level programming languages out there, what it does differently (and similarly?) as other languages. If you're lucky, you might just walk away ready to learn Zig.","A Brief History of Time Syncing
+
+",Walt Mankowski,"The Internet comes with no guarantees about network bandwidth or topology. It seems like it should be impossible to accurately synchronize the time between two computers, yet this has been a solved problem since the development of the Network Time Protocol over 40 years ago. How does NTP accomplish this seemingly impossible task? What does it even mean for the time to be ""correct"" in the first place? And what can we do when NTP isn't working?",Sweet Snacks,
+4:45 PM,5:30 PM,Lightning Talks,,,,,,,,,Sweet Snacks,
+5:30 PM,5:45 PM,Farewell,,,,,,,,,,
+6:00 PM,,,,,,,,,,,,After Party
+,,,,,,,,,,,,
+,,,,,,,,,,,,
+,,A.I. / LLMs,,,,,,,,,,
+,,People / Soft Skills,,,,,,,,,,
+,,Hardware,,,,,,,,,,
+,,Software / OS,,,,,,,,,,
+,,Business / Team,,,,,,,,,,
+,,Interesting / Less Intense,,,,,,,,,,
