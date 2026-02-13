@@ -79,6 +79,10 @@ onMounted(async () => {
 </template>
 
 <style lang="scss" scoped>
+h1, h2, h3, h4, a, p {
+  font-family: "Lexend", sans-serif;
+}
+
 button {
   cursor: pointer;
   padding: 0.5rem 1rem;
