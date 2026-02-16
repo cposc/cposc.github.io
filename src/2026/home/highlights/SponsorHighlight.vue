@@ -11,15 +11,24 @@
           source in Central PA. Multiple sponsorship levels available.
         </p>
         <div>
-          <div class="sponsors">
+          <div class="sponsor-row headliner">
             <a href="https://www.webstaurantstore.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/WebstaurantStore.png" alt="WebstaurantStore Logo" /></a>
+          </div>
+          <div class="sponsor-row">
             <a href="https://www.minddevelopmentanddesign.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/mind.png" alt="MIND Logo" /></a>
             <a href="https://cargas.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/cargas.png" alt="Cargas Logo" /></a>
+            <a href="https://www.elastic.co/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/elastic-logo.svg" alt="Elastic Logo" /></a>
+          </div>
+          <div class="sponsor-row">
             <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
             <a href="https://make717.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
+            <a href="https://theindustrialresolution.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/indyres.png" alt="Industrial Resolution Logo" /></a>
+            <a href="https://landistechnologies.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/landis.svg" alt="Landis Technologies Logo" /></a>
+          </div>
+          <div class="sponsor-row">
             <a href="https://jfcglobal.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/jfc.png" alt="JFC Global Logo" /></a>
             <a href="https://scpaworks.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/SCPAWorks.png" alt="SCPA Works Logo" /></a>
-            <a href="https://www.tccp.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
+            <a href="https://www.tccp.org/" target="_blank"><img class="sponsor sponsor--wide" src="/src/2026/assets/sponsors/TCCP.png" alt="TCCP Logo" /></a>
           </div>
         </div>
         <a href="/sponsors" class="card-link">View Sponsorship Opportunities →</a>
@@ -83,7 +92,7 @@ h3 {
   justify-content: space-between;
 }
 
-.sponsors {
+.sponsor-row {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -95,6 +104,15 @@ h3 {
   .sponsor {
     max-width: 150px;
     max-height: 80px;
+  }
+
+  .sponsor--wide {
+    max-width: 300px;
+  }
+
+  &.headliner .sponsor {
+    max-width: 300px;
+    max-height: 150px;
   }
 }
 
