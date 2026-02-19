@@ -1,6 +1,6 @@
 # cposc
 
-This is the CPOSC website for the event being held April 26th, 2026. Use the instructions below to pull down the codebase and start making changes.
+This is the CPOSC website for the event being held March 28th, 2026. Use the instructions below to pull down the codebase and start making changes.
 
 -----
 
@@ -26,6 +26,8 @@ To get your changes live:
 1. Create a feature branch and make your changes
 2. Open a PR to `master`
 3. Once merged, the site deploys automatically
+
+The custom domain (`CNAME`) is included in the build output automatically — no extra steps needed.
 
 To test a production build locally:
 ```sh
