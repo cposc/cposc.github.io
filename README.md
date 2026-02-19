@@ -1,6 +1,6 @@
 # cposc
 
-This is the CPOSC website for the event being held April 26th, 2025. Use the instructions below to pull down the codebase and start making changes.
+This is the CPOSC website for the event being held April 26th, 2026. Use the instructions below to pull down the codebase and start making changes.
 
 -----
 
@@ -18,22 +18,20 @@ The following command runs the project locally [here](http://127.0.0.1:5173/).
 npm run dev
 ```
 
-### DEPLOY
+### Deploy
 
-This codebase is set up with Github Pages - meaning, anything on a pre-determined branch is in "production" and is visible as a website.
+The site deploys automatically when code is pushed to the `master` branch. A GitHub Actions workflow builds the site and publishes it to GitHub Pages.
 
-*Code STILL needs to be pushed to the `master` branch in this repo.*
+To get your changes live:
+1. Create a feature branch and make your changes
+2. Open a PR to `master`
+3. Once merged, the site deploys automatically
 
-When ready to deploy, run the following commands.
+To test a production build locally:
 ```sh
 npm run build
-// copy and paste the CNAME file from the root directory, to inside the /dist folder
-git add .
-git commit -m "message describing my changes"
-git push origin master
-npm run push-live
+npm run preview
 ```
-The command `npm run build` is set to push your built `dist` files to the `gh-pages` branch. Github will then display the contents of `gh-pages` as a website.
 
 ### Lint with [ESLint](https://eslint.org/)
 
