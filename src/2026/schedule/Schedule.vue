@@ -47,19 +47,22 @@ onMounted(async () => {
               <div v-if="row[2]">
                 <h3>Steinman Hall</h3>
                 <p><b>{{ row[2] }}</b></p>
-                <em v-if="row[3]">{{ row[3] }}</em>
+                <!--<em v-if="row[3]">{{ row[3] }}</em>-->
+                <a :href="'/2026/speakers#' + row[3].split(' ').join('')" target="_blank">{{ row[3] }}</a>
                 <p v-if="row[4]">{{ row[4] }}</p>
               </div>
               <div v-if="row[5]">
                 <h3>Binns Room</h3>
                 <p><b>{{ row[5] }}</b></p>
-                <em v-if="row[6]">{{ row[6] }}</em>
+                <!--<em v-if="row[6]">{{ row[6] }}</em>-->
+                <a :href="'/2026/speakers#' + row[6].split(' ').join('')" target="_blank">{{ row[6] }}</a>
                 <p v-if="row[7]">{{ row[7] }}</p>
               </div>
               <div v-if="row[8]">
                 <h3>Choral Room</h3>
                 <p><b>{{ row[8] }}</b></p>
-                <em v-if="row[9]">{{ row[9] }}</em>
+                <!--<em v-if="row[9]">{{ row[9] }}</em>-->
+                <a :href="'/2026/speakers#' + row[9].split(' ').join('')" target="_blank">{{ row[9] }}</a>
                 <p v-if="row[10]">{{ row[10] }}</p>
               </div>
               <div v-if="row[11]">
