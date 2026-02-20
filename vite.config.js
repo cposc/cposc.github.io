@@ -15,10 +15,7 @@ export default defineConfig({
         logistics: './logistics/index.html',
         codeOfConduct: './code-of-conduct/index.html',
         schedule: './schedule/index.html',
-        404: './404.html',
-        cname: './CNAME'
-        // ...
-        // List all files you want in your build
+        404: './404.html'
       }
     }
   },
