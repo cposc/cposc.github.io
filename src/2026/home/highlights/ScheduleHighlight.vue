@@ -56,7 +56,7 @@
               </div>
               <div>
                 <span>Hacking Around Your Home with Home Assistant</span><br />
-                <em>Speaker: Edward Schwartz</em>
+                <em>Speaker: Ed Schwartz</em>
               </div>
               <div>
                 <span>An Alternative to LLMs for Making Sense of Things</span><br />

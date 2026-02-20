@@ -1,5 +1,5 @@
 <script setup>
-import SpeakerBlock from "../../components/2026/SpeakerBlock.vue";
+import SpeakerBlock from "./SpeakerBlock.vue";
 import TopNav from "../sitecontainer/Nav/TopNav.vue";
 </script>
 
@@ -11,9 +11,10 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
       <div class="line"></div>
       <div class="pageContent">
         <p>Get to know our fantastic lineup of 2026 speakers!</p>
-        <div v-for="(speaker, index) in speakers" v-bind:key="index">
-          <div class="line"></div>
-          <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name.split(' ').join(''))" :imageUrl="speaker.imageURL" :bio="speaker.bio" :talkTitle="speaker.talkTitle" :talkAbstract="speaker.talkAbstract" :index="index"/>
+        <div class="speakerSection">
+          <div v-for="(speaker, index) in speakers" v-bind:key="index">
+            <SpeakerBlock :name="speaker.name" :nameAnchor="getNameAnchor(speaker.name.split(' ').join(''))" :imageUrl="speaker.imageURL" :bio="speaker.bio" :talkTitle="speaker.talkTitle" :talkAbstract="speaker.talkAbstract" :index="index"/>
+          </div>
         </div>
       </div>
       <!-- <GradientContainer /> -->
@@ -70,7 +71,7 @@ export default {
           talkAbstract: "Discover how AI can bridge code and motion. I used AI to design and build a fully 3D-printed electro-mechanical satellite tracker. Selecting components, writing Arduino code, integrating servos, steppers, and Wi-Fi.  A hands-on story of AI-driven design, engineering, and creativity."
         },
         {
-          imageURL: "@/assets/2026/speakers/x.jpg",
+          imageURL: "@/assets/2026/speakers/OliverCox.png",
           name: "Oliver Cox",
           bio: "Oliver is the Founder & CEO of HSM, a company that is here to make computers tools of liberation, by building systems shaped like human thinking, which work together, and protect our rights. He is also HSM's principal programmer. Oliver writes regularly on technology, with the ACM's Interactions magazine publishing one of his articles. He lives in Lancaster, with his wife, cat and dog.",
           talkTitle: "An Alternative to LLMs for Making Sense of Things",
@@ -98,14 +99,14 @@ export default {
           talkAbstract: "Join a panel of industry veterans as we discuss topics you’ll encounter at any part of being a developer; ranging from hiring to code reviews to production support. 16+ years of engineering each involves a lot of learning, a lot of mistakes, and a lot of wisdom. "
         },
         {
-          imageURL: "@/assets/2026/speakers/x.jpg",
+          imageURL: "@/assets/2026/speakers/JonathanFleckenstein.png",
           name: "Jonathan Fleckenstein",
           bio: "I work with React, TypeScript, and all things JavaScript. When I’m not on a computer I enjoy running and tackling DIY projects.",
           talkTitle: "Zero to Mobile App in 30 Minutes!",
           talkAbstract: "Walk the audience through the steps required to build a mobile app with React Native. Start with showing how to setup React Native. Show hello world example and make some changes to show near instant app updates. Add small feature that utilizes mapping and geolocation APIs. Show off other features like sensor data. Briefly cover the architecture of React Native and how it works."
         },
         {
-          imageURL: "@/assets/2026/speakers/x.jpg",
+          imageURL: "@/assets/2026/speakers/NathanHeffley.png",
           name: "Nathan Heffley",
           bio: "Nathan has over a decade of experience building awesome things for the web. He enjoys helping out with the Tech Lancaster meetup, chatting about Laravel and React, and playing board games.",
           talkTitle: "Using a Computer Hands-Free: Coding by Voice Control No Longer Sucks",
@@ -147,8 +148,8 @@ export default {
           talkAbstract: "FIRST Robotics is a global, student-driven program where young people design, build, fund, and code robots in a collaborative, exciting, and fun learning environment. Team 25650, One Small Step for an Axolotl, an international-award-winning FIRST Tech Challenge (FTC) team, shares how FIRST transforms hands-on STEM experiences to inspire youth (k-12) for pathways for STEM and leadership and how you can get involved! (Includes live demo/test drive)"
         },
         {
-          imageURL: "@/assets/2026/speakers/EdSchwartz.webp",
-          name: "Edward Schwartz",
+          imageURL: "@/assets/2026/speakers/EdSchwartz.jpeg",
+          name: "Ed Schwartz",
           bio: "Ed is a senior researcher at Carnegie Mellon University where he studies automated executable analysis and reverse engineering.",
           talkTitle: "Hacking Around Your Home with Home Assistant",
           talkAbstract: "Home Assistant is an open source software project that allows you to connect all of your smart devices into a single platform.  Have a device that \"isn't supported\"?  No problem!  You can create your own device integrations, or more likely, find someone else who has already done it for you.  I'll share the basics of getting started with Home Assistant in this talk, and share some of the cool hacks and automations that I use at home."
@@ -161,7 +162,7 @@ export default {
           talkAbstract: "How are engineers actually using generative AI day to day? This talk shares survey results from software developers on real-world GenAI use cases, preferred interaction modes (autocompletion, chat, and agentic tools), and how much they trust the results. I explore impacts on productivity and quality—and what these insights mean for educating future software engineers."
         },
         {
-          imageURL: "@/assets/2026/speakers/x.jpg",
+          imageURL: "@/assets/2026/speakers/EricaWindisch.png",
           name: "Erica Windisch",
           bio: "Building cloud-computing and systems automation for 25 years. Erica has been a former maintainer of Docker and OpenStack, contributing to the OCI spec, its implementations, and ecosystem security. She has lead the deployment of public cloud compute and storage infrastructure, industry-scale infrastructure and application observability products, and has battled with running untrusted multi-tenant cloud applications since before know-your-customer existed.",
           talkTitle: "the vibe of agentic infrastructure",
@@ -194,12 +195,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.pageContainer {
+  padding-top: 6rem;
+  background-color: white;
+}
 .pageContent {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   padding-bottom: 2em;
 
   @media screen and (max-width: 960px) {
@@ -216,6 +220,19 @@ export default {
   width: 100%;
 
   min-height: calc(100vh - 28.9rem);
+}
+
+.speakerSection {
+  width: calc(100vw - 4rem);
+  // max-width: 1200px;
+  padding: 4rem;
+  margin-top: 2em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 1.5rem;
 }
 
 h1 {
@@ -240,13 +257,6 @@ p > a {
   &:hover {
     color: #848699;
   }
-}
-
-.line {
-  //background: linear-gradient(305deg, rgba(162,28,217,1) 0%, rgba(254,112,100,1) 100%);
-  background: linear-gradient(305deg, rgb(45, 27, 105) 0%, rgb(17, 153, 142) 100%);
-  margin-bottom: 1em;
-  width: auto;
 }
 
 h4, h3, p, a {
