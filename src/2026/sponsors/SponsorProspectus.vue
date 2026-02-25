@@ -197,6 +197,7 @@ import TopNav from "../sitecontainer/Nav/TopNav.vue";
               <div class="sponsors">
                 <a href="https://www.brewcorelabs.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/FirstSponsor.png" alt="BrewCore Labs Logo" /></a>
                 <a href="https://make717.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
+                <a href="https://www.siml.life/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/deepsiml.png" alt="Deep SIML Labs Logo" /></a>
               </div>
           </div>
 
