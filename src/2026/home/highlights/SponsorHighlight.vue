@@ -24,6 +24,7 @@
             <a href="https://make717.org/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/Make717.svg" alt="Make717 Logo" /></a>
             <a href="https://theindustrialresolution.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/indyres.png" alt="Industrial Resolution Logo" /></a>
             <a href="https://landistechnologies.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/landis.svg" alt="Landis Technologies Logo" /></a>
+            <a href="https://www.siml.life/" target="_blank"><img class="sponsor sponsor--wide" src="/src/2026/assets/sponsors/deepsiml.png" alt="Deep SIML Labs Logo" /></a>
           </div>
           <div class="sponsor-row">
             <a href="https://jfcglobal.com/" target="_blank"><img class="sponsor" src="/src/2026/assets/sponsors/jfc.png" alt="JFC Global Logo" /></a>
