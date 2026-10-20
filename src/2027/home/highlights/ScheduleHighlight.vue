@@ -36,8 +36,8 @@
         <figure class="schedule__media">
           <!-- Replace imageSrc in the script with your real photo, e.g. "/images/schedule.jpg" -->
           <img
-            :src="imageSrc"
-            alt="Illustration of Pennsylvania with a glowing teal circuit running through it"
+            src="/src/2027/assets/IMG_7397.jpeg"
+            alt="Retro room from 2026 conference with old computers and games"
             width="600"
             height="450"
             loading="lazy"
@@ -80,7 +80,7 @@ const placeholderSvg = `
 </svg>`;
 
 // const imageSrc = `data:image/svg+xml;utf8,${encodeURIComponent(placeholderSvg)}`;
-const imageSrc = "/src/2027/assets/IMG_7397.jpeg";
+// const imageSrc = "/src/2027/assets/IMG_7397.jpeg";
 </script>
 
 <style lang="scss" scoped>
