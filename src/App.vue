@@ -1,5 +1,6 @@
 <script setup>
 import { RouterView } from "vue-router";
+import SiteContainer2027 from "./2027/sitecontainer/SiteContainer2027.vue";
 import SiteContainer2026 from "./2026/sitecontainer/SiteContainer2026.vue";
 
 import TopNav2025 from "./components/2025/TopNav.vue";
@@ -32,8 +33,11 @@ import Bottom2026 from "./2026/sitecontainer/Nav/BottomNav.vue";
     <RouterView />
     <Bottom2026 />
   </template>
-  <template v-else-if="['home', '2026', 'sponsors2026', 'schedule2026', 'volunteers2026', 'speakers2026', 'logistics2026'].includes($route.name)">
+  <template v-else-if="['home2026', 'sponsors2026', 'schedule2026', 'volunteers2026', 'speakers2026', 'logistics2026'].includes($route.name)">
     <SiteContainer2026 />
+  </template>
+  <template v-else-if="['home', 'sponsors2027', 'schedule2027', 'volunteers2027', 'speakers2027', 'logistics2027'].includes($route.name)">
+    <SiteContainer2027 />
   </template>
   <template v-else>
     <RouterView />

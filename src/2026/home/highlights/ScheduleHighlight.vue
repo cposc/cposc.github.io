@@ -65,7 +65,7 @@
             </div>
           </div>
           <a href="/2026/schedule" class="card-link secondary-button">View Full Schedule →</a>
-          <button @click="goGetTickets">GET TICKETS</button>
+          <!-- <button @click="goGetTickets">GET TICKETS</button> -->
           <!-- <a href="https://forms.gle/F3hDEHcLZWfmNA89A" target="_blank" class="card-link">Submit a talk proposal now →</a> -->
         </div>
       </div>

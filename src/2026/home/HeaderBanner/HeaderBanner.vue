@@ -45,7 +45,7 @@
       <!-- COMMENT THIS OUT once tickets are available -->
       <!-- <p><i>Tickets will be available Spring 2026.</i></p> -->
       <!-- UNCOMMENT THIS once tickets are available - uncomment and update goGetTickets function with ticket URL -->
-      <button @click="goGetTickets">GET TICKETS</button>
+      <!-- <button @click="goGetTickets">GET TICKETS</button> -->
       <div class="gallery">
         <img
           v-if="currentIndex === 0"

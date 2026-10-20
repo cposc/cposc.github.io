@@ -65,7 +65,7 @@ document.querySelectorAll(".card").forEach((card) => {
   </div>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 * {
   font-family: "Lexend", sans-serif;
 }

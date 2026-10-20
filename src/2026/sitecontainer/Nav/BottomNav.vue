@@ -29,7 +29,8 @@
           <p><a href="/2023">2023 Event</a></p>
           <p><a href="/2024">2024 - The Next Generation</a></p>
           <p><a href="/2025">2025 - Hack to the Future</a></p>
-          <p><a href="/">2026 - Sweet 0x10</a></p>
+          <p><a href="/2026">2026 - Sweet 0x10</a></p>
+          <p><a href="/">2027 - The Current Year</a></p>
         </div>
       </div>
       <div class="copyright">

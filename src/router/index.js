@@ -1,6 +1,12 @@
 import { createRouter, createWebHistory } from "vue-router";
 import { useMenuStore } from "../store/menuStore";
 
+import HomeView2027 from "../2027/home/HomeView.vue";
+// import LogisticsView2027 from "../2027/travel/TravelOptions.vue";
+// import SponsorsView2027 from "../2027/sponsors/SponsorProspectus.vue";
+// import ScheduleView2027 from "../2027/schedule/Schedule.vue";
+// import SpeakersView2027 from "../2027/speakers/Speakers.vue";
+
 import HomeView2026 from "../2026/home/HomeView.vue";
 import LogisticsView2026 from "../2026/travel/TravelOptions.vue";
 import SponsorsView2026 from "../2026/sponsors/SponsorProspectus.vue";
@@ -9,9 +15,7 @@ import SpeakersView2026 from "../2026/speakers/Speakers.vue";
 
 import HomeView2025 from "../views/2025/HomeView.vue";
 import ScheduleView2025 from "../views/2025/ScheduleView.vue";
-import VolunteerView2025 from "../views/2025/VolunteerView.vue";
 import SpeakersView2025 from "../views/2025/SpeakersView.vue";
-import LogisticsView2025 from "../views/2025/LogisticsView.vue";
 import SponsorView2025 from "../views/2025/SponsorsView.vue";
 
 import HomeView2024 from "../views/2024/HomeView.vue";
@@ -37,15 +41,45 @@ const router = createRouter({
     {
       path: "/",
       name: "home",
-      component: HomeView2026,
+      component: HomeView2027,
     },
     {
       path: "/logistics",
+      // name: "logistics2027",
+      // component: LogisticsView2027,
+      redirect: "/",
+    },
+    {
+      path: "/sponsors",
+      // name: "sponsors2027",
+      // component: SponsorsView2027,
+      redirect: "/",
+    },
+    {
+      path: "/2027/schedule",
+      // name: "schedule2027",
+      // component: ScheduleView2027,
+      redirect: "/",
+    },
+    {
+      path: "/2027/speakers",
+      // name: "speakers2027",
+      // component: SpeakersView2027,
+      redirect: "/",
+    },
+    // 2026 pages
+    {
+      path: "/2026",
+      name: "home2026",
+      component: HomeView2026,
+    },
+    {
+      path: "/2026/logistics",
       name: "logistics2026",
       component: LogisticsView2026,
     },
     {
-      path: "/sponsors",
+      path: "/2026/sponsors",
       name: "sponsors2026",
       component: SponsorsView2026,
     },
@@ -69,7 +103,6 @@ const router = createRouter({
       name: "about-nonprofit",
       component: AboutNonprofit,
     },
-    // 2026 pages
     // 2025 conference pages
     {
       path: "/2025",
