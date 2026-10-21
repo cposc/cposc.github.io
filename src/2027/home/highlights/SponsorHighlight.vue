@@ -51,22 +51,31 @@
 <script setup>
 import { computed, ref } from "vue";
 
-const base = "/src/2026/assets/sponsors";
 const paused = ref(false);
 
+// Tell Vite to bundle every file in the sponsors folder and hand back the final
+// (hashed) URLs. Plain string paths like "/src/..." only work in dev, because
+// Vite can't see them as assets and leaves them out of the production build.
+const assets = import.meta.glob("/src/2026/assets/sponsors/*", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+const logo = (file) => assets[`/src/2026/assets/sponsors/${file}`];
+
 const sponsors = [
-  { href: "https://www.webstaurantstore.com/", src: `${base}/WebstaurantStore.png`, alt: "WebstaurantStore Logo" },
-  { href: "https://www.minddevelopmentanddesign.com/", src: `${base}/mind.png`, alt: "MIND Logo" },
-  { href: "https://cargas.com/", src: `${base}/cargas.png`, alt: "Cargas Logo" },
-  { href: "https://www.elastic.co/", src: `${base}/elastic-logo.svg`, alt: "Elastic Logo" },
-  { href: "https://www.brewcorelabs.com/", src: `${base}/FirstSponsor.png`, alt: "BrewCore Labs Logo" },
-  { href: "https://make717.org/", src: `${base}/Make717.svg`, alt: "Make717 Logo" },
-  { href: "https://theindustrialresolution.com/", src: `${base}/indyres.png`, alt: "Industrial Resolution Logo" },
-  { href: "https://landistechnologies.com/", src: `${base}/landis.svg`, alt: "Landis Technologies Logo" },
-  { href: "https://www.siml.life/", src: `${base}/deepsiml.png`, alt: "Deep SIML Labs Logo" },
-  { href: "https://jfcglobal.com/", src: `${base}/jfc.png`, alt: "JFC Global Logo" },
-  { href: "https://scpaworks.org/", src: `${base}/SCPAWorks.png`, alt: "SCPA Works Logo" },
-  { href: "https://www.tccp.org/", src: `${base}/TCCP.png`, alt: "TCCP Logo" },
+  { href: "https://www.webstaurantstore.com/", src: logo("WebstaurantStore.png"), alt: "WebstaurantStore Logo" },
+  { href: "https://www.minddevelopmentanddesign.com/", src: logo("mind.png"), alt: "MIND Logo" },
+  { href: "https://cargas.com/", src: logo("Cargas.png"), alt: "Cargas Logo" },
+  { href: "https://www.elastic.co/", src: logo("elastic-logo.svg"), alt: "Elastic Logo" },
+  { href: "https://www.brewcorelabs.com/", src: logo("FirstSponsor.png"), alt: "BrewCore Labs Logo" },
+  { href: "https://make717.org/", src: logo("Make717.svg"), alt: "Make717 Logo" },
+  { href: "https://theindustrialresolution.com/", src: logo("indyres.png"), alt: "Industrial Resolution Logo" },
+  { href: "https://landistechnologies.com/", src: logo("landis.svg"), alt: "Landis Technologies Logo" },
+  { href: "https://www.siml.life/", src: logo("deepsiml.png"), alt: "Deep SIML Labs Logo" },
+  { href: "https://jfcglobal.com/", src: logo("jfc.png"), alt: "JFC Global Logo" },
+  { href: "https://scpaworks.org/", src: logo("SCPAWorks.png"), alt: "SCPA Works Logo" },
+  { href: "https://www.tccp.org/", src: logo("TCCP.png"), alt: "TCCP Logo" },
 ];
 
 // Rendered twice so the scroll loops with no visible jump.
@@ -76,7 +85,7 @@ const loop = computed(() => [...sponsors, ...sponsors]);
 <style lang="scss" scoped>
 $black: #1b1d21;
 $teal: #14b8a6;
-$red: #ef3340;
+$red: #7B1E2B;
 $gray: #4a4e55;
 
 .sponsors {

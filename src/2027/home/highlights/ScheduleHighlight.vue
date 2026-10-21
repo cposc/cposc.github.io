@@ -88,6 +88,7 @@ $black: #1b1d21;
 $teal: #14b8a6;
 $teal-deep: #0f766e;
 $red: #ef3340;
+$maroon: #7B1E2B;
 $gray: #4a4e55;
 
 .schedule {
@@ -153,7 +154,7 @@ $gray: #4a4e55;
       position: absolute;
       width: 34px;
       height: 34px;
-      border: 3px solid $red;
+      border: 3px solid $maroon;
       pointer-events: none;
     }
     &::before {

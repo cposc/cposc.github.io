@@ -110,6 +110,7 @@ $teal: #14b8a6;
 $teal-bright: #2dd4bf;
 $teal-pulse: #5eead4;
 $red: #ef3340;
+$maroon: #7B1E2B;
 $gray: #4a4e55;
 
 .travel {
@@ -121,7 +122,7 @@ $gray: #4a4e55;
     text-wrap: balance;
     // Black-to-red gradient title
     color: $black;
-    background: linear-gradient(90deg, $black 0%, $red 100%);
+    background: linear-gradient(90deg, $black 0%, $maroon 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -140,7 +141,7 @@ $gray: #4a4e55;
     width: 56px;
     height: 3px;
     margin: 0.9rem auto 0;
-    background: $red;
+    background: $maroon;
     -webkit-text-fill-color: initial;
   }
 
