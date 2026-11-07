@@ -21,6 +21,9 @@
         <li>
           <!-- <a href="/#volunteer">Volunteer</a> -->
         </li>
+        <li>
+          <a href="/about-nonprofit">Nonprofit</a>
+        </li>
         <!-- <li>
           <a href="#register">Join Us</a>
         </li> -->

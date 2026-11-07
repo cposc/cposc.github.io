@@ -121,12 +121,12 @@ h1 {
 .event-date {
   font-family: "Lexend", sans-serif !important;
   font-size: 18px;
-  color: #0d9488;
+  color: #134f5c; // prospectus dark blue
   margin-bottom: 1rem;
   padding: 8px 24px;
-  background-color: #e0f2f1;
+  background-color: #e9f1f2; // light wash of the blue
   border-radius: 10px;
-  border: 1px solid #0d9488;
+  border: 1px solid #134f5c;
   width: fit-content;
 }
 
@@ -295,4 +295,4 @@ h1 {
     display: none;
   }
 }
-</style>
+</style>s

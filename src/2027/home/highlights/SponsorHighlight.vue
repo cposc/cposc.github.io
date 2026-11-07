@@ -34,6 +34,20 @@
           Sponsors help power the future of open source in Central PA. Join us
           in celebrating the sponsors from last year!
         </p>
+        <div class="sponsors__actions">
+          <a
+            class="btn-primary"
+            :href="prospectusUrl"
+            target="_blank"
+            rel="noopener"
+            aria-label="Download the sponsorship prospectus (PDF, opens in a new tab)"
+          >
+            Download the prospectus (PDF)
+          </a>
+          <a class="btn-secondary" :href="sponsorsPageUrl">
+            Visit our sponsors page
+          </a>
+        </div>
         <button
           type="button"
           class="pause"
@@ -52,6 +66,10 @@
 import { computed, ref } from "vue";
 
 const paused = ref(false);
+
+// TODO: swap in the real links. If the PDF lives in your /public folder, "/file.pdf" works as-is.
+const prospectusUrl = "/CPOSC_2027_Sponsorship_Prospectus.pdf";
+const sponsorsPageUrl = "/sponsors";
 
 // Tell Vite to bundle every file in the sponsors folder and hand back the final
 // (hashed) URLs. Plain string paths like "/src/..." only work in dev, because
@@ -130,6 +148,20 @@ $gray: #4a4e55;
     align-items: center;
     gap: 1rem;
     margin-top: 1.5rem;
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.75rem;
+    margin: 0.5rem 0 0.25rem;
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
   }
 
   &__note {
@@ -256,6 +288,44 @@ $gray: #4a4e55;
   }
 }
 
+/* ---------- Sponsorship links ---------- */
+.btn-primary,
+.btn-secondary {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  &:focus-visible {
+    outline: 3px solid $teal;
+    outline-offset: 3px;
+  }
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, $black, $red);
+  color: #fff;
+
+  &:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 18px rgba(123, 30, 43, 0.4);
+  }
+}
+
+.btn-secondary {
+  background: #fff;
+  color: $black;
+  border: 1.5px solid $black;
+
+  &:hover {
+    border-color: $teal;
+    color: #0d9488;
+  }
+}
+
 /* ---------- Pause control ---------- */
 .pause {
   display: inline-flex;
@@ -319,8 +389,13 @@ $gray: #4a4e55;
     display: none;
   }
 
-  .tile a {
+  .tile a,
+  .btn-primary,
+  .btn-secondary {
     transition: none;
+  }
+  .btn-primary:hover {
+    transform: none;
   }
 }
 </style>

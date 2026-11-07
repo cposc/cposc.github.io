@@ -3,7 +3,7 @@ import { useMenuStore } from "../store/menuStore";
 
 import HomeView2027 from "../2027/home/HomeView.vue";
 // import LogisticsView2027 from "../2027/travel/TravelOptions.vue";
-// import SponsorsView2027 from "../2027/sponsors/SponsorProspectus.vue";
+import SponsorsView2027 from "../2027/sponsors/SponsorProspectus.vue";
 // import ScheduleView2027 from "../2027/schedule/Schedule.vue";
 // import SpeakersView2027 from "../2027/speakers/Speakers.vue";
 
@@ -51,9 +51,9 @@ const router = createRouter({
     },
     {
       path: "/sponsors",
-      // name: "sponsors2027",
-      // component: SponsorsView2027,
-      redirect: "/",
+      name: "sponsors2027",
+      component: SponsorsView2027,
+      // redirect: "/",
     },
     {
       path: "/2027/schedule",

@@ -1,1222 +1,1262 @@
+<script setup>
+import { computed, ref } from "vue";
+import TopNav from "../2027/sitecontainer/Nav/TopNav.vue"; // same import as the sponsors page; adjust if this file lives elsewhere
+
+const email = "sponsor@localareanetworks.org";
+const sponsorsPageUrl = "/sponsors"; // TODO: confirm the route
+
+// Fill these in when you have them. Anything left empty is hidden, not shown blank.
+// (An EIN and mailing address are the first things an auditor or lawyer will look for.)
+const legal = {
+  ein: "", // e.g. "12-3456789"
+  address: "", // e.g. "PO Box 000, Lancaster, PA 17601"
+  stateOfIncorporation: "", // e.g. "Pennsylvania"
+};
+
+const glance = computed(() =>
+  [
+    { label: "Organization", value: "Local Area Networks (LAN)" },
+    { label: "Tax status", value: "501(c)(3) nonprofit organization" },
+    { label: "Established", value: "2021" },
+    { label: "Primary program", value: "The Central Pennsylvania Open Source Conference (CPOSC), an annual one-day technology conference in Lancaster, PA" },
+    { label: "Run by", value: "A volunteer board of directors" },
+    legal.ein && { label: "EIN", value: legal.ein },
+    legal.stateOfIncorporation && { label: "Incorporated in", value: legal.stateOfIncorporation },
+    legal.address && { label: "Mailing address", value: legal.address },
+  ].filter(Boolean)
+);
+
+const pillars = [
+  {
+    title: "Strengthening the tech community",
+    body: ["We create a welcoming space for technologists to learn, share ideas, and build real connections that support the long-term growth of tech in Central PA and Lancaster."],
+  },
+  {
+    title: "Connecting employers & talent",
+    body: [
+      "CPOSC is a place where hiring managers, engineers, designers, and early-career technologists meet.",
+      "We help employers find great people, and help attendees discover new opportunities.",
+    ],
+  },
+  {
+    title: "Free student access",
+    body: [
+      "Every student should have a path into the tech community.",
+      "We offer free student tickets to remove financial barriers and help students meet mentors, employers, and peers.",
+    ],
+  },
+  {
+    title: "Economic development",
+    body: ["We support a stronger regional tech economy by showcasing local innovation and creating opportunities for companies and professionals to grow."],
+  },
+];
+
+const stats = [
+  { num: "220+", label: "annual participants" },
+  { num: "100%", label: "volunteer-run" },
+  { num: "Free", label: "student tickets" },
+];
+
+const impactList = [
+  { lead: "Attendee participation", text: "In recent years, CPOSC has welcomed approximately 220 participants for a full day of learning, networking, and career development." },
+  { lead: "Student attendance", text: "Free student tickets expand access for early-career technologists and future leaders." },
+  { lead: "Sponsor participation", text: "A broad base of regional sponsors reflects strong community support and creates more opportunities for meaningful interaction between organizations, technologists, and students." },
+];
+
+const values = [
+  { title: "Access", text: "Everyone belongs here, regardless of background or experience." },
+  { title: "Connection", text: "Relationships fuel career growth and community strength." },
+  { title: "Inclusion", text: "We welcome diverse perspectives and lived experiences." },
+  { title: "Growth", text: "We support learning, progress, and lifelong curiosity." },
+  { title: "Community", text: "We build an ecosystem that helps people succeed together." },
+];
+
+const measures = [
+  "Overall attendee numbers",
+  "Student registrations and participation",
+  "Sponsor participation and satisfaction",
+  "Speaker and attendee feedback",
+];
+
+const board = [
+  { name: "Joel Walker", initials: "JW", href: "https://www.linkedin.com/in/joeldanielwalker/" },
+  { name: "Elyse Ewing", initials: "EE", href: "https://www.linkedin.com/in/elyseewing/" },
+  { name: "Ken Richard", initials: "KR", href: "https://www.linkedin.com/in/richardken/" },
+  { name: "Emma Wertz", initials: "EW", href: "https://www.linkedin.com/in/emmaliwertz/" },
+];
+
+// mailto: does nothing without an email app, so offer a copy button too.
+const copied = ref(false);
+let copyTimer;
+const copyEmail = async () => {
+  try {
+    await navigator.clipboard.writeText(email);
+  } catch {
+    const t = document.createElement("textarea");
+    t.value = email;
+    t.setAttribute("readonly", "");
+    t.style.position = "fixed";
+    t.style.opacity = "0";
+    document.body.appendChild(t);
+    t.select();
+    try { document.execCommand("copy"); } catch { /* ignore */ }
+    document.body.removeChild(t);
+  }
+  copied.value = true;
+  clearTimeout(copyTimer);
+  copyTimer = setTimeout(() => (copied.value = false), 2500);
+};
+</script>
+
 <template>
-  <div class="pageContainer">
-    <img
-      class="hero-image"
-      src="/src/2026/assets/hero2026.png"
-      alt="Hero Image - Circuit board and clouds"
-    />
-    <div class="contentContainer">
-      <div class="header-section">
-        <h1>About the Non-Profit Behind CPOSC</h1>
-        <p class="tagline">
-          Building Central Pennsylvania's tech future, one connection at a time
+  <TopNav></TopNav>
+
+  <main class="lan">
+    <!-- ================= Hero: the one-sentence answer ================= -->
+    <header class="lan-hero">
+      <svg class="lan-hero__circuit" viewBox="0 0 600 400" preserveAspectRatio="xMaxYMid slice" aria-hidden="true">
+        <g fill="none" stroke-linejoin="round">
+          <path class="trace" d="M0,300 H180 L230,250 H380 L420,210 H600" />
+          <path class="flow" pathLength="100" d="M0,300 H180 L230,250 H380 L420,210 H600" />
+          <path class="trace" d="M0,120 H140 L180,160 H320 V340 H600" />
+          <path class="flow flow--slow" pathLength="100" d="M0,120 H140 L180,160 H320 V340 H600" />
+        </g>
+        <circle class="node" cx="230" cy="250" r="5" />
+        <circle class="node" cx="420" cy="210" r="5" />
+        <circle class="dot" cx="320" cy="340" r="6" />
+      </svg>
+
+      <div class="lan-wrap lan-hero__body">
+        <p class="lan-hero__badge">501(c)(3) nonprofit organization</p>
+        <h1>Local Area Networks</h1>
+        <p class="lan-hero__lead">
+          Local Area Networks (LAN) is the nonprofit that organizes and operates the
+          <strong>Central Pennsylvania Open Source Conference (CPOSC)</strong>, an annual
+          technology conference in Lancaster, PA. CPOSC is our primary focus.
+        </p>
+        <div class="lan-hero__actions">
+          <a class="lan-btn lan-btn--light" href="https://cposc.org" target="_blank" rel="noopener"
+             aria-label="Visit cposc.org (opens in a new tab)">Visit cposc.org</a>
+          <a class="lan-btn lan-btn--ghost" href="#contact">Contact us</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ================= At a glance ================= -->
+    <section class="lan-band" aria-labelledby="glance-title">
+      <div class="lan-wrap">
+        <h2 id="glance-title" class="lan-title lan-title--teal">Local Area Networks at a glance</h2>
+
+        <dl class="lan-glance">
+          <div v-for="g in glance" :key="g.label" class="lan-glance__row">
+            <dt>{{ g.label }}</dt>
+            <dd>{{ g.value }}</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= Mission ================= -->
+    <section class="lan-band lan-band--blue" aria-labelledby="mission-title">
+      <div class="lan-wrap lan-wrap--narrow">
+        <h2 id="mission-title" class="lan-mission__label">Our mission</h2>
+        <p class="lan-mission__text">
+          We support the growth of Central PA’s tech culture and economy by bringing together
+          technology professionals, enthusiasts, companies, and students to learn, connect, and
+          explore the ideas, relationships, and opportunities that move our region forward.
         </p>
       </div>
+    </section>
 
-      <div class="pageContent">
-        <!-- Who We Are -->
-        <section class="content-section who-we-are">
-          <h2>Who We Are</h2>
-          <p class="intro-text">
-            Local Area Networks (LAN) is the 501(c)(3) nonprofit that operates
-            the Central Pennsylvania Open Source Conference (CPOSC). We bring
-            together technology professionals from Lancaster and Central PA to
-            connect, learn, and grow. We support a thriving regional tech
-            community and create opportunities for both students and experienced
-            technologists by fostering connection, education, and
-            entrepreneurship.
-          </p>
-          <div class="mission-box">
-            <div class="mission-icon">✦</div>
-            <h3>Our Mission</h3>
-            <p class="mission-statement">
-              We support the growth of Central PA’s tech culture and economy by
-              bringing together technology professionals, enthusiasts,
-              companies, and students to learn, connect, and explore the ideas,
-              relationships, and opportunities that move our region forward.
-            </p>
-          </div>
-        </section>
-
-        <!-- Our History -->
-        <section class="content-section history-section">
-          <div class="year-badge">16+ Years</div>
-          <h2>Our History</h2>
-          <p>
-            The Central PA Open Source Conference (CPOSC) has been a cornerstone
-            of the regional tech community for more than 16 years. In 2021,
-            Local Area Networks was established as a nonprofit to formally
-            steward and grow the conference, ensuring its long-term
-            sustainability and expanding support for technology professionals
-            and students throughout Central Pennsylvania.
-          </p>
-        </section>
-
-        <!-- Why We Exist -->
-        <section class="content-section why-section">
-          <h2>Why We Exist</h2>
-          <p class="section-intro">Four pillars drive everything we do:</p>
-
-          <div class="goals-grid">
-            <div class="goal-item">
-              <div class="goal-number">01</div>
-              <h3>Strengthening the Tech Community</h3>
-              <p>
-                We create a welcoming space for technologists to learn, share
-                ideas, and build real connections that support the long-term
-                growth of tech in Central PA and Lancaster.
-              </p>
-            </div>
-
-            <div class="goal-item">
-              <div class="goal-number">02</div>
-              <h3>Connecting Employers &amp; Talent</h3>
-              <p>
-                CPOSC is a place where hiring managers, engineers, designers,
-                and early-career technologists meet.
-              </p>
-              <p>
-                We help employers find great people — and help attendees
-                discover new opportunities.
-              </p>
-            </div>
-
-            <div class="goal-item">
-              <div class="goal-number">03</div>
-              <h3>Free Student Access</h3>
-              <p>Every student should have a path into the tech community.</p>
-              <p>
-                We offer free student tickets to remove financial barriers and
-                help students meet mentors, employers, and peers.
-              </p>
-            </div>
-
-            <div class="goal-item">
-              <div class="goal-number">04</div>
-              <h3>Economic Development</h3>
-              <p>
-                We support a stronger regional tech economy by showcasing local
-                innovation and creating opportunities for companies and
-                professionals to grow.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <!-- What We Do -->
-        <section class="content-section what-section">
-          <h2>What We Do</h2>
-          <div class="flagship-program">
-            <div class="flagship-header">
-              <span class="flagship-badge">Annual Event</span>
-              <h3>CPOSC — Central Pennsylvania Open Source Conference</h3>
-            </div>
+    <!-- ================= Who we are + What we do ================= -->
+    <section class="lan-band" aria-labelledby="what-title">
+      <div class="lan-wrap">
+        <div class="lan-cols">
+          <div>
+            <h2 id="what-title" class="lan-title lan-title--maroon">What we do</h2>
             <p>
-              LAN operates one flagship program: a one-day event featuring
-              talks, workshops, networking, career opportunities, and community
-              building.
+              Local Area Networks is a 501(c)(3) nonprofit that brings together technology
+              professionals from Lancaster and Central PA to connect, learn, and grow. We support a
+              thriving regional tech community and create opportunities for both students and
+              experienced technologists by fostering connection, education, and entrepreneurship.
             </p>
             <p>
-              Our focus is on high-quality content, diverse voices, and
-              meaningful interaction between attendees, companies, and students.
-            </p>
-          </div>
-        </section>
-
-        <!-- Our Values -->
-        <section class="content-section values-section">
-          <h2>Our Values</h2>
-          <div class="values-list">
-            <div class="value-item">
-              <div class="value-icon">🤝</div>
-              <h3>Access</h3>
-              <p>
-                Everyone belongs here, regardless of background or experience.
-              </p>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🔗</div>
-              <h3>Connection</h3>
-              <p>Relationships fuel career growth and community strength.</p>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">🌍</div>
-              <h3>Inclusion</h3>
-              <p>We welcome diverse perspectives and lived experiences.</p>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">📈</div>
-              <h3>Growth</h3>
-              <p>We support learning, progress, and lifelong curiosity.</p>
-            </div>
-            <div class="value-item">
-              <div class="value-icon">💡</div>
-              <h3>Community</h3>
-              <p>We build an ecosystem that helps people succeed together.</p>
-            </div>
-          </div>
-        </section>
-
-        <!-- Impact & Outcomes -->
-        <section class="content-section impact-section">
-          <h2>Impact &amp; Outcomes</h2>
-          <div class="impact-highlight">
-            <p class="impact-lead">
-              CPOSC delivers large community impact at a comparatively low cost.
-              Because the conference is volunteer-run and operates on a
-              grassroots model, funds go almost entirely toward high-impact
-              items—student access, venue rental, and meals that make the event
-              welcoming and inclusive.
+              LAN is governed by a volunteer board of directors, and the conference it runs is
+              volunteer-run.
             </p>
           </div>
 
-          <div class="stats-grid">
-            <div class="stat-card">
-              <div class="stat-number">220+</div>
-              <div class="stat-label">Annual Participants</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">Volunteer-Run</div>
-            </div>
-            <div class="stat-card">
-              <div class="stat-number">Free</div>
-              <div class="stat-label">Student Tickets</div>
-            </div>
-          </div>
-
-          <ul class="impact-list">
-            <li>
-              <strong>Attendee Participation:</strong> In recent years, CPOSC
-              has welcomed approximately 220 participants for a full day of
-              learning, networking, and career development.
-            </li>
-            <li>
-              <strong>Student Attendance:</strong> Free student tickets expand
-              access for early-career technologists and future leaders.
-            </li>
-            <li>
-              <strong>Sponsor Participation:</strong> A broad base of regional
-              sponsors reflects strong community support and creates more
-              opportunities for meaningful interaction between organizations,
-              technologists, and students.
-            </li>
-          </ul>
-        </section>
-
-        <!-- How We Measure Success -->
-        <section class="content-section measurement-section">
-          <h2>How We Measure Success</h2>
-          <p>
-            We use post-event surveys and participation data to understand our
-            impact and improve the conference each year.
-          </p>
-          <div class="metrics-grid">
-            <div class="metric-item">
-              <span class="metric-icon">👥</span>
-              <span>Overall attendee numbers</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-icon">🎓</span>
-              <span>Student registrations and participation</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-icon">🤝</span>
-              <span>Sponsor participation and satisfaction</span>
-            </div>
-            <div class="metric-item">
-              <span class="metric-icon">💬</span>
-              <span>Speaker and attendee feedback</span>
-            </div>
-          </div>
-          <p class="closing-text">
-            These insights help us refine the experience, strengthen the
-            regional tech pipeline, and better serve future leaders in Central
-            Pennsylvania.
-          </p>
-        </section>
-
-        <!-- Support the Mission -->
-        <section class="content-section support-section">
-          <h2>Support the Mission</h2>
-          <p class="section-intro">
-            There are several ways to help us strengthen the Central PA tech
-            community:
-          </p>
-
-          <div class="support-options">
-            <div class="support-item sponsor-card">
-              <div class="support-header">
-                <h3><span class="support-icon">🎯</span> Sponsor CPOSC</h3>
-              </div>
-              <p>
-                Reach hundreds of technologists, hiring managers, students, and
-                industry leaders. Sponsors are recognized on our website, event
-                materials, and conference t-shirts, with opportunities for
-                additional visibility throughout the event.
-              </p>
-            </div>
-
-            <div class="support-item donate-card">
-              <div class="support-header">
-                <h3><span class="support-icon">💝</span> Donate</h3>
-              </div>
-              <p>
-                Support free student tickets, venue costs, and meals that make
-                the conference welcoming and accessible to all.
-              </p>
-            </div>
-
-            <div class="support-item volunteer-card">
-              <div class="support-header">
-                <h3><span class="support-icon">✨</span> Volunteer</h3>
-              </div>
-              <p>
-                Help shape the conference experience and connect with the
-                community behind the scenes.
-              </p>
-            </div>
-          </div>
-
-          <div class="cta-box">
-            <p class="cta-text">
-              If you're interested in contributing, please reach out — we'd love
-              to work with you.
+          <article class="lan-flagship">
+            <span class="lan-flagship__badge">Our program</span>
+            <h3>CPOSC: Central Pennsylvania Open Source Conference</h3>
+            <p>
+              LAN operates one flagship program: a one-day event featuring talks, workshops,
+              networking, career opportunities, and community building.
             </p>
-          </div>
-        </section>
-
-        <!-- Board of Directors -->
-        <section class="content-section board-section">
-          <h2>Board of Directors</h2>
-          <p>
-            LAN is governed by a volunteer board of directors who are passionate
-            about strengthening Central Pennsylvania's tech community.
-          </p>
-          <div class="board-grid">
-            <a
-              href="https://www.linkedin.com/in/joeldanielwalker/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="board-member"
-            >
-              <div class="board-avatar">JW</div>
-              <h3>Joel Walker</h3>
-              <p class="board-role">Board Member</p>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/elyseewing/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="board-member"
-            >
-              <div class="board-avatar">EE</div>
-              <h3>Elyse Ewing</h3>
-              <p class="board-role">Board Member</p>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/richardken/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="board-member"
-            >
-              <div class="board-avatar">KR</div>
-              <h3>Ken Richard</h3>
-              <p class="board-role">Board Member</p>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/emmaliwertz/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="board-member"
-            >
-              <div class="board-avatar">EW</div>
-              <h3>Emma Wertz</h3>
-              <p class="board-role">Board Member</p>
-            </a>
-            <a
-              href="https://www.linkedin.com/in/brandonsharter/"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="board-member"
-            >
-              <div class="board-avatar">BH</div>
-              <h3>Brandon Harter</h3>
-              <p class="board-role">Board Member</p>
-            </a>
-          </div>
-        </section>
-
-        <!-- Contact -->
-        <section class="content-section contact-section">
-          <h2>Contact Us</h2>
-          <p>Have questions about LAN, CPOSC, or how to get involved?</p>
-          <div class="contact-info">
-            <div class="contact-item">
-              <strong>Email:</strong>
-              <a href="mailto:sponsor@localareanetworks.org"
-                >sponsor@localareanetworks.org</a
-              >
-            </div>
-            <div class="contact-item">
-              <strong>Website:</strong>
-              <a href="https://cposc.org" target="_blank">https://cposc.org</a>
-            </div>
-          </div>
-        </section>
+            <p>
+              Our focus is on high-quality content, diverse voices, and meaningful interaction
+              between attendees, companies, and students.
+            </p>
+          </article>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+
+    <!-- ================= Why we exist ================= -->
+    <section class="lan-band lan-band--tint" aria-labelledby="why-title">
+      <div class="lan-wrap">
+        <h2 id="why-title" class="lan-title lan-title--teal">Why we exist</h2>
+        <p class="lan-lead">Four goals drive everything we do:</p>
+
+        <div class="lan-pillars">
+          <article v-for="(p, i) in pillars" :key="p.title" class="lan-pillar" :class="i % 2 ? 'lan-pillar--gray' : 'lan-pillar--blue'">
+            <h3>{{ p.title }}</h3>
+            <p v-for="(t, j) in p.body" :key="j">{{ t }}</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Impact: how funds are used ================= -->
+    <section class="lan-band lan-band--blue" aria-labelledby="impact-title">
+      <div class="lan-wrap">
+        <h2 id="impact-title" class="lan-title lan-title--light">Impact &amp; how funds are used</h2>
+        <p class="lan-impact__lead">
+          CPOSC delivers large community impact at a comparatively low cost. Because the conference
+          is volunteer-run and operates on a grassroots model, funds go almost entirely toward
+          high-impact items: student access, venue rental, and meals that make the event welcoming
+          and inclusive.
+        </p>
+
+        <ul class="lan-stats">
+          <li v-for="s in stats" :key="s.label" class="lan-stat">
+            <span class="lan-stat__num">{{ s.num }}</span>
+            <span class="lan-stat__label">{{ s.label }}</span>
+          </li>
+        </ul>
+
+        <ul class="lan-impact__list">
+          <li v-for="item in impactList" :key="item.lead">
+            <strong>{{ item.lead }}:</strong> {{ item.text }}
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= History ================= -->
+    <section class="lan-band" aria-labelledby="history-title">
+      <div class="lan-wrap">
+        <h2 id="history-title" class="lan-title lan-title--maroon lan-title--center">Our history</h2>
+
+        <ol class="lan-timeline">
+          <li>
+            <h3>2010: The first CPOSC</h3>
+            <p>
+              The first Central PA Open Source Conference was held in 2010. It has been a
+              cornerstone of the regional tech community for more than 16 years.
+            </p>
+          </li>
+          <li>
+            <h3>2021: LAN is established</h3>
+            <p>
+              Local Area Networks was established as a nonprofit to formally steward and grow the
+              conference, ensuring its long-term sustainability and expanding support for technology
+              professionals and students throughout Central Pennsylvania.
+            </p>
+          </li>
+          <li class="lan-timeline__next">
+            <h3>2027: CPOSC's 17th year</h3>
+            <p>
+              We're planning the next CPOSC for Saturday, April 3rd, 2027, at The Ware Center in
+              downtown Lancaster.
+            </p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= Values + measurement ================= -->
+    <section class="lan-band lan-band--tint" aria-labelledby="values-title">
+      <div class="lan-wrap">
+        <h2 id="values-title" class="lan-title lan-title--teal">Our values</h2>
+
+        <ul class="lan-values">
+          <li v-for="v in values" :key="v.title">
+            <h3>{{ v.title }}</h3>
+            <p>{{ v.text }}</p>
+          </li>
+        </ul>
+
+        <div class="lan-measure">
+          <h3>How we measure success</h3>
+          <p>
+            We use post-event surveys and participation data to understand our impact and improve
+            the conference each year. We track:
+          </p>
+          <ul class="lan-chips">
+            <li v-for="m in measures" :key="m">{{ m }}</li>
+          </ul>
+          <p>
+            These insights help us refine the experience, strengthen the regional tech pipeline, and
+            better serve future leaders in Central Pennsylvania.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= Support ================= -->
+    <section class="lan-band" aria-labelledby="support-title">
+      <div class="lan-wrap">
+        <h2 id="support-title" class="lan-title lan-title--maroon lan-title--center">Support the mission</h2>
+        <p class="lan-lead lan-lead--center">
+          There are several ways to help us strengthen the Central PA tech community:
+        </p>
+
+        <div class="lan-support">
+          <article class="lan-support__item lan-support__item--blue">
+            <h3>Sponsor CPOSC</h3>
+            <p>
+              Reach hundreds of technologists, hiring managers, students, and industry leaders.
+              Sponsors are recognized on our website, event materials, and conference t-shirts, with
+              opportunities for additional visibility throughout the event.
+            </p>
+            <a class="lan-link" :href="sponsorsPageUrl">See sponsorship levels</a>
+          </article>
+          <article class="lan-support__item lan-support__item--gray">
+            <h3>Donate</h3>
+            <p>
+              Support free student tickets, venue costs, and meals that make the conference
+              welcoming and accessible to all.
+            </p>
+          </article>
+          <article class="lan-support__item lan-support__item--blue">
+            <h3>Volunteer</h3>
+            <p>
+              Help shape the conference experience and connect with the community behind the
+              scenes.
+            </p>
+          </article>
+        </div>
+
+        <p class="lan-support__note">
+          If you're interested in contributing, please reach out. We'd love to work with you.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= Board ================= -->
+    <section class="lan-band lan-band--tint" aria-labelledby="board-title">
+      <div class="lan-wrap">
+        <h2 id="board-title" class="lan-title lan-title--teal">Board of directors</h2>
+        <p class="lan-lead">
+          LAN is governed by a volunteer board of directors who are passionate about strengthening
+          Central Pennsylvania's tech community.
+        </p>
+
+        <ul class="lan-board">
+          <li v-for="m in board" :key="m.name">
+            <a :href="m.href" target="_blank" rel="noopener noreferrer"
+               :aria-label="`${m.name} on LinkedIn (opens in a new tab)`">
+              <span class="lan-board__avatar" aria-hidden="true">{{ m.initials }}</span>
+              <span class="lan-board__name">{{ m.name }}</span>
+              <span class="lan-board__role">Board Member</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= Contact ================= -->
+    <section id="contact" class="lan-band lan-band--end" aria-labelledby="contact-title">
+      <div class="lan-wrap">
+        <div class="lan-cta">
+          <div>
+            <h2 id="contact-title">Contact Local Area Networks</h2>
+            <p>Have questions about LAN, CPOSC, or how to get involved?</p>
+            <p class="lan-cta__alt">
+              No email app? Copy the address and paste it into any email.
+              <a :href="`mailto:${email}`">Open in your email app</a>
+            </p>
+          </div>
+          <div class="lan-cta__actions">
+            <button type="button" class="lan-btn lan-btn--light" @click="copyEmail">
+              <span class="lan-swap">
+                <span :class="{ 'lan-swap--off': copied }">Copy {{ email }}</span>
+                <span :class="{ 'lan-swap--off': !copied }" aria-hidden="true">Copied!</span>
+              </span>
+            </button>
+            <a class="lan-btn lan-btn--ghost" href="https://cposc.org" target="_blank" rel="noopener"
+               aria-label="Visit cposc.org (opens in a new tab)">cposc.org</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <span class="lan-sr" role="status" aria-live="polite">{{ copied ? "Email address copied" : "" }}</span>
+  </main>
 </template>
 
 <style lang="scss" scoped>
-.hero-image {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
+$ink: #0b0c0e;
+$black: #1b1d21;
+$gray: #4a4e55;
+$line: #e5e7ea;
+$teal: #14b8a6;
+$teal-deep: #0d9488;
+$teal-bright: #2dd4bf;
+$teal-pulse: #5eead4;
+$maroon: #7b1e2b;
+$red: #ef3340;
+$blue: #134f5c; // prospectus dark blue
+$blue-deep: #0e3b45;
+$blue-tint: #e9f1f2;
+$blue-line: #cddfe3;
 
-  @media screen and (max-width: 600px) {
-    height: 150px;
-  }
-}
-
-.pageContainer {
-  margin-bottom: 2rem;
-  font-family: "Lexend", Arial, sans-serif;
-  background-color: #0e0723;
-  padding-top: 0;
-  overflow-x: hidden;
-  width: 100%;
-  box-sizing: border-box;
-}
-
-.contentContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  background-color: #ffffff;
-  width: 100%;
-  min-height: calc(100vh - 28.9rem);
-  box-sizing: border-box;
+// Every class on this page is prefixed "lan-" so none of the site's global
+// card/stat/grid styles can leak in.
+.lan {
+  color: $gray;
+  line-height: 1.7;
   overflow-x: hidden;
 }
 
-.header-section {
-  max-width: 960px;
+.lan-wrap {
   width: 100%;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 3rem 2rem 1.5rem 2rem;
-  text-align: center;
+  padding: 0 1.25rem;
   box-sizing: border-box;
 
-  @media screen and (max-width: 600px) {
-    padding: 2rem 1rem 1rem 1rem;
-  }
-
-  @media screen and (max-width: 400px) {
-    padding: 1.5rem 0.75rem 1rem 0.75rem;
-  }
-
-  h1 {
-    font-size: 2.75rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 0.75rem 0;
-    letter-spacing: -0.02em;
-    line-height: 1.2;
-
-    @media screen and (max-width: 600px) {
-      font-size: 2rem;
-    }
-  }
-
-  .tagline {
-    font-size: 1.15rem;
-    color: #64748b;
-    font-weight: 400;
-    margin: 0;
-    letter-spacing: 0.01em;
-    text-align: center;
-
-    @media screen and (max-width: 600px) {
-      font-size: 1rem;
-    }
+  &--narrow {
+    max-width: 820px;
   }
 }
 
-.pageContent {
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  width: 100%;
-  max-width: 960px;
-  margin: 0 auto;
-  padding-bottom: 3rem;
-
-  @media screen and (max-width: 960px) {
-    padding-right: 1rem;
-    padding-left: 1rem;
-  }
-
-  @media screen and (max-width: 600px) {
-    padding-right: 0;
-    padding-left: 0;
-  }
+h1,
+h2,
+h3 {
+  font-family: "Lexend", sans-serif;
+  margin: 0;
+  line-height: 1.2;
 }
 
-.content-section {
-  width: 100%;
-  padding: 2.5rem 2rem 0 2rem;
-  box-sizing: border-box;
-
-  @media screen and (max-width: 500px) {
-    padding: 2rem 1rem 0 1rem;
-  }
-
-  @media screen and (max-width: 400px) {
-    padding: 2rem 0.75rem 0 0.75rem;
-  }
-
-  h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    color: #0f172a;
-    margin-bottom: 1rem;
-    margin-top: 0;
-    letter-spacing: -0.01em;
-    line-height: 1.3;
-    text-align: left;
-
-    @media screen and (max-width: 600px) {
-      font-size: 1.75rem;
-    }
-  }
-
-  h3 {
-    font-size: 1.35rem;
-    font-weight: 600;
-    color: #1e293b;
-    margin-bottom: 0.6rem;
-    margin-top: 0;
-    letter-spacing: -0.01em;
-    text-align: left;
-  }
-
-  h4 {
-    font-size: 1.1rem;
-    color: #1e293b;
-    margin-bottom: 0.4rem;
-    margin-top: 0;
-    font-weight: 600;
-    text-align: left;
-  }
-}
-
-.section-intro {
-  font-size: 1.05rem;
-  color: #475569;
-  margin-bottom: 1.5rem;
-  text-align: left;
+h3 {
+  color: $black;
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  margin-bottom: 0.5rem;
 }
 
 p {
+  margin: 0 0 1rem;
   text-align: left;
-  color: #475569;
-  line-height: 1.75;
-  margin: 0 0 1rem 0;
-  font-size: 1rem;
+  color: inherit;
+}
 
-  @media screen and (max-width: 500px) {
-    padding: 0;
+.lan-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------- Bands + titles ---------- */
+.lan-band {
+  padding: clamp(2.5rem, 7vw, 4.25rem) 0;
+
+  &--tint {
+    background: #f6f7f8;
+  }
+
+  &--blue {
+    color: #d4e6e9;
+    background:
+      linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 24px 24px,
+      linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 24px 24px,
+      linear-gradient(135deg, $blue, $blue-deep);
+  }
+
+  &--end {
+    padding-top: clamp(2rem, 5vw, 3rem);
   }
 }
 
-p > a {
-  color: #0e0723;
-  font-weight: 500;
+.lan-title {
+  font-size: clamp(1.7rem, 5vw, 2.3rem);
+  margin-bottom: clamp(1.5rem, 4vw, 2rem);
+  text-wrap: balance;
+  width: fit-content;
+  max-width: 100%;
+  color: $black;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  &--teal {
+    background-image: linear-gradient(90deg, $black 0%, $teal-deep 100%);
+  }
+  &--maroon {
+    background-image: linear-gradient(90deg, $black 0%, $maroon 100%);
+  }
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  // On the blue band: solid white instead of a gradient
+  &--light {
+    color: #fff;
+    -webkit-text-fill-color: #fff;
+    background: none;
+  }
+}
+
+.lan-lead {
+  font-size: 1.1rem;
+  max-width: 60ch;
+  margin-bottom: 2rem;
+
+  &--center {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+}
+
+.lan .lan-lead--center {
+  text-align: center;
+}
+
+/* ---------- Buttons ---------- */
+.lan-swap {
+  display: inline-grid;
+  justify-items: center;
+
+  > span {
+    grid-area: 1 / 1;
+  }
+
+  &--off {
+    visibility: hidden;
+  }
+}
+
+.lan-btn {
+  display: inline-block;
+  padding: 0.85rem 1.5rem;
+  font: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 8px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, border-color 0.2s ease;
+
+  &:focus-visible {
+    outline: 3px solid $teal-pulse;
+    outline-offset: 3px;
+  }
+
+  &--light {
+    background: $teal-bright;
+    color: $ink;
+    border: 0;
+
+    &:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 6px 18px rgba(45, 212, 191, 0.4);
+    }
+  }
+
+  &--ghost {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+
+    &:hover {
+      border-color: $red;
+    }
+  }
+}
+
+/* ---------- Hero ---------- */
+.lan-hero {
+  position: relative;
+  overflow: hidden;
+  color: #e8eaed;
+  padding: clamp(2.75rem, 8vw, 5rem) 0 clamp(2.5rem, 7vw, 4rem);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(135deg, $ink, #1f2226);
+
+  // On phones the nav bar sits over the top of the page, so push the content below it.
+  // Set --nav-offset to your nav's height if 4.5rem isn't right.
+  @media (max-width: 768px) {
+    padding-top: calc(var(--nav-offset, 4.5rem) + 1.5rem);
+  }
+
+  &__body {
+    position: relative;
+    z-index: 1;
+  }
+
+  &__badge {
+    display: inline-block;
+    margin: 0 0 1rem;
+    padding: 0.4rem 0.9rem;
+    border: 1px solid rgba(45, 212, 191, 0.35);
+    background: rgba(45, 212, 191, 0.1);
+    border-radius: 999px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #fff;
+  }
+
+  h1 {
+    color: #fff;
+    font-size: clamp(2.2rem, 7vw, 3.6rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-wrap: balance;
+  }
+
+  &__lead {
+    font-size: clamp(1.05rem, 2.5vw, 1.25rem);
+    max-width: 46ch;
+    margin-bottom: 1.75rem;
+
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+      align-items: stretch;
+    }
+  }
+
+  &__circuit {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    pointer-events: none;
+
+    @media (max-width: 700px) {
+      opacity: 0.22;
+    }
+
+    .trace {
+      stroke: $teal-bright;
+      stroke-opacity: 0.25;
+      stroke-width: 1.6;
+    }
+    .flow {
+      stroke: $teal-pulse;
+      stroke-width: 2.4;
+      stroke-linecap: round;
+      stroke-dasharray: 14 86;
+      animation: lan-flow 4s linear infinite;
+    }
+    .flow--slow {
+      animation-duration: 5.6s;
+      animation-delay: -2s;
+    }
+    .node {
+      fill: $ink;
+      stroke: $teal-bright;
+      stroke-width: 1.6;
+    }
+    .dot {
+      fill: $red;
+    }
+  }
+}
+
+@keyframes lan-flow {
+  from {
+    stroke-dashoffset: 100;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* ---------- At a glance ---------- */
+.lan-glance {
+  margin: 0;
+  background: linear-gradient(135deg, $blue-tint 0%, #ffffff 70%);
+  border: 1px solid $blue-line;
+  border-left: 4px solid $blue;
+  border-radius: 10px;
+  padding: clamp(0.5rem, 2vw, 1rem) clamp(1.1rem, 4vw, 2rem);
+
+  &__row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid $blue-line;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+
+    @media (min-width: 700px) {
+      grid-template-columns: 11rem 1fr;
+      gap: 1.5rem;
+    }
+  }
+
+  dt {
+    font-family: "Lexend", sans-serif;
+    font-weight: 600;
+    color: $blue;
+  }
+
+  dd {
+    margin: 0;
+    color: $black;
+  }
+}
+
+/* ---------- Mission ---------- */
+.lan-mission {
+  &__label {
+    color: $teal-pulse;
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  &__text {
+    font-family: "Lexend", sans-serif;
+    font-size: clamp(1.3rem, 3.6vw, 1.85rem);
+    font-weight: 500;
+    line-height: 1.5;
+    color: #fff;
+    margin: 0;
+    padding-left: 1.25rem;
+    border-left: 4px solid $red;
+  }
+}
+
+.lan .lan-mission__text {
+  color: #fff;
+}
+
+/* ---------- What we do ---------- */
+.lan-cols {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+
+  @media (min-width: 860px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+  }
+}
+
+.lan-flagship {
+  position: relative;
+  padding: clamp(1.5rem, 4vw, 2rem);
+  border-radius: 12px;
+  background: linear-gradient(135deg, $blue-tint 0%, #ffffff 70%);
+  border: 1px solid $blue-line;
+  border-top: 4px solid $blue;
+
+  &__badge {
+    display: inline-block;
+    margin-bottom: 0.9rem;
+    padding: 0.3rem 0.85rem;
+    border-radius: 999px;
+    background: $blue;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  h3 {
+    color: $blue;
+    font-size: clamp(1.2rem, 3.4vw, 1.5rem);
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+/* ---------- Pillars ---------- */
+.lan-pillars {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.25rem;
+
+  @media (min-width: 760px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.lan-pillar {
+  padding: clamp(1.25rem, 4vw, 1.75rem);
+  border-radius: 10px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+  &--blue {
+    background: linear-gradient(135deg, $blue-tint 0%, #ffffff 70%);
+    border: 1px solid $blue-line;
+    border-left: 4px solid $blue;
+  }
+
+  &--gray {
+    background: linear-gradient(135deg, #f4f5f6 0%, #ffffff 70%);
+    border: 1px solid $line;
+    border-left: 4px solid $black;
+  }
+}
+
+/* ---------- Impact ---------- */
+.lan .lan-impact__lead {
+  font-size: 1.1rem;
+  max-width: 62ch;
+  color: #e3f0f2;
+  margin-bottom: 2rem;
+}
+
+.lan-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem 1.25rem;
+  list-style: none;
+  margin: 0 0 2rem;
+  padding: 0;
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}
+
+.lan-stat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-top: 1.1rem;
+  border-top: 2px solid rgba(94, 234, 212, 0.35);
+
+  // Node on the trace
+  &::before {
+    content: "";
+    position: absolute;
+    top: -7px;
+    left: 0;
+    box-sizing: border-box;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: $red;
+    border: 2.5px solid $blue-deep;
+    box-shadow: 0 0 0 1px rgba(239, 51, 64, 0.6), 0 0 10px rgba(239, 51, 64, 0.5);
+  }
+
+  &__num {
+    font-family: "Lexend", sans-serif;
+    font-size: clamp(2rem, 6vw, 2.75rem);
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+  }
+
+  &__label {
+    color: $teal-pulse;
+  }
+}
+
+.lan-impact__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+  max-width: 70ch;
+
+  li {
+    position: relative;
+    padding-left: 1.5rem;
+    color: #d4e6e9;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.7rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: $teal-pulse;
+    }
+
+    strong {
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+}
+
+/* ---------- History ---------- */
+.lan-timeline {
+  display: grid;
+  gap: 1.75rem;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 0 0 2rem;
+  list-style: none;
+  position: relative;
+
+  // The trace
+  &::before {
+    content: "";
+    position: absolute;
+    left: 7px;
+    top: 0.6rem;
+    bottom: 0.6rem;
+    width: 2px;
+    background: rgba(20, 184, 166, 0.35);
+  }
+
+  li {
+    position: relative;
+
+    // Node on the trace
+    &::before {
+      content: "";
+      position: absolute;
+      left: calc(-2rem + 1px);
+      top: 0.3rem;
+      box-sizing: border-box;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: $red;
+      border: 3px solid #fff;
+      box-shadow: 0 0 0 1px rgba(239, 51, 64, 0.6);
+    }
+
+    p {
+      margin: 0;
+    }
+  }
+
+  li.lan-timeline__next::before {
+    background: $teal;
+    box-shadow: 0 0 0 1px rgba(20, 184, 166, 0.6), 0 0 10px rgba(20, 184, 166, 0.5);
+  }
+}
+
+/* ---------- Values ---------- */
+.lan-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  list-style: none;
+  margin: 0 0 3rem;
+  padding: 0;
+
+  @media (max-width: 800px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (max-width: 500px) {
+    grid-template-columns: 1fr;
+  }
+
+  li {
+    padding: 1.25rem 1.25rem 0.5rem;
+    background: #fff;
+    border: 1px solid $line;
+    border-top: 3px solid $teal;
+    border-radius: 10px;
+
+    p {
+      font-size: 0.97rem;
+    }
+  }
+}
+
+.lan-measure {
+  max-width: 760px;
+
+  p {
+    max-width: 62ch;
+  }
+}
+
+.lan-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+
+  li {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    padding: 0.45rem 0.95rem;
+    background: #fff;
+    border: 1px solid $blue-line;
+    border-radius: 999px;
+    font-size: 0.95rem;
+    color: $blue;
+
+    &::before {
+      content: "";
+      flex: none;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: $teal;
+    }
+  }
+}
+
+/* ---------- Support ---------- */
+.lan-support {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+
+  @media (max-width: 860px) {
+    grid-template-columns: 1fr;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.25rem, 4vw, 1.75rem);
+    border-radius: 10px;
+
+    p {
+      flex: 1;
+    }
+
+    &--blue {
+      background: linear-gradient(135deg, $blue-tint 0%, #ffffff 70%);
+      border: 1px solid $blue-line;
+      border-left: 4px solid $blue;
+    }
+
+    &--gray {
+      background: linear-gradient(135deg, #f4f5f6 0%, #ffffff 70%);
+      border: 1px solid $line;
+      border-left: 4px solid $black;
+    }
+  }
+
+  &__note {
+    margin: 1.75rem auto 0;
+    max-width: 56ch;
+    text-align: center;
+  }
+}
+
+.lan .lan-support__note {
+  text-align: center;
+}
+
+.lan-link {
+  align-self: flex-start;
+  color: $blue;
+  font-weight: 600;
   text-decoration: underline;
   text-decoration-thickness: 1.5px;
   text-underline-offset: 3px;
-  transition: all 0.2s ease;
 
   &:hover {
-    color: #6366f1;
-    text-decoration-thickness: 2px;
+    color: $maroon;
+  }
+
+  &:focus-visible {
+    outline: 3px solid $teal;
+    outline-offset: 3px;
+    border-radius: 4px;
   }
 }
 
-ul {
-  margin: 0 0 1rem 0;
-  padding: 0;
+/* ---------- Board ---------- */
+.lan-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
   list-style: none;
-
-  &.impact-list {
-    margin-top: 1.5rem;
-
-    li {
-      padding-left: 1.75rem;
-      position: relative;
-      color: #475569;
-      font-size: 1rem;
-      line-height: 1.75;
-      margin-bottom: 1rem;
-
-      &:before {
-        content: "→";
-        position: absolute;
-        left: 0;
-        color: #0e0723;
-        font-weight: 600;
-      }
-
-      strong {
-        color: #1e293b;
-        font-weight: 600;
-      }
-    }
-  }
-}
-
-// Who We Are Section
-.who-we-are {
-  .intro-text {
-    font-size: 1.1rem;
-    color: #475569;
-    line-height: 1.8;
-    margin-bottom: 2rem;
-    text-align: left;
-  }
-
-  .intro-text {
-    @media screen and (max-width: 500px) {
-      text-align: center !important;
-    }
-  }
-}
-
-.mission-box {
-  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-  padding: 2.5rem 2rem;
-  border-radius: 16px;
-  margin-top: 2rem;
-  border: 2px solid #e2e8f0;
-  position: relative;
-  overflow: hidden;
-  text-align: left;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-
-  @media screen and (max-width: 600px) {
-    padding: 1.5rem 1rem;
-    border-radius: 12px;
-  }
-
-  @media screen and (max-width: 400px) {
-    padding: 1.25rem 0.75rem;
-  }
-
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 100%;
-    background: linear-gradient(45deg, #2d1b69, #11998e);
-  }
-
-  .mission-icon {
-    font-size: 2rem;
-    color: #0e0723;
-    margin-right: 0.75rem;
-    display: inline-block;
-    vertical-align: middle;
-  }
-
-  h3 {
-    font-size: 1.15rem;
-    color: #0f172a;
-    margin-bottom: 0rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.9rem;
-    display: inline-block;
-    vertical-align: middle;
-    text-align: left;
-  }
-}
-
-.mission-statement {
-  font-size: 1.35rem;
-  font-weight: 500;
-  color: #0f172a;
   margin: 0;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
-  text-align: left !important;
-  display: block;
-  width: 100%;
+  padding: 0;
 
-  @media screen and (max-width: 600px) {
-    font-size: 1.15rem;
-  }
-}
-
-// History Section
-.history-section {
-  position: relative;
-
-  .year-badge {
-    display: inline-block;
-    background: linear-gradient(45deg, #2d1b69, #11998e);
-    color: white;
-    padding: 0.5rem 1.25rem;
-    border-radius: 50px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    margin-bottom: 1.25rem;
-    letter-spacing: 0.05em;
-  }
-
-  p {
-    text-align: left;
-    @media screen and (max-width: 500px) {
-      text-align: center !important;
-    }
-  }
-}
-
-// Why We Exist Section
-.why-section {
-  background: linear-gradient(to bottom, transparent 0%, #fafafa 100%);
-  padding-bottom: 2rem;
-}
-
-.goals-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1.75rem;
-  margin-top: 2rem;
-
-  @media screen and (max-width: 768px) {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-}
-
-.goal-item {
-  padding: 2rem 1.75rem;
-  background-color: #ffffff;
-  border-radius: 16px;
-  border: 2px solid #e5e7eb;
-  box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  text-align: left;
-  position: relative;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-
-  @media screen and (max-width: 600px) {
-    padding: 1.5rem 1rem;
-  }
-
-  @media screen and (max-width: 400px) {
-    padding: 1.25rem 0.75rem;
-  }
-
-  &:hover {
-    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
-    transform: translateY(-4px);
-    border-color: #0e0723;
-
-    @media screen and (max-width: 768px) {
-      transform: translateY(-2px);
-    }
-  }
-
-  .goal-number {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #0e0723;
-    background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-    padding: 0.35rem 0.85rem;
-    border-radius: 50px;
-    display: inline-block;
-    margin-bottom: 0.75rem;
-    letter-spacing: 0.05em;
-    text-align: left;
-  }
-
-  h3 {
-    font-size: 1.2rem;
-    margin-bottom: 0.75rem;
-    color: #0f172a;
-    font-weight: 700;
-    text-align: left;
-  }
-
-  p {
-    margin-bottom: 0.75rem;
-    font-size: 0.98rem;
-    text-align: left;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-// What We Do Section
-.flagship-program {
-  background: linear-gradient(135deg, rgba(125, 211, 252, 0.1), rgba(167, 139, 250, 0.1));
-  border: 2px solid rgba(125, 211, 252, 0.3);
-  color: #64748b;
-  padding: 2.5rem 2rem;
-  border-radius: 18px;
-  margin-top: 1.5rem;
-  // box-shadow: 0 10px 40px rgba(14, 7, 35, 0.3);
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-
-  @media screen and (max-width: 600px) {
-    padding: 1.5rem 1rem;
-    border-radius: 12px;
-  }
-
-  @media screen and (max-width: 400px) {
-    padding: 1.25rem 0.75rem;
-  }
-
-  .flagship-header {
-    margin-bottom: 1rem;
-    text-align: left;
-
-    .flagship-badge {
-      display: inline-block;
-      background: linear-gradient(45deg, #2d1b69, #11998e);
-      backdrop-filter: blur(10px);
-      color: white;
-      padding: 0.4rem 1rem;
-      border-radius: 50px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      margin-bottom: 1rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-    }
-  }
-
-  h3 {
-    color: #64748b;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
-    font-weight: 700;
-    line-height: 1.3;
-    text-align: left;
-
-    @media screen and (max-width: 600px) {
-      font-size: 1.25rem;
-    }
-  }
-
-  p {
-    color: #64748b;
-    margin-bottom: 0.85rem;
-    font-size: 1.02rem;
-    text-align: left;
-
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
-}
-
-// Values Section
-.values-list {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin-top: 2rem;
-
-  .value-item:nth-child(4),
-  .value-item:nth-child(5) {
-    grid-column: span 1;
-  }
-
-  @media screen and (max-width: 768px) {
+  @media (max-width: 760px) {
     grid-template-columns: repeat(2, 1fr);
-
-    .value-item:nth-child(5) {
-      grid-column: span 2;
-    }
   }
 
-  @media screen and (max-width: 500px) {
-    grid-template-columns: 1fr;
-
-    .value-item:nth-child(4),
-    .value-item:nth-child(5) {
-      grid-column: span 1;
-    }
-  }
-}
-
-.value-item {
-  padding: 1.75rem 1.5rem;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #fafafa 0%, #f5f5f5 100%);
-  border: 2px solid #e5e7eb;
-  transition: all 0.3s ease;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  &:hover {
-    transform: translateY(-4px);
-    border-color: #cbd5e1;
-    box-shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
-  }
-
-  .value-icon {
-    font-size: 2rem;
-    margin-bottom: 0.75rem;
-    display: block;
-  }
-
-  h3 {
-    color: #0f172a;
-    margin-bottom: 0.5rem;
-    font-weight: 700;
-    font-size: 1.05rem;
-  }
-
-  p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #64748b;
-    text-align: center;
-  }
-}
-
-// Impact Section
-.impact-section {
-  .impact-highlight {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    border-left: 4px solid #f59e0b;
-    padding: 1.75rem 2rem;
-    border-radius: 12px;
-    margin-bottom: 2rem;
-
-    .impact-lead {
-      font-size: 1.1rem;
-      color: #78350f;
-      font-weight: 500;
-      margin: 0;
-      line-height: 1.7;
-      text-align: left;
-    }
-  }
-}
-
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0;
-
-  @media screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-}
-
-.stat-card {
-  background: linear-gradient(135deg, rgba(125, 211, 252, 0.1), rgba(167, 139, 250, 0.1));
-  border: 2px solid rgba(125, 211, 252, 0.3);
-  padding: 2rem 1.5rem;
-  border-radius: 14px;
-  text-align: center;
-  // box-shadow: 0 8px 25px rgba(14, 7, 35, 0.2);
-
-  .stat-number {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #64748b;
-    margin-bottom: 0.5rem;
-    line-height: 1;
-  }
-
-  .stat-label {
-    font-size: 0.95rem;
-    color: #64748b;
-    font-weight: 500;
-  }
-}
-
-// Measurement Section
-.metrics-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
-  margin: 1.5rem 0;
-
-  @media screen and (max-width: 600px) {
-    grid-template-columns: 1fr;
-  }
-}
-
-.metric-item {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  padding: 1rem 1.25rem;
-  background: #fafafa;
-  border-radius: 10px;
-  border: 1px solid #e5e7eb;
-  font-size: 0.95rem;
-  color: #475569;
-
-  .metric-icon {
-    font-size: 1.5rem;
-  }
-}
-
-.closing-text {
-  margin-top: 1.5rem;
-  font-style: italic;
-  color: #64748b;
-}
-
-// Support Section
-.support-section {
-  background: linear-gradient(to bottom, #fafafa 0%, transparent 100%);
-  padding-bottom: 2rem;
-}
-
-.support-options {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-  margin: 2rem 0;
-
-  @media screen and (max-width: 900px) {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-.support-item {
-  padding: 2rem 1.75rem;
-  border: 2px solid #e5e7eb;
-  border-radius: 16px;
-  background-color: #ffffff;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
-  text-align: left;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 100%;
-
-  @media screen and (max-width: 600px) {
-    padding: 1.5rem 1rem;
-  }
-
-  @media screen and (max-width: 400px) {
-    padding: 1.25rem 0.75rem;
-  }
-
-  &:hover {
-    border-color: #0e0723;
-    box-shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
-    transform: translateY(-6px);
-  }
-
-  .support-header {
+  a {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    margin-bottom: 0.75rem;
-
-    .support-icon {
-      font-size: 2.25rem;
-      margin-bottom: 0.75rem;
-    }
-  }
-
-  h3 {
-    font-size: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: #0f172a;
-    font-weight: 700;
-    text-align: left;
-  }
-
-  p {
-    margin: 0;
-    font-size: 0.98rem;
-    text-align: left;
-  }
-}
-
-.cta-box {
-  background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
-  padding: 2rem;
-  border-radius: 14px;
-  margin-top: 2rem;
-  text-align: center;
-  border: 2px solid #c4b5fd;
-
-  .cta-text {
-    font-size: 1.15rem;
-    font-weight: 500;
+    align-items: center;
+    gap: 0.2rem;
     text-align: center;
-    margin: 0;
-    color: #4c1d95;
-  }
-}
+    text-decoration: none;
+    color: $black;
+    border-radius: 10px;
 
-// Board Section
-.board-section {
-  p {
-    margin-bottom: 2rem;
-  }
-}
-
-.board-grid {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 2rem;
-
-  @media screen and (max-width: 900px) {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.75rem;
-  }
-
-  @media screen and (max-width: 600px) {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
-  }
-
-  @media screen and (max-width: 400px) {
-    grid-template-columns: 1fr;
-    gap: 1.25rem;
-  }
-}
-
-.board-member {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  text-decoration: none;
-  transition: all 0.3s ease;
-
-  &:hover {
-    .board-avatar {
-      transform: scale(1.08);
-      box-shadow: 0 12px 30px rgba(14, 7, 35, 0.25);
+    &:visited,
+    &:hover {
+      color: $black;
     }
 
-    h3 {
-      color: #6366f1;
+    &:focus-visible {
+      outline: 3px solid $teal;
+      outline-offset: 4px;
+    }
+
+    &:hover .lan-board__avatar {
+      transform: scale(1.06);
+      box-shadow: 0 0 0 3px $teal-pulse, 0 12px 26px -10px rgba(14, 59, 69, 0.6);
     }
   }
 
-  .board-avatar {
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #0e0723 0%, #4c1d95 100%);
-    color: white;
+  &__avatar {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.75rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-    box-shadow: 0 8px 20px rgba(14, 7, 35, 0.15);
-    transition: all 0.3s ease;
+    width: 92px;
+    height: 92px;
+    margin-bottom: 0.75rem;
+    border-radius: 50%;
+    background: linear-gradient(135deg, $blue, $blue-deep);
+    color: #fff;
+    font-family: "Lexend", sans-serif;
+    font-size: 1.6rem;
+    font-weight: 600;
+    box-shadow: 0 0 0 3px #fff, 0 0 0 4px $blue-line;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    @media screen and (max-width: 600px) {
-      width: 80px;
-      height: 80px;
-      font-size: 1.5rem;
+    @media (max-width: 600px) {
+      width: 76px;
+      height: 76px;
+      font-size: 1.4rem;
     }
   }
 
-  h3 {
-    font-size: 1.1rem;
-    color: #0f172a;
-    margin-bottom: 0.25rem;
+  a &__name {
+    font-family: "Lexend", sans-serif;
     font-weight: 600;
-    transition: color 0.3s ease;
+    color: $black;
   }
 
-  .board-role {
+  a &__role {
     font-size: 0.9rem;
-    color: #64748b;
-    margin: 0;
+    color: $gray;
   }
 }
 
-// Contact Section
-.contact-section {
-  padding-bottom: 3rem;
+/* ---------- Contact ---------- */
+.lan-cta {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: clamp(1.75rem, 5vw, 2.5rem);
+  border-radius: 14px;
+  border: 1px solid $blue-deep;
+  color: #d4e6e9;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(135deg, $blue, $blue-deep);
 
-  .contact-info {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-top: 1rem;
+  // Red corner bracket, like the banner
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 22px;
+    height: 22px;
+    border-top: 3px solid $red;
+    border-left: 3px solid $red;
+    border-top-left-radius: 6px;
   }
 
-  .contact-item {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    font-size: 1rem;
+  h2 {
+    color: #fff;
+    font-size: clamp(1.4rem, 4vw, 1.9rem);
+    margin-bottom: 0.4rem;
+  }
 
-    strong {
-      color: #1e293b;
-      min-width: 80px;
-    }
+  p {
+    margin: 0;
+  }
+
+  &__alt {
+    margin-top: 0.6rem;
+    font-size: 0.9rem;
+    max-width: 44ch;
 
     a {
-      color: #0e0723;
-      font-weight: 500;
+      color: $teal-pulse;
       text-decoration: underline;
-      text-decoration-thickness: 1.5px;
       text-underline-offset: 3px;
-      transition: all 0.2s ease;
 
       &:hover {
-        color: #6366f1;
+        color: #fff;
       }
     }
   }
 
-  p {
-    margin-bottom: 0.75rem;
-    text-align: left;
+  &__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+
+    @media (max-width: 520px) {
+      flex-direction: column;
+      align-items: stretch;
+      width: 100%;
+    }
   }
 }
 
-h1, h2 {
-  background: linear-gradient(45deg, #2d1b69, #11998e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-@media screen and (max-width: 500px) {
-  h2 {
-    text-align: center !important;
+@media (prefers-reduced-motion: reduce) {
+  .lan-hero__circuit .flow {
+    animation: none;
+  }
+  .lan-btn,
+  .lan-board__avatar {
+    transition: none;
+  }
+  .lan-btn--light:hover,
+  .lan-board a:hover .lan-board__avatar {
+    transform: none;
   }
 }
 </style>

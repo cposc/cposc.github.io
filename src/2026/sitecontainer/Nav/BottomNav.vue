@@ -35,11 +35,8 @@
       </div>
       <div class="copyright">
         <p>
-          &copy; 2025-2026 Central Pennsylvania Open Source Conference. All
+          &copy; 2026-2027 Central Pennsylvania Open Source Conference. All
           rights reserved.
-        </p>
-        <p class="closingMsg">
-          16 years of bringing bits, bytes, and brilliant minds together ✨
         </p>
       </div>
     </div>

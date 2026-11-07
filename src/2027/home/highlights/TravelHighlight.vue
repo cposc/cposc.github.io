@@ -111,6 +111,8 @@ $teal-bright: #2dd4bf;
 $teal-pulse: #5eead4;
 $red: #ef3340;
 $maroon: #7B1E2B;
+$blue: #134f5c; // prospectus dark blue
+$blue-deep: #0e3b45;
 $gray: #4a4e55;
 
 .travel {
@@ -177,13 +179,13 @@ p {
   position: relative;
   overflow: hidden;
   border-radius: 14px;
-  color: #e8eaed;
+  color: #d4e6e9;
   background:
-    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px) 0 0 / 24px 24px,
-    linear-gradient(135deg, $ink, #1f2226);
-  border: 1px solid #2a2d32;
-  box-shadow: 0 18px 40px -20px rgba(11, 12, 14, 0.6);
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(135deg, $blue, $blue-deep);
+  border: 1px solid $blue-deep;
+  box-shadow: 0 18px 40px -20px rgba(14, 59, 69, 0.7);
 
   // Red corner bracket
   &::before {
@@ -231,8 +233,8 @@ p {
     }
 
     .trace {
-      stroke: $teal-bright;
-      stroke-opacity: 0.25;
+      stroke: $teal-pulse;
+      stroke-opacity: 0.28;
       stroke-width: 1.6;
     }
     .flow {
@@ -247,8 +249,8 @@ p {
       animation-delay: -2s;
     }
     .node {
-      fill: $ink;
-      stroke: $teal-bright;
+      fill: $blue-deep;
+      stroke: $teal-pulse;
       stroke-width: 1.6;
     }
     .dot {
@@ -335,9 +337,9 @@ p {
   }
 
   &--dark {
-    color: $teal-bright;
-    background: rgba(45, 212, 191, 0.12);
-    border: 1px solid rgba(45, 212, 191, 0.3);
+    color: $teal-pulse;
+    background: rgba(94, 234, 212, 0.12);
+    border: 1px solid rgba(94, 234, 212, 0.35);
   }
 }
 

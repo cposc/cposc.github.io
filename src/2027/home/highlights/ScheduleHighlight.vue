@@ -89,6 +89,10 @@ $teal: #14b8a6;
 $teal-deep: #0f766e;
 $red: #ef3340;
 $maroon: #7B1E2B;
+$blue: #134f5c; // prospectus dark blue
+$blue-deep: #0e3b45;
+$blue-tint: #e9f1f2; // light wash of the blue
+$blue-line: #cddfe3;
 $gray: #4a4e55;
 
 .schedule {
@@ -142,9 +146,9 @@ $gray: #4a4e55;
       aspect-ratio: 4 / 3;
       object-fit: cover;
       border-radius: 14px;
-      border: 1px solid #2a2d32;
-      background: $black;
-      box-shadow: 0 18px 40px -18px rgba(11, 12, 14, 0.55);
+      border: 1px solid $blue-deep;
+      background: $blue;
+      box-shadow: 0 18px 40px -18px rgba(14, 59, 69, 0.6);
     }
 
     // Red corner brackets, echoing the banner
@@ -174,9 +178,9 @@ $gray: #4a4e55;
   }
 
   &__panel {
-    background: linear-gradient(135deg, #f0fdfa 0%, #ffffff 70%);
-    border: 1px solid #ccfbf1;
-    border-left: 4px solid $teal;
+    background: linear-gradient(135deg, $blue-tint 0%, #ffffff 70%);
+    border: 1px solid $blue-line;
+    border-left: 4px solid $blue;
     border-radius: 10px;
     padding: clamp(1.25rem, 4vw, 2.25rem);
 
@@ -184,7 +188,7 @@ $gray: #4a4e55;
       margin: 0;
       font-size: clamp(1.5rem, 4vw, 2rem);
       line-height: 1.2;
-      color: $black;
+      color: $blue;
     }
   }
 }
@@ -242,11 +246,11 @@ $gray: #4a4e55;
     gap: 0.5rem;
     padding: 0.4rem 0.9rem;
     background: #fff;
-    border: 1px solid #e5e7ea;
+    border: 1px solid $blue-line;
     border-radius: 999px;
     font-size: 0.9rem;
     font-weight: 500;
-    color: $black;
+    color: $blue;
 
     &::before {
       content: "";
@@ -261,7 +265,7 @@ $gray: #4a4e55;
 .btn-primary {
   display: inline-block;
   padding: 0.85rem 1.75rem;
-  background: linear-gradient(135deg, $black, $teal-deep);
+  background: linear-gradient(135deg, $blue, $blue-deep);
   color: #fff;
   font-weight: 600;
   text-decoration: none;
